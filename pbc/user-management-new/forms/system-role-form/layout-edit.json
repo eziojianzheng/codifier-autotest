@@ -1,0 +1,241 @@
+{
+  "fields": [
+    {
+      "component": "FlowLayout",
+      "componentProps": {
+        "gap": 25,
+        "style": {
+          "flexDirection": "column"
+        }
+      },
+      "fields": [
+        {
+          "component": "CardLayout",
+          "componentProps": {
+            "title": "角色基本信息",
+            "title_i18n_en-US": "Role Basic Information",
+            "title_i18n_ja-JP": "ロールの基本情報",
+            "title_i18n_zh-CN": "角色基本信息"
+          },
+          "fields": [
+            {
+              "component": "NormalLayout",
+              "fields": [
+                {
+                  "component": "Input",
+                  "hidden": true,
+                  "id": "roleId",
+                  "readonly": true,
+                  "title": "Role ID",
+                  "title_i18n_key": "user-management|>system-role-form|>generatedEsxcigxu",
+                  "uniqueField": true,
+                  "validation": {
+                    "maxLength": 200
+                  }
+                },
+                {
+                  "component": "Input",
+                  "componentProps": {
+                    "placeholder": "请输入角色名",
+                    "placeholder_i18n_en-US": "Please enter the role name",
+                    "placeholder_i18n_ja-JP": "ロール名を入力してください",
+                    "placeholder_i18n_zh-CN": "请输入角色名"
+                  },
+                  "id": "name",
+                  "title": "角色名",
+                  "title_i18n_en-US": "Role Name",
+                  "title_i18n_ja-JP": "ロール名",
+                  "title_i18n_key": "user-management|>system-role-form|>name",
+                  "title_i18n_zh-CN": "角色名",
+                  "validation": {
+                    "maxLength": 200,
+                    "required": true
+                  }
+                },
+                {
+                  "component": "Input",
+                  "componentProps": {
+                    "placeholder": "请输入角色描述",
+                    "placeholder_i18n_en-US": "Please enter the role description",
+                    "placeholder_i18n_ja-JP": "ロールの説明を入力してください",
+                    "placeholder_i18n_zh-CN": "请输入角色描述"
+                  },
+                  "id": "description",
+                  "title": "角色描述",
+                  "title_i18n_en-US": "Role Description",
+                  "title_i18n_ja-JP": "ロールの説明",
+                  "title_i18n_key": "user-management|>system-role-form|>description",
+                  "title_i18n_zh-CN": "角色描述",
+                  "validation": {
+                    "maxLength": 200
+                  }
+                }
+              ]
+            }
+          ],
+          "id": "tab-basic-info"
+        },
+        {
+          "component": "CardLayout",
+          "componentProps": {
+            "title": "角色成员",
+            "titleDesc": "该角色的用户成员列表",
+            "titleDesc_i18n_en-US": "User member list for this role",
+            "titleDesc_i18n_ja-JP": "このロールのユーザーメンバーリスト",
+            "titleDesc_i18n_zh-CN": "该角色的用户成员列表",
+            "title_i18n_en-US": "Role Members",
+            "title_i18n_ja-JP": "ロールメンバー",
+            "title_i18n_zh-CN": "角色成员"
+          },
+          "fields": [
+            {
+              "component": "ACL",
+              "componentProps": {
+                "AgTableProps": {
+                  "pinnedFilter": [
+                    "username",
+                    "email",
+                    "nickName"
+                  ]
+                },
+                "columnDefs": [
+                  {
+                    "colId": "username",
+                    "field": "username",
+                    "headerName": "用户名",
+                    "headerName_i18n_en-US": "Username",
+                    "headerName_i18n_ja-JP": "ユーザー名",
+                    "headerName_i18n_key": "user-management|>system-user-form|>username",
+                    "headerName_i18n_zh-CN": "用户名",
+                    "type": "TEXT_COLUMN"
+                  },
+                  {
+                    "colId": "email",
+                    "field": "email",
+                    "headerName": "电子邮件",
+                    "headerName_i18n_en-US": "Email",
+                    "headerName_i18n_ja-JP": "メールアドレス",
+                    "headerName_i18n_key": "user-management|>system-user-form|>email",
+                    "headerName_i18n_zh-CN": "电子邮件",
+                    "type": "TEXT_COLUMN"
+                  },
+                  {
+                    "colId": "nickName",
+                    "field": "nickName",
+                    "headerName_i18n_en-US": "User Nickname",
+                    "headerName_i18n_ja-JP": "ユーザーのニックネーム",
+                    "headerName_i18n_key": "user-management|>system-user-form|>nickName",
+                    "headerName_i18n_zh-CN": "用户昵称",
+                    "type": "TEXT_COLUMN"
+                  }
+                ],
+                "dataSource": {
+                  "token": "system-user-form"
+                },
+                "mapping": {
+                  "label": "nickName",
+                  "value": "id"
+                },
+                "multiple": true,
+                "stringEqual": true
+              },
+              "id": "users",
+              "title": "用户列表",
+              "title_i18n_en-US": "User List",
+              "title_i18n_ja-JP": "ユーザーリスト",
+              "title_i18n_key": "user-management|>system-role-form|>users",
+              "title_i18n_zh-CN": "用户列表"
+            }
+          ],
+          "id": "user-list"
+        },
+        {
+          "component": "CardLayout",
+          "componentProps": {
+            "title": "数据权限",
+            "titleDesc": "该角色将对以下数据拥有查看、编辑、新增、删除的权限",
+            "titleDesc_i18n_en-US": "This role will have view, edit, add, and delete permissions for the following data",
+            "titleDesc_i18n_ja-JP": "このロールは以下のデータに対して表示、編集、追加、削除の権限を持ちます",
+            "titleDesc_i18n_zh-CN": "该角色将对以下数据拥有查看、编辑、新增、删除的权限",
+            "title_i18n_en-US": "Data Permissions",
+            "title_i18n_ja-JP": "データ権限",
+            "title_i18n_zh-CN": "数据权限"
+          },
+          "fields": [
+            {
+              "component": "Radio",
+              "componentProps": {
+                "direction": "vertical",
+                "options": [
+                  {
+                    "label": "本人的数据",
+                    "label_i18n_en-US": "My Data",
+                    "label_i18n_ja-JP": "自分のデータ",
+                    "label_i18n_zh-CN": "本人的数据",
+                    "value": 1
+                  },
+                  {
+                    "label": "本组织的数据",
+                    "label_i18n_en-US": "Organization's Data",
+                    "label_i18n_ja-JP": "組織のデータ",
+                    "label_i18n_zh-CN": "本组织的数据",
+                    "value": 2
+                  },
+                  {
+                    "label": "全部数据",
+                    "label_i18n_en-US": "All Data",
+                    "label_i18n_ja-JP": "すべてのデータ",
+                    "label_i18n_zh-CN": "全部数据",
+                    "value": 4
+                  }
+                ]
+              },
+              "defaultValue": 1,
+              "id": "scope",
+              "title": "权限范围",
+              "title_i18n_en-US": "Scope of Permissions",
+              "title_i18n_ja-JP": "権限の範囲",
+              "title_i18n_key": "user-management|>system-role-form|>scope",
+              "title_i18n_zh-CN": "权限范围"
+            }
+          ],
+          "id": "tab-data-permission"
+        },
+        {
+          "component": "CardLayout",
+          "componentProps": {
+            "title": "功能权限",
+            "titleDesc": "该角色将对以下功能模块拥有查看、编辑、新增、删除的权限",
+            "titleDesc_i18n_en-US": "This role will have view, edit, add, and delete permissions for the following functional modules",
+            "titleDesc_i18n_ja-JP": "このロールは以下の機能モジュールに対して表示、編集、追加、削除の権限を持ちます",
+            "titleDesc_i18n_zh-CN": "该角色将对以下功能模块拥有查看、编辑、新增、删除的权限",
+            "title_i18n_en-US": "Function Permissions",
+            "title_i18n_ja-JP": "機能権限",
+            "title_i18n_zh-CN": "功能权限"
+          },
+          "fields": [
+            {
+              "component": "Permissions",
+              "id": "permissions"
+            }
+          ],
+          "id": "tab-access-permission"
+        }
+      ],
+      "id": "role-detail"
+    }
+  ],
+  "form": {
+    "accessPermissionPredicate": {
+      "hasAllOf": [
+        "ROLE_EDIT"
+      ]
+    },
+    "defaultButton": false,
+    "defaultButtonPosition": "bottom",
+    "defaultCancelButton": true,
+    "defaultSubmitButton": true,
+    "labelLayout": "vertical",
+    "transformRetrievedData": "$$$$ref:text:layout-edit-transformRetrievedData.js"
+  }
+}

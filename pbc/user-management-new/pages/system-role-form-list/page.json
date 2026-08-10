@@ -1,0 +1,103 @@
+{
+  "schemaId": "system-role-form-list",
+  "schemaJson_$$$NESTED_JSON_STRING$$$": {
+    "fields": [
+      {
+        "component": "Card",
+        "fields": [
+          {
+            "component": "Table",
+            "componentProps": {
+              "addButtonHref": "/form/system-role-form/layout/new",
+              "columnDefs": [
+                {
+                  "colId": "name",
+                  "field": "name",
+                  "headerName": "角色名",
+                  "headerName_i18n_en-US": "Role Name",
+                  "headerName_i18n_ja-JP": "ロール名",
+                  "headerName_i18n_zh-CN": "角色名",
+                  "type": "TEXT_COLUMN"
+                },
+                {
+                  "colId": "description",
+                  "field": "description",
+                  "headerName": "角色描述",
+                  "headerName_i18n_en-US": "Role Description",
+                  "headerName_i18n_ja-JP": "ロールの説明",
+                  "headerName_i18n_zh-CN": "角色描述",
+                  "type": "TEXT_COLUMN"
+                },
+                {
+                  "cellRendererParams": {
+                    "actions": [
+                      {
+                        "href": "/form/system-role-form/layout/edit/:id",
+                        "type": "EDIT"
+                      },
+                      {
+                        "href": "/form/:id/view",
+                        "type": "VIEW"
+                      },
+                      {
+                        "type": "DELETE"
+                      }
+                    ],
+                    "displayLikeButton": true,
+                    "showIcon": true
+                  },
+                  "headerName": "操作",
+                  "headerName_i18n_en-US": "Action",
+                  "headerName_i18n_ja-JP": "動く",
+                  "headerName_i18n_zh-CN": "操作",
+                  "pinned": "right",
+                  "type": "ACTION_COLUMN",
+                  "width": 240
+                }
+              ],
+              "dataFilters": [
+                {
+                  "conditions": [
+                    {
+                      "filter": "1",
+                      "filterType": "number",
+                      "id": "integrationRole",
+                      "type": "notEqual"
+                    },
+                    {
+                      "filterType": "number",
+                      "id": "integrationRole",
+                      "type": "blank"
+                    }
+                  ],
+                  "operator": "OR"
+                }
+              ],
+              "dataSource": {
+                "token": "system-role-form"
+              },
+              "pagination": true,
+              "pinnedFilter": [
+                "name",
+                "description"
+              ]
+            },
+            "id": "system-role-form-table",
+            "style": {
+              "height": "100%"
+            }
+          }
+        ],
+        "style": {
+          "height": "100%"
+        }
+      }
+    ],
+    "form": {
+      "title": "角色列表",
+      "title_i18n_en-US": "Role List",
+      "title_i18n_ja-JP": "ロールリスト",
+      "title_i18n_zh-CN": "角色列表"
+    }
+  }
+}
