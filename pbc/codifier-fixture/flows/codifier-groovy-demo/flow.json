@@ -1,0 +1,73 @@
+{
+  "name": "Codifier Groovy Demo",
+  "nodeList": [
+    {
+      "enabled": true,
+      "id": 1,
+      "inMemory": true,
+      "inMemoryTransaction": true,
+      "restTrigger": {
+        "eligibleForAgent": false,
+        "method": "POST",
+        "requestBody": [
+          {
+            "dataType": "string",
+            "label": "X",
+            "name": "x",
+            "optional": true
+          }
+        ],
+        "requestHeaders": [ ],
+        "requestParams": [ ],
+        "url": "/flow/api/flow-rest/codifier-groovy-demo"
+      },
+      "triggerType": "REST",
+      "type": "TRIGGER"
+    },
+    {
+      "enabled": true,
+      "id": 2,
+      "nodeName": "APP - Groovy Script",
+      "sdk": {
+        "input": {
+          "script": "// Codifier 拆分测试 Groovy 脚本 — 应被提取为独立 .groovy 文件\n// 特殊字符: 中文 / \"quotes\" / emoji 🚀\ndef input = binding.variables\nint a = 4 + 8\nint b = a * 2\ndef result = [\n    sum: a,\n    doubled: b,\n    note: \"computed by groovy\",\n    ts: System.currentTimeMillis()\n]\nreturn result\n"
+        },
+        "inputFields": [ ],
+        "name": "Groovy 计算",
+        "numberStringToBigDecimal": false,
+        "outputFields": [ ],
+        "sdkType": "GENERAL_GROOVY"
+      },
+      "type": "APP"
+    },
+    {
+      "enabled": true,
+      "id": 3,
+      "nodeName": "设置返回值",
+      "sdk": {
+        "input": {
+          "code": "0",
+          "data": "$2.output",
+          "message": "success"
+        },
+        "inputFields": [ ],
+        "name": "返回结果",
+        "numberStringToBigDecimal": false,
+        "outputFields": [ ],
+        "sdkType": "SET_VALUE_TO_INSTANCE"
+      },
+      "type": "APP"
+    },
+    {
+      "enabled": true,
+      "id": 4,
+      "nodeName": "STOP_JOB",
+      "result": "Successful",
+      "type": "STOP_JOB"
+    }
+  ],
+  "restApiEnabled": 1,
+  "restApiMethod": "POST",
+  "restApiUrl": "/flow/api/flow-rest/codifier-groovy-demo",
+  "token": "codifier-groovy-demo"
+}
