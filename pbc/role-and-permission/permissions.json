@@ -1,0 +1,262 @@
+[
+  {
+    "method": "C",
+    "name": "新增",
+    "nameEnUs": "Create",
+    "nameJaJp": "追加する",
+    "target": "数据源管理-API数据源管理",
+    "targetJaJp": "APIデータソース管理",
+    "targetToken": "DATASOURCE-API",
+    "token": "DATASOURCE_CONNECTOR_CREATE"
+  },
+  {
+    "method": "D",
+    "name": "删除",
+    "nameEnUs": "Delete",
+    "nameJaJp": "削除する",
+    "target": "数据源管理-API数据源管理",
+    "targetJaJp": "APIデータソース管理",
+    "targetToken": "DATASOURCE-API",
+    "token": "DATASOURCE_CONNECTOR_DELETE"
+  },
+  {
+    "method": "U",
+    "name": "更新",
+    "nameEnUs": "Update",
+    "nameJaJp": "修正する",
+    "target": "数据源管理-API数据源管理",
+    "targetJaJp": "APIデータソース管理",
+    "targetToken": "DATASOURCE-API",
+    "token": "DATASOURCE_CONNECTOR_EDIT"
+  },
+  {
+    "method": "R",
+    "name": "查看",
+    "nameEnUs": "View",
+    "nameJaJp": "表示する",
+    "target": "数据源管理-API数据源管理",
+    "targetJaJp": "APIデータソース管理",
+    "targetToken": "DATASOURCE-API",
+    "token": "DATASOURCE_CONNECTOR_VIEW"
+  },
+  {
+    "method": "C",
+    "name": "新增",
+    "nameEnUs": "Create",
+    "nameJaJp": "追加する",
+    "target": "数据源管理-数据源链接管理",
+    "targetJaJp": "データソースリンク管理",
+    "targetToken": "DATASOURCE-CONNECT",
+    "token": "DATASOURCE_CONNECTOR_CREATE"
+  },
+  {
+    "method": "D",
+    "name": "删除",
+    "nameEnUs": "Delete",
+    "nameJaJp": "削除する",
+    "target": "数据源管理-数据源链接管理",
+    "targetJaJp": "データソースリンク管理",
+    "targetToken": "DATASOURCE-CONNECT",
+    "token": "DATASOURCE_CONNECTOR_DELETE"
+  },
+  {
+    "method": "U",
+    "name": "更新",
+    "nameEnUs": "Update",
+    "nameJaJp": "修正する",
+    "target": "数据源管理-数据源链接管理",
+    "targetJaJp": "データソースリンク管理",
+    "targetToken": "DATASOURCE-CONNECT",
+    "token": "DATASOURCE_CONNECTOR_EDIT"
+  },
+  {
+    "method": "R",
+    "name": "查看",
+    "nameEnUs": "View",
+    "nameJaJp": "追加する",
+    "target": "数据源管理-数据源链接管理",
+    "targetJaJp": "データソースリンク管理",
+    "targetToken": "DATASOURCE-CONNECT",
+    "token": "DATASOURCE_CONNECTOR_VIEW"
+  },
+  {
+    "method": "ALLOW-ALL",
+    "name": "IntegrationUser",
+    "nameEnUs": "",
+    "nameJaJp": "",
+    "target": "Integration User",
+    "targetJaJp": "",
+    "targetToken": "INTEGRATION_USER_ADMIN",
+    "token": "***"
+  },
+  {
+    "method": "C",
+    "name": "新增",
+    "nameEnUs": "Create",
+    "nameJaJp": "追加する",
+    "target": "后台管理-组织树管理",
+    "targetJaJp": "組織ツリー管理",
+    "targetToken": "ORG_TREE",
+    "token": "ORG_TREE_CREATE"
+  },
+  {
+    "method": "D",
+    "name": "删除",
+    "nameEnUs": "Delete",
+    "nameJaJp": "削除する",
+    "target": "后台管理-组织树管理",
+    "targetJaJp": "組織ツリー管理",
+    "targetToken": "ORG_TREE",
+    "token": "ORG_TREE_DELETE"
+  },
+  {
+    "method": "U",
+    "name": "更新",
+    "nameEnUs": "Update",
+    "nameJaJp": "修正する",
+    "target": "后台管理-组织树管理",
+    "targetJaJp": "組織ツリー管理",
+    "targetToken": "ORG_TREE",
+    "token": "ORG_TREE_EDIT"
+  },
+  {
+    "method": "R",
+    "name": "查看",
+    "nameEnUs": "View",
+    "nameJaJp": "表示する",
+    "target": "后台管理-组织树管理",
+    "targetJaJp": "組織ツリー管理",
+    "targetToken": "ORG_TREE",
+    "token": "ORG_TREE_VIEW"
+  },
+  {
+    "method": "C",
+    "name": "新增",
+    "nameEnUs": "Create",
+    "nameJaJp": "追加する",
+    "target": "后台管理-权限组管理",
+    "targetJaJp": "権限グループ管理",
+    "targetToken": "PERMISSION_GROUP",
+    "token": "PERMISSION_GROUP_CREATE"
+  },
+  {
+    "method": "D",
+    "name": "删除",
+    "nameEnUs": "Delete",
+    "nameJaJp": "削除する",
+    "target": "后台管理-权限组管理",
+    "targetJaJp": "権限グループ管理",
+    "targetToken": "PERMISSION_GROUP",
+    "token": "PERMISSION_GROUP_DELETE"
+  },
+  {
+    "method": "U",
+    "name": "更新",
+    "nameEnUs": "Update",
+    "nameJaJp": "修正する",
+    "target": "后台管理-权限组管理",
+    "targetJaJp": "権限グループ管理",
+    "targetToken": "PERMISSION_GROUP",
+    "token": "PERMISSION_GROUP_EDIT"
+  },
+  {
+    "method": "R",
+    "name": "查看",
+    "nameEnUs": "View",
+    "nameJaJp": "表示する",
+    "target": "后台管理-权限组管理",
+    "targetJaJp": "権限グループ管理",
+    "targetToken": "PERMISSION_GROUP",
+    "token": "PERMISSION_GROUP_VIEW"
+  },
+  {
+    "method": "C",
+    "name": "新增",
+    "nameEnUs": "Create",
+    "nameJaJp": "追加する",
+    "target": "后台管理-角色管理",
+    "targetJaJp": "役割管理",
+    "targetToken": "ROLE",
+    "token": "ROLE_CREATE"
+  },
+  {
+    "method": "D",
+    "name": "删除",
+    "nameEnUs": "Delete",
+    "nameJaJp": "削除する",
+    "target": "后台管理-角色管理",
+    "targetJaJp": "役割管理",
+    "targetToken": "ROLE",
+    "token": "ROLE_DELETE"
+  },
+  {
+    "method": "U",
+    "name": "更新",
+    "nameEnUs": "Update",
+    "nameJaJp": "修正する",
+    "target": "后台管理-角色管理",
+    "targetJaJp": "役割管理",
+    "targetToken": "ROLE",
+    "token": "ROLE_EDIT"
+  },
+  {
+    "method": "R",
+    "name": "查看",
+    "nameEnUs": "View",
+    "nameJaJp": "表示する",
+    "target": "后台管理-角色管理",
+    "targetJaJp": "役割管理",
+    "targetToken": "ROLE",
+    "token": "ROLE_VIEW"
+  },
+  {
+    "method": "ALLOW-ALL",
+    "name": "全部权限",
+    "nameEnUs": "All permission",
+    "nameJaJp": "すべての権限",
+    "target": "超级管理员",
+    "targetJaJp": "スーパーアドミン",
+    "targetToken": "SUPER-ADMIN",
+    "token": "***"
+  },
+  {
+    "method": "C",
+    "name": "新增",
+    "nameEnUs": "Create",
+    "nameJaJp": "追加する",
+    "target": "后台管理-用户管理",
+    "targetJaJp": "ユーザー管理",
+    "targetToken": "USER",
+    "token": "USER_CREATE"
+  },
+  {
+    "method": "D",
+    "name": "删除",
+    "nameEnUs": "Delete",
+    "nameJaJp": "削除する",
+    "target": "后台管理-用户管理",
+    "targetJaJp": "ユーザー管理",
+    "targetToken": "USER",
+    "token": "USER_DELETE"
+  },
+  {
+    "method": "U",
+    "name": "更新",
+    "nameEnUs": "Update",
+    "nameJaJp": "修正する",
+    "target": "后台管理-用户管理",
+    "targetJaJp": "ユーザー管理",
+    "targetToken": "USER",
+    "token": "USER_EDIT"
+  },
+  {
+    "method": "R",
+    "name": "查看",
+    "nameEnUs": "View",
+    "nameJaJp": "表示する",
+    "target": "后台管理-用户管理",
+    "targetJaJp": "ユーザー管理",
+    "targetToken": "USER",
+    "token": "USER_VIEW"
+  }
+]
