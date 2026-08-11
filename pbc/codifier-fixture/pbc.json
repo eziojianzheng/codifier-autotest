@@ -1,0 +1,12 @@
+{
+  "category": "BUSINESS",
+  "contributor": "admin",
+  "description": "Codifier 拆分压力测试夹具：涵盖 Groovy/SQL/JS/嵌套JSON/多字段类型",
+  "formDashboardLayoutList": [ ],
+  "formEntityRelationList": [ ],
+  "matchWeight": 0,
+  "name": "Codifier Fixture",
+  "tags": "test,codifier",
+  "token": "codifier-fixture",
+  "uiPluginList": [ ]
+}

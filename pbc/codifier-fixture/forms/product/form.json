@@ -1,0 +1,86 @@
+{
+  "enableForbidUpdateSomeFieldsValueWhenReferenced": 0,
+  "fields": [
+    {
+      "maxLength": 200,
+      "name": "是否上架",
+      "storageField": "value6",
+      "token": "active",
+      "type": "SWITCH"
+    },
+    {
+      "maxLength": 200,
+      "name": "附件",
+      "storageField": "value8",
+      "token": "attachment",
+      "type": "UPLOAD"
+    },
+    {
+      "maxLength": 200,
+      "name": "分类",
+      "storageField": "value4",
+      "token": "category",
+      "type": "SELECT"
+    },
+    {
+      "maxLength": 100,
+      "name": "产品编码",
+      "storageField": "value2",
+      "token": "code",
+      "type": "TEXT_BOX"
+    },
+    {
+      "maxLength": 200,
+      "name": "描述",
+      "storageField": "value7",
+      "token": "description",
+      "type": "TEXTAREA"
+    },
+    {
+      "maxLength": 200,
+      "name": "上市日期",
+      "storageField": "value5",
+      "token": "launchDate",
+      "type": "DATE"
+    },
+    {
+      "maxLength": 200,
+      "name": "产品名称",
+      "storageField": "value1",
+      "token": "name",
+      "type": "TEXT_BOX"
+    },
+    {
+      "maxLength": 200,
+      "maxValue": 9999999,
+      "minValue": 0,
+      "name": "单价",
+      "storageField": "value3",
+      "token": "price",
+      "type": "NUMBER"
+    },
+    {
+      "fieldConfigJson": "{\"formEntityToken\":\"product-spec\",\"pbcToken\":\"codifier-fixture\",\"relations\":[{\"colId\":\"parentDataId\",\"filterType\":\"text\",\"type\":\"equals\",\"filter\":\"$CURRENT_FORM_DATA_ID\"}]}",
+      "maxLength": 200,
+      "name": "规格明细",
+      "storageField": "value9",
+      "token": "specs",
+      "type": "EDITABLE_GRID"
+    }
+  ],
+  "isAutoLock": 0,
+  "isDeletableWhenReferenced": 1,
+  "isInnerEntity": 0,
+  "isMasterData": 0,
+  "layouts": [
+    {
+      "defaultLayout": true,
+      "name": "默认布局",
+      "sortIndex": 0,
+      "token": "default"
+    }
+  ],
+  "name": "产品",
+  "permissionTarget": "product",
+  "token": "product"
+}
