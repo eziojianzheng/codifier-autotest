@@ -1,0 +1,24 @@
+{
+  "definition_$$$NESTED_JSON_STRING$$$": {
+    "code": "",
+    "inputFields": [
+      {
+        "controlType": "input",
+        "dataType": "string",
+        "label": "Timeout(Seconds)",
+        "label_i18n_en-US": "Timeout(Seconds)",
+        "label_i18n_ja-JP": "Timeout(Seconds)",
+        "name": "timeout",
+        "optional": true
+      }
+    ],
+    "outputFields": [ ],
+    "sdkType": "GENERAL_SQL_FOR_NORMALIZED_TABLE"
+  },
+  "isSystem": 1,
+  "name": "普通化表单的通用查询SQL",
+  "nameEnUs": "Generic Query SQL For Normalized Form Table",
+  "nameJaJp": "標準化フォームの汎用クエリSQL",
+  "sdkType": "GENERAL_SQL_FOR_NORMALIZED_TABLE",
+  "uuid": "9386ff2c-2c85-49c7-a9f9-60f4aa7364b8"
+}

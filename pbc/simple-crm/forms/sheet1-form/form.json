@@ -1,0 +1,178 @@
+{
+  "dataLocation": "LOCAL",
+  "enableForbidUpdateSomeFieldsValueWhenReferenced": 0,
+  "fields": [
+    {
+      "encryptStorage": 0,
+      "encryptTransit": 0,
+      "forbidToUpdate": false,
+      "maxLength": 10,
+      "name": "CPU",
+      "regex": "^[0-9]+C$",
+      "storageField": "value6",
+      "token": "cpuConfig",
+      "type": "TEXT_BOX"
+    },
+    {
+      "encryptStorage": 0,
+      "encryptTransit": 0,
+      "forbidToUpdate": false,
+      "maxLength": 200,
+      "maxValue": 100.0,
+      "minValue": 0.0,
+      "name": "CPU使用率(%)",
+      "storageField": "value7",
+      "token": "cpuUsagePercent",
+      "type": "NUMBER"
+    },
+    {
+      "encryptStorage": 0,
+      "encryptTransit": 0,
+      "forbidToUpdate": false,
+      "maxLength": 200,
+      "maxValue": 100.0,
+      "minValue": 0.0,
+      "name": "错误率%",
+      "storageField": "value12",
+      "token": "errorRatePercent",
+      "type": "NUMBER"
+    },
+    {
+      "encryptStorage": 0,
+      "encryptTransit": 0,
+      "forbidToUpdate": false,
+      "maxLength": 200,
+      "minValue": 0.0,
+      "name": "最大压测用户数",
+      "storageField": "value5",
+      "token": "maxPressureTestUsers",
+      "type": "NUMBER"
+    },
+    {
+      "encryptStorage": 0,
+      "encryptTransit": 0,
+      "forbidToUpdate": false,
+      "maxLength": 10,
+      "name": "内存配置",
+      "regex": "^[0-9]+G$",
+      "storageField": "value8",
+      "token": "memoryConfig",
+      "type": "TEXT_BOX"
+    },
+    {
+      "encryptStorage": 0,
+      "encryptTransit": 0,
+      "forbidToUpdate": false,
+      "maxLength": 200,
+      "maxValue": 100.0,
+      "minValue": 0.0,
+      "name": "内存配置(使用率%)",
+      "storageField": "value9",
+      "token": "memoryUsagePercent",
+      "type": "NUMBER"
+    },
+    {
+      "encryptStorage": 0,
+      "encryptTransit": 0,
+      "forbidToUpdate": false,
+      "maxLength": 200,
+      "minValue": 0.0,
+      "name": "最少压测用户数",
+      "storageField": "value4",
+      "token": "minPressureTestUsers",
+      "type": "NUMBER"
+    },
+    {
+      "encryptStorage": 0,
+      "encryptTransit": 0,
+      "forbidToUpdate": false,
+      "maxLength": 20,
+      "name": "P95执行时长",
+      "regex": "^[0-9]+m[0-9]+s$",
+      "storageField": "value10",
+      "token": "p95ExecutionDuration",
+      "type": "TEXT_BOX"
+    },
+    {
+      "encryptStorage": 0,
+      "encryptTransit": 0,
+      "forbidToUpdate": false,
+      "maxLength": 20,
+      "name": "P95服务器响应时间",
+      "regex": "^[0-9]+(\\.[0-9]+)?s$",
+      "storageField": "value11",
+      "token": "p95ServerResponseTime",
+      "type": "TEXT_BOX"
+    },
+    {
+      "encryptStorage": 0,
+      "encryptTransit": 0,
+      "forbidToUpdate": false,
+      "maxLength": 200,
+      "name": "备注说明",
+      "storageField": "value13",
+      "token": "remarkDescription",
+      "type": "TEXTAREA"
+    },
+    {
+      "encryptStorage": 0,
+      "encryptTransit": 0,
+      "forbidToUpdate": false,
+      "maxLength": 200,
+      "minValue": 1.0,
+      "name": "序号",
+      "storageField": "value1",
+      "token": "serialNumber",
+      "type": "NUMBER"
+    },
+    {
+      "encryptStorage": 0,
+      "encryptTransit": 0,
+      "forbidToUpdate": false,
+      "maxLength": 200,
+      "name": "Status",
+      "storageField": "value14",
+      "token": "status",
+      "type": "TEXT_BOX"
+    },
+    {
+      "encryptStorage": 0,
+      "encryptTransit": 0,
+      "forbidToUpdate": false,
+      "maxLength": 200,
+      "name": "测试日期",
+      "storageField": "value2",
+      "token": "testDate",
+      "type": "DATE"
+    },
+    {
+      "encryptStorage": 0,
+      "encryptTransit": 0,
+      "forbidToUpdate": false,
+      "maxLength": 20,
+      "name": "上传文件大小",
+      "regex": "^[0-9]+（MB\\)|^[0-9]+\\s*MB$",
+      "storageField": "value3",
+      "token": "uploadFileSize",
+      "type": "TEXT_BOX"
+    }
+  ],
+  "isAutoLock": 0,
+  "isDeletableWhenReferenced": 1,
+  "isInnerEntity": 0,
+  "isMasterData": 0,
+  "layouts": [
+    {
+      "defaultLayout": true,
+      "name": "Default",
+      "sortIndex": 0,
+      "token": "default-layout"
+    }
+  ],
+  "name": "Sheet1",
+  "permissionTarget": "sheet1-form",
+  "remoteNoSystemColumns": true,
+  "standalone": 0,
+  "standaloneTableNormalized": 0,
+  "token": "sheet1-form"
+}

@@ -1,0 +1,46 @@
+{
+  "fields": [
+    {
+      "component": "Input",
+      "domain": "ERP 供应商管理",
+      "id": "singleLineText",
+      "source": "ba3e4acf-932c-4828-846d-5d2691185f79",
+      "title": "单行文本",
+      "title_i18n_key": "standard|>ERP 供应商管理|>any|>singleLineText",
+      "title_i18n_ns": "standard",
+      "validation": {
+        "maxLength": 200
+      }
+    },
+    {
+      "component": "Input",
+      "domain": "ERP 供应商管理",
+      "id": "location",
+      "source": "e794a916-7bd8-4c94-b913-d610c4f667b6",
+      "title": "定位",
+      "title_i18n_key": "standard|>ERP 供应商管理|>any|>location",
+      "title_i18n_ns": "standard",
+      "validation": {
+        "maxLength": 200
+      }
+    },
+    {
+      "component": "Signature",
+      "id": "signature",
+      "title": "签名"
+    },
+    {
+      "component": "Location",
+      "componentProps": {
+        "reverseGeocodeUrl": "/flow/api/flow-rest/mocklocate"
+      },
+      "id": "relocate",
+      "title": "reloacte"
+    }
+  ],
+  "form": {
+    "defaultCancelButton": true,
+    "defaultSubmitButton": true,
+    "title": "Layout"
+  }
+}

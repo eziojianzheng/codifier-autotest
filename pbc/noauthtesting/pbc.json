@@ -1,0 +1,20 @@
+{
+  "category": "BUSINESS",
+  "contributor": "admin",
+  "formDashboardLayoutList": [ ],
+  "formEntityRelationList": [ ],
+  "matchWeight": 0.0,
+  "name": "noauthtesting",
+  "routesJson_$$$NESTED_JSON_STRING$$$": {
+    "desktop": {
+      "/noauthpage": {
+        "formType": "",
+        "noNeedAuth": true,
+        "schemaId": "entry"
+      }
+    },
+    "mobile": { }
+  },
+  "token": "noauthtesting",
+  "uiPluginList": [ ]
+}

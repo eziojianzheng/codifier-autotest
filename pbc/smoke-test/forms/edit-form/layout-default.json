@@ -1,0 +1,32 @@
+{
+  "fields": [
+    {
+      "component": "Input",
+      "domain": "ERP 供应商管理",
+      "id": "parentDataId",
+      "source": "b005371d-8ca6-4549-a492-e523eebd82c7",
+      "title": "parentDataId",
+      "title_i18n_key": "standard|>ERP 供应商管理|>any|>parentDataId",
+      "title_i18n_ns": "standard",
+      "validation": {
+        "maxLength": 200
+      }
+    },
+    {
+      "component": "Input",
+      "id": "input",
+      "title": "Input",
+      "validation": {
+        "maxLength": 200
+      }
+    },
+    {
+      "component": "Textarea",
+      "id": "textarea",
+      "title": "Textarea"
+    }
+  ],
+  "form": {
+    "title": "Layout"
+  }
+}

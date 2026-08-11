@@ -1,0 +1,25 @@
+{
+  "fields": [
+    {
+      "component": "DatePicker",
+      "componentProps": {
+        "format": "YYYY-MM-DD",
+        "slotProps": {
+          "calendarHeader": {
+            "format": "YYYY MMMM"
+          },
+          "toolbar": {
+            "toolbarFormat": "MMMM DD"
+          }
+        }
+      },
+      "id": "datePicker",
+      "title": "Date Picker"
+    }
+  ],
+  "form": {
+    "defaultCancelButton": true,
+    "defaultSubmitButton": true,
+    "title": "Layout"
+  }
+}

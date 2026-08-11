@@ -1,0 +1,78 @@
+{
+  "schemaId": "set-null-value-form-list",
+  "schemaJson_$$$NESTED_JSON_STRING$$$": {
+    "fields": [
+      {
+        "component": "Card",
+        "fields": [
+          {
+            "component": "Table",
+            "componentProps": {
+              "addButtonHref": "/form/set-null-value-form/layout/default",
+              "columnDefs": [
+                {
+                  "colId": "input",
+                  "field": "input",
+                  "headerName": "input",
+                  "type": "TEXT_COLUMN"
+                },
+                {
+                  "colId": "numberPicker",
+                  "field": "numberPicker",
+                  "headerName": "Number Picker",
+                  "type": "NUMBER_COLUMN"
+                },
+                {
+                  "colId": "numericPicker",
+                  "field": "numericPicker",
+                  "headerName": "Numeric Picker",
+                  "type": "NUMERIC_COLUMN"
+                },
+                {
+                  "cellRendererParams": {
+                    "actions": [
+                      {
+                        "href": "/form/set-null-value-form/layout/default/:id",
+                        "type": "EDIT"
+                      },
+                      {
+                        "href": "/form/:id/view",
+                        "type": "VIEW"
+                      },
+                      {
+                        "type": "DELETE"
+                      }
+                    ],
+                    "displayLikeButton": true,
+                    "showIcon": true
+                  },
+                  "type": "ACTION_COLUMN",
+                  "width": 240
+                }
+              ],
+              "dataSource": {
+                "token": "set-null-value-form"
+              },
+              "pagination": true,
+              "pinnedFilter": [
+                "input",
+                "numberPicker",
+                "numericPicker"
+              ]
+            },
+            "id": "set-null-value-form-table",
+            "style": {
+              "height": "100%"
+            }
+          }
+        ],
+        "style": {
+          "height": "100%"
+        }
+      }
+    ],
+    "form": {
+      "title": "setnullvalueform List"
+    }
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "baseConnectorTypeUuid": "12064b00-eea8-4615-82c3-31178f719fd0",
+  "mapperScript": "return [\"cache\":true,\"expires\":15000,\"timeUnit\":\"HOURS\",\"canSetToGroovy\":true]",
+  "name": "FTTT",
+  "parameters": [ ],
+  "plugins": [
+    {
+      "fileName": "sdk-plugin-1.0-SNAPSHOT-with-dependencies.jar",
+      "storageId": "5165cf97-7c11-4dd6-b882-23cf9e302ed5.jar"
+    }
+  ],
+  "scope": 0,
+  "uuid": "0d37b25f-3766-4be1-8391-67628d7a520a"
+}

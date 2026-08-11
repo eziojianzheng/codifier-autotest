@@ -1,0 +1,82 @@
+{
+  "definition_$$$NESTED_JSON_STRING$$$": {
+    "formEntityId": "",
+    "formInput": null,
+    "inputFields": [
+      {
+        "controlType": "input",
+        "dataType": "string",
+        "label": "batchInput",
+        "label_i18n_en-US": "Bulk data insertion",
+        "label_i18n_ja-JP": "一括データ追加",
+        "name": "batchInput",
+        "optional": true
+      },
+      {
+        "controlType": "entity",
+        "label": "Form Entity",
+        "label_i18n_en-US": "Form Entity",
+        "label_i18n_ja-JP": "フォーム・エンティティ",
+        "name": "formEntityToken",
+        "optional": false
+      },
+      {
+        "controlType": "select",
+        "dataType": "string",
+        "label": "是否需要返回创建的值",
+        "label_i18n_en-US": "Need Return Created Value",
+        "label_i18n_ja-JP": "作成した値を返す必要がありますか?",
+        "name": "needReturnValue",
+        "optional": true,
+        "pickList": [
+          "true",
+          "false"
+        ]
+      },
+      {
+        "controlType": "input",
+        "label": "Batch Size",
+        "label_i18n_en-US": "Batch Size",
+        "label_i18n_ja-JP": "バッチサイズ",
+        "name": "batchSize",
+        "optional": false
+      },
+      {
+        "controlType": "select",
+        "dataType": "string",
+        "label": "独立事务提交",
+        "label_i18n_en-US": "Independent Transaction Commit",
+        "label_i18n_ja-JP": "独立トランザクションコミット",
+        "name": "independentTransaction",
+        "optional": true,
+        "pickList": [
+          "true",
+          "false"
+        ]
+      }
+    ],
+    "outputFields": [
+      {
+        "dataType": "list",
+        "label": "返回结果",
+        "label_i18n_en-US": "results",
+        "label_i18n_ja-JP": "結果",
+        "name": "results"
+      },
+      {
+        "dataType": "string",
+        "label": "返回数量",
+        "label_i18n_en-US": "count",
+        "label_i18n_ja-JP": "数量",
+        "name": "count"
+      }
+    ],
+    "sdkType": "BATCH_CREATE_ENTITY_FOR_PG"
+  },
+  "isSystem": 1,
+  "name": "批量新建表单数据Postgres专用版",
+  "nameEnUs": "Bulk create form data - PG-Specific Edition",
+  "nameJaJp": "一括でフォームデータを作成する - PostgreSQL専用版",
+  "sdkType": "BATCH_CREATE_ENTITY_FOR_PG",
+  "uuid": "c5f16be5-57d1-4d25-b096-6ebdfcbae0a3"
+}

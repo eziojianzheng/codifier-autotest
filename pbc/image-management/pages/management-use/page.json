@@ -1,0 +1,60 @@
+{
+  "name": "【開発用】デモ用Formデータ",
+  "schemaId": "management-use",
+  "schemaJson_$$$NESTED_JSON_STRING$$$": {
+    "fields": [
+      {
+        "component": "Table",
+        "componentProps": {
+          "addButtonHref": "/form/vehicle-images-form/layout/default",
+          "columnDefs": [
+            {
+              "cellRendererParams": {
+                "actions": [
+                  {
+                    "href": "/form/vehicle-images-form/layout/default/:id",
+                    "type": "EDIT"
+                  },
+                  {
+                    "href": "/form/:id/view",
+                    "type": "VIEW"
+                  },
+                  {
+                    "type": "DELETE"
+                  }
+                ],
+                "displayLikeButton": true,
+                "showIcon": true
+              },
+              "type": "ACTION_COLUMN"
+            },
+            {
+              "colId": "orderNumber",
+              "field": "orderNumber",
+              "headerName": "注文番号",
+              "type": "TEXT_COLUMN"
+            },
+            {
+              "colId": "veichleEvent-display",
+              "field": "veichleEvent-display",
+              "headerName": "業務種別",
+              "type": "TEXT_COLUMN"
+            }
+          ],
+          "dataSource": {
+            "token": "vehicle-images-form"
+          },
+          "pinnedFilter": [
+            "orderNumber",
+            "vehicleEvent",
+            "vehicleImage"
+          ]
+        },
+        "id": "18c7fa09-table"
+      }
+    ],
+    "form": {
+      "title": "管理用"
+    }
+  }
+}

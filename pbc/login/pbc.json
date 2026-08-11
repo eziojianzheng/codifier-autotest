@@ -4,7 +4,7 @@
   "description": "Account Login",
   "formDashboardLayoutList": [ ],
   "formEntityRelationList": [ ],
-  "matchWeight": 0,
+  "matchWeight": 0.0,
   "name": "Login",
   "token": "login",
   "type": "LOGIN",

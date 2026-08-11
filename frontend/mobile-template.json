@@ -1,0 +1,35 @@
+{
+  "carousel": { },
+  "navbar": {
+    "items": [
+      {
+        "icon": "home",
+        "label": "",
+        "to": "/mobile"
+      },
+      {
+        "icon": "person",
+        "label": "",
+        "to": "/mobile/my"
+      }
+    ]
+  },
+  "subApps": [ ],
+  "tabBar": {
+    "items": [
+      {
+        "accessPermissionPredicate": {
+          "hasAnyOf": [
+            "CONNECTOR_EDIT",
+            "CONNECTOR_VIEW"
+          ]
+        },
+        "activeBasePath": "/connector",
+        "icon": "ant:api-outlined",
+        "label": "连接器管理",
+        "to": "/connector"
+      }
+    ]
+  },
+  "tabBarUsed": false
+}

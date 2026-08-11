@@ -1,0 +1,38 @@
+[
+  {
+    "method": "C",
+    "name": "创建",
+    "nameEnUs": "Create",
+    "nameJaJp": "作成",
+    "target": "date",
+    "targetToken": "date-form",
+    "token": "pg_date-form_C"
+  },
+  {
+    "method": "D",
+    "name": "删除",
+    "nameEnUs": "Delete",
+    "nameJaJp": "削除",
+    "target": "date",
+    "targetToken": "date-form",
+    "token": "pg_date-form_D"
+  },
+  {
+    "method": "R",
+    "name": "读取",
+    "nameEnUs": "Read",
+    "nameJaJp": "読取",
+    "target": "date",
+    "targetToken": "date-form",
+    "token": "pg_date-form_R"
+  },
+  {
+    "method": "U",
+    "name": "更新",
+    "nameEnUs": "Update",
+    "nameJaJp": "更新",
+    "target": "date",
+    "targetToken": "date-form",
+    "token": "pg_date-form_U"
+  }
+]

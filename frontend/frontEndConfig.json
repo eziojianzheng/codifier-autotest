@@ -1,1 +1,24 @@
-{ }
+{
+  "config_$$$NESTED_JSON_STRING$$$": {
+    "appConfig": {
+      "appearance": "light",
+      "baseUrl": "/ui/",
+      "componentLibrary": "material-ui",
+      "description": "",
+      "favicon": "public/favicon.ico",
+      "i18n": "$$$$ref:text:i18n.json",
+      "logoutRedirectUrl": "",
+      "mobileTemplate": "MobileTemplate1",
+      "mobileTemplateConfig": "$$$$ref:text:mobile-template.json",
+      "projectName": "",
+      "template": "Template2",
+      "templateConfig": "$$$$ref:text:templateConfig.json",
+      "themeConfig": "$$$$ref:text:themeConfig.json",
+      "title": "窄表上线测试"
+    },
+    "routers": {
+      "desktop": "$$$$ref:text:routers/desktop.json",
+      "mobile": "$$$$ref:text:routers/mobile.json"
+    }
+  }
+}

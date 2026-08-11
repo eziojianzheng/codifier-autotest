@@ -1,0 +1,10 @@
+{
+  "category": "BUSINESS",
+  "contributor": "admin",
+  "formDashboardLayoutList": [ ],
+  "formEntityRelationList": [ ],
+  "matchWeight": 0.0,
+  "name": "Ticket402  date pickerの表示形式に関して",
+  "token": "ticket402-date-picker-format",
+  "uiPluginList": [ ]
+}

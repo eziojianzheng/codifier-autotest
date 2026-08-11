@@ -1,0 +1,352 @@
+{
+  "name": "sqltest",
+  "nodeList": [
+    {
+      "enabled": true,
+      "id": 6,
+      "inMemory": true,
+      "inMemoryTransaction": false,
+      "interval": 60,
+      "nodeName": "TRIGGER",
+      "periodEnd": "23:59:59",
+      "periodStart": "00:00:00",
+      "restTrigger": {
+        "eligibleForAgent": false,
+        "method": "GET",
+        "url": "/flow/api/flow-rest-selfauth/materialsql"
+      },
+      "scheduleType": "ONE_TIME",
+      "startTime": 1768916712665,
+      "triggerType": "REST",
+      "type": "TRIGGER",
+      "version": "2.0"
+    },
+    {
+      "enabled": true,
+      "id": 1,
+      "nodeName": "APP - Generic Query SQL - testBasicCTE",
+      "sdk": {
+        "code": "$$$$ref:text:sdk-1.sql",
+        "inputFields": [
+          {
+            "controlType": "input",
+            "dataType": "string",
+            "label": "Timeout(Seconds)",
+            "name": "timeout",
+            "optional": true
+          }
+        ],
+        "name": "Generic Query SQL",
+        "outputFields": [ ],
+        "sdkType": "GENERAL_SQL",
+        "uuid": "b09e4613-69a2-4365-9bc0-3b8eedae5ff1"
+      },
+      "type": "APP",
+      "version": "1.0"
+    },
+    {
+      "enabled": true,
+      "id": 2,
+      "nodeName": "APP - Generic Query SQL - testMultipleCTE",
+      "sdk": {
+        "code": "$$$$ref:text:sdk-2.sql",
+        "inputFields": [
+          {
+            "controlType": "input",
+            "dataType": "string",
+            "label": "Timeout(Seconds)",
+            "name": "timeout",
+            "optional": true
+          }
+        ],
+        "name": "Generic Query SQL",
+        "outputFields": [ ],
+        "sdkType": "GENERAL_SQL",
+        "uuid": "b09e4613-69a2-4365-9bc0-3b8eedae5ff1"
+      },
+      "type": "APP",
+      "version": "1.0"
+    },
+    {
+      "enabled": true,
+      "id": 3,
+      "nodeName": "APP - Generic Query SQL - testMaterializedWithJoin",
+      "sdk": {
+        "code": "$$$$ref:text:sdk-3.sql",
+        "inputFields": [
+          {
+            "controlType": "input",
+            "dataType": "string",
+            "label": "Timeout(Seconds)",
+            "name": "timeout",
+            "optional": true
+          }
+        ],
+        "name": "Generic Query SQL",
+        "outputFields": [ ],
+        "sdkType": "GENERAL_SQL",
+        "uuid": "b09e4613-69a2-4365-9bc0-3b8eedae5ff1"
+      },
+      "type": "APP",
+      "version": "1.0"
+    },
+    {
+      "enabled": true,
+      "id": 4,
+      "nodeName": "APP - Generic Query SQL - testMaterializedWithAggregation",
+      "sdk": {
+        "code": "$$$$ref:text:sdk-4.sql",
+        "inputFields": [
+          {
+            "controlType": "input",
+            "dataType": "string",
+            "label": "Timeout(Seconds)",
+            "name": "timeout",
+            "optional": true
+          }
+        ],
+        "name": "Generic Query SQL",
+        "outputFields": [ ],
+        "sdkType": "GENERAL_SQL",
+        "uuid": "b09e4613-69a2-4365-9bc0-3b8eedae5ff1"
+      },
+      "type": "APP",
+      "version": "1.0"
+    },
+    {
+      "enabled": true,
+      "id": 5,
+      "nodeName": "APP - Generic Query SQL - testNestedCTE",
+      "sdk": {
+        "code": "$$$$ref:text:sdk-5.sql",
+        "inputFields": [
+          {
+            "controlType": "input",
+            "dataType": "string",
+            "label": "Timeout(Seconds)",
+            "name": "timeout",
+            "optional": true
+          }
+        ],
+        "name": "Generic Query SQL",
+        "outputFields": [ ],
+        "sdkType": "GENERAL_SQL",
+        "uuid": "b09e4613-69a2-4365-9bc0-3b8eedae5ff1"
+      },
+      "type": "APP",
+      "version": "1.0"
+    },
+    {
+      "enabled": true,
+      "id": 7,
+      "nodeName": "APP - Generic Query SQL For Normalized Form Table - testBasicCTE",
+      "sdk": {
+        "code": "$$$$ref:text:sdk-7.sql",
+        "inputFields": [
+          {
+            "controlType": "input",
+            "dataType": "string",
+            "label": "Timeout(Seconds)",
+            "name": "timeout",
+            "optional": true
+          }
+        ],
+        "name": "Generic Query SQL For Normalized Form Table",
+        "outputFields": [ ],
+        "sdkType": "GENERAL_SQL_FOR_NORMALIZED_TABLE",
+        "uuid": "9386ff2c-2c85-49c7-a9f9-60f4aa7364b8"
+      },
+      "type": "APP",
+      "version": "1.0"
+    },
+    {
+      "enabled": true,
+      "id": 8,
+      "nodeName": "APP - Generic Query SQL For Normalized Form Table - testMultipleCTE",
+      "sdk": {
+        "code": "$$$$ref:text:sdk-8.sql",
+        "inputFields": [
+          {
+            "controlType": "input",
+            "dataType": "string",
+            "label": "Timeout(Seconds)",
+            "name": "timeout",
+            "optional": true
+          }
+        ],
+        "name": "Generic Query SQL For Normalized Form Table",
+        "outputFields": [ ],
+        "sdkType": "GENERAL_SQL_FOR_NORMALIZED_TABLE",
+        "uuid": "9386ff2c-2c85-49c7-a9f9-60f4aa7364b8"
+      },
+      "type": "APP",
+      "version": "1.0"
+    },
+    {
+      "enabled": true,
+      "id": 9,
+      "nodeName": "APP - Generic Query SQL For Normalized Form Table - testMaterializedWithJoin",
+      "sdk": {
+        "code": "$$$$ref:text:sdk-9.sql",
+        "inputFields": [
+          {
+            "controlType": "input",
+            "dataType": "string",
+            "label": "Timeout(Seconds)",
+            "name": "timeout",
+            "optional": true
+          }
+        ],
+        "name": "Generic Query SQL For Normalized Form Table",
+        "outputFields": [ ],
+        "sdkType": "GENERAL_SQL_FOR_NORMALIZED_TABLE",
+        "uuid": "9386ff2c-2c85-49c7-a9f9-60f4aa7364b8"
+      },
+      "type": "APP",
+      "version": "1.0"
+    },
+    {
+      "enabled": true,
+      "id": 10,
+      "nodeName": "APP - Generic Query SQL For Normalized Form Table - testMaterializedWithAggregation",
+      "sdk": {
+        "code": "$$$$ref:text:sdk-10.sql",
+        "inputFields": [
+          {
+            "controlType": "input",
+            "dataType": "string",
+            "label": "Timeout(Seconds)",
+            "name": "timeout",
+            "optional": true
+          }
+        ],
+        "name": "Generic Query SQL For Normalized Form Table",
+        "outputFields": [ ],
+        "sdkType": "GENERAL_SQL_FOR_NORMALIZED_TABLE",
+        "uuid": "9386ff2c-2c85-49c7-a9f9-60f4aa7364b8"
+      },
+      "type": "APP",
+      "version": "1.0"
+    },
+    {
+      "enabled": true,
+      "id": 11,
+      "nodeName": "APP - Generic Query SQL For Normalized Form Table - testNestedCTE",
+      "sdk": {
+        "code": "$$$$ref:text:sdk-11.sql",
+        "inputFields": [
+          {
+            "controlType": "input",
+            "dataType": "string",
+            "label": "Timeout(Seconds)",
+            "name": "timeout",
+            "optional": true
+          }
+        ],
+        "name": "Generic Query SQL For Normalized Form Table",
+        "outputFields": [ ],
+        "sdkType": "GENERAL_SQL_FOR_NORMALIZED_TABLE",
+        "uuid": "9386ff2c-2c85-49c7-a9f9-60f4aa7364b8"
+      },
+      "type": "APP",
+      "version": "1.0"
+    },
+    {
+      "enabled": true,
+      "id": 12,
+      "nodeName": "APP - Set workflow output value",
+      "sdk": {
+        "input": {
+          "OldSQLtestBasicCTE": "$1",
+          "OldSQLtestMaterializedWithAggregation": "$4",
+          "OldSQLtestMaterializedWithJoin": "$3",
+          "OldSQLtestMultipleCTE": "$2",
+          "OldSQLtestNestedCTE": "$5",
+          "testBasicCTE": "$7",
+          "testMaterializedWithAggregation": "$10",
+          "testMaterializedWithJoin": "$9",
+          "testMultipleCTE": "$8",
+          "testNestedCTE": "$11"
+        },
+        "inputFields": [
+          {
+            "dataType": "string",
+            "label": "OldSQLtestBasicCTE",
+            "name": "OldSQLtestBasicCTE",
+            "optional": false
+          },
+          {
+            "dataType": "string",
+            "label": "OldSQLtestMultipleCTE",
+            "name": "OldSQLtestMultipleCTE",
+            "optional": false
+          },
+          {
+            "dataType": "string",
+            "label": "OldSQLtestMaterializedWithJoin",
+            "name": "OldSQLtestMaterializedWithJoin",
+            "optional": false
+          },
+          {
+            "dataType": "string",
+            "label": "OldSQLtestMaterializedWithAggregation",
+            "name": "OldSQLtestMaterializedWithAggregation",
+            "optional": false
+          },
+          {
+            "dataType": "string",
+            "label": "OldSQLtestNestedCTE",
+            "name": "OldSQLtestNestedCTE",
+            "optional": false
+          },
+          {
+            "dataType": "string",
+            "label": "testBasicCTE",
+            "name": "testBasicCTE",
+            "optional": false
+          },
+          {
+            "dataType": "string",
+            "label": "testMultipleCTE",
+            "name": "testMultipleCTE",
+            "optional": false
+          },
+          {
+            "dataType": "string",
+            "label": "testMaterializedWithJoin",
+            "name": "testMaterializedWithJoin",
+            "optional": false
+          },
+          {
+            "dataType": "string",
+            "label": "testMaterializedWithAggregation",
+            "name": "testMaterializedWithAggregation",
+            "optional": false
+          },
+          {
+            "dataType": "string",
+            "label": "testNestedCTE",
+            "name": "testNestedCTE",
+            "optional": false
+          }
+        ],
+        "name": "Set workflow output value",
+        "sdkType": "SET_VALUE_TO_INSTANCE",
+        "uuid": "f63bae3b-4003-4b29-aedf-4626216fc12a"
+      },
+      "type": "APP",
+      "version": "1.0"
+    },
+    {
+      "enabled": true,
+      "id": 13,
+      "nodeName": "STOP_JOB",
+      "result": "Successful",
+      "type": "STOP_JOB"
+    }
+  ],
+  "restApiEnabled": 1,
+  "restApiMethod": "GET",
+  "restApiUrl": "/flow/api/flow-rest-selfauth/materialsql",
+  "token": "sql-test-flow"
+}

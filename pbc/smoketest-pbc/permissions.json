@@ -1,0 +1,110 @@
+[
+  {
+    "method": "C",
+    "name": "创建",
+    "nameEnUs": "Create",
+    "nameJaJp": "作成",
+    "target": "datasource",
+    "targetToken": "data-source-form",
+    "token": "smoketest-pbc_data-source-form_C"
+  },
+  {
+    "method": "D",
+    "name": "删除",
+    "nameEnUs": "Delete",
+    "nameJaJp": "削除",
+    "target": "datasource",
+    "targetToken": "data-source-form",
+    "token": "smoketest-pbc_data-source-form_D"
+  },
+  {
+    "method": "R",
+    "name": "读取",
+    "nameEnUs": "Read",
+    "nameJaJp": "読取",
+    "target": "datasource",
+    "targetToken": "data-source-form",
+    "token": "smoketest-pbc_data-source-form_R"
+  },
+  {
+    "method": "U",
+    "name": "更新",
+    "nameEnUs": "Update",
+    "nameJaJp": "更新",
+    "target": "datasource",
+    "targetToken": "data-source-form",
+    "token": "smoketest-pbc_data-source-form_U"
+  },
+  {
+    "method": "C",
+    "name": "创建",
+    "nameEnUs": "Create",
+    "nameJaJp": "作成",
+    "target": "studentform",
+    "targetToken": "student-form",
+    "token": "smoketest-pbc_student-form_C"
+  },
+  {
+    "method": "D",
+    "name": "删除",
+    "nameEnUs": "Delete",
+    "nameJaJp": "削除",
+    "target": "studentform",
+    "targetToken": "student-form",
+    "token": "smoketest-pbc_student-form_D"
+  },
+  {
+    "method": "R",
+    "name": "读取",
+    "nameEnUs": "Read",
+    "nameJaJp": "読取",
+    "target": "studentform",
+    "targetToken": "student-form",
+    "token": "smoketest-pbc_student-form_R"
+  },
+  {
+    "method": "U",
+    "name": "更新",
+    "nameEnUs": "Update",
+    "nameJaJp": "更新",
+    "target": "studentform",
+    "targetToken": "student-form",
+    "token": "smoketest-pbc_student-form_U"
+  },
+  {
+    "method": "C",
+    "name": "创建",
+    "nameEnUs": "Create",
+    "nameJaJp": "作成",
+    "target": "substudentform",
+    "targetToken": "substudentform-form",
+    "token": "smoketest-pbc_substudentform-form_C"
+  },
+  {
+    "method": "D",
+    "name": "删除",
+    "nameEnUs": "Delete",
+    "nameJaJp": "削除",
+    "target": "substudentform",
+    "targetToken": "substudentform-form",
+    "token": "smoketest-pbc_substudentform-form_D"
+  },
+  {
+    "method": "R",
+    "name": "读取",
+    "nameEnUs": "Read",
+    "nameJaJp": "読取",
+    "target": "substudentform",
+    "targetToken": "substudentform-form",
+    "token": "smoketest-pbc_substudentform-form_R"
+  },
+  {
+    "method": "U",
+    "name": "更新",
+    "nameEnUs": "Update",
+    "nameJaJp": "更新",
+    "target": "substudentform",
+    "targetToken": "substudentform-form",
+    "token": "smoketest-pbc_substudentform-form_U"
+  }
+]

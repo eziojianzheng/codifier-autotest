@@ -1,0 +1,247 @@
+{
+  "fields": [
+    {
+      "component": "Input",
+      "domain": "ERP 供应商管理",
+      "id": "parentDataId",
+      "source": "b005371d-8ca6-4549-a492-e523eebd82c7",
+      "title": "parentDataId",
+      "title_i18n_key": "standard|>ERP 供应商管理|>any|>parentDataId",
+      "title_i18n_ns": "standard",
+      "validation": {
+        "maxLength": 200
+      }
+    },
+    {
+      "component": "Input",
+      "domain": "ERP 供应商管理",
+      "id": "singleLineText",
+      "source": "ba3e4acf-932c-4828-846d-5d2691185f79",
+      "title": "单行文本",
+      "title_i18n_key": "standard|>ERP 供应商管理|>any|>singleLineText",
+      "title_i18n_ns": "standard",
+      "validation": {
+        "maxLength": 200
+      }
+    },
+    {
+      "component": "Textarea",
+      "id": "multiLineText",
+      "title": "多行文本"
+    },
+    {
+      "component": "NumberPicker",
+      "id": "digital",
+      "title": "数字"
+    },
+    {
+      "component": "NumericPicker",
+      "id": "highPrecisionDigital",
+      "title": "高精度数字"
+    },
+    {
+      "component": "DatePicker",
+      "domain": "CETA 基础模块",
+      "id": "date",
+      "source": "7f5718b0-8545-40c9-a7ab-c72e63b0f7bc",
+      "title": "日期",
+      "title_i18n_key": "standard|>CETA 基础模块|>any|>date",
+      "title_i18n_ns": "standard",
+      "validation": {
+        "maxLength": 200
+      }
+    },
+    {
+      "component": "DatePicker",
+      "id": "time",
+      "source": "b74d29a0-1757-47c9-8d8a-a350a2776caa",
+      "title": "时间",
+      "title_i18n_key": "standard|>any|>any|>time",
+      "title_i18n_ns": "standard",
+      "validation": {
+        "maxLength": 200
+      }
+    },
+    {
+      "component": "Checkbox",
+      "componentProps": {
+        "direction": "horizontal"
+      },
+      "id": "multipleChoice",
+      "title": "多选"
+    },
+    {
+      "component": "Radio",
+      "componentProps": {
+        "direction": "horizontal"
+      },
+      "id": "singleChoice",
+      "source": "13302649-3ac7-4f06-89a4-96d5e0abfd23",
+      "title": "单选",
+      "title_i18n_key": "standard|>any|>any|>singleChoice",
+      "title_i18n_ns": "standard",
+      "validation": {
+        "maxLength": 200
+      }
+    },
+    {
+      "component": "Select",
+      "componentProps": {
+        "dataSource": {
+          "token": "select-datasource-form"
+        },
+        "mapping": {
+          "label": "switch",
+          "value": "id"
+        },
+        "stringEqual": true
+      },
+      "id": "dropdownSelection",
+      "title": "下拉选择"
+    },
+    {
+      "component": "ACL",
+      "componentProps": {
+        "AgTableProps": {
+          "pinnedFilter": [
+            "switch",
+            "rating",
+            "singleLineText"
+          ]
+        },
+        "columnDefs": [
+          {
+            "colId": "switch",
+            "field": "switch",
+            "headerName": "开关"
+          },
+          {
+            "colId": "rating",
+            "field": "rating",
+            "headerName": "评分"
+          },
+          {
+            "colId": "singleLineText",
+            "field": "singleLineText",
+            "headerName": "单行文本",
+            "headerName_i18n_key": "standard|>ERP 供应商管理|>any|>singleLineText",
+            "headerName_i18n_ns": "standard",
+            "type": "TEXT_COLUMN"
+          },
+          {
+            "colId": "multiLineText",
+            "field": "multiLineText",
+            "headerName": "多行文本",
+            "type": "TEXTAREA_COLUMN"
+          },
+          {
+            "colId": "number",
+            "field": "number",
+            "headerName": "数字",
+            "headerName_i18n_key": "standard|>ERP 供应商管理|>any|>number",
+            "headerName_i18n_ns": "standard",
+            "type": "TEXT_COLUMN"
+          },
+          {
+            "colId": "highPrecisionDigital",
+            "field": "highPrecisionDigital",
+            "headerName": "高精度数字",
+            "type": "NUMERIC_COLUMN"
+          },
+          {
+            "colId": "date",
+            "field": "date",
+            "headerName": "日期",
+            "headerName_i18n_key": "standard|>CETA 基础模块|>any|>date",
+            "headerName_i18n_ns": "standard",
+            "type": "DATE_COLUMN"
+          },
+          {
+            "colId": "time",
+            "field": "time",
+            "headerName": "时间",
+            "headerName_i18n_key": "standard|>any|>any|>time",
+            "headerName_i18n_ns": "standard",
+            "type": "DATE_COLUMN"
+          },
+          {
+            "colId": "multipleChoice",
+            "field": "multipleChoice",
+            "headerName": "多选",
+            "type": "CHECKBOX_COLUMN"
+          },
+          {
+            "colId": "singleChoice",
+            "field": "singleChoice",
+            "headerName": "单选",
+            "headerName_i18n_key": "standard|>any|>any|>singleChoice",
+            "headerName_i18n_ns": "standard",
+            "type": "RADIO_COLUMN"
+          }
+        ],
+        "dataSource": {
+          "token": "select-datasource-form"
+        },
+        "mapping": {
+          "label": "switch",
+          "value": "id"
+        },
+        "stringEqual": true
+      },
+      "id": "aclSelection",
+      "source": "2f76e786-1068-4ca3-adfb-e9653f0f4971",
+      "title": "ACL选择",
+      "title_i18n_key": "standard|>any|>any|>aclSelection",
+      "title_i18n_ns": "standard",
+      "validation": {
+        "maxLength": 200
+      }
+    },
+    {
+      "component": "Switch",
+      "id": "switch",
+      "title": "开关"
+    },
+    {
+      "component": "Rate",
+      "id": "rating",
+      "title": "评分"
+    },
+    {
+      "component": "TreeSelect",
+      "componentProps": {
+        "dataSource": {
+          "token": "select-datasource-form"
+        },
+        "mapping": {
+          "children": "children",
+          "label": "switch",
+          "value": "id"
+        },
+        "stringEqual": true
+      },
+      "id": "treeSelection",
+      "title": "树形选择"
+    },
+    {
+      "component": "Cascader",
+      "componentProps": {
+        "dataSource": {
+          "token": "select-datasource-form"
+        },
+        "mapping": {
+          "children": "children",
+          "label": "switch",
+          "value": "id"
+        },
+        "stringEqual": true
+      },
+      "id": "cascadingSelection",
+      "title": "级联选择"
+    }
+  ],
+  "form": {
+    "defaultCancelButton": true,
+    "defaultSubmitButton": true
+  }
+}

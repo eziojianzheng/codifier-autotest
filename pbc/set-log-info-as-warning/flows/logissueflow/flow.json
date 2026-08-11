@@ -1,0 +1,240 @@
+{
+  "description": "",
+  "name": "logissueflow",
+  "nodeList": [
+    {
+      "enabled": true,
+      "id": 1,
+      "inMemory": true,
+      "inMemoryTransaction": false,
+      "interval": 60,
+      "nodeName": "TRIGGER",
+      "periodEnd": "23:59:59",
+      "periodStart": "00:00:00",
+      "restTrigger": {
+        "eligibleForAgent": false,
+        "method": "GET",
+        "requestBody": [ ],
+        "url": "/flow/api/flow-rest-selfauth/logissueflow"
+      },
+      "scheduleType": "ONE_TIME",
+      "startTime": 1778746755456,
+      "triggerType": "REST",
+      "type": "TRIGGER",
+      "version": "2.0"
+    },
+    {
+      "enabled": true,
+      "id": 2,
+      "nodeName": "APP - Groovy script",
+      "sdk": {
+        "code": "$$$$ref:text:sdk-2.groovy",
+        "name": "Groovy script",
+        "numberStringToBigDecimal": false,
+        "outputFields": [
+          {
+            "dataType": "string",
+            "label": "nullvaluelist",
+            "name": "nullvaluelist"
+          }
+        ],
+        "sdkType": "GENERAL_GROOVY",
+        "uuid": "492f8c00-14de-4837-a1f6-ed6ff0a2870e"
+      },
+      "type": "APP",
+      "version": "1.0"
+    },
+    {
+      "batchSize": 0,
+      "clearStepOutput": false,
+      "concurrent": false,
+      "enableConcurrentInMemory": false,
+      "enabled": true,
+      "id": 3,
+      "inputList": "$2.nullvaluelist",
+      "nodeName": "REPEAT",
+      "repeatMode": "ONE",
+      "repeatType": "INPUT_LIST",
+      "subFlow": [
+        {
+          "enabled": true,
+          "id": 4,
+          "nodeName": "APP - Get form data based on conditions",
+          "sdk": {
+            "input": {
+              "formEntityToken": "student-form",
+              "include_deleted": "false",
+              "lockUpdate": "false",
+              "needACL": "false",
+              "needResource": "false",
+              "needText": "false",
+              "pbcToken": "set-log-info-as-warning",
+              "projectToken": "$CURRENT_PROJECT.token",
+              "throw_exception": "false"
+            },
+            "inputFields": [
+              {
+                "controlType": "select",
+                "dataType": "string",
+                "label": "Need ACL",
+                "name": "needACL",
+                "optional": false,
+                "pickList": [
+                  "true",
+                  "false"
+                ]
+              },
+              {
+                "controlType": "select",
+                "dataType": "string",
+                "label": "Need Resource",
+                "name": "needResource",
+                "optional": false,
+                "pickList": [
+                  "true",
+                  "false"
+                ]
+              },
+              {
+                "controlType": "select",
+                "dataType": "string",
+                "label": "Need Text",
+                "name": "needText",
+                "optional": false,
+                "pickList": [
+                  "true",
+                  "false"
+                ]
+              },
+              {
+                "controlType": "select",
+                "dataType": "string",
+                "label": "Include Deleted",
+                "name": "include_deleted",
+                "optional": false,
+                "pickList": [
+                  "true",
+                  "false"
+                ]
+              },
+              {
+                "controlType": "select",
+                "dataType": "string",
+                "label": "Whether throw exception if data cannot be retrieved",
+                "name": "throw_exception",
+                "optional": false,
+                "pickList": [
+                  "true",
+                  "false"
+                ]
+              },
+              {
+                "controlType": "select",
+                "dataType": "string",
+                "label": "Need Count",
+                "name": "needCount",
+                "optional": false,
+                "pickList": [
+                  "true",
+                  "false"
+                ]
+              },
+              {
+                "controlType": "input",
+                "dataType": "number",
+                "label": "Start Row",
+                "name": "startRow",
+                "optional": false
+              },
+              {
+                "controlType": "input",
+                "dataType": "number",
+                "label": "End Row",
+                "name": "endRow",
+                "optional": false
+              }
+            ],
+            "name": "Get form data based on conditions",
+            "numberStringToBigDecimal": false,
+            "outputFields": [
+              {
+                "label": "results",
+                "name": "results"
+              },
+              {
+                "dataType": "string",
+                "label": "count",
+                "name": "count"
+              }
+            ],
+            "sdkType": "LIST_QUERY",
+            "uuid": "b4ffad17-593b-4868-940b-70d89fa35cc3"
+          },
+          "type": "APP",
+          "version": "1.0"
+        }
+      ],
+      "type": "REPEAT"
+    },
+    {
+      "enabled": true,
+      "id": 8,
+      "nodeName": "APP - Generic Query SQL",
+      "sdk": {
+        "code": "$$$$ref:text:sdk-8.sql",
+        "inputFields": [
+          {
+            "controlType": "input",
+            "dataType": "string",
+            "label": "Timeout(Seconds)",
+            "name": "timeout",
+            "optional": true
+          }
+        ],
+        "name": "Generic Query SQL",
+        "numberStringToBigDecimal": false,
+        "outputFields": [ ],
+        "sdkType": "GENERAL_SQL",
+        "uuid": "b09e4613-69a2-4365-9bc0-3b8eedae5ff1"
+      },
+      "type": "APP",
+      "version": "1.0"
+    },
+    {
+      "enabled": true,
+      "id": 7,
+      "nodeName": "APP - Set HTTP status code",
+      "sdk": {
+        "input": {
+          "http_status_code": "200"
+        },
+        "inputFields": [
+          {
+            "controlType": "input",
+            "dataType": "number",
+            "label": "HTTP status code",
+            "name": "http_status_code",
+            "optional": false
+          }
+        ],
+        "name": "Set HTTP status code",
+        "numberStringToBigDecimal": false,
+        "sdkType": "SET_HTTP_STATUS_TO_INSTANCE",
+        "uuid": "4ceec4ff-c521-4c2b-b152-f3c92f21f418"
+      },
+      "type": "APP",
+      "version": "1.0"
+    },
+    {
+      "enabled": true,
+      "id": 6,
+      "nodeName": "STOP_JOB",
+      "result": "Successful",
+      "type": "STOP_JOB"
+    }
+  ],
+  "restApiEnabled": 1,
+  "restApiMethod": "GET",
+  "restApiUrl": "/flow/api/flow-rest-selfauth/logissueflow",
+  "token": "logissueflow"
+}

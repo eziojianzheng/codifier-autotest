@@ -1,0 +1,40 @@
+{
+  "footer": { },
+  "globalSearch": {
+    "inline": false,
+    "position": "sidebar",
+    "show": false,
+    "triggerSize": "narrow"
+  },
+  "header": { },
+  "languageSwitcher": {
+    "position": "sidebar",
+    "show": true,
+    "showLabel": true
+  },
+  "login": {
+    "template": "LoginSplit"
+  },
+  "logo": {
+    "alt": "Logo",
+    "src": ""
+  },
+  "navbar": "$$$$ref:text:navbar.json",
+  "notifications": {
+    "position": "sidebar",
+    "show": true,
+    "showNumber": true
+  },
+  "sidebar": {
+    "collapsible": true
+  },
+  "title": "窄表上线测试",
+  "userInfo": {
+    "position": "sidebar",
+    "show": true,
+    "showRole": false
+  },
+  "userMenu": {
+    "items": [ ]
+  }
+}

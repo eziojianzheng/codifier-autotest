@@ -1,0 +1,135 @@
+{
+  "dataLocation": "LOCAL",
+  "enableForbidUpdateSomeFieldsValueWhenReferenced": 0,
+  "fields": [
+    {
+      "encryptStorage": 0,
+      "encryptTransit": 0,
+      "forbidToUpdate": false,
+      "maxLength": 200,
+      "name": "breed",
+      "normalizedStorageField": "breed",
+      "storageField": "value6",
+      "token": "breed",
+      "type": "TEXT_BOX"
+    },
+    {
+      "encryptStorage": 0,
+      "encryptTransit": 0,
+      "forbidToUpdate": false,
+      "maxLength": 200,
+      "name": "catId",
+      "normalizedStorageField": "cat_id",
+      "storageField": "value1",
+      "token": "cat_id",
+      "type": "TEXT_BOX"
+    },
+    {
+      "encryptStorage": 0,
+      "encryptTransit": 0,
+      "forbidToUpdate": false,
+      "maxLength": 200,
+      "name": "catName",
+      "normalizedStorageField": "cat_name",
+      "storageField": "value5",
+      "token": "cat_name",
+      "type": "TEXT_BOX"
+    },
+    {
+      "encryptStorage": 0,
+      "encryptTransit": 0,
+      "forbidToUpdate": false,
+      "maxLength": 200,
+      "name": "color",
+      "normalizedStorageField": "color",
+      "storageField": "value7",
+      "token": "color",
+      "type": "TEXT_BOX"
+    },
+    {
+      "encryptStorage": 0,
+      "encryptTransit": 0,
+      "forbidToUpdate": false,
+      "maxLength": 200,
+      "name": "intakeDate",
+      "normalizedStorageField": "intake_date",
+      "storageField": "value4",
+      "token": "intake_date",
+      "type": "DATE"
+    },
+    {
+      "encryptStorage": 0,
+      "encryptTransit": 0,
+      "forbidToUpdate": false,
+      "maxLength": 200,
+      "name": "lastCheckup",
+      "normalizedStorageField": "last_checkup",
+      "storageField": "value10",
+      "token": "last_checkup",
+      "type": "TIME"
+    },
+    {
+      "encryptStorage": 0,
+      "encryptTransit": 0,
+      "forbidToUpdate": false,
+      "maxLength": 200,
+      "name": "microchipId",
+      "normalizedStorageField": "microchip_id",
+      "storageField": "value8",
+      "token": "microchip_id",
+      "type": "NUMERIC"
+    },
+    {
+      "encryptStorage": 0,
+      "encryptTransit": 0,
+      "forbidToUpdate": false,
+      "maxLength": 200,
+      "name": "specialCareApply",
+      "normalizedStorageField": "special_care_apply",
+      "storageField": "value9",
+      "token": "special_care_apply",
+      "type": "TEXTAREA"
+    },
+    {
+      "encryptStorage": 0,
+      "encryptTransit": 0,
+      "forbidToUpdate": false,
+      "maxLength": 200,
+      "name": "status",
+      "normalizedStorageField": "status",
+      "storageField": "value3",
+      "token": "status",
+      "type": "TEXT_BOX"
+    },
+    {
+      "encryptStorage": 0,
+      "encryptTransit": 0,
+      "forbidToUpdate": false,
+      "maxLength": 200,
+      "name": "updateType",
+      "normalizedStorageField": "update_type",
+      "storageField": "value2",
+      "token": "update_type",
+      "type": "TEXT_BOX"
+    }
+  ],
+  "isAutoLock": 0,
+  "isDeletableWhenReferenced": 0,
+  "isInnerEntity": 0,
+  "isMasterData": 0,
+  "layouts": [
+    {
+      "defaultLayout": true,
+      "name": "Layout",
+      "sortIndex": 0,
+      "token": "default"
+    }
+  ],
+  "name": "catinfo",
+  "permissionTarget": "cats",
+  "remoteNoSystemColumns": true,
+  "standalone": 1,
+  "standaloneTableName": "eziosql_catinfo",
+  "standaloneTableNormalized": 1,
+  "token": "cats"
+}

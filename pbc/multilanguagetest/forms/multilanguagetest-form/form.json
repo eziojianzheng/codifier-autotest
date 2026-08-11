@@ -1,0 +1,85 @@
+{
+  "dataLocation": "LOCAL",
+  "defaultViewLayoutToken": "view",
+  "enableForbidUpdateSomeFieldsValueWhenReferenced": 0,
+  "fields": [
+    {
+      "encryptStorage": 0,
+      "encryptTransit": 0,
+      "forbidToUpdate": false,
+      "name": "Date Picker",
+      "nameI18nKey": "multilanguagetest|>multilanguagetest-form|>date-picker",
+      "storageField": "value3",
+      "token": "date",
+      "type": "DATE"
+    },
+    {
+      "encryptStorage": 0,
+      "encryptTransit": 0,
+      "forbidToUpdate": false,
+      "name": "Number Picker",
+      "storageField": "value2",
+      "token": "number",
+      "type": "NUMBER"
+    },
+    {
+      "encryptStorage": 0,
+      "encryptTransit": 0,
+      "forbidToUpdate": false,
+      "name": "Rich Text",
+      "storageField": "value4",
+      "token": "richText",
+      "type": "RICH_TEXT"
+    },
+    {
+      "encryptStorage": 0,
+      "encryptTransit": 0,
+      "forbidToUpdate": false,
+      "maxLength": 200,
+      "name": "Text",
+      "storageField": "value1",
+      "token": "singleLineText",
+      "type": "TEXT_BOX"
+    },
+    {
+      "encryptStorage": 0,
+      "encryptTransit": 0,
+      "forbidToUpdate": false,
+      "name": "Upload",
+      "nameI18nKey": "multilanguagetest|>multilanguagetest-form|>upload",
+      "storageField": "value5",
+      "token": "upload",
+      "type": "UPLOAD"
+    }
+  ],
+  "isAutoLock": 0,
+  "isDeletableWhenReferenced": 1,
+  "isInnerEntity": 0,
+  "isMasterData": 0,
+  "layouts": [
+    {
+      "defaultLayout": true,
+      "name": "New",
+      "sortIndex": 0,
+      "token": "new"
+    },
+    {
+      "defaultLayout": false,
+      "name": "Edit",
+      "sortIndex": 1,
+      "token": "edit"
+    },
+    {
+      "defaultLayout": false,
+      "name": "View",
+      "sortIndex": 2,
+      "token": "view"
+    }
+  ],
+  "name": "i18n Form",
+  "permissionTarget": "multilanguagetest-form",
+  "remoteNoSystemColumns": true,
+  "standalone": 0,
+  "standaloneTableNormalized": 0,
+  "token": "multilanguagetest-form"
+}

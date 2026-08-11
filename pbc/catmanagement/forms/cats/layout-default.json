@@ -1,0 +1,76 @@
+{
+  "fields": [
+    {
+      "component": "Input",
+      "id": "cat_id",
+      "title": "catId",
+      "validation": {
+        "maxLength": 200
+      }
+    },
+    {
+      "component": "Input",
+      "id": "update_type",
+      "title": "updateType",
+      "validation": {
+        "maxLength": 200
+      }
+    },
+    {
+      "component": "Input",
+      "id": "status",
+      "title": "status",
+      "validation": {
+        "maxLength": 200
+      }
+    },
+    {
+      "component": "DatePicker",
+      "id": "intake_date",
+      "title": "intakeDate"
+    },
+    {
+      "component": "Input",
+      "id": "cat_name",
+      "title": "catName",
+      "validation": {
+        "maxLength": 200
+      }
+    },
+    {
+      "component": "Input",
+      "id": "breed",
+      "title": "breed",
+      "validation": {
+        "maxLength": 200
+      }
+    },
+    {
+      "component": "Input",
+      "id": "color",
+      "title": "color",
+      "validation": {
+        "maxLength": 200
+      }
+    },
+    {
+      "component": "NumericPicker",
+      "id": "microchip_id",
+      "title": "microchipId"
+    },
+    {
+      "component": "Textarea",
+      "id": "special_care_apply",
+      "title": "specialCareApply"
+    },
+    {
+      "component": "TimePicker",
+      "id": "last_checkup",
+      "title": "lastCheckup"
+    }
+  ],
+  "form": {
+    "defaultCancelButton": true,
+    "defaultSubmitButton": true
+  }
+}

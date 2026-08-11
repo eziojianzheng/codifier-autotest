@@ -1,0 +1,35 @@
+{
+  "fields": [
+    {
+      "component": "NumberPicker",
+      "id": "spid",
+      "title": "spid"
+    },
+    {
+      "component": "Input",
+      "id": "spmc",
+      "title": "spmc",
+      "validation": {
+        "maxLength": 200
+      }
+    },
+    {
+      "component": "Input",
+      "id": "splx",
+      "title": "splx",
+      "validation": {
+        "maxLength": 200
+      }
+    },
+    {
+      "component": "NumberPicker",
+      "id": "spjg",
+      "title": "spjg"
+    }
+  ],
+  "form": {
+    "defaultCancelButton": true,
+    "defaultSubmitButton": true,
+    "title": "Layout"
+  }
+}

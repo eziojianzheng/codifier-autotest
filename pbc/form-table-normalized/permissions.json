@@ -1,0 +1,146 @@
+[
+  {
+    "method": "C",
+    "name": "创建",
+    "nameEnUs": "Create",
+    "nameJaJp": "作成",
+    "target": "部门表单",
+    "targetToken": "department-form",
+    "token": "form-table-normalized_department-form_C"
+  },
+  {
+    "method": "D",
+    "name": "删除",
+    "nameEnUs": "Delete",
+    "nameJaJp": "削除",
+    "target": "部门表单",
+    "targetToken": "department-form",
+    "token": "form-table-normalized_department-form_D"
+  },
+  {
+    "method": "R",
+    "name": "读取",
+    "nameEnUs": "Read",
+    "nameJaJp": "読取",
+    "target": "部门表单",
+    "targetToken": "department-form",
+    "token": "form-table-normalized_department-form_R"
+  },
+  {
+    "method": "U",
+    "name": "更新",
+    "nameEnUs": "Update",
+    "nameJaJp": "更新",
+    "target": "部门表单",
+    "targetToken": "department-form",
+    "token": "form-table-normalized_department-form_U"
+  },
+  {
+    "method": "C",
+    "name": "创建",
+    "nameEnUs": "Create",
+    "nameJaJp": "作成",
+    "target": "表单数据普通化 表单",
+    "targetToken": "form-table-normalized-form",
+    "token": "form-table-normalized_form-table-normalized-form_C"
+  },
+  {
+    "method": "D",
+    "name": "删除",
+    "nameEnUs": "Delete",
+    "nameJaJp": "削除",
+    "target": "表单数据普通化 表单",
+    "targetToken": "form-table-normalized-form",
+    "token": "form-table-normalized_form-table-normalized-form_D"
+  },
+  {
+    "method": "R",
+    "name": "读取",
+    "nameEnUs": "Read",
+    "nameJaJp": "読取",
+    "target": "表单数据普通化 表单",
+    "targetToken": "form-table-normalized-form",
+    "token": "form-table-normalized_form-table-normalized-form_R"
+  },
+  {
+    "method": "U",
+    "name": "更新",
+    "nameEnUs": "Update",
+    "nameJaJp": "更新",
+    "target": "表单数据普通化 表单",
+    "targetToken": "form-table-normalized-form",
+    "token": "form-table-normalized_form-table-normalized-form_U"
+  },
+  {
+    "method": "C",
+    "name": "创建",
+    "nameEnUs": "Create",
+    "nameJaJp": "作成",
+    "target": "窄表测试1",
+    "targetToken": "normalized-test1",
+    "token": "form-table-normalized_normalized-test1_C"
+  },
+  {
+    "method": "D",
+    "name": "删除",
+    "nameEnUs": "Delete",
+    "nameJaJp": "削除",
+    "target": "窄表测试1",
+    "targetToken": "normalized-test1",
+    "token": "form-table-normalized_normalized-test1_D"
+  },
+  {
+    "method": "R",
+    "name": "读取",
+    "nameEnUs": "Read",
+    "nameJaJp": "読取",
+    "target": "窄表测试1",
+    "targetToken": "normalized-test1",
+    "token": "form-table-normalized_normalized-test1_R"
+  },
+  {
+    "method": "U",
+    "name": "更新",
+    "nameEnUs": "Update",
+    "nameJaJp": "更新",
+    "target": "窄表测试1",
+    "targetToken": "normalized-test1",
+    "token": "form-table-normalized_normalized-test1_U"
+  },
+  {
+    "method": "C",
+    "name": "创建",
+    "nameEnUs": "Create",
+    "nameJaJp": "作成",
+    "target": "宽表表单",
+    "targetToken": "origin-form-test",
+    "token": "form-table-normalized_origin-form_C"
+  },
+  {
+    "method": "D",
+    "name": "删除",
+    "nameEnUs": "Delete",
+    "nameJaJp": "削除",
+    "target": "宽表表单",
+    "targetToken": "origin-form-test",
+    "token": "form-table-normalized_origin-form_D"
+  },
+  {
+    "method": "R",
+    "name": "读取",
+    "nameEnUs": "Read",
+    "nameJaJp": "読取",
+    "target": "宽表表单",
+    "targetToken": "origin-form-test",
+    "token": "form-table-normalized_origin-form_R"
+  },
+  {
+    "method": "U",
+    "name": "更新",
+    "nameEnUs": "Update",
+    "nameJaJp": "更新",
+    "target": "宽表表单",
+    "targetToken": "origin-form-test",
+    "token": "form-table-normalized_origin-form_U"
+  }
+]

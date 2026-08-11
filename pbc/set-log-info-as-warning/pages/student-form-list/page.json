@@ -1,0 +1,82 @@
+{
+  "schemaId": "student-form-list",
+  "schemaJson_$$$NESTED_JSON_STRING$$$": {
+    "fields": [
+      {
+        "component": "Card",
+        "fields": [
+          {
+            "component": "Table",
+            "componentProps": {
+              "addButtonHref": "/form/student-form/layout/default",
+              "columnDefs": [
+                {
+                  "colId": "textarea",
+                  "field": "textarea",
+                  "headerName": "Textarea",
+                  "type": "TEXTAREA_COLUMN"
+                },
+                {
+                  "colId": "input",
+                  "field": "input",
+                  "headerName": "Input",
+                  "type": "TEXT_COLUMN"
+                },
+                {
+                  "cellRendererParams": {
+                    "actions": [
+                      {
+                        "href": "/form/student-form/layout/default/:id",
+                        "type": "EDIT"
+                      },
+                      {
+                        "href": "/form/:id/view",
+                        "type": "VIEW"
+                      },
+                      {
+                        "type": "DELETE"
+                      }
+                    ],
+                    "displayLikeButton": true,
+                    "showIcon": true
+                  },
+                  "type": "ACTION_COLUMN",
+                  "width": 240
+                }
+              ],
+              "dataSource": {
+                "token": "student-form"
+              },
+              "pagination": true,
+              "pinnedFilter": [
+                "textarea",
+                "input"
+              ]
+            },
+            "id": "student-form-table",
+            "style": {
+              "height": "100%"
+            }
+          },
+          {
+            "component": "Button",
+            "componentProps": {
+              "action": {
+                "method": "get",
+                "type": "request",
+                "url": "/flow/api/flow-rest-selfauth/logissueflow"
+              },
+              "content": "Button"
+            }
+          }
+        ],
+        "style": {
+          "height": "100%"
+        }
+      }
+    ],
+    "form": {
+      "title": "studentform List"
+    }
+  }
+}

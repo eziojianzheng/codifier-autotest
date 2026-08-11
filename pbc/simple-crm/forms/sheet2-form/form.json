@@ -1,0 +1,34 @@
+{
+  "dataLocation": "LOCAL",
+  "enableForbidUpdateSomeFieldsValueWhenReferenced": 0,
+  "fields": [
+    {
+      "encryptStorage": 0,
+      "encryptTransit": 0,
+      "forbidToUpdate": false,
+      "maxLength": 200,
+      "name": "Status",
+      "storageField": "value1",
+      "token": "status",
+      "type": "TEXT_BOX"
+    }
+  ],
+  "isAutoLock": 0,
+  "isDeletableWhenReferenced": 1,
+  "isInnerEntity": 0,
+  "isMasterData": 0,
+  "layouts": [
+    {
+      "defaultLayout": true,
+      "name": "Default",
+      "sortIndex": 0,
+      "token": "default-layout"
+    }
+  ],
+  "name": "Sheet2",
+  "permissionTarget": "sheet2-form",
+  "remoteNoSystemColumns": true,
+  "standalone": 0,
+  "standaloneTableNormalized": 0,
+  "token": "sheet2-form"
+}

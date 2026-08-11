@@ -1,0 +1,10 @@
+{
+  "category": "BUSINESS",
+  "contributor": "admin",
+  "formDashboardLayoutList": [ ],
+  "formEntityRelationList": [ ],
+  "matchWeight": 0.0,
+  "name": "ticketsetnullvaluefornumericemumber",
+  "token": "ticket-set-null-value-for-numeric-enum",
+  "uiPluginList": [ ]
+}

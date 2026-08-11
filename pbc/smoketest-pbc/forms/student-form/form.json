@@ -1,0 +1,258 @@
+{
+  "dataLocation": "LOCAL",
+  "enableForbidUpdateSomeFieldsValueWhenReferenced": 0,
+  "fields": [
+    {
+      "encryptStorage": 0,
+      "encryptTransit": 0,
+      "forbidToUpdate": false,
+      "name": "ACL Selector",
+      "referenceDisplayField": "dataSource",
+      "referenceEntity": "data-source-form",
+      "referenceField": "id",
+      "referenceMappingFields": "{\"value\":\"id\",\"label\":\"dataSource\"}",
+      "referencePbc": "smoketest-pbc",
+      "storageField": "value22",
+      "token": "aclSelector",
+      "type": "ACL"
+    },
+    {
+      "encryptStorage": 0,
+      "encryptTransit": 0,
+      "forbidToUpdate": false,
+      "name": "Address",
+      "storageField": "value10",
+      "token": "address",
+      "type": "TEXTAREA"
+    },
+    {
+      "encryptStorage": 0,
+      "encryptTransit": 0,
+      "forbidToUpdate": false,
+      "name": "Class",
+      "storageField": "value7",
+      "token": "className",
+      "type": "TEXT_BOX"
+    },
+    {
+      "encryptStorage": 0,
+      "encryptTransit": 0,
+      "forbidToUpdate": false,
+      "name": "Date of Birth",
+      "storageField": "value5",
+      "token": "dateOfBirth",
+      "type": "DATE"
+    },
+    {
+      "encryptStorage": 0,
+      "encryptTransit": 0,
+      "forbidToUpdate": false,
+      "name": "Department",
+      "storageField": "value16",
+      "token": "department",
+      "type": "TEXT_BOX"
+    },
+    {
+      "domain": "ERP 供应商管理",
+      "encryptStorage": 0,
+      "encryptTransit": 0,
+      "fieldConfigJson": "{\"formEntityToken\":\"substudentform-form\",\"pbcToken\":\"smoketest-pbc\",\"relations\":[{\"colId\":\"parentDataId\",\"filterType\":\"text\",\"type\":\"equals\",\"filter\":\"$CURRENT_FORM_DATA_ID\"}]}",
+      "forbidToUpdate": false,
+      "maxLength": 200,
+      "name": "Editable Table",
+      "nameI18nKey": "standard|>ERP 供应商管理|>any|>editableTable",
+      "nameI18nNs": "standard",
+      "source": "df5e8a84-55b4-46bc-9fcd-44ee4ad30e37",
+      "storageField": "value23",
+      "token": "editableTable",
+      "type": "EDITABLE_GRID"
+    },
+    {
+      "encryptStorage": 0,
+      "encryptTransit": 0,
+      "forbidToUpdate": false,
+      "maxLength": 100,
+      "name": "Email",
+      "regex": "^[^\\s@]+@[^\\s@]+\\.[^\\s@]+$",
+      "storageField": "value8",
+      "token": "email",
+      "type": "TEXT_BOX"
+    },
+    {
+      "encryptStorage": 0,
+      "encryptTransit": 0,
+      "forbidToUpdate": false,
+      "name": "Enrollment Date",
+      "storageField": "value15",
+      "token": "enrollmentDate",
+      "type": "DATE"
+    },
+    {
+      "encryptStorage": 0,
+      "encryptTransit": 0,
+      "forbidToUpdate": false,
+      "name": "Gender",
+      "storageField": "value4",
+      "token": "gender",
+      "type": "RADIO"
+    },
+    {
+      "encryptStorage": 0,
+      "encryptTransit": 0,
+      "forbidToUpdate": false,
+      "maxValue": 4.0,
+      "minValue": 0.0,
+      "name": "GPA",
+      "storageField": "value18",
+      "token": "gpa",
+      "type": "NUMBER"
+    },
+    {
+      "encryptStorage": 0,
+      "encryptTransit": 0,
+      "forbidToUpdate": false,
+      "name": "Grade",
+      "storageField": "value6",
+      "token": "grade",
+      "type": "SELECT"
+    },
+    {
+      "encryptStorage": 0,
+      "encryptTransit": 0,
+      "forbidToUpdate": false,
+      "maxLength": 100,
+      "name": "Guardian Email",
+      "regex": "^[^\\s@]+@[^\\s@]+\\.[^\\s@]+$",
+      "storageField": "value14",
+      "token": "guardianEmail",
+      "type": "TEXT_BOX"
+    },
+    {
+      "encryptStorage": 0,
+      "encryptTransit": 0,
+      "forbidToUpdate": false,
+      "maxLength": 100,
+      "name": "Guardian Name",
+      "storageField": "value11",
+      "token": "guardianName",
+      "type": "TEXT_BOX"
+    },
+    {
+      "encryptStorage": 0,
+      "encryptTransit": 0,
+      "forbidToUpdate": false,
+      "maxLength": 20,
+      "name": "Guardian Phone",
+      "storageField": "value13",
+      "token": "guardianPhone",
+      "type": "TEXT_BOX"
+    },
+    {
+      "encryptStorage": 0,
+      "encryptTransit": 0,
+      "forbidToUpdate": false,
+      "name": "Relationship",
+      "storageField": "value12",
+      "token": "guardianRelation",
+      "type": "SELECT"
+    },
+    {
+      "encryptStorage": 0,
+      "encryptTransit": 0,
+      "forbidToUpdate": false,
+      "name": "Active Student",
+      "storageField": "value17",
+      "token": "isActive",
+      "type": "SWITCH"
+    },
+    {
+      "encryptStorage": 0,
+      "encryptTransit": 0,
+      "forbidToUpdate": false,
+      "maxLength": 20,
+      "name": "Phone Number",
+      "storageField": "value9",
+      "token": "phoneNumber",
+      "type": "TEXT_BOX"
+    },
+    {
+      "encryptStorage": 0,
+      "encryptTransit": 0,
+      "forbidToUpdate": false,
+      "name": "Remarks",
+      "storageField": "value20",
+      "token": "remarks",
+      "type": "TEXTAREA"
+    },
+    {
+      "encryptStorage": 0,
+      "encryptTransit": 0,
+      "forbidToUpdate": false,
+      "name": "Select",
+      "referenceDisplayField": "dataSource",
+      "referenceEntity": "data-source-form",
+      "referenceField": "id",
+      "referenceMappingFields": "{\"value\":\"id\",\"label\":\"dataSource\"}",
+      "referencePbc": "smoketest-pbc",
+      "storageField": "value21",
+      "token": "select",
+      "type": "SELECT"
+    },
+    {
+      "encryptStorage": 0,
+      "encryptTransit": 0,
+      "forbidToUpdate": false,
+      "name": "Status",
+      "storageField": "value1",
+      "token": "status",
+      "type": "TEXT_BOX"
+    },
+    {
+      "encryptStorage": 0,
+      "encryptTransit": 0,
+      "forbidToUpdate": false,
+      "maxLength": 30,
+      "name": "Student ID",
+      "storageField": "value3",
+      "token": "studentId",
+      "type": "TEXT_BOX"
+    },
+    {
+      "encryptStorage": 0,
+      "encryptTransit": 0,
+      "forbidToUpdate": false,
+      "maxLength": 100,
+      "name": "Student Name",
+      "storageField": "value2",
+      "token": "studentName",
+      "type": "TEXT_BOX"
+    },
+    {
+      "encryptStorage": 0,
+      "encryptTransit": 0,
+      "forbidToUpdate": false,
+      "name": "Subjects",
+      "storageField": "value19",
+      "token": "subjects",
+      "type": "CHECKBOX"
+    }
+  ],
+  "isAutoLock": 0,
+  "isDeletableWhenReferenced": 1,
+  "isInnerEntity": 0,
+  "isMasterData": 0,
+  "layouts": [
+    {
+      "defaultLayout": true,
+      "name": "Layout",
+      "sortIndex": 0,
+      "token": "default"
+    }
+  ],
+  "name": "studentform",
+  "permissionTarget": "student-form",
+  "remoteNoSystemColumns": true,
+  "standalone": 0,
+  "standaloneTableNormalized": 0,
+  "token": "student-form"
+}

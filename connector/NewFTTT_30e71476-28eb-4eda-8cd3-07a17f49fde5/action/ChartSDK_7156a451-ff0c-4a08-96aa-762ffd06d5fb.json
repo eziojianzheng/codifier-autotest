@@ -1,0 +1,9 @@
+{
+  "connectorTypeUuid": "30e71476-28eb-4eda-8cd3-07a17f49fde5",
+  "inputParameters": [ ],
+  "mapperScript": "$$$$ref:text:ChartSDK_7156a451-ff0c-4a08-96aa-762ffd06d5fb.groovy",
+  "name": "ChartSDK",
+  "outputParameters": [ ],
+  "scope": 0,
+  "uuid": "7156a451-ff0c-4a08-96aa-762ffd06d5fb"
+}

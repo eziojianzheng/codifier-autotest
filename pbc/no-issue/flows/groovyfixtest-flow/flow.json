@@ -1,0 +1,295 @@
+{
+  "name": "groovyfixtest",
+  "nodeList": [
+    {
+      "enabled": false,
+      "id": 6,
+      "nodeName": "APP - Create form data",
+      "sdk": {
+        "formInput": {
+          "input": "test",
+          "numericPicker": "\"0.0000001\""
+        },
+        "input": {
+          "formEntityToken": "form-check-form",
+          "pbcToken": "no-issue"
+        },
+        "inputFields": [ ],
+        "name": "Create form data",
+        "numberStringToBigDecimal": false,
+        "outputFields": [ ],
+        "sdkType": "CREATE_ENTITY",
+        "uuid": "739b0a8f-cf7a-4e83-93ca-4ebe55ef80e8"
+      },
+      "type": "APP",
+      "version": "1.0"
+    },
+    {
+      "enabled": true,
+      "id": 2,
+      "nodeName": "APP - Get form data based on conditions",
+      "sdk": {
+        "input": {
+          "formEntityToken": "form-check-form",
+          "include_deleted": "false",
+          "lockUpdate": "false",
+          "needACL": "false",
+          "needResource": "false",
+          "needText": "true",
+          "pbcToken": "no-issue",
+          "projectToken": "$CURRENT_PROJECT.token",
+          "throw_exception": "false"
+        },
+        "inputFields": [
+          {
+            "controlType": "select",
+            "dataType": "string",
+            "label": "Need ACL",
+            "name": "needACL",
+            "optional": false,
+            "pickList": [
+              "true",
+              "false"
+            ]
+          },
+          {
+            "controlType": "select",
+            "dataType": "string",
+            "label": "Need Resource",
+            "name": "needResource",
+            "optional": false,
+            "pickList": [
+              "true",
+              "false"
+            ]
+          },
+          {
+            "controlType": "select",
+            "dataType": "string",
+            "label": "Need Text",
+            "name": "needText",
+            "optional": false,
+            "pickList": [
+              "true",
+              "false"
+            ]
+          },
+          {
+            "controlType": "select",
+            "dataType": "string",
+            "label": "Include Deleted",
+            "name": "include_deleted",
+            "optional": false,
+            "pickList": [
+              "true",
+              "false"
+            ]
+          },
+          {
+            "controlType": "select",
+            "dataType": "string",
+            "label": "Whether throw exception if data cannot be retrieved",
+            "name": "throw_exception",
+            "optional": false,
+            "pickList": [
+              "true",
+              "false"
+            ]
+          },
+          {
+            "controlType": "select",
+            "dataType": "string",
+            "label": "Need Count",
+            "name": "needCount",
+            "optional": false,
+            "pickList": [
+              "true",
+              "false"
+            ]
+          },
+          {
+            "controlType": "input",
+            "dataType": "number",
+            "label": "Start Row",
+            "name": "startRow",
+            "optional": false
+          },
+          {
+            "controlType": "input",
+            "dataType": "number",
+            "label": "End Row",
+            "name": "endRow",
+            "optional": false
+          }
+        ],
+        "name": "Get form data based on conditions",
+        "numberStringToBigDecimal": false,
+        "outputFields": [
+          {
+            "label": "results",
+            "name": "results"
+          },
+          {
+            "dataType": "string",
+            "label": "count",
+            "name": "count"
+          }
+        ],
+        "sdkType": "LIST_QUERY",
+        "uuid": "b4ffad17-593b-4868-940b-70d89fa35cc3"
+      },
+      "type": "APP",
+      "version": "1.0"
+    },
+    {
+      "enabled": false,
+      "id": 5,
+      "nodeName": "APP - Generic Query SQL",
+      "sdk": {
+        "code": "select * from \"no-issue\".\"form-check-form\"",
+        "inputFields": [
+          {
+            "controlType": "input",
+            "dataType": "string",
+            "label": "Timeout(Seconds)",
+            "name": "timeout",
+            "optional": true
+          }
+        ],
+        "name": "Generic Query SQL",
+        "numberStringToBigDecimal": false,
+        "outputFields": [ ],
+        "sdkType": "GENERAL_SQL",
+        "uuid": "b09e4613-69a2-4365-9bc0-3b8eedae5ff1"
+      },
+      "type": "APP",
+      "version": "1.0"
+    },
+    {
+      "enabled": true,
+      "id": 4,
+      "nodeName": "APP - Groovy script - string input not convert",
+      "sdk": {
+        "code": "$$$$ref:text:sdk-4.groovy",
+        "input": {
+          "dataInput": "$2.results"
+        },
+        "inputFields": [
+          {
+            "dataType": "string",
+            "label": "dataInput",
+            "name": "dataInput",
+            "optional": false
+          }
+        ],
+        "name": "Groovy script",
+        "numberStringToBigDecimal": false,
+        "outputFields": [
+          {
+            "dataType": "string",
+            "label": "dataInput",
+            "name": "dataInput"
+          },
+          {
+            "dataType": "string",
+            "label": "numberPicker",
+            "name": "numberPicker"
+          },
+          {
+            "dataType": "string",
+            "label": "numericPicker",
+            "name": "numericPicker"
+          },
+          {
+            "dataType": "string",
+            "label": "input",
+            "name": "input"
+          },
+          {
+            "dataType": "string",
+            "label": "textarea",
+            "name": "textarea"
+          }
+        ],
+        "sdkType": "GENERAL_GROOVY",
+        "uuid": "492f8c00-14de-4837-a1f6-ed6ff0a2870e"
+      },
+      "type": "APP",
+      "version": "1.0"
+    },
+    {
+      "enabled": true,
+      "id": 1,
+      "nodeName": "APP - Groovy script - enable string convert decimal",
+      "sdk": {
+        "code": "$$$$ref:text:sdk-1.groovy",
+        "input": {
+          "dataInput": "$2.results"
+        },
+        "inputFields": [
+          {
+            "dataType": "string",
+            "label": "dataInput",
+            "name": "dataInput",
+            "optional": false
+          }
+        ],
+        "name": "Groovy script",
+        "numberStringToBigDecimal": true,
+        "outputFields": [
+          {
+            "dataType": "string",
+            "label": "dataInput",
+            "name": "dataInput"
+          },
+          {
+            "dataType": "string",
+            "label": "numericPickeradd",
+            "name": "numericPickeradd"
+          },
+          {
+            "dataType": "string",
+            "label": "numberPickeradd",
+            "name": "numberPickeradd"
+          },
+          {
+            "dataType": "string",
+            "label": "inputadd",
+            "name": "inputadd"
+          }
+        ],
+        "sdkType": "GENERAL_GROOVY",
+        "uuid": "492f8c00-14de-4837-a1f6-ed6ff0a2870e"
+      },
+      "type": "APP",
+      "version": "1.0"
+    },
+    {
+      "enabled": false,
+      "id": 3,
+      "nodeName": "APP - Create form data",
+      "sdk": {
+        "formInput": {
+          "input": "$1.dataInput[0].input",
+          "numberPicker": "$1.dataInput[0].numberPicker",
+          "numericPicker": "$1.dataInput[0].numericPicker",
+          "textarea": "$1.dataInput[0].textarea"
+        },
+        "input": {
+          "formEntityToken": "form-check-form",
+          "pbcToken": "no-issue"
+        },
+        "inputFields": [ ],
+        "name": "Create form data",
+        "numberStringToBigDecimal": false,
+        "outputFields": [ ],
+        "sdkType": "CREATE_ENTITY",
+        "uuid": "739b0a8f-cf7a-4e83-93ca-4ebe55ef80e8"
+      },
+      "type": "APP",
+      "version": "1.0"
+    }
+  ],
+  "restApiEnabled": 0,
+  "token": "groovyfixtest-flow"
+}

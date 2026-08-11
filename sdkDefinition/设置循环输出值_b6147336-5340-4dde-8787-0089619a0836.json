@@ -1,0 +1,12 @@
+{
+  "definition_$$$NESTED_JSON_STRING$$$": {
+    "inputFields": [ ],
+    "sdkType": "SET_OUTPUT_TO_REPEAT"
+  },
+  "isSystem": 1,
+  "name": "设置循环输出值",
+  "nameEnUs": "Set repeat output value",
+  "nameJaJp": "ループノードの出力値を設定する",
+  "sdkType": "SET_OUTPUT_TO_REPEAT",
+  "uuid": "b6147336-5340-4dde-8787-0089619a0836"
+}

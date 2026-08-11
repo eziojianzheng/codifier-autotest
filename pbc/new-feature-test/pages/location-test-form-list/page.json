@@ -1,0 +1,81 @@
+{
+  "schemaId": "location-test-form-list",
+  "schemaJson_$$$NESTED_JSON_STRING$$$": {
+    "fields": [
+      {
+        "component": "Card",
+        "fields": [
+          {
+            "component": "Table",
+            "componentProps": {
+              "addButtonHref": "/form/location-test-form/layout/default",
+              "columnDefs": [
+                {
+                  "colId": "singleLineText",
+                  "field": "singleLineText",
+                  "headerName": "单行文本",
+                  "headerName_i18n_key": "standard|>ERP 供应商管理|>any|>singleLineText",
+                  "headerName_i18n_ns": "standard",
+                  "type": "TEXT_COLUMN"
+                },
+                {
+                  "colId": "location",
+                  "field": "location",
+                  "headerName": "定位",
+                  "headerName_i18n_key": "standard|>ERP 供应商管理|>any|>location",
+                  "headerName_i18n_ns": "standard",
+                  "type": "TEXT_COLUMN"
+                },
+                {
+                  "colId": "signature",
+                  "field": "signature",
+                  "headerName": "签名"
+                },
+                {
+                  "cellRendererParams": {
+                    "actions": [
+                      {
+                        "href": "/form/location-test-form/layout/default/:id",
+                        "type": "EDIT"
+                      },
+                      {
+                        "href": "/form/:id/view",
+                        "type": "VIEW"
+                      },
+                      {
+                        "type": "DELETE"
+                      }
+                    ],
+                    "displayLikeButton": true,
+                    "showIcon": true
+                  },
+                  "type": "ACTION_COLUMN",
+                  "width": 240
+                }
+              ],
+              "dataSource": {
+                "token": "location-test-form"
+              },
+              "pagination": true,
+              "pinnedFilter": [
+                "singleLineText",
+                "location",
+                "signature"
+              ]
+            },
+            "id": "location-test-form-table",
+            "style": {
+              "height": "100%"
+            }
+          }
+        ],
+        "style": {
+          "height": "100%"
+        }
+      }
+    ],
+    "form": {
+      "title": "locationtest列表"
+    }
+  }
+}

@@ -1,0 +1,157 @@
+{
+  "dataLocation": "LOCAL",
+  "enableForbidUpdateSomeFieldsValueWhenReferenced": 0,
+  "fields": [
+    {
+      "encryptStorage": 0,
+      "encryptTransit": 0,
+      "forbidToUpdate": false,
+      "maxLength": 50,
+      "name": "Brand",
+      "storageField": "value4",
+      "token": "brand",
+      "type": "TEXT_BOX"
+    },
+    {
+      "encryptStorage": 0,
+      "encryptTransit": 0,
+      "forbidToUpdate": false,
+      "maxLength": 200,
+      "name": "Category",
+      "storageField": "value5",
+      "token": "category",
+      "type": "SELECT"
+    },
+    {
+      "encryptStorage": 0,
+      "encryptTransit": 0,
+      "forbidToUpdate": false,
+      "maxLength": 30,
+      "name": "Color",
+      "storageField": "value11",
+      "token": "color",
+      "type": "TEXT_BOX"
+    },
+    {
+      "encryptStorage": 0,
+      "encryptTransit": 0,
+      "forbidToUpdate": false,
+      "maxLength": 200,
+      "name": "Available for Sale",
+      "storageField": "value12",
+      "token": "isAvailable",
+      "type": "SWITCH"
+    },
+    {
+      "encryptStorage": 0,
+      "encryptTransit": 0,
+      "forbidToUpdate": false,
+      "maxLength": 200,
+      "minValue": 0.0,
+      "name": "Price",
+      "storageField": "value8",
+      "token": "price",
+      "type": "NUMBER"
+    },
+    {
+      "encryptStorage": 0,
+      "encryptTransit": 0,
+      "forbidToUpdate": false,
+      "maxLength": 200,
+      "name": "Product Description",
+      "storageField": "value13",
+      "token": "productDescription",
+      "type": "TEXTAREA"
+    },
+    {
+      "encryptStorage": 0,
+      "encryptTransit": 0,
+      "forbidToUpdate": false,
+      "maxLength": 50,
+      "name": "Model",
+      "storageField": "value3",
+      "token": "productModel",
+      "type": "TEXT_BOX"
+    },
+    {
+      "encryptStorage": 0,
+      "encryptTransit": 0,
+      "forbidToUpdate": false,
+      "maxLength": 100,
+      "name": "Product Name",
+      "storageField": "value2",
+      "token": "productName",
+      "type": "TEXT_BOX"
+    },
+    {
+      "encryptStorage": 0,
+      "encryptTransit": 0,
+      "forbidToUpdate": false,
+      "maxLength": 200,
+      "name": "Release Date",
+      "storageField": "value7",
+      "token": "releaseDate",
+      "type": "DATE"
+    },
+    {
+      "encryptStorage": 0,
+      "encryptTransit": 0,
+      "forbidToUpdate": false,
+      "maxLength": 100,
+      "name": "Serial Number",
+      "storageField": "value6",
+      "token": "serialNumber",
+      "type": "TEXT_BOX"
+    },
+    {
+      "encryptStorage": 0,
+      "encryptTransit": 0,
+      "forbidToUpdate": false,
+      "maxLength": 200,
+      "name": "Status",
+      "storageField": "value1",
+      "token": "status",
+      "type": "TEXT_BOX"
+    },
+    {
+      "encryptStorage": 0,
+      "encryptTransit": 0,
+      "forbidToUpdate": false,
+      "maxLength": 200,
+      "minValue": 0.0,
+      "name": "Stock Quantity",
+      "storageField": "value9",
+      "token": "stockQuantity",
+      "type": "NUMBER"
+    },
+    {
+      "encryptStorage": 0,
+      "encryptTransit": 0,
+      "forbidToUpdate": false,
+      "maxLength": 200,
+      "minValue": 0.0,
+      "name": "Warranty Period (Months)",
+      "storageField": "value10",
+      "token": "warrantyPeriod",
+      "type": "NUMBER"
+    }
+  ],
+  "isAutoLock": 0,
+  "isDeletableWhenReferenced": 1,
+  "isInnerEntity": 0,
+  "isMasterData": 0,
+  "layouts": [
+    {
+      "defaultLayout": true,
+      "name": "Layout",
+      "sortIndex": 0,
+      "token": "default"
+    }
+  ],
+  "name": "Pic-To-Form",
+  "permissionTarget": "pic-to-form",
+  "remoteNoSystemColumns": true,
+  "standalone": 0,
+  "standaloneTableNormalized": 0,
+  "token": "pic-to-form"
+}

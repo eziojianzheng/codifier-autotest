@@ -1,0 +1,70 @@
+{
+  "definition_$$$NESTED_JSON_STRING$$$": {
+    "input": {
+      "lockUpdate": "false",
+      "needSubFormData": "false"
+    },
+    "inputFields": [
+      {
+        "controlType": "input",
+        "dataType": "string",
+        "label": "查询数据ID",
+        "label_i18n_en-US": "Query Data ID",
+        "label_i18n_ja-JP": "クエリデータID",
+        "name": "formEntityDataId",
+        "optional": true
+      },
+      {
+        "controlType": "input",
+        "dataType": "string",
+        "label": "组件编号",
+        "label_i18n_en-US": "Pbc Token",
+        "label_i18n_ja-JP": "コンポーネント番号",
+        "name": "pbcToken",
+        "optional": false
+      },
+      {
+        "controlType": "entity",
+        "label": "表单编号",
+        "label_i18n_en-US": "Form Entity",
+        "label_i18n_ja-JP": "フォーム・エンティティ",
+        "name": "formEntityToken",
+        "optional": false
+      },
+      {
+        "controlType": "select",
+        "dataType": "string",
+        "label": "启用密码解密",
+        "label_i18n_en-US": "Enable Password Decryption",
+        "label_i18n_ja-JP": "パスワードの復号化を有効にする",
+        "name": "enablePwdDecrypt",
+        "optional": true,
+        "pickList": [
+          "true",
+          "false"
+        ]
+      },
+      {
+        "controlType": "select",
+        "dataType": "string",
+        "label": "throwException",
+        "label_i18n_en-US": "Whether throw exception if data cannot be retrieved",
+        "label_i18n_ja-JP": "データが照会されなかった場合にエラーを報告するかどうか",
+        "name": "throwException",
+        "optional": false,
+        "pickList": [
+          "true",
+          "false"
+        ]
+      }
+    ],
+    "outputFields": [ ],
+    "sdkType": "INTERNAL_GET_ENTITY_DATA_BY_ID"
+  },
+  "isSystem": 1,
+  "name": "根据ID获取表单数据",
+  "nameEnUs": "Get form data by ID",
+  "nameJaJp": "IDに基づいてフォームデータを取得する",
+  "sdkType": "INTERNAL_GET_ENTITY_DATA_BY_ID",
+  "uuid": "ef57bcca-ecd4-42b0-af62-375cd65def93"
+}

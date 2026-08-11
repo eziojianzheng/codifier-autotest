@@ -1,0 +1,9 @@
+{
+  "definition_$$$NESTED_JSON_STRING$$$": { },
+  "isSystem": 1,
+  "name": "Groovy脚本",
+  "nameEnUs": "Groovy script",
+  "nameJaJp": "Groovyスクリプト",
+  "sdkType": "GENERAL_GROOVY",
+  "uuid": "492f8c00-14de-4837-a1f6-ed6ff0a2870e"
+}

@@ -1,0 +1,14 @@
+{
+  "fields": [
+    {
+      "component": "Input",
+      "hidden": true,
+      "id": "status",
+      "title": "Status"
+    }
+  ],
+  "form": {
+    "defaultCancelButton": true,
+    "defaultSubmitButton": true
+  }
+}

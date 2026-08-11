@@ -1,0 +1,36 @@
+{
+  "name": "新建产品流程",
+  "nodeList": [
+    {
+      "enabled": true,
+      "id": 1,
+      "nodeName": "APP - 新建表单数据",
+      "sdk": {
+        "formInput": {
+          "lkp_product_contract": "abc"
+        },
+        "input": {
+          "formEntityToken": "product-management-form",
+          "pbcToken": "simple-crm"
+        },
+        "inputFields": [ ],
+        "name": "新建表单数据",
+        "numberStringToBigDecimal": false,
+        "outputFields": [ ],
+        "sdkType": "CREATE_ENTITY",
+        "uuid": "739b0a8f-cf7a-4e83-93ca-4ebe55ef80e8"
+      },
+      "type": "APP",
+      "version": "1.0"
+    },
+    {
+      "enabled": true,
+      "id": 2,
+      "nodeName": "STOP_JOB",
+      "result": "Successful",
+      "type": "STOP_JOB"
+    }
+  ],
+  "restApiEnabled": 0,
+  "token": "product-creation-process-flow"
+}

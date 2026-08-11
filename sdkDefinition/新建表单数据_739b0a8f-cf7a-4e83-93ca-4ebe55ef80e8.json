@@ -1,0 +1,15 @@
+{
+  "definition_$$$NESTED_JSON_STRING$$$": {
+    "formEntityId": "1",
+    "formInput": { },
+    "inputFields": [ ],
+    "outputFields": [ ],
+    "sdkType": "CREATE_ENTITY"
+  },
+  "isSystem": 1,
+  "name": "新建表单数据",
+  "nameEnUs": "Create form data",
+  "nameJaJp": "フォームデータの作成",
+  "sdkType": "CREATE_ENTITY",
+  "uuid": "739b0a8f-cf7a-4e83-93ca-4ebe55ef80e8"
+}

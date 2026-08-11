@@ -1,0 +1,82 @@
+{
+  "name": "sqlstandard",
+  "nodeList": [
+    {
+      "enabled": true,
+      "id": 1,
+      "inMemory": true,
+      "inMemoryTransaction": false,
+      "interval": 60,
+      "nodeName": "TRIGGER",
+      "periodEnd": "23:59:59",
+      "periodStart": "00:00:00",
+      "restTrigger": {
+        "eligibleForAgent": false,
+        "method": "GET",
+        "url": "/flow/api/flow-rest-selfauth/sqlstandard"
+      },
+      "scheduleType": "ONE_TIME",
+      "startTime": 1765444576022,
+      "triggerType": "REST",
+      "type": "TRIGGER",
+      "version": "2.0"
+    },
+    {
+      "enabled": true,
+      "id": 2,
+      "nodeName": "APP - Generic Query SQL",
+      "sdk": {
+        "code": "select * from \"newfeatureimportesting\".\"date-form\"",
+        "inputFields": [
+          {
+            "controlType": "input",
+            "dataType": "string",
+            "label": "Timeout(Seconds)",
+            "name": "timeout",
+            "optional": true
+          }
+        ],
+        "name": "Generic Query SQL",
+        "outputFields": [ ],
+        "sdkType": "GENERAL_SQL",
+        "uuid": "b09e4613-69a2-4365-9bc0-3b8eedae5ff1"
+      },
+      "type": "APP",
+      "version": "1.0"
+    },
+    {
+      "enabled": true,
+      "id": 3,
+      "nodeName": "APP - Set workflow output value",
+      "sdk": {
+        "input": {
+          "out": "$2"
+        },
+        "inputFields": [
+          {
+            "dataType": "string",
+            "label": "out",
+            "name": "out",
+            "optional": false
+          }
+        ],
+        "name": "Set workflow output value",
+        "sdkType": "SET_VALUE_TO_INSTANCE",
+        "uuid": "f63bae3b-4003-4b29-aedf-4626216fc12a"
+      },
+      "type": "APP",
+      "version": "1.0"
+    },
+    {
+      "enabled": true,
+      "id": 4,
+      "nodeName": "STOP_JOB",
+      "result": "Successful",
+      "type": "STOP_JOB"
+    }
+  ],
+  "restApiEnabled": 1,
+  "restApiMethod": "GET",
+  "restApiUrl": "/flow/api/flow-rest-selfauth/sqlstandard",
+  "token": "sql-standard-flow"
+}

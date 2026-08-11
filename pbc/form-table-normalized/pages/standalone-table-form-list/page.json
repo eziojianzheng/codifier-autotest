@@ -1,0 +1,153 @@
+{
+  "schemaId": "standalone-table-form-list",
+  "schemaJson_$$$NESTED_JSON_STRING$$$": {
+    "fields": [
+      {
+        "component": "Card",
+        "fields": [
+          {
+            "component": "Table",
+            "componentProps": {
+              "addButtonHref": "/form/origin-form-test/layout/default",
+              "columnDefs": [
+                {
+                  "colId": "number1",
+                  "field": "number1",
+                  "headerName": "数字",
+                  "type": "NUMBER_COLUMN"
+                },
+                {
+                  "colId": "singleLine1",
+                  "field": "singleLine1",
+                  "headerName": "单行文本",
+                  "type": "TEXT_COLUMN"
+                },
+                {
+                  "colId": "selectField01",
+                  "field": "selectField01",
+                  "headerName": "下拉选择",
+                  "type": "SELECT_COLUMN"
+                },
+                {
+                  "colId": "selectMultiField",
+                  "field": "selectMultiField",
+                  "headerName": "下拉选择多选",
+                  "type": "SELECT_COLUMN"
+                },
+                {
+                  "colId": "aclFieldSingle",
+                  "field": "aclFieldSingle",
+                  "headerName": "ACL选择单选",
+                  "type": "ACL_COLUMN"
+                },
+                {
+                  "colId": "aclFieldMulti",
+                  "field": "aclFieldMulti",
+                  "headerName": "ACL选择多选",
+                  "type": "ACL_COLUMN"
+                },
+                {
+                  "colId": "toggleField",
+                  "field": "toggleField",
+                  "headerName": "开关"
+                },
+                {
+                  "colId": "passwordField",
+                  "field": "passwordField",
+                  "headerName": "密码"
+                },
+                {
+                  "colId": "numbericField01",
+                  "field": "numbericField01",
+                  "headerName": "高精度数字",
+                  "type": "NUMERIC_COLUMN"
+                },
+                {
+                  "colId": "longText",
+                  "field": "longText",
+                  "headerName": "多行文本",
+                  "type": "TEXTAREA_COLUMN"
+                },
+                {
+                  "cellRendererParams": {
+                    "componentProps": {
+                      "listType": "text"
+                    }
+                  },
+                  "colId": "uploadField",
+                  "field": "uploadField",
+                  "headerName": "上传",
+                  "type": "UPLOAD_COLUMN"
+                },
+                {
+                  "colId": "dateField01",
+                  "field": "dateField01",
+                  "headerName": "日期",
+                  "type": "DATE_COLUMN"
+                },
+                {
+                  "colId": "dateField02",
+                  "field": "dateField02",
+                  "headerName": "时间",
+                  "type": "TIME_COLUMN"
+                },
+                {
+                  "colId": "radioField01",
+                  "field": "radioField01",
+                  "headerName": "单选",
+                  "type": "RADIO_COLUMN"
+                },
+                {
+                  "colId": "checkBoxField01",
+                  "field": "checkBoxField01",
+                  "headerName": "多选",
+                  "type": "CHECKBOX_COLUMN"
+                },
+                {
+                  "cellRendererParams": {
+                    "actions": [
+                      {
+                        "href": "/form/standalone-table-form/layout/default/:id",
+                        "type": "EDIT"
+                      },
+                      {
+                        "href": "/form/:id/view",
+                        "type": "VIEW"
+                      },
+                      {
+                        "type": "DELETE"
+                      }
+                    ],
+                    "displayLikeButton": true,
+                    "showIcon": true
+                  },
+                  "type": "ACTION_COLUMN",
+                  "width": 240
+                }
+              ],
+              "dataSource": {
+                "token": "origin-form-test"
+              },
+              "pagination": true,
+              "pinnedFilter": [
+                "number1",
+                "singleLine1",
+                "selectField01"
+              ]
+            },
+            "id": "standalone-table-form-table",
+            "style": {
+              "height": "100%"
+            }
+          }
+        ],
+        "style": {
+          "height": "100%"
+        }
+      }
+    ],
+    "form": {
+      "title": "standalonetableform List"
+    }
+  }
+}

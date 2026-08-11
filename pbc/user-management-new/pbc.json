@@ -2,11 +2,11 @@
   "category": "BUSINESS",
   "config": "{\"menu\":[{\"to\":\"\",\"label\":\"用户与角色\",\"label_i18n_zh-CN\":\"用户与角色\",\"label_i18n_en-US\":\"Users and Roles\",\"label_i18n_ja-JP\":\"ユーザーとロール\",\"category\":null,\"key\":\"793341b4\",\"children\":[{\"to\":\"/user-management-new/page/system-user-form-list\",\"label\":\"用户\",\"label_i18n_zh-CN\":\"用户\",\"label_i18n_en-US\":\"User\",\"label_i18n_ja-JP\":\"ユーザー\",\"category\":null,\"key\":\"74e20a44\",\"icon\":\"oct:passkey-fill\"},{\"to\":\"/user-management-new/page/system-role-form-list\",\"label\":\"角色\",\"label_i18n_zh-CN\":\"角色\",\"label_i18n_en-US\":\"Role\",\"label_i18n_ja-JP\":\"ロール\",\"category\":null,\"key\":\"ad696683\",\"icon\":\"material:people-alt-outlined\"}],\"icon\":\"material:group-sharp\"}]}",
   "contributor": "admin",
-  "description": "User management , Role management ",
+  "description": "用户管理，角色管理",
   "formDashboardLayoutList": [ ],
   "formEntityRelationList": [ ],
-  "matchWeight": 0,
-  "name": "User Management",
+  "matchWeight": 0.0,
+  "name": "用户与角色",
   "routesJson_$$$NESTED_JSON_STRING$$$": {
     "desktop": {
       "/": {
@@ -55,11 +55,6 @@
         "pageTitle_i18n_zh-CN": "用户管理",
         "schemaId": "system-user-form-list"
       },
-      "/user/:formEntityDataId/change-password": {
-        "formEntityLayoutToken": "user-change-password",
-        "formEntityToken": "system-user-form",
-        "formType": "ENTITY"
-      },
       "/user/:formEntityDataId/edit": {
         "formEntityLayoutToken": "edit",
         "formEntityToken": "system-user-form",
@@ -81,6 +76,11 @@
         "pageTitle_i18n_zh-CN": "用户详情",
         "parent": "/",
         "retrieveUrl": "/user-management/api/user/:params.userId"
+      },
+      "/user/change-password": {
+        "formEntityLayoutToken": "user-change-password",
+        "formEntityToken": "system-user-form",
+        "formType": "ENTITY"
       },
       "/user/new": {
         "createUrl": "/user-management/api/user",
@@ -113,7 +113,7 @@
       }
     }
   },
-  "tags": "UM,User and Role,User Management",
+  "tags": "用户管理,UM,User and Role,User Management",
   "token": "user-management-new",
   "uiPluginList": [ ]
 }

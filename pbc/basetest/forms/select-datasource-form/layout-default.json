@@ -1,0 +1,108 @@
+{
+  "fields": [
+    {
+      "component": "Input",
+      "domain": "ERP 供应商管理",
+      "id": "singleLineText",
+      "source": "ba3e4acf-932c-4828-846d-5d2691185f79",
+      "title": "单行文本",
+      "title_i18n_key": "standard|>ERP 供应商管理|>any|>singleLineText",
+      "title_i18n_ns": "standard",
+      "validation": {
+        "maxLength": 200
+      }
+    },
+    {
+      "component": "Textarea",
+      "id": "multiLineText",
+      "title": "多行文本"
+    },
+    {
+      "component": "Input",
+      "domain": "ERP 供应商管理",
+      "id": "number",
+      "source": "be78e594-5ccb-4b7b-b54e-3184e592ff3b",
+      "title": "数字",
+      "title_i18n_key": "standard|>ERP 供应商管理|>any|>number",
+      "title_i18n_ns": "standard",
+      "validation": {
+        "maxLength": 200
+      }
+    },
+    {
+      "component": "NumericPicker",
+      "id": "highPrecisionDigital",
+      "title": "高精度数字"
+    },
+    {
+      "component": "DatePicker",
+      "domain": "CETA 基础模块",
+      "id": "date",
+      "source": "7f5718b0-8545-40c9-a7ab-c72e63b0f7bc",
+      "title": "日期",
+      "title_i18n_key": "standard|>CETA 基础模块|>any|>date",
+      "title_i18n_ns": "standard",
+      "validation": {
+        "maxLength": 200
+      }
+    },
+    {
+      "component": "DatePicker",
+      "id": "time",
+      "source": "b74d29a0-1757-47c9-8d8a-a350a2776caa",
+      "title": "时间",
+      "title_i18n_key": "standard|>any|>any|>time",
+      "title_i18n_ns": "standard",
+      "validation": {
+        "maxLength": 200
+      }
+    },
+    {
+      "component": "Checkbox",
+      "componentProps": {
+        "direction": "horizontal"
+      },
+      "id": "multipleChoice",
+      "title": "多选"
+    },
+    {
+      "component": "Radio",
+      "componentProps": {
+        "direction": "horizontal"
+      },
+      "id": "singleChoice",
+      "source": "13302649-3ac7-4f06-89a4-96d5e0abfd23",
+      "title": "单选",
+      "title_i18n_key": "standard|>any|>any|>singleChoice",
+      "title_i18n_ns": "standard",
+      "validation": {
+        "maxLength": 200
+      }
+    },
+    {
+      "component": "Switch",
+      "id": "switch",
+      "title": "开关"
+    },
+    {
+      "component": "Rate",
+      "id": "rating",
+      "title": "评分"
+    },
+    {
+      "component": "RichText",
+      "id": "richText",
+      "source": "1bf2dc11-dd68-4fb4-b7a6-e7eb5da12c6f",
+      "title": "富文本",
+      "title_i18n_key": "standard|>any|>any|>richText",
+      "title_i18n_ns": "standard",
+      "validation": {
+        "maxLength": 200
+      }
+    }
+  ],
+  "form": {
+    "defaultCancelButton": true,
+    "defaultSubmitButton": true
+  }
+}

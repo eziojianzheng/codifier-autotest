@@ -1,0 +1,88 @@
+{
+  "dataLocation": "LOCAL",
+  "enableForbidUpdateSomeFieldsValueWhenReferenced": 0,
+  "fields": [
+    {
+      "encryptStorage": 0,
+      "encryptTransit": 0,
+      "forbidToUpdate": false,
+      "maxLength": 200,
+      "name": "Email Address",
+      "regex": "^[\\w\\.-]+@[a-zA-Z\\d\\.-]+\\.[a-zA-Z]{2,}$",
+      "regexErrorMessage": "Invalid Email Address",
+      "storageField": "value5",
+      "token": "emailAddress",
+      "type": "TEXT_BOX"
+    },
+    {
+      "encryptStorage": 0,
+      "encryptTransit": 0,
+      "forbidToUpdate": false,
+      "maxLength": 200,
+      "name": "Enrollment Date",
+      "storageField": "value4",
+      "token": "enrollmentDate",
+      "type": "DATE"
+    },
+    {
+      "encryptStorage": 0,
+      "encryptTransit": 0,
+      "forbidToUpdate": false,
+      "maxLength": 15,
+      "name": "Phone Number",
+      "regex": "^\\+?[1-9]\\d{1,14}$",
+      "regexErrorMessage": "Invalid Phone Number",
+      "storageField": "value6",
+      "token": "phoneNumber",
+      "type": "TEXT_BOX"
+    },
+    {
+      "encryptStorage": 0,
+      "encryptTransit": 0,
+      "forbidToUpdate": false,
+      "maxLength": 200,
+      "name": "Status",
+      "storageField": "value1",
+      "token": "status",
+      "type": "TEXT_BOX"
+    },
+    {
+      "encryptStorage": 0,
+      "encryptTransit": 0,
+      "forbidToUpdate": false,
+      "maxLength": 20,
+      "name": "Student ID",
+      "storageField": "value3",
+      "token": "studentId",
+      "type": "TEXT_BOX"
+    },
+    {
+      "encryptStorage": 0,
+      "encryptTransit": 0,
+      "forbidToUpdate": false,
+      "maxLength": 200,
+      "name": "Student Name",
+      "storageField": "value2",
+      "token": "studentName",
+      "type": "TEXT_BOX"
+    }
+  ],
+  "isAutoLock": 0,
+  "isDeletableWhenReferenced": 1,
+  "isInnerEntity": 0,
+  "isMasterData": 0,
+  "layouts": [
+    {
+      "defaultLayout": true,
+      "name": "Layout",
+      "sortIndex": 0,
+      "token": "default"
+    }
+  ],
+  "name": "studentform",
+  "permissionTarget": "student-form",
+  "remoteNoSystemColumns": true,
+  "standalone": 0,
+  "standaloneTableNormalized": 0,
+  "token": "student-form"
+}

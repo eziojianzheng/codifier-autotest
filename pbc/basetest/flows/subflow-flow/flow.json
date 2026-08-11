@@ -1,0 +1,444 @@
+{
+  "description": "",
+  "name": "subflow",
+  "nodeList": [
+    {
+      "enabled": true,
+      "id": 2,
+      "inMemory": true,
+      "inMemoryTransaction": true,
+      "interval": 60,
+      "nodeName": "TRIGGER",
+      "parentTrigger": {
+        "inputFields": [ ]
+      },
+      "periodEnd": "23:59:59",
+      "periodStart": "00:00:00",
+      "restTrigger": {
+        "eligibleForAgent": false,
+        "method": "GET",
+        "url": "/flow/api/flow-rest-selfauth/rest-inmemory"
+      },
+      "scheduleType": "ONE_TIME",
+      "startTime": 1764664686694,
+      "triggerType": "PARENT",
+      "type": "TRIGGER",
+      "version": "2.0"
+    },
+    {
+      "enabled": true,
+      "id": 4,
+      "nodeName": "APP - 根据条件获取表单数据",
+      "sdk": {
+        "input": {
+          "formEntityFieldTokenList": "[]",
+          "formEntityToken": "base-test-form",
+          "include_deleted": "false",
+          "lockUpdate": "false",
+          "needACL": "true",
+          "needResource": "true",
+          "needText": "true",
+          "pbcToken": "basetest",
+          "projectToken": "$CURRENT_PROJECT.token",
+          "throw_exception": "false"
+        },
+        "inputFields": [
+          {
+            "controlType": "select",
+            "dataType": "string",
+            "label": "needACL",
+            "name": "needACL",
+            "optional": false,
+            "pickList": [
+              "true",
+              "false"
+            ]
+          },
+          {
+            "controlType": "select",
+            "dataType": "string",
+            "label": "needResource",
+            "name": "needResource",
+            "optional": false,
+            "pickList": [
+              "true",
+              "false"
+            ]
+          },
+          {
+            "controlType": "select",
+            "dataType": "string",
+            "label": "needText",
+            "name": "needText",
+            "optional": false,
+            "pickList": [
+              "true",
+              "false"
+            ]
+          },
+          {
+            "controlType": "select",
+            "dataType": "string",
+            "label": "include_deleted",
+            "name": "include_deleted",
+            "optional": false,
+            "pickList": [
+              "true",
+              "false"
+            ]
+          },
+          {
+            "controlType": "select",
+            "dataType": "string",
+            "label": "throw_exception",
+            "name": "throw_exception",
+            "optional": false,
+            "pickList": [
+              "true",
+              "false"
+            ]
+          },
+          {
+            "controlType": "select",
+            "dataType": "string",
+            "label": "Need Count",
+            "name": "needCount",
+            "optional": false,
+            "pickList": [
+              "true",
+              "false"
+            ]
+          },
+          {
+            "controlType": "input",
+            "dataType": "number",
+            "label": "Start Row",
+            "name": "startRow",
+            "optional": false
+          },
+          {
+            "controlType": "input",
+            "dataType": "number",
+            "label": "End Row",
+            "name": "endRow",
+            "optional": false
+          }
+        ],
+        "name": "根据条件获取表单数据",
+        "outputFields": [
+          {
+            "label": "查询结果",
+            "name": "results"
+          },
+          {
+            "dataType": "string",
+            "label": "结果数量",
+            "name": "count"
+          }
+        ],
+        "sdkType": "LIST_QUERY",
+        "uuid": "b4ffad17-593b-4868-940b-70d89fa35cc3"
+      },
+      "type": "APP",
+      "version": "1.0"
+    },
+    {
+      "enabled": true,
+      "id": 1,
+      "nodeName": "APP - 新建表单数据",
+      "sdk": {
+        "formInput": {
+          "aclSelection": "[\r\n  {\r\n    \"value\": \"5213858\",\r\n    \"label\": \"true\",\r\n    \"i18nLabel\": {}\r\n  }\r\n]",
+          "age": "123213",
+          "cascadingSelection": "[\r\n  {\r\n    \"value\": \"5213858\",\r\n    \"label\": \"true\",\r\n    \"i18nLabel\": {}\r\n  }\r\n]",
+          "dropdownSelection": "[\r\n  {\r\n    \"value\": \"5213858\",\r\n    \"label\": \"true\",\r\n    \"i18nLabel\": {}\r\n  }\r\n]",
+          "email": "createformdata",
+          "enrollmentDate": "2025-10-01",
+          "highPrecision": "1111111111111111111111111111.1111111111111111111111111111111111111",
+          "isFullTime": "true",
+          "major": "[\r\n  {\r\n    \"label\": \"电子工程\",\r\n    \"value\": \"ee\"\r\n  }\r\n]",
+          "multiLineText": "textarea",
+          "password": "3213213",
+          "phoneNumber": "createformdata",
+          "status": "test",
+          "studentId": "createformdata",
+          "studentName": "createformdata",
+          "treeSelection": "[\r\n  {\r\n    \"value\": \"5213858\",\r\n    \"label\": \"true\",\r\n    \"i18nLabel\": {}\r\n  }\r\n]"
+        },
+        "input": {
+          "formEntityToken": "base-test-form",
+          "pbcToken": "basetest"
+        },
+        "inputFields": [ ],
+        "name": "新建表单数据",
+        "outputFields": [ ],
+        "sdkType": "CREATE_ENTITY",
+        "uuid": "739b0a8f-cf7a-4e83-93ca-4ebe55ef80e8"
+      },
+      "type": "APP",
+      "version": "1.0"
+    },
+    {
+      "enabled": true,
+      "id": 5,
+      "nodeName": "APP - 修改表单数据",
+      "sdk": {
+        "formEntityDataId": "$1.id",
+        "formInput": {
+          "email": "mdoifydata",
+          "enrollmentDate": "2025-10-10",
+          "major": "[\r\n  {\r\n    \"label\": \"电子工程\",\r\n    \"value\": \"ee\"\r\n  }\r\n]",
+          "phoneNumber": "mdoifydata",
+          "status": "mdoifydata",
+          "studentId": "mdoifydata",
+          "studentName": "mdoifydata"
+        },
+        "input": {
+          "formEntityToken": "base-test-form",
+          "needReturnValue": "true",
+          "pbcToken": "basetest"
+        },
+        "inputFields": [ ],
+        "name": "修改表单数据",
+        "outputFields": [ ],
+        "sdkType": "SET_ENTITY_FIELD_VALUE",
+        "uuid": "dc0e9c73-8da1-44dd-b314-abf8cd4586b3"
+      },
+      "type": "APP",
+      "version": "1.0"
+    },
+    {
+      "enabled": true,
+      "id": 7,
+      "nodeName": "批量新增",
+      "sdk": {
+        "code": "$$$$ref:text:sdk-7.groovy",
+        "input": { },
+        "inputFields": [ ],
+        "name": "Groovy脚本",
+        "outputFields": [
+          {
+            "dataType": "string",
+            "label": "data",
+            "name": "data"
+          }
+        ],
+        "sdkType": "GENERAL_GROOVY",
+        "uuid": "492f8c00-14de-4837-a1f6-ed6ff0a2870e"
+      },
+      "type": "APP",
+      "version": "1.0"
+    },
+    {
+      "enabled": true,
+      "id": 6,
+      "nodeName": "APP - 批量新建表单数据",
+      "sdk": {
+        "formEntityId": "",
+        "input": {
+          "batchInput": "$7.data",
+          "formEntityToken": "base-test-form",
+          "pbcToken": "basetest"
+        },
+        "inputFields": [
+          {
+            "controlType": "input",
+            "dataType": "string",
+            "label": "batchInput",
+            "name": "batchInput",
+            "optional": true
+          },
+          {
+            "controlType": "entity",
+            "label": "Form Entity",
+            "name": "formEntityToken",
+            "optional": false
+          },
+          {
+            "controlType": "select",
+            "dataType": "string",
+            "label": "是否需要返回创建的值",
+            "name": "needReturnValue",
+            "optional": true,
+            "pickList": [
+              "true",
+              "false"
+            ]
+          },
+          {
+            "controlType": "input",
+            "label": "Batch Size",
+            "name": "batchSize",
+            "optional": false
+          }
+        ],
+        "name": "批量新建表单数据",
+        "outputFields": [
+          {
+            "label": "返回结果",
+            "name": "results"
+          },
+          {
+            "dataType": "string",
+            "label": "返回数量",
+            "name": "count"
+          }
+        ],
+        "sdkType": "BATCH_CREATE_ENTITY",
+        "uuid": "8abc1654-b307-4fe9-b41a-72f9d7481e79"
+      },
+      "type": "APP",
+      "version": "1.0"
+    },
+    {
+      "enabled": true,
+      "id": 10,
+      "nodeName": "APP - 根据条件获取表单数据",
+      "sdk": {
+        "input": {
+          "formEntityToken": "base-test-form",
+          "include_deleted": "false",
+          "lockUpdate": "false",
+          "needACL": "true",
+          "needResource": "true",
+          "needText": "true",
+          "pbcToken": "basetest",
+          "projectToken": "$CURRENT_PROJECT.token",
+          "throw_exception": "false"
+        },
+        "inputFields": [
+          {
+            "controlType": "select",
+            "dataType": "string",
+            "label": "needACL",
+            "name": "needACL",
+            "optional": false,
+            "pickList": [
+              "true",
+              "false"
+            ]
+          },
+          {
+            "controlType": "select",
+            "dataType": "string",
+            "label": "needResource",
+            "name": "needResource",
+            "optional": false,
+            "pickList": [
+              "true",
+              "false"
+            ]
+          },
+          {
+            "controlType": "select",
+            "dataType": "string",
+            "label": "needText",
+            "name": "needText",
+            "optional": false,
+            "pickList": [
+              "true",
+              "false"
+            ]
+          },
+          {
+            "controlType": "select",
+            "dataType": "string",
+            "label": "include_deleted",
+            "name": "include_deleted",
+            "optional": false,
+            "pickList": [
+              "true",
+              "false"
+            ]
+          },
+          {
+            "controlType": "select",
+            "dataType": "string",
+            "label": "throw_exception",
+            "name": "throw_exception",
+            "optional": false,
+            "pickList": [
+              "true",
+              "false"
+            ]
+          },
+          {
+            "controlType": "select",
+            "dataType": "string",
+            "label": "Need Count",
+            "name": "needCount",
+            "optional": false,
+            "pickList": [
+              "true",
+              "false"
+            ]
+          },
+          {
+            "controlType": "input",
+            "dataType": "number",
+            "label": "Start Row",
+            "name": "startRow",
+            "optional": false
+          },
+          {
+            "controlType": "input",
+            "dataType": "number",
+            "label": "End Row",
+            "name": "endRow",
+            "optional": false
+          }
+        ],
+        "name": "根据条件获取表单数据",
+        "outputFields": [
+          {
+            "label": "查询结果",
+            "name": "results"
+          },
+          {
+            "dataType": "string",
+            "label": "结果数量",
+            "name": "count"
+          }
+        ],
+        "sdkType": "LIST_QUERY",
+        "uuid": "b4ffad17-593b-4868-940b-70d89fa35cc3"
+      },
+      "type": "APP",
+      "version": "1.0"
+    },
+    {
+      "enabled": true,
+      "id": 9,
+      "nodeName": "APP - 设置流程输出值",
+      "sdk": {
+        "input": {
+          "subout": "$10"
+        },
+        "inputFields": [
+          {
+            "dataType": "string",
+            "label": "subout",
+            "name": "subout",
+            "optional": false
+          }
+        ],
+        "name": "设置流程输出值",
+        "sdkType": "SET_VALUE_TO_INSTANCE",
+        "uuid": "f63bae3b-4003-4b29-aedf-4626216fc12a"
+      },
+      "type": "APP",
+      "version": "1.0"
+    },
+    {
+      "enabled": true,
+      "id": 8,
+      "nodeName": "STOP_JOB",
+      "result": "Successful",
+      "type": "STOP_JOB"
+    }
+  ],
+  "restApiEnabled": 1,
+  "restApiMethod": "GET",
+  "restApiUrl": "/flow/api/flow-rest-selfauth/rest-inmemory",
+  "token": "subflow-flow"
+}

@@ -1,0 +1,69 @@
+{
+  "schemaId": "upload-pic-in-order-form-list",
+  "schemaJson_$$$NESTED_JSON_STRING$$$": {
+    "fields": [
+      {
+        "component": "Card",
+        "fields": [
+          {
+            "component": "Table",
+            "componentProps": {
+              "addButtonHref": "/form/upload-pic-in-order-form/layout/default",
+              "columnDefs": [
+                {
+                  "cellRendererParams": {
+                    "componentProps": {
+                      "listType": "text"
+                    }
+                  },
+                  "colId": "uploadPic",
+                  "field": "uploadPic",
+                  "headerName": "Uploadpic",
+                  "type": "UPLOAD_COLUMN"
+                },
+                {
+                  "cellRendererParams": {
+                    "actions": [
+                      {
+                        "href": "/form/upload-pic-in-order-form/layout/default/:id",
+                        "type": "EDIT"
+                      },
+                      {
+                        "href": "/form/:id/view",
+                        "type": "VIEW"
+                      },
+                      {
+                        "type": "DELETE"
+                      }
+                    ],
+                    "displayLikeButton": true,
+                    "showIcon": true
+                  },
+                  "type": "ACTION_COLUMN",
+                  "width": 240
+                }
+              ],
+              "dataSource": {
+                "token": "upload-pic-in-order-form"
+              },
+              "pagination": true,
+              "pinnedFilter": [
+                "uploadPic"
+              ]
+            },
+            "id": "upload-pic-in-order-form-table",
+            "style": {
+              "height": "100%"
+            }
+          }
+        ],
+        "style": {
+          "height": "100%"
+        }
+      }
+    ],
+    "form": {
+      "title": "uploadPicInorder List"
+    }
+  }
+}

@@ -1,0 +1,87 @@
+{
+  "name": "i18n-flow",
+  "nodeList": [
+    {
+      "enabled": true,
+      "id": 1,
+      "nodeName": "APP - Get form data based on conditions - i18n-False",
+      "sdk": {
+        "input": {
+          "formEntityToken": "product-management-form",
+          "include_deleted": "false",
+          "lockUpdate": "false",
+          "needACL": "false",
+          "needResource": "false",
+          "needText": "false",
+          "pbcToken": "simple-crm",
+          "projectToken": "$CURRENT_PROJECT.token",
+          "throw_exception": "false"
+        },
+        "inputFields": [ ],
+        "name": "Get form data based on conditions",
+        "numberStringToBigDecimal": false,
+        "outputFields": [
+          {
+            "label": "results",
+            "name": "results"
+          },
+          {
+            "dataType": "string",
+            "label": "count",
+            "name": "count"
+          }
+        ],
+        "sdkType": "LIST_QUERY",
+        "uuid": "b4ffad17-593b-4868-940b-70d89fa35cc3"
+      },
+      "type": "APP",
+      "version": "1.0"
+    },
+    {
+      "enabled": true,
+      "id": 3,
+      "nodeName": "APP - Get form data based on conditions - i18n-True",
+      "sdk": {
+        "input": {
+          "formEntityToken": "product-management-form",
+          "include_deleted": "false",
+          "lockUpdate": "false",
+          "needACL": "false",
+          "needI18n": "true",
+          "needResource": "false",
+          "needText": "false",
+          "pbcToken": "simple-crm",
+          "projectToken": "$CURRENT_PROJECT.token",
+          "throw_exception": "false"
+        },
+        "inputFields": [ ],
+        "name": "Get form data based on conditions",
+        "numberStringToBigDecimal": false,
+        "outputFields": [
+          {
+            "label": "results",
+            "name": "results"
+          },
+          {
+            "dataType": "string",
+            "label": "count",
+            "name": "count"
+          }
+        ],
+        "sdkType": "LIST_QUERY",
+        "uuid": "b4ffad17-593b-4868-940b-70d89fa35cc3"
+      },
+      "type": "APP",
+      "version": "1.0"
+    },
+    {
+      "enabled": true,
+      "id": 2,
+      "nodeName": "STOP_JOB EDITED",
+      "result": "Successful",
+      "type": "STOP_JOB"
+    }
+  ],
+  "restApiEnabled": 0,
+  "token": "i18n-flow"
+}

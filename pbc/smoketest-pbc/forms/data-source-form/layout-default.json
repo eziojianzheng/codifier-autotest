@@ -1,0 +1,37 @@
+{
+  "fields": [
+    {
+      "component": "Input",
+      "id": "dataSource",
+      "title": "datasource",
+      "validation": {
+        "maxLength": 200
+      }
+    },
+    {
+      "component": "Textarea",
+      "id": "datasourceTextarea",
+      "title": "datasourcetextarea"
+    },
+    {
+      "component": "NumberPicker",
+      "id": "numberPicker",
+      "title": "Number Picker"
+    },
+    {
+      "component": "NumericPicker",
+      "id": "numericPicker",
+      "title": "Numeric Picker"
+    },
+    {
+      "component": "DatePicker",
+      "id": "datePicker",
+      "title": "Date Picker"
+    }
+  ],
+  "form": {
+    "defaultCancelButton": true,
+    "defaultSubmitButton": true,
+    "title": "Layout"
+  }
+}

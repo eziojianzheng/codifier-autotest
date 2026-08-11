@@ -1,0 +1,70 @@
+{
+  "dataLocation": "LOCAL",
+  "enableForbidUpdateSomeFieldsValueWhenReferenced": 0,
+  "fields": [
+    {
+      "encryptStorage": 0,
+      "encryptTransit": 0,
+      "forbidToUpdate": false,
+      "maxLength": 200,
+      "name": "datasource",
+      "storageField": "value1",
+      "token": "dataSource",
+      "type": "TEXT_BOX"
+    },
+    {
+      "encryptStorage": 0,
+      "encryptTransit": 0,
+      "forbidToUpdate": false,
+      "name": "datasourcetextarea",
+      "storageField": "value2",
+      "token": "datasourceTextarea",
+      "type": "TEXTAREA"
+    },
+    {
+      "encryptStorage": 0,
+      "encryptTransit": 0,
+      "forbidToUpdate": false,
+      "name": "Date Picker",
+      "storageField": "value5",
+      "token": "datePicker",
+      "type": "DATE"
+    },
+    {
+      "encryptStorage": 0,
+      "encryptTransit": 0,
+      "forbidToUpdate": false,
+      "name": "Number Picker",
+      "storageField": "value3",
+      "token": "numberPicker",
+      "type": "NUMBER"
+    },
+    {
+      "encryptStorage": 0,
+      "encryptTransit": 0,
+      "forbidToUpdate": false,
+      "name": "Numeric Picker",
+      "storageField": "value4",
+      "token": "numericPicker",
+      "type": "NUMERIC"
+    }
+  ],
+  "isAutoLock": 0,
+  "isDeletableWhenReferenced": 1,
+  "isInnerEntity": 0,
+  "isMasterData": 0,
+  "layouts": [
+    {
+      "defaultLayout": true,
+      "name": "Layout",
+      "sortIndex": 0,
+      "token": "default"
+    }
+  ],
+  "name": "datasource",
+  "permissionTarget": "data-source-form",
+  "remoteNoSystemColumns": true,
+  "standalone": 0,
+  "standaloneTableNormalized": 0,
+  "token": "data-source-form"
+}

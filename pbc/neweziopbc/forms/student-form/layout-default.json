@@ -1,0 +1,166 @@
+{
+  "fields": [
+    {
+      "component": "Card",
+      "fields": [
+        {
+          "component": "Stack",
+          "componentProps": {
+            "flexDirection": "column",
+            "gap": 20
+          },
+          "fields": [
+            {
+              "component": "Stack",
+              "componentProps": {
+                "flexDirection": "column",
+                "gap": 12
+              },
+              "fields": [
+                {
+                  "component": "Text",
+                  "componentProps": {
+                    "content": "Student Information"
+                  },
+                  "style": {
+                    "color": "#efa666",
+                    "fontSize": 18,
+                    "fontWeight": "bold"
+                  }
+                },
+                {
+                  "component": "Input",
+                  "id": "studentName",
+                  "style": {
+                    "color": "#999",
+                    "fontSize": 16,
+                    "fontWeight": 500
+                  },
+                  "title": "Student Name",
+                  "validation": {
+                    "maxLength": 200,
+                    "required": true
+                  }
+                },
+                {
+                  "component": "Input",
+                  "id": "studentId",
+                  "style": {
+                    "color": "#999",
+                    "fontSize": 16,
+                    "fontWeight": 500
+                  },
+                  "title": "Student ID",
+                  "validation": {
+                    "maxLength": 20,
+                    "required": true
+                  }
+                },
+                {
+                  "component": "DatePicker",
+                  "componentProps": {
+                    "style": {
+                      "width": "100%"
+                    }
+                  },
+                  "id": "enrollmentDate",
+                  "style": {
+                    "color": "#999",
+                    "fontSize": 16,
+                    "fontWeight": 500
+                  },
+                  "title": "Enrollment Date"
+                }
+              ]
+            },
+            {
+              "component": "Stack",
+              "componentProps": {
+                "flexDirection": "column",
+                "gap": 12
+              },
+              "fields": [
+                {
+                  "component": "Text",
+                  "componentProps": {
+                    "content": "Contact Information"
+                  },
+                  "style": {
+                    "color": "#efa666",
+                    "fontSize": 18,
+                    "fontWeight": "bold"
+                  }
+                },
+                {
+                  "component": "Input",
+                  "id": "emailAddress",
+                  "style": {
+                    "color": "#999",
+                    "fontSize": 16,
+                    "fontWeight": 500
+                  },
+                  "title": "Email Address",
+                  "validation": {
+                    "maxLength": 200,
+                    "regex": "^[\\w\\.-]+@[a-zA-Z\\d\\.-]+\\.[a-zA-Z]{2,}$",
+                    "regexErrorMessage": "Invalid Email Address",
+                    "required": true
+                  }
+                },
+                {
+                  "component": "Input",
+                  "id": "phoneNumber",
+                  "style": {
+                    "color": "#999",
+                    "fontSize": 16,
+                    "fontWeight": 500
+                  },
+                  "title": "Phone Number",
+                  "validation": {
+                    "maxLength": 15,
+                    "regex": "^\\+?[1-9]\\d{1,14}$",
+                    "regexErrorMessage": "Invalid Phone Number"
+                  }
+                }
+              ]
+            },
+            {
+              "component": "Stack",
+              "componentProps": {
+                "flexDirection": "row",
+                "justifyContent": "flex-end"
+              },
+              "fields": [
+                {
+                  "component": "Button",
+                  "componentProps": {
+                    "action": {
+                      "type": "submit"
+                    },
+                    "content": "Submit"
+                  },
+                  "style": {
+                    "background": "#efa666",
+                    "fontSize": 16,
+                    "fontWeight": "bold"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "component": "Input",
+      "hidden": true,
+      "id": "status",
+      "title": "Status"
+    }
+  ],
+  "form": {
+    "defaultCancelButton": true,
+    "defaultSubmitButton": true,
+    "title": "Student Form EDITED"
+  }
+}

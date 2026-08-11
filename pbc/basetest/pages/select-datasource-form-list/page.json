@@ -1,0 +1,128 @@
+{
+  "schemaId": "select-datasource-form-list",
+  "schemaJson_$$$NESTED_JSON_STRING$$$": {
+    "fields": [
+      {
+        "component": "Card",
+        "fields": [
+          {
+            "component": "Table",
+            "componentProps": {
+              "addButtonHref": "/form/select-datasource-form/layout/default",
+              "columnDefs": [
+                {
+                  "colId": "switch",
+                  "field": "switch",
+                  "headerName": "开关"
+                },
+                {
+                  "colId": "rating",
+                  "field": "rating",
+                  "headerName": "评分"
+                },
+                {
+                  "colId": "singleLineText",
+                  "field": "singleLineText",
+                  "headerName": "单行文本",
+                  "headerName_i18n_key": "standard|>ERP 供应商管理|>any|>singleLineText",
+                  "headerName_i18n_ns": "standard",
+                  "type": "TEXT_COLUMN"
+                },
+                {
+                  "colId": "multiLineText",
+                  "field": "multiLineText",
+                  "headerName": "多行文本",
+                  "type": "TEXTAREA_COLUMN"
+                },
+                {
+                  "colId": "number",
+                  "field": "number",
+                  "headerName": "数字",
+                  "headerName_i18n_key": "standard|>ERP 供应商管理|>any|>number",
+                  "headerName_i18n_ns": "standard",
+                  "type": "TEXT_COLUMN"
+                },
+                {
+                  "colId": "highPrecisionDigital",
+                  "field": "highPrecisionDigital",
+                  "headerName": "高精度数字",
+                  "type": "NUMERIC_COLUMN"
+                },
+                {
+                  "colId": "date",
+                  "field": "date",
+                  "headerName": "日期",
+                  "headerName_i18n_key": "standard|>CETA 基础模块|>any|>date",
+                  "headerName_i18n_ns": "standard",
+                  "type": "DATE_COLUMN"
+                },
+                {
+                  "colId": "time",
+                  "field": "time",
+                  "headerName": "时间",
+                  "headerName_i18n_key": "standard|>any|>any|>time",
+                  "headerName_i18n_ns": "standard",
+                  "type": "DATE_COLUMN"
+                },
+                {
+                  "colId": "multipleChoice",
+                  "field": "multipleChoice",
+                  "headerName": "多选",
+                  "type": "CHECKBOX_COLUMN"
+                },
+                {
+                  "colId": "singleChoice",
+                  "field": "singleChoice",
+                  "headerName": "单选",
+                  "headerName_i18n_key": "standard|>any|>any|>singleChoice",
+                  "headerName_i18n_ns": "standard",
+                  "type": "RADIO_COLUMN"
+                },
+                {
+                  "cellRendererParams": {
+                    "actions": [
+                      {
+                        "href": "/form/select-datasource-form/layout/default/:id",
+                        "type": "EDIT"
+                      },
+                      {
+                        "href": "/form/:id/view",
+                        "type": "VIEW"
+                      },
+                      {
+                        "type": "DELETE"
+                      }
+                    ],
+                    "displayLikeButton": true,
+                    "showIcon": true
+                  },
+                  "type": "ACTION_COLUMN",
+                  "width": 240
+                }
+              ],
+              "dataSource": {
+                "token": "select-datasource-form"
+              },
+              "pagination": true,
+              "pinnedFilter": [
+                "switch",
+                "rating",
+                "singleLineText"
+              ]
+            },
+            "id": "select-datasource-form-table",
+            "style": {
+              "height": "100%"
+            }
+          }
+        ],
+        "style": {
+          "height": "100%"
+        }
+      }
+    ],
+    "form": {
+      "title": "selectdatasource列表"
+    }
+  }
+}

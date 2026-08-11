@@ -1,0 +1,53 @@
+{
+  "fields": [
+    {
+      "component": "Input",
+      "id": "application_id",
+      "title": "applicationId",
+      "validation": {
+        "maxLength": 200
+      }
+    },
+    {
+      "component": "Input",
+      "id": "cat_id",
+      "title": "catId",
+      "validation": {
+        "maxLength": 200
+      }
+    },
+    {
+      "component": "Input",
+      "id": "update_type",
+      "title": "updateType",
+      "validation": {
+        "maxLength": 200
+      }
+    },
+    {
+      "component": "Input",
+      "id": "status",
+      "title": "status",
+      "validation": {
+        "maxLength": 200
+      }
+    },
+    {
+      "component": "NumberPicker",
+      "id": "special_flag",
+      "title": "specialFlag"
+    },
+    {
+      "component": "Input",
+      "id": "care_level",
+      "title": "careLevel",
+      "validation": {
+        "maxLength": 200
+      }
+    }
+  ],
+  "form": {
+    "defaultCancelButton": true,
+    "defaultSubmitButton": true
+  }
+}

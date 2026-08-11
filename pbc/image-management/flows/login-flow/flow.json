@@ -1,0 +1,486 @@
+{
+  "name": "ログイン",
+  "nodeList": [
+    {
+      "enabled": true,
+      "id": 1,
+      "inMemory": true,
+      "inMemoryTransaction": false,
+      "interval": 60,
+      "nodeName": "TRIGGER",
+      "periodEnd": "23:59:59",
+      "periodStart": "00:00:00",
+      "restTrigger": {
+        "eligibleForAgent": false,
+        "method": "POST",
+        "requestBody": [
+          {
+            "dataType": "string",
+            "label": "dealerCode",
+            "name": "dealerCode",
+            "optional": false
+          },
+          {
+            "dataType": "string",
+            "label": "loginId",
+            "name": "loginId",
+            "optional": false
+          },
+          {
+            "dataType": "string",
+            "label": "password",
+            "name": "password",
+            "optional": false
+          }
+        ],
+        "requestHeaders": [ ],
+        "url": "/flow/api/flow-rest-selfauth/login-flow"
+      },
+      "scheduleType": "ONE_TIME",
+      "startTime": 1760509819855,
+      "triggerType": "REST",
+      "type": "TRIGGER",
+      "version": "2.0"
+    },
+    {
+      "enabled": true,
+      "id": 12,
+      "nodeName": "APP - Groovy script - 環境変数取得",
+      "sdk": {
+        "code": "$$$$ref:text:sdk-12.groovy",
+        "name": "Groovy script",
+        "outputFields": [
+          {
+            "dataType": "string",
+            "label": "cetaUserId",
+            "name": "cetaUserId"
+          },
+          {
+            "dataType": "string",
+            "label": "cetaUserPassword",
+            "name": "cetaUserPassword"
+          },
+          {
+            "dataType": "string",
+            "label": "apiCommonKey",
+            "name": "apiCommonKey"
+          },
+          {
+            "dataType": "string",
+            "label": "loginApiUrl",
+            "name": "loginApiUrl"
+          },
+          {
+            "dataType": "string",
+            "label": "environment",
+            "name": "environment"
+          },
+          {
+            "dataType": "string",
+            "label": "debug",
+            "name": "debug"
+          }
+        ],
+        "sdkType": "GENERAL_GROOVY",
+        "uuid": "492f8c00-14de-4837-a1f6-ed6ff0a2870e"
+      },
+      "type": "APP",
+      "version": "1.0"
+    },
+    {
+      "enabled": true,
+      "id": 2,
+      "nodeName": "APP - Groovy script- CETAパスワード暗号化",
+      "sdk": {
+        "code": "$$$$ref:text:sdk-2.groovy",
+        "input": {
+          "userPassword": "$12.cetaUserPassword"
+        },
+        "inputFields": [
+          {
+            "dataType": "string",
+            "label": "userPassword",
+            "name": "userPassword",
+            "optional": false
+          }
+        ],
+        "name": "Groovy script",
+        "outputFields": [
+          {
+            "dataType": "string",
+            "label": "passwordEncode",
+            "name": "passwordEncode"
+          }
+        ],
+        "sdkType": "GENERAL_GROOVY",
+        "uuid": "492f8c00-14de-4837-a1f6-ed6ff0a2870e"
+      },
+      "type": "APP",
+      "version": "1.0"
+    },
+    {
+      "enabled": true,
+      "id": 6,
+      "nodeName": "APP - Groovy script - IGSパスワード暗号化",
+      "sdk": {
+        "code": "$$$$ref:text:sdk-6.groovy",
+        "input": {
+          "apiCommonKey": "$12.apiCommonKey",
+          "inputpassword": "$1.restTrigger.requestBody.password"
+        },
+        "inputFields": [
+          {
+            "dataType": "string",
+            "label": "inputpassword",
+            "name": "inputpassword",
+            "optional": false
+          },
+          {
+            "dataType": "string",
+            "label": "apiCommonKey",
+            "name": "apiCommonKey",
+            "optional": false
+          }
+        ],
+        "name": "Groovy script",
+        "outputFields": [
+          {
+            "dataType": "string",
+            "label": "AESpass",
+            "name": "AESpass"
+          }
+        ],
+        "sdkType": "GENERAL_GROOVY",
+        "uuid": "492f8c00-14de-4837-a1f6-ed6ff0a2870e"
+      },
+      "type": "APP",
+      "version": "1.0"
+    },
+    {
+      "enabled": true,
+      "id": 17,
+      "nodeName": "APP - Groovy script - IGSログインAPIリクエスト",
+      "sdk": {
+        "code": "$$$$ref:text:sdk-17.groovy",
+        "input": {
+          "dealerCode": "$1.restTrigger.requestBody.dealerCode",
+          "debug": "$12.debug",
+          "loginApiUrl": "$12.loginApiUrl",
+          "password": "$1.restTrigger.requestBody.password",
+          "userId": "$1.restTrigger.requestBody.loginId"
+        },
+        "inputFields": [
+          {
+            "dataType": "string",
+            "label": "loginApiUrl",
+            "name": "loginApiUrl",
+            "optional": false
+          },
+          {
+            "dataType": "string",
+            "label": "dealerCode",
+            "name": "dealerCode",
+            "optional": false
+          },
+          {
+            "dataType": "string",
+            "label": "userId",
+            "name": "userId",
+            "optional": false
+          },
+          {
+            "dataType": "string",
+            "label": "password",
+            "name": "password",
+            "optional": false
+          },
+          {
+            "dataType": "string",
+            "label": "debug",
+            "name": "debug",
+            "optional": false
+          }
+        ],
+        "name": "Groovy script",
+        "sdkType": "GENERAL_GROOVY",
+        "uuid": "492f8c00-14de-4837-a1f6-ed6ff0a2870e"
+      },
+      "type": "APP",
+      "version": "1.0"
+    },
+    {
+      "conditions": [
+        {
+          "condition": "is_present",
+          "dataField": "$17.responseCode",
+          "id": 6316
+        }
+      ],
+      "enabled": true,
+      "id": 29,
+      "nodeName": "IF",
+      "subFlow": [
+        {
+          "conditions": [
+            {
+              "condition": "equals",
+              "dataField": "$17.responseCode",
+              "id": 8323,
+              "value": "0000"
+            }
+          ],
+          "enabled": true,
+          "id": 30,
+          "nodeName": "IF",
+          "subFlow": [
+            {
+              "enabled": true,
+              "id": 21,
+              "nodeName": "APP - Internal login - CETAログイン",
+              "sdk": {
+                "input": {
+                  "jwtMaxLifeMinutes": "",
+                  "password": "$2.passwordEncode",
+                  "userId": "$12.cetaUserId"
+                },
+                "inputFields": [
+                  {
+                    "controlType": "input",
+                    "dataType": "string",
+                    "label": "Payload",
+                    "name": "payload",
+                    "optional": true
+                  },
+                  {
+                    "controlType": "input",
+                    "dataType": "string",
+                    "label": "UserId",
+                    "name": "userId",
+                    "optional": true
+                  },
+                  {
+                    "controlType": "input",
+                    "dataType": "string",
+                    "label": "Password",
+                    "name": "password",
+                    "optional": true
+                  },
+                  {
+                    "controlType": "input",
+                    "dataType": "string",
+                    "label": "Jwt max life minutes",
+                    "name": "jwtMaxLifeMinutes",
+                    "optional": true
+                  }
+                ],
+                "name": "Internal login",
+                "outputFields": [
+                  {
+                    "dataType": "string",
+                    "label": "Message",
+                    "name": "message"
+                  },
+                  {
+                    "dataType": "string",
+                    "label": "Success",
+                    "name": "success"
+                  },
+                  {
+                    "dataType": "string",
+                    "label": "AccessToken",
+                    "name": "accessToken"
+                  },
+                  {
+                    "dataType": "string",
+                    "label": "RefreshToken",
+                    "name": "refreshToken"
+                  }
+                ],
+                "sdkType": "INTERNAL_LOGIN",
+                "uuid": "e2039b45-81f2-4f8b-b3df-f54232a7f497"
+              },
+              "type": "APP",
+              "version": "1.0"
+            },
+            {
+              "enabled": true,
+              "id": 22,
+              "input": {
+                "accessToken": "$21.accessToken",
+                "igsDealerCode": "$1.restTrigger.requestBody.dealerCode",
+                "igsJwtToken": "$17.responseBody.token",
+                "igsUserId": "$1.restTrigger.requestBody.loginId",
+                "igsUserName": "$17.responseBody.user_name",
+                "message": "$17.message",
+                "refreshToken": "$21.refreshToken",
+                "responseCode": "$17.responseCode",
+                "statusCode": "$17.status"
+              },
+              "nodeName": "APP - Set workflow output value - 正常レスポンス作成",
+              "sdk": {
+                "inputFields": [
+                  {
+                    "dataType": "string",
+                    "label": "accessToken",
+                    "name": "accessToken",
+                    "of": "string",
+                    "optional": false
+                  },
+                  {
+                    "dataType": "string",
+                    "label": "refreshToken",
+                    "name": "refreshToken",
+                    "of": "string",
+                    "optional": false
+                  },
+                  {
+                    "dataType": "string",
+                    "label": "igsJwtToken",
+                    "name": "igsJwtToken",
+                    "of": "string",
+                    "optional": false
+                  },
+                  {
+                    "dataType": "string",
+                    "label": "igsDealerCode",
+                    "name": "igsDealerCode",
+                    "of": "string",
+                    "optional": false
+                  },
+                  {
+                    "dataType": "string",
+                    "label": "igsLoginId",
+                    "name": "igsUserId",
+                    "of": "string",
+                    "optional": false
+                  },
+                  {
+                    "dataType": "string",
+                    "label": "igsUserName",
+                    "name": "igsUserName",
+                    "of": "string",
+                    "optional": false
+                  },
+                  {
+                    "dataType": "string",
+                    "label": "statusCode",
+                    "name": "statusCode",
+                    "optional": false
+                  },
+                  {
+                    "dataType": "string",
+                    "label": "responseCode",
+                    "name": "responseCode",
+                    "optional": false
+                  },
+                  {
+                    "dataType": "string",
+                    "label": "message",
+                    "name": "message",
+                    "optional": false
+                  }
+                ],
+                "name": "Set workflow output value",
+                "sdkType": "SET_VALUE_TO_INSTANCE",
+                "uuid": "f63bae3b-4003-4b29-aedf-4626216fc12a"
+              },
+              "type": "APP",
+              "version": "2.0"
+            },
+            {
+              "enabled": true,
+              "id": 33,
+              "nodeName": "STOP_JOB",
+              "result": "Successful",
+              "type": "STOP_JOB"
+            }
+          ],
+          "type": "IF"
+        },
+        {
+          "enabled": true,
+          "id": 34,
+          "input": {
+            "message": "$17.message",
+            "responseCode": "$17.responseCode",
+            "statusCode": "$17.status"
+          },
+          "nodeName": "APP - Set workflow output value - 正常レスポンス作成",
+          "sdk": {
+            "inputFields": [
+              {
+                "dataType": "string",
+                "label": "statusCode",
+                "name": "statusCode",
+                "of": "string",
+                "optional": false
+              },
+              {
+                "dataType": "string",
+                "label": "responseCode",
+                "name": "responseCode",
+                "of": "string",
+                "optional": false
+              },
+              {
+                "dataType": "string",
+                "label": "message",
+                "name": "message",
+                "of": "string",
+                "optional": false
+              }
+            ],
+            "name": "Set workflow output value",
+            "sdkType": "SET_VALUE_TO_INSTANCE",
+            "uuid": "f63bae3b-4003-4b29-aedf-4626216fc12a"
+          },
+          "type": "APP",
+          "version": "2.0"
+        },
+        {
+          "enabled": true,
+          "id": 35,
+          "nodeName": "STOP_JOB",
+          "result": "Successful",
+          "type": "STOP_JOB"
+        }
+      ],
+      "type": "IF"
+    },
+    {
+      "enabled": true,
+      "id": 36,
+      "input": {
+        "statusCode": "$17.status"
+      },
+      "nodeName": "APP - Set workflow output value - 異常レスポンス作成",
+      "sdk": {
+        "inputFields": [
+          {
+            "dataType": "string",
+            "label": "statusCode",
+            "name": "statusCode",
+            "of": "string",
+            "optional": false
+          }
+        ],
+        "name": "Set workflow output value",
+        "sdkType": "SET_VALUE_TO_INSTANCE",
+        "uuid": "f63bae3b-4003-4b29-aedf-4626216fc12a"
+      },
+      "type": "APP",
+      "version": "2.0"
+    },
+    {
+      "enabled": true,
+      "id": 23,
+      "nodeName": "STOP_JOB",
+      "result": "Failed",
+      "type": "STOP_JOB"
+    }
+  ],
+  "restApiEnabled": 1,
+  "restApiMethod": "POST",
+  "restApiUrl": "/flow/api/flow-rest-selfauth/login-flow",
+  "token": "login-flow"
+}

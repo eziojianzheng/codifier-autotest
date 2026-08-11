@@ -1,0 +1,162 @@
+{
+  "dataLocation": "LOCAL",
+  "enableForbidUpdateSomeFieldsValueWhenReferenced": 0,
+  "fields": [
+    {
+      "domain": "CETA 基础模块",
+      "encryptStorage": 0,
+      "encryptTransit": 0,
+      "forbidToUpdate": false,
+      "maxLength": 200,
+      "name": "日期",
+      "nameI18nKey": "standard|>CETA 基础模块|>any|>date",
+      "nameI18nNs": "standard",
+      "normalizedStorageField": "ceta_pre_date",
+      "source": "7f5718b0-8545-40c9-a7ab-c72e63b0f7bc",
+      "storageField": "value5",
+      "token": "date",
+      "type": "DATE"
+    },
+    {
+      "encryptStorage": 0,
+      "encryptTransit": 0,
+      "forbidToUpdate": false,
+      "name": "高精度数字",
+      "normalizedStorageField": "high_precision_digital",
+      "storageField": "value4",
+      "token": "highPrecisionDigital",
+      "type": "NUMERIC"
+    },
+    {
+      "encryptStorage": 0,
+      "encryptTransit": 0,
+      "forbidToUpdate": false,
+      "name": "多行文本",
+      "normalizedStorageField": "multi_line_text",
+      "storageField": "value2",
+      "token": "multiLineText",
+      "type": "TEXTAREA"
+    },
+    {
+      "encryptStorage": 0,
+      "encryptTransit": 0,
+      "forbidToUpdate": false,
+      "name": "多选",
+      "normalizedStorageField": "multiple_choice",
+      "storageField": "value7",
+      "token": "multipleChoice",
+      "type": "CHECKBOX"
+    },
+    {
+      "domain": "ERP 供应商管理",
+      "encryptStorage": 0,
+      "encryptTransit": 0,
+      "forbidToUpdate": false,
+      "maxLength": 200,
+      "name": "数字",
+      "nameI18nKey": "standard|>ERP 供应商管理|>any|>number",
+      "nameI18nNs": "standard",
+      "normalizedStorageField": "number",
+      "source": "be78e594-5ccb-4b7b-b54e-3184e592ff3b",
+      "storageField": "value3",
+      "token": "number",
+      "type": "TEXT_BOX"
+    },
+    {
+      "encryptStorage": 0,
+      "encryptTransit": 0,
+      "forbidToUpdate": false,
+      "name": "评分",
+      "normalizedStorageField": "rating",
+      "storageField": "value10",
+      "token": "rating",
+      "type": "RATE"
+    },
+    {
+      "encryptStorage": 0,
+      "encryptTransit": 0,
+      "forbidToUpdate": false,
+      "maxLength": 200,
+      "name": "富文本",
+      "nameI18nKey": "standard|>any|>any|>richText",
+      "nameI18nNs": "standard",
+      "normalizedStorageField": "rich_text",
+      "source": "1bf2dc11-dd68-4fb4-b7a6-e7eb5da12c6f",
+      "storageField": "value11",
+      "token": "richText",
+      "type": "RICH_TEXT"
+    },
+    {
+      "encryptStorage": 0,
+      "encryptTransit": 0,
+      "forbidToUpdate": false,
+      "maxLength": 200,
+      "name": "单选",
+      "nameI18nKey": "standard|>any|>any|>singleChoice",
+      "nameI18nNs": "standard",
+      "normalizedStorageField": "single_choice",
+      "source": "13302649-3ac7-4f06-89a4-96d5e0abfd23",
+      "storageField": "value8",
+      "token": "singleChoice",
+      "type": "RADIO"
+    },
+    {
+      "domain": "ERP 供应商管理",
+      "encryptStorage": 0,
+      "encryptTransit": 0,
+      "forbidToUpdate": false,
+      "maxLength": 200,
+      "name": "单行文本",
+      "nameI18nKey": "standard|>ERP 供应商管理|>any|>singleLineText",
+      "nameI18nNs": "standard",
+      "normalizedStorageField": "single_line_text",
+      "source": "ba3e4acf-932c-4828-846d-5d2691185f79",
+      "storageField": "value1",
+      "token": "singleLineText",
+      "type": "TEXT_BOX"
+    },
+    {
+      "encryptStorage": 0,
+      "encryptTransit": 0,
+      "forbidToUpdate": false,
+      "name": "开关",
+      "normalizedStorageField": "switch",
+      "storageField": "value9",
+      "token": "switch",
+      "type": "SWITCH"
+    },
+    {
+      "encryptStorage": 0,
+      "encryptTransit": 0,
+      "forbidToUpdate": false,
+      "maxLength": 200,
+      "name": "时间",
+      "nameI18nKey": "standard|>any|>any|>time",
+      "nameI18nNs": "standard",
+      "normalizedStorageField": "ceta_pre_time",
+      "source": "b74d29a0-1757-47c9-8d8a-a350a2776caa",
+      "storageField": "value6",
+      "token": "time",
+      "type": "DATE"
+    }
+  ],
+  "isAutoLock": 0,
+  "isDeletableWhenReferenced": 0,
+  "isInnerEntity": 0,
+  "isMasterData": 0,
+  "layouts": [
+    {
+      "defaultLayout": true,
+      "name": "布局",
+      "sortIndex": 0,
+      "token": "default"
+    }
+  ],
+  "name": "selectdatasource",
+  "permissionTarget": "select-datasource-form",
+  "remoteNoSystemColumns": true,
+  "standalone": 1,
+  "standaloneTableName": "normal_standalone_selectdatasource",
+  "standaloneTableNormalized": 1,
+  "token": "select-datasource-form"
+}

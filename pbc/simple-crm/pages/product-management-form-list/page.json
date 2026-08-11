@@ -1,0 +1,114 @@
+{
+  "schemaId": "product-management-form-list",
+  "schemaJson_$$$NESTED_JSON_STRING$$$": {
+    "fields": [
+      {
+        "component": "Card",
+        "fields": [
+          {
+            "component": "Table",
+            "componentProps": {
+              "addButtonHref": "/form/product-management-form/layout/default",
+              "columnDefs": [
+                {
+                  "colId": "status",
+                  "field": "status",
+                  "headerName": "Status",
+                  "type": "TEXT_COLUMN"
+                },
+                {
+                  "colId": "productName",
+                  "field": "productName",
+                  "headerName": "Product Name",
+                  "type": "TEXT_COLUMN"
+                },
+                {
+                  "colId": "productCategory",
+                  "field": "productCategory",
+                  "headerName": "Product Category",
+                  "type": "TEXT_COLUMN"
+                },
+                {
+                  "colId": "productBrand",
+                  "field": "productBrand",
+                  "headerName": "Product Brand",
+                  "type": "TEXT_COLUMN"
+                },
+                {
+                  "colId": "costPrice",
+                  "field": "costPrice",
+                  "headerName": "Cost Price",
+                  "type": "NUMBER_COLUMN"
+                },
+                {
+                  "colId": "suggestedRetailPrice",
+                  "field": "suggestedRetailPrice",
+                  "headerName": "Suggested Retail Price",
+                  "type": "NUMBER_COLUMN"
+                },
+                {
+                  "colId": "unit",
+                  "field": "unit",
+                  "headerName": "Unit",
+                  "type": "TEXT_COLUMN"
+                },
+                {
+                  "colId": "productReferenceProfitMargin",
+                  "field": "productReferenceProfitMargin",
+                  "headerName": "Product Reference Profit Margin (%)",
+                  "type": "NUMBER_COLUMN"
+                },
+                {
+                  "colId": "productFile",
+                  "field": "productFile",
+                  "headerName": "Product File",
+                  "type": "TEXT_COLUMN"
+                },
+                {
+                  "cellRendererParams": {
+                    "actions": [
+                      {
+                        "href": "/form/product-management-form/layout/default/:id",
+                        "type": "EDIT"
+                      },
+                      {
+                        "href": "/form/:id/view",
+                        "type": "VIEW"
+                      },
+                      {
+                        "type": "DELETE"
+                      }
+                    ],
+                    "displayLikeButton": true,
+                    "showIcon": true
+                  },
+                  "type": "ACTION_COLUMN",
+                  "width": 240
+                }
+              ],
+              "dataSource": {
+                "token": "product-management-form"
+              },
+              "pagination": true,
+              "pinnedFilter": [
+                "status",
+                "productName",
+                "productCategory"
+              ]
+            },
+            "id": "product-management-form-table",
+            "style": {
+              "height": "100%"
+            }
+          }
+        ],
+        "style": {
+          "height": "100%"
+        }
+      }
+    ],
+    "form": {
+      "title": "Product Management List"
+    }
+  }
+}

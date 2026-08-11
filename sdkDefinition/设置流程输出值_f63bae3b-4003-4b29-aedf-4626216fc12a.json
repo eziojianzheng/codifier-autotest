@@ -1,0 +1,12 @@
+{
+  "definition_$$$NESTED_JSON_STRING$$$": {
+    "inputFields": [ ],
+    "sdkType": "SET_VALUE_TO_INSTANCE"
+  },
+  "isSystem": 1,
+  "name": "设置流程输出值",
+  "nameEnUs": "Set workflow output value",
+  "nameJaJp": "ワークフローの出力値の設定",
+  "sdkType": "SET_VALUE_TO_INSTANCE",
+  "uuid": "f63bae3b-4003-4b29-aedf-4626216fc12a"
+}

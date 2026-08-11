@@ -1,0 +1,45 @@
+{
+  "dataLocation": "LOCAL",
+  "enableForbidUpdateSomeFieldsValueWhenReferenced": 0,
+  "fields": [
+    {
+      "encryptStorage": 0,
+      "encryptTransit": 0,
+      "forbidToUpdate": false,
+      "name": "Date Picker1",
+      "normalizedStorageField": "date_picker_1",
+      "storageField": "value1",
+      "token": "datePicker_1",
+      "type": "DATE"
+    },
+    {
+      "encryptStorage": 0,
+      "encryptTransit": 0,
+      "forbidToUpdate": false,
+      "name": "Date Picker2",
+      "normalizedStorageField": "date_picker_2",
+      "storageField": "value2",
+      "token": "datePicker_2",
+      "type": "DATE"
+    }
+  ],
+  "isAutoLock": 0,
+  "isDeletableWhenReferenced": 0,
+  "isInnerEntity": 0,
+  "isMasterData": 0,
+  "layouts": [
+    {
+      "defaultLayout": true,
+      "name": "Layout",
+      "sortIndex": 0,
+      "token": "default"
+    }
+  ],
+  "name": "dateform_standard",
+  "permissionTarget": "date-form",
+  "remoteNoSystemColumns": true,
+  "standalone": 1,
+  "standaloneTableName": "standard_dateform",
+  "standaloneTableNormalized": 1,
+  "token": "date-form"
+}

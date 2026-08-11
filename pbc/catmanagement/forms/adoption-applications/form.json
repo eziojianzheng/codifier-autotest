@@ -1,0 +1,90 @@
+{
+  "dataLocation": "LOCAL",
+  "enableForbidUpdateSomeFieldsValueWhenReferenced": 0,
+  "fields": [
+    {
+      "encryptStorage": 0,
+      "encryptTransit": 0,
+      "forbidToUpdate": false,
+      "maxLength": 200,
+      "name": "applicationId",
+      "normalizedStorageField": "application_id",
+      "storageField": "value1",
+      "token": "application_id",
+      "type": "TEXT_BOX"
+    },
+    {
+      "encryptStorage": 0,
+      "encryptTransit": 0,
+      "forbidToUpdate": false,
+      "maxLength": 200,
+      "name": "careLevel",
+      "normalizedStorageField": "care_level",
+      "storageField": "value6",
+      "token": "care_level",
+      "type": "TEXT_BOX"
+    },
+    {
+      "encryptStorage": 0,
+      "encryptTransit": 0,
+      "forbidToUpdate": false,
+      "maxLength": 200,
+      "name": "catId",
+      "normalizedStorageField": "cat_id",
+      "storageField": "value2",
+      "token": "cat_id",
+      "type": "TEXT_BOX"
+    },
+    {
+      "encryptStorage": 0,
+      "encryptTransit": 0,
+      "forbidToUpdate": false,
+      "name": "specialFlag",
+      "normalizedStorageField": "special_flag",
+      "storageField": "value5",
+      "token": "special_flag",
+      "type": "NUMBER"
+    },
+    {
+      "encryptStorage": 0,
+      "encryptTransit": 0,
+      "forbidToUpdate": false,
+      "maxLength": 200,
+      "name": "status",
+      "normalizedStorageField": "status",
+      "storageField": "value4",
+      "token": "status",
+      "type": "TEXT_BOX"
+    },
+    {
+      "encryptStorage": 0,
+      "encryptTransit": 0,
+      "forbidToUpdate": false,
+      "maxLength": 200,
+      "name": "updateType",
+      "normalizedStorageField": "update_type",
+      "storageField": "value3",
+      "token": "update_type",
+      "type": "TEXT_BOX"
+    }
+  ],
+  "isAutoLock": 0,
+  "isDeletableWhenReferenced": 0,
+  "isInnerEntity": 0,
+  "isMasterData": 0,
+  "layouts": [
+    {
+      "defaultLayout": true,
+      "name": "Layout",
+      "sortIndex": 0,
+      "token": "default"
+    }
+  ],
+  "name": "catadoption",
+  "permissionTarget": "adoption-applications",
+  "remoteNoSystemColumns": true,
+  "standalone": 1,
+  "standaloneTableName": "ezipsql_adoption_applications",
+  "standaloneTableNormalized": 1,
+  "token": "adoption-applications"
+}

@@ -1,7 +1,9 @@
 {
+  "dataLocation": "LOCAL",
   "defaultMobileViewLayoutToken": "view",
   "defaultViewLayoutToken": "view",
   "description": "用户表",
+  "enableForbidUpdateSomeFieldsValueWhenReferenced": 0,
   "fields": [
     {
       "encryptStorage": 0,
@@ -116,16 +118,6 @@
       "encryptStorage": 0,
       "encryptTransit": 0,
       "forbidToUpdate": false,
-      "maxLength": 100,
-      "name": "新密码",
-      "storageField": "value21",
-      "token": "newPassword",
-      "type": "PASSWORD"
-    },
-    {
-      "encryptStorage": 0,
-      "encryptTransit": 0,
-      "forbidToUpdate": false,
       "maxLength": 200,
       "name": "昵称",
       "storageField": "value2",
@@ -141,16 +133,6 @@
       "nameI18nKey": "user-management|>system-user-form|>password",
       "storageField": "value3",
       "token": "password",
-      "type": "PASSWORD"
-    },
-    {
-      "encryptStorage": 0,
-      "encryptTransit": 0,
-      "forbidToUpdate": false,
-      "maxLength": 100,
-      "name": "确认密码",
-      "storageField": "value29",
-      "token": "passwordConfirmation",
       "type": "PASSWORD"
     },
     {
@@ -376,6 +358,7 @@
   "masterDataType": "USER",
   "name": "System User",
   "permissionTarget": "system-user-form",
+  "remoteNoSystemColumns": true,
   "standalone": 1,
   "standaloneTableName": "form_um_user",
   "standaloneTableNormalized": 0,

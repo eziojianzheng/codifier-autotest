@@ -1,0 +1,9 @@
+{
+  "name": "Product Page",
+  "schemaId": "product-page",
+  "schemaJson_$$$NESTED_JSON_STRING$$$": {
+    "form": {
+      "title": "Product Page"
+    }
+  }
+}

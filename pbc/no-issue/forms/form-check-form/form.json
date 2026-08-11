@@ -1,0 +1,68 @@
+{
+  "dataLocation": "LOCAL",
+  "enableForbidUpdateSomeFieldsValueWhenReferenced": 0,
+  "fields": [
+    {
+      "encryptStorage": 0,
+      "encryptTransit": 0,
+      "forbidToUpdate": false,
+      "maxLength": 200,
+      "name": "Input",
+      "normalizedStorageField": "input",
+      "storageField": "value1",
+      "token": "input",
+      "type": "TEXT_BOX"
+    },
+    {
+      "encryptStorage": 0,
+      "encryptTransit": 0,
+      "forbidToUpdate": false,
+      "name": "Number Picker",
+      "normalizedStorageField": "number_picker",
+      "storageField": "value4",
+      "token": "numberPicker",
+      "type": "NUMBER"
+    },
+    {
+      "encryptStorage": 0,
+      "encryptTransit": 0,
+      "forbidToUpdate": false,
+      "maxValue": 9.99999999999999E14,
+      "name": "Numeric Picker",
+      "normalizedStorageField": "numeric_picker",
+      "precision": 15,
+      "storageField": "value3",
+      "token": "numericPicker",
+      "type": "NUMERIC"
+    },
+    {
+      "encryptStorage": 0,
+      "encryptTransit": 0,
+      "forbidToUpdate": false,
+      "name": "Textarea",
+      "normalizedStorageField": "textarea",
+      "storageField": "value2",
+      "token": "textarea",
+      "type": "TEXTAREA"
+    }
+  ],
+  "isAutoLock": 0,
+  "isDeletableWhenReferenced": 1,
+  "isInnerEntity": 0,
+  "isMasterData": 0,
+  "layouts": [
+    {
+      "defaultLayout": true,
+      "name": "Layout",
+      "sortIndex": 0,
+      "token": "default"
+    }
+  ],
+  "name": "formcheck",
+  "permissionTarget": "form-check-form",
+  "remoteNoSystemColumns": true,
+  "standalone": 1,
+  "standaloneTableName": "form_check_form",
+  "standaloneTableNormalized": 1,
+  "token": "form-check-form"
+}

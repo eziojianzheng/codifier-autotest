@@ -1,0 +1,38 @@
+[
+  {
+    "method": "C",
+    "name": "创建",
+    "nameEnUs": "Create",
+    "nameJaJp": "作成",
+    "target": "車両画像",
+    "targetToken": "vehicle-images-form",
+    "token": "image-management_vehicle-images-form_C"
+  },
+  {
+    "method": "D",
+    "name": "删除",
+    "nameEnUs": "Delete",
+    "nameJaJp": "削除",
+    "target": "車両画像",
+    "targetToken": "vehicle-images-form",
+    "token": "image-management_vehicle-images-form_D"
+  },
+  {
+    "method": "R",
+    "name": "读取",
+    "nameEnUs": "Read",
+    "nameJaJp": "読取",
+    "target": "車両画像",
+    "targetToken": "vehicle-images-form",
+    "token": "image-management_vehicle-images-form_R"
+  },
+  {
+    "method": "U",
+    "name": "更新",
+    "nameEnUs": "Update",
+    "nameJaJp": "更新",
+    "target": "車両画像",
+    "targetToken": "vehicle-images-form",
+    "token": "image-management_vehicle-images-form_U"
+  }
+]

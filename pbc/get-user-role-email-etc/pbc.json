@@ -1,0 +1,10 @@
+{
+  "category": "BUSINESS",
+  "contributor": "admin",
+  "formDashboardLayoutList": [ ],
+  "formEntityRelationList": [ ],
+  "matchWeight": 0.0,
+  "name": "GetUserRoleEmailEtc",
+  "token": "get-user-role-email-etc",
+  "uiPluginList": [ ]
+}

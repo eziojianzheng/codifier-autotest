@@ -1,0 +1,88 @@
+{
+  "dataLocation": "LOCAL",
+  "defaultViewLayoutToken": "view",
+  "enableForbidUpdateSomeFieldsValueWhenReferenced": 0,
+  "fields": [
+    {
+      "encryptStorage": 0,
+      "encryptTransit": 0,
+      "forbidToUpdate": false,
+      "name": "Date Picker",
+      "nameI18nKey": "translationtest|>translationtest-form|>date-picker",
+      "storageField": "value3",
+      "token": "date",
+      "type": "DATE"
+    },
+    {
+      "encryptStorage": 0,
+      "encryptTransit": 0,
+      "forbidToUpdate": false,
+      "name": "Number Picker",
+      "nameI18nKey": "translationtest|>translationtest-form|>number-picker",
+      "storageField": "value2",
+      "token": "number",
+      "type": "NUMBER"
+    },
+    {
+      "encryptStorage": 0,
+      "encryptTransit": 0,
+      "forbidToUpdate": false,
+      "name": "Rich Text",
+      "nameI18nKey": "translationtest|>translationtest-form|>rich-text",
+      "storageField": "value4",
+      "token": "richText",
+      "type": "RICH_TEXT"
+    },
+    {
+      "encryptStorage": 0,
+      "encryptTransit": 0,
+      "forbidToUpdate": false,
+      "maxLength": 200,
+      "name": "Text",
+      "nameI18nKey": "translationtest|>translationtest-form|>text",
+      "storageField": "value1",
+      "token": "singleLineText",
+      "type": "TEXT_BOX"
+    },
+    {
+      "encryptStorage": 0,
+      "encryptTransit": 0,
+      "forbidToUpdate": false,
+      "name": "Upload",
+      "nameI18nKey": "translationtest|>translationtest-form|>upload",
+      "storageField": "value5",
+      "token": "upload",
+      "type": "UPLOAD"
+    }
+  ],
+  "isAutoLock": 0,
+  "isDeletableWhenReferenced": 1,
+  "isInnerEntity": 0,
+  "isMasterData": 0,
+  "layouts": [
+    {
+      "defaultLayout": true,
+      "name": "New",
+      "sortIndex": 0,
+      "token": "new"
+    },
+    {
+      "defaultLayout": false,
+      "name": "Edit",
+      "sortIndex": 1,
+      "token": "edit"
+    },
+    {
+      "defaultLayout": false,
+      "name": "View",
+      "sortIndex": 2,
+      "token": "view"
+    }
+  ],
+  "name": "translationtest Form",
+  "permissionTarget": "translationtest-form",
+  "remoteNoSystemColumns": true,
+  "standalone": 0,
+  "standaloneTableNormalized": 0,
+  "token": "translationtest-form"
+}

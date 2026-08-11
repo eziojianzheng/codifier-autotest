@@ -1,0 +1,17 @@
+{
+  "name": "tesfff",
+  "nodeList": [
+    {
+      "actionUuid": "7156a451-ff0c-4a08-96aa-762ffd06d5fb",
+      "connectorUuid": "35fcc866-c935-42fb-8073-eab3e4e96ab2",
+      "enabled": true,
+      "id": 1,
+      "input": { },
+      "nodeName": "APP - ChartSDK",
+      "type": "APP",
+      "version": "2.0"
+    }
+  ],
+  "restApiEnabled": 0,
+  "token": "tesfff-flow"
+}

@@ -1,0 +1,67 @@
+{
+  "fields": [
+    {
+      "component": "Card",
+      "componentProps": {
+        "title": "Product Details",
+        "titleDesc": "Edit products under the contract"
+      },
+      "fields": [
+        {
+          "component": "Grid",
+          "componentProps": {
+            "colNumber": 2,
+            "columnGap": 24,
+            "rowGap": 20
+          },
+          "fields": [
+            {
+              "component": "Select",
+              "componentProps": {
+                "options": [
+                  {
+                    "label": "Product Management",
+                    "value": "productManagement"
+                  }
+                ]
+              },
+              "id": "productName",
+              "title": "Product Name"
+            },
+            {
+              "component": "NumberPicker",
+              "id": "quantity",
+              "title": "Quantity",
+              "validation": {
+                "minValue": 1,
+                "required": true
+              }
+            },
+            {
+              "component": "NumberPicker",
+              "id": "costPrice",
+              "title": "Cost Price"
+            },
+            {
+              "component": "NumberPicker",
+              "id": "suggestedSellingPrice",
+              "title": "Suggested Selling Price"
+            },
+            {
+              "component": "NumberPicker",
+              "id": "totalPrice",
+              "title": "Total Price"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "component": "Input",
+      "id": "parentDataId"
+    }
+  ],
+  "form": {
+    "title": "Contract Products"
+  }
+}

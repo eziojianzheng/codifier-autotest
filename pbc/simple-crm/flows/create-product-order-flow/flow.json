@@ -1,0 +1,60 @@
+{
+  "name": "新建产品订单",
+  "nodeList": [
+    {
+      "enabled": true,
+      "id": 1,
+      "nodeName": "APP - Create form data",
+      "sdk": {
+        "formInput": {
+          "productName": "Auto-001"
+        },
+        "input": {
+          "formEntityToken": "product-management-form",
+          "pbcToken": "simple-crm"
+        },
+        "inputFields": [ ],
+        "name": "Create form data",
+        "numberStringToBigDecimal": false,
+        "outputFields": [ ],
+        "sdkType": "CREATE_ENTITY",
+        "uuid": "739b0a8f-cf7a-4e83-93ca-4ebe55ef80e8"
+      },
+      "type": "APP",
+      "version": "1.0"
+    },
+    {
+      "enabled": true,
+      "id": 3,
+      "nodeName": "APP - Modify form data",
+      "sdk": {
+        "formEntityDataId": "$1.id",
+        "formInput": {
+          "productFile": "https://project-wbfqaflj.staging.duxing.cn/fss/api/public/tenant/System/persistent/8cb6a996-6be1-4889-bf93-e0e1a6bf4d1b.txt?jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJyZXMiOiIvdGVuYW50L1N5c3RlbS9wZXJzaXN0ZW50LzhjYjZhOTk2LTZiZTEtNDg4OS1iZjkzLWUwZTFhNmJmNGQxYi50eHQiLCJvcHQiOlsiUkVBRCJdLCJleHAiOjE3ODAzODU1NDAsImNoZCI6dHJ1ZX0.TPLR9NqnT8CjLz_acr-OHbaRwB3TRr1xcUCNhVNI3ZFmDXe8wLbFrCp8kPSo1HvX-3d0CGOhb_XhsH03l8cAHEv6bNlPPoDaB3N8AP3SZ7IprjrMCrUEfmyVJ9Z2DCCSeFNoNbkaNl-R1dwUn9U-MCLaXH6qRyOiF3BBrFzMxPf0FT5OYLwx4wW4U5k6_kMmdXPR5k0riGodLKcWiH2VJ6yM-PB1OYD-HVDtGjnK2wuhAZA7K-Qu4NwhtCup7ytO06F8w6I0jUcb4azHFNSxY0EuK9qV9HVcuHKZfFdt0NzRCvBThI1RpoUGXPUWcjerEvPG323PSL3Cm_YN974ieA&contentType=text%2Fplain&"
+        },
+        "input": {
+          "formEntityToken": "product-management-form",
+          "needReturnValue": "true",
+          "pbcToken": "simple-crm"
+        },
+        "inputFields": [ ],
+        "name": "Modify form data",
+        "numberStringToBigDecimal": false,
+        "outputFields": [ ],
+        "sdkType": "SET_ENTITY_FIELD_VALUE",
+        "uuid": "dc0e9c73-8da1-44dd-b314-abf8cd4586b3"
+      },
+      "type": "APP",
+      "version": "1.0"
+    },
+    {
+      "enabled": true,
+      "id": 2,
+      "nodeName": "STOP_JOB",
+      "result": "Successful",
+      "type": "STOP_JOB"
+    }
+  ],
+  "restApiEnabled": 0,
+  "token": "create-product-order-flow"
+}

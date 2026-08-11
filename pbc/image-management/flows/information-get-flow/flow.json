@@ -1,0 +1,800 @@
+{
+  "name": "情報取得",
+  "nodeList": [
+    {
+      "enabled": true,
+      "id": 1,
+      "inMemory": true,
+      "inMemoryTransaction": false,
+      "interval": 60,
+      "nodeName": "TRIGGER",
+      "periodEnd": "23:59:59",
+      "periodStart": "00:00:00",
+      "restTrigger": {
+        "eligibleForAgent": false,
+        "method": "POST",
+        "requestBody": [
+          {
+            "dataType": "number",
+            "label": "igsLoginDealerCode",
+            "name": "igsLoginDealerCode",
+            "optional": false,
+            "type": "string"
+          },
+          {
+            "dataType": "string",
+            "label": "igsLoginId",
+            "name": "igsLoginId",
+            "optional": false,
+            "type": "string"
+          },
+          {
+            "dataType": "string",
+            "label": "igsJwtToken",
+            "name": "igsJwtToken",
+            "optional": false,
+            "type": "number"
+          },
+          {
+            "dataType": "string",
+            "label": "veichleEvent",
+            "name": "veichleEvent",
+            "optional": false
+          },
+          {
+            "dataType": "string",
+            "label": "orderNumber",
+            "name": "orderNumber",
+            "optional": false
+          },
+          {
+            "dataType": "string",
+            "label": "vehicleNumber",
+            "name": "vehicleNumber",
+            "optional": false
+          }
+        ],
+        "url": "/flow/api/flow-rest/information-get-flow"
+      },
+      "scheduleType": "ONE_TIME",
+      "startTime": 1760939462366,
+      "triggerType": "REST",
+      "type": "TRIGGER",
+      "version": "2.0"
+    },
+    {
+      "enabled": true,
+      "id": 18,
+      "nodeName": "APP - Groovy script - 環境変数取得",
+      "sdk": {
+        "code": "$$$$ref:text:sdk-18.groovy",
+        "name": "Groovy script",
+        "outputFields": [
+          {
+            "dataType": "string",
+            "label": "getImageApiUrl",
+            "name": "getImageApiUrl"
+          },
+          {
+            "dataType": "string",
+            "label": "environment",
+            "name": "environment"
+          },
+          {
+            "dataType": "string",
+            "label": "debug",
+            "name": "debug"
+          },
+          {
+            "dataType": "string",
+            "label": "fssS3Bucket",
+            "name": "fssS3Bucket"
+          },
+          {
+            "dataType": "string",
+            "label": "fssS3Host",
+            "name": "fssS3Host"
+          }
+        ],
+        "sdkType": "GENERAL_GROOVY",
+        "uuid": "492f8c00-14de-4837-a1f6-ed6ff0a2870e"
+      },
+      "type": "APP",
+      "version": "1.0"
+    },
+    {
+      "enabled": true,
+      "id": 28,
+      "nodeName": "APP - Groovy script - IGS画像読込APIリクエスト",
+      "sdk": {
+        "code": "$$$$ref:text:sdk-28.groovy",
+        "input": {
+          "car_no": "$1.restTrigger.requestBody.vehicleNumber",
+          "dealerCode": "$1.restTrigger.requestBody.igsLoginDealerCode",
+          "debug": "$18.debug",
+          "environment": "$18.environment",
+          "getImageApiUrl": "$18.getImageApiUrl",
+          "igsJwtToken": "$1.restTrigger.requestBody.igsJwtToken",
+          "order_mode": "1",
+          "order_no": "$1.restTrigger.requestBody.orderNumber",
+          "userId": "$1.restTrigger.requestBody.igsLoginId",
+          "veichleEvent": "$1.restTrigger.requestBody.vehicleEvent"
+        },
+        "inputFields": [
+          {
+            "dataType": "string",
+            "label": "dealerCode",
+            "name": "dealerCode",
+            "optional": false
+          },
+          {
+            "dataType": "string",
+            "label": "userId",
+            "name": "userId",
+            "optional": false
+          },
+          {
+            "dataType": "string",
+            "label": "veichleEvent",
+            "name": "veichleEvent",
+            "optional": false
+          },
+          {
+            "dataType": "string",
+            "label": "order_no",
+            "name": "order_no",
+            "optional": false
+          },
+          {
+            "dataType": "string",
+            "label": "car_no",
+            "name": "car_no",
+            "optional": false
+          },
+          {
+            "dataType": "string",
+            "label": "order_mode",
+            "name": "order_mode",
+            "optional": false
+          },
+          {
+            "dataType": "string",
+            "label": "getImageApiUrl",
+            "name": "getImageApiUrl",
+            "optional": false
+          },
+          {
+            "dataType": "string",
+            "label": "igsJwtToken",
+            "name": "igsJwtToken",
+            "optional": false
+          },
+          {
+            "dataType": "string",
+            "label": "debug",
+            "name": "debug",
+            "optional": false
+          },
+          {
+            "dataType": "string",
+            "label": "environment",
+            "name": "environment",
+            "optional": false
+          }
+        ],
+        "name": "Groovy script",
+        "sdkType": "GENERAL_GROOVY",
+        "uuid": "492f8c00-14de-4837-a1f6-ed6ff0a2870e"
+      },
+      "type": "APP",
+      "version": "1.0"
+    },
+    {
+      "conditions": [
+        {
+          "condition": "is_present",
+          "dataField": "$28.responseCode",
+          "id": 6316
+        }
+      ],
+      "enabled": true,
+      "id": 30,
+      "nodeName": "IF",
+      "subFlow": [
+        {
+          "conditions": [
+            {
+              "condition": "equals",
+              "dataField": "$28.responseCode",
+              "id": 8323,
+              "value": "0000"
+            }
+          ],
+          "enabled": true,
+          "id": 31,
+          "nodeName": "IF",
+          "subFlow": [
+            {
+              "enabled": true,
+              "id": 12,
+              "nodeName": "APP - Convert Base64 To File - ZIPファイルアップロード",
+              "sdk": {
+                "code": "",
+                "input": {
+                  "base64": "$28.parsedData.zipData",
+                  "contentType": "zip",
+                  "fileName": "$28.parsedData.filename"
+                },
+                "inputFields": [
+                  {
+                    "controlType": "input",
+                    "dataType": "string",
+                    "label": "文件名称",
+                    "name": "fileName",
+                    "optional": false
+                  },
+                  {
+                    "controlType": "input",
+                    "dataType": "string",
+                    "label": "文件的MIME类型",
+                    "name": "contentType",
+                    "optional": false
+                  },
+                  {
+                    "controlType": "input",
+                    "dataType": "string",
+                    "label": "Base64编码的文件内容",
+                    "name": "base64",
+                    "optional": false
+                  }
+                ],
+                "name": "Convert Base64 To File",
+                "outputFields": [
+                  {
+                    "dataType": "string",
+                    "label": "文件可访问的URL",
+                    "name": "url"
+                  },
+                  {
+                    "dataType": "string",
+                    "label": "文件的MD5值",
+                    "name": "md5"
+                  },
+                  {
+                    "dataType": "string",
+                    "label": "文件按字节计算的长度",
+                    "name": "size"
+                  }
+                ],
+                "sdkType": "BASE64_TO_FILE",
+                "uuid": "6682e021-47b6-4b10-a1c7-660e2fbe176d"
+              },
+              "type": "APP",
+              "version": "1.0"
+            },
+            {
+              "enabled": true,
+              "id": 15,
+              "nodeName": "APP - Groovy script - ZIPファイルDL&解凍（BASE64化）",
+              "sdk": {
+                "code": "$$$$ref:text:sdk-15.groovy",
+                "input": {
+                  "debug": "$18.debug",
+                  "environment": "$18.environment",
+                  "fileStorageUrl": "$APPLICATION.fss.url",
+                  "fssS3Bucket": "$18.fssS3Bucket  ",
+                  "fssS3Host": "$18.fssS3Host",
+                  "url": "$groovy{$12.url}"
+                },
+                "inputFields": [
+                  {
+                    "dataType": "string",
+                    "label": "url",
+                    "name": "url",
+                    "optional": false
+                  },
+                  {
+                    "dataType": "string",
+                    "label": "debug",
+                    "name": "debug",
+                    "optional": false
+                  },
+                  {
+                    "dataType": "string",
+                    "label": "fileStorageUrl",
+                    "name": "fileStorageUrl",
+                    "optional": false
+                  },
+                  {
+                    "dataType": "string",
+                    "label": "environment",
+                    "name": "environment",
+                    "optional": false
+                  },
+                  {
+                    "dataType": "string",
+                    "label": "fssS3Bucket",
+                    "name": "fssS3Bucket",
+                    "optional": false
+                  },
+                  {
+                    "dataType": "string",
+                    "label": "fssS3Host",
+                    "name": "fssS3Host",
+                    "optional": false
+                  }
+                ],
+                "name": "Groovy script",
+                "outputFields": [
+                  {
+                    "dataType": "number",
+                    "label": "jpgCount",
+                    "name": "jpgCount"
+                  },
+                  {
+                    "dataType": "string",
+                    "label": "jpgList",
+                    "name": "jpgList"
+                  }
+                ],
+                "sdkType": "GENERAL_GROOVY",
+                "uuid": "492f8c00-14de-4837-a1f6-ed6ff0a2870e"
+              },
+              "type": "APP",
+              "version": "1.0"
+            },
+            {
+              "batchSize": 0,
+              "clearStepOutput": false,
+              "concurrent": false,
+              "enabled": true,
+              "id": 22,
+              "inputList": "$15.jpgList",
+              "nodeName": "REPEAT",
+              "repeatMode": "BATCH",
+              "repeatType": "INPUT_LIST",
+              "subFlow": [
+                {
+                  "enabled": true,
+                  "id": 23,
+                  "nodeName": "APP - Convert Base64 To File - 画像ファイルアップロード",
+                  "sdk": {
+                    "code": "",
+                    "input": {
+                      "base64": "$groovy{$22.value.filebase64}",
+                      "contentType": "image/jpeg",
+                      "fileName": "$groovy{$22.value.filename}"
+                    },
+                    "inputFields": [
+                      {
+                        "controlType": "input",
+                        "dataType": "string",
+                        "label": "文件名称",
+                        "name": "fileName",
+                        "optional": false
+                      },
+                      {
+                        "controlType": "input",
+                        "dataType": "string",
+                        "label": "文件的MIME类型",
+                        "name": "contentType",
+                        "optional": false
+                      },
+                      {
+                        "controlType": "input",
+                        "dataType": "string",
+                        "label": "Base64编码的文件内容",
+                        "name": "base64",
+                        "optional": false
+                      }
+                    ],
+                    "name": "Convert Base64 To File",
+                    "outputFields": [
+                      {
+                        "dataType": "string",
+                        "label": "文件可访问的URL",
+                        "name": "url"
+                      },
+                      {
+                        "dataType": "string",
+                        "label": "文件的MD5值",
+                        "name": "md5"
+                      },
+                      {
+                        "dataType": "string",
+                        "label": "文件按字节计算的长度",
+                        "name": "size"
+                      }
+                    ],
+                    "sdkType": "BASE64_TO_FILE",
+                    "uuid": "6682e021-47b6-4b10-a1c7-660e2fbe176d"
+                  },
+                  "type": "APP",
+                  "version": "1.0"
+                },
+                {
+                  "enabled": true,
+                  "id": 24,
+                  "nodeName": "APP - Set repeat output value",
+                  "sdk": {
+                    "input": {
+                      "md5": "$23.md5",
+                      "size": "$23.size",
+                      "url": "$groovy{$23.url}"
+                    },
+                    "inputFields": [
+                      {
+                        "dataType": "string",
+                        "label": "url",
+                        "name": "url",
+                        "optional": false
+                      },
+                      {
+                        "dataType": "string",
+                        "label": "md5",
+                        "name": "md5",
+                        "optional": false
+                      },
+                      {
+                        "dataType": "string",
+                        "label": "size",
+                        "name": "size",
+                        "optional": false
+                      }
+                    ],
+                    "name": "Set repeat output value",
+                    "sdkType": "SET_OUTPUT_TO_REPEAT",
+                    "uuid": "b6147336-5340-4dde-8787-0089619a0836"
+                  },
+                  "type": "APP",
+                  "version": "1.0"
+                }
+              ],
+              "type": "REPEAT"
+            },
+            {
+              "conditions": [
+                {
+                  "condition": "does_not_equal",
+                  "dataField": "$15.jpgCount",
+                  "id": 1220,
+                  "value": "0"
+                }
+              ],
+              "enabled": true,
+              "id": 26,
+              "nodeName": "IF",
+              "subFlow": [
+                {
+                  "enabled": true,
+                  "id": 25,
+                  "nodeName": "APP - Groovy script - 画像URLリスト作成",
+                  "sdk": {
+                    "code": "$$$$ref:text:sdk-25.groovy",
+                    "input": {
+                      "environment": "$18.environment",
+                      "fileStorageUrl": "$APPLICATION.fss.url",
+                      "fssS3Bucket": "$18.fssS3Bucket",
+                      "fssS3Host": "$18.fssS3Host",
+                      "in": "$22"
+                    },
+                    "inputFields": [
+                      {
+                        "dataType": "string",
+                        "label": "in",
+                        "name": "in",
+                        "optional": false
+                      },
+                      {
+                        "dataType": "string",
+                        "label": "environment",
+                        "name": "environment",
+                        "optional": false
+                      },
+                      {
+                        "dataType": "string",
+                        "label": "fssS3Bucket",
+                        "name": "fssS3Bucket",
+                        "optional": false
+                      },
+                      {
+                        "dataType": "string",
+                        "label": "fssS3Host",
+                        "name": "fssS3Host",
+                        "optional": false
+                      },
+                      {
+                        "dataType": "string",
+                        "label": "fileStorageUrl",
+                        "name": "fileStorageUrl",
+                        "optional": false
+                      }
+                    ],
+                    "name": "Groovy script",
+                    "outputFields": [
+                      {
+                        "dataType": "string",
+                        "label": "urls",
+                        "name": "urls"
+                      }
+                    ],
+                    "sdkType": "GENERAL_GROOVY",
+                    "uuid": "492f8c00-14de-4837-a1f6-ed6ff0a2870e"
+                  },
+                  "type": "APP",
+                  "version": "1.0"
+                },
+                {
+                  "enabled": true,
+                  "id": 38,
+                  "nodeName": "APP - Create form data - 車両画像Form作成（画像あり）",
+                  "sdk": {
+                    "formInput": {
+                      "Images": "$groovy{$25.urls ?: \"\"}",
+                      "customerName": "$groovy{$28.parsedData.json.okyaku_mei ?: \"\"}",
+                      "entryVerifierCode": "$groovy{$28.parsedData.json.kakunin_cd ?: \"\"}",
+                      "entryVerifyDate": "$groovy{$28.parsedData.json.kakunin_dt ?: \"\"}",
+                      "exitVerifierCode": "$groovy{$28.parsedData.json.kensa_cd ?: \"\"}",
+                      "exitVerifyDate": "$groovy{$28.parsedData.json.kensa_dt ?: \"\"}",
+                      "fuelTankTotalCapacity": "$groovy{$28.parsedData.json.tank_gokei_l ?: \"\"}",
+                      "fuelTankUnit": "$groovy{$28.parsedData.json.tank_su ?: \"\"}",
+                      "maintenanceVerifierCode": "$groovy{$28.parsedData.json.seibi_cd ?: \"\"}",
+                      "maintenanceVerifyDate": "$groovy{$28.parsedData.json.seibi_dt ?: \"\"}",
+                      "orderNumber": "$groovy{$28.parsedData.json.order_no ?: \"\"}",
+                      "registrationDate": "$groovy{$28.parsedData.json.touroku_dt ?: \"\"}",
+                      "registrationNumber": "$groovy{$28.parsedData.json.touroku_no ?: \"\"}",
+                      "remarks": "$groovy{$28.parsedData.json.tokki ?: \"\"}",
+                      "repairOrderNumber": "$groovy{$28.parsedData.json.order_no ?: \"\"}",
+                      "salespersonName": "$groovy{$28.parsedData.json.eigyo_mei ?: \"\"}",
+                      "seatingCapacity": "$groovy{$28.parsedData.json.teiin ?: \"\"}",
+                      "vehicleEvent": "$groovy{[$28.parsedData.json.syori_kbn]}",
+                      "vehicleEvent-display": "$28.parsedData.json.syori_kbn.label",
+                      "vehicleNumber": "$groovy{$28.parsedData.json.car_no ?: \"\"}"
+                    },
+                    "input": {
+                      "formEntityToken": "vehicle-images-form",
+                      "pbcToken": "image-management"
+                    },
+                    "inputFields": [ ],
+                    "name": "Create form data",
+                    "outputFields": [ ],
+                    "sdkType": "CREATE_ENTITY",
+                    "uuid": "739b0a8f-cf7a-4e83-93ca-4ebe55ef80e8"
+                  },
+                  "type": "APP",
+                  "version": "1.0"
+                },
+                {
+                  "enabled": true,
+                  "id": 39,
+                  "input": {
+                    "message": "$28.message",
+                    "newFormId": "$38.id",
+                    "responseCode": "$28.responseCode",
+                    "statusCode": "$28.status"
+                  },
+                  "nodeName": "APP - Set workflow output value - 正常レスポンス作成",
+                  "sdk": {
+                    "inputFields": [
+                      {
+                        "dataType": "string",
+                        "label": "newFormId",
+                        "name": "newFormId",
+                        "optional": false
+                      },
+                      {
+                        "dataType": "string",
+                        "label": "statusCode",
+                        "name": "statusCode",
+                        "optional": false
+                      },
+                      {
+                        "dataType": "string",
+                        "label": "responseCode",
+                        "name": "responseCode",
+                        "optional": false
+                      },
+                      {
+                        "dataType": "string",
+                        "label": "message",
+                        "name": "message",
+                        "optional": false
+                      }
+                    ],
+                    "name": "Set workflow output value",
+                    "sdkType": "SET_VALUE_TO_INSTANCE",
+                    "uuid": "f63bae3b-4003-4b29-aedf-4626216fc12a"
+                  },
+                  "type": "APP",
+                  "version": "2.0"
+                },
+                {
+                  "enabled": true,
+                  "id": 41,
+                  "nodeName": "STOP_JOB",
+                  "result": "Successful",
+                  "type": "STOP_JOB"
+                }
+              ],
+              "type": "IF"
+            },
+            {
+              "enabled": true,
+              "id": 13,
+              "nodeName": "APP - Create form data - 車両画像Form作成（画像なし）",
+              "sdk": {
+                "formInput": {
+                  "customerName": "$groovy{$28.parsedData.json.okyaku_mei ?: \"\"}",
+                  "entryVerifierConde": "$groovy{$28.parsedData.json.kakunin_cd ?: \"\"}",
+                  "entryVerifyDate": "$groovy{$28.parsedData.json.kakunin_dt ?: \"\"}",
+                  "exitVerifierCode": "$groovy{$28.parsedData.json.kensa_cd ?: \"\"}",
+                  "exitVerifyDate": "$groovy{$28.parsedData.json.kensa_dt ?: \"\"}",
+                  "fuelTankTotalCapacity": "$groovy{$28.parsedData.json.tank_gokei_l ?: \"\"}",
+                  "fuelTankUnit": "$groovy{$28.parsedData.json.tank_su ?: \"\"}",
+                  "maintenanceVerifierCode": "$groovy{$28.parsedData.json.seibi_cd ?: \"\"}",
+                  "maintenanceVerifyDate": "$groovy{$28.parsedData.json.seibi_dt ?: \"\"}",
+                  "orderNumber": "$groovy{$28.parsedData.json.order_no ?: \"\"}",
+                  "registrationDate": "$groovy{$28.parsedData.json.touroku_dt ?: \"\"}",
+                  "registrationNumber": "$groovy{$28.parsedData.json.touroku_no ?: \"\"}",
+                  "remarks": "$groovy{$28.parsedData.json.tokki ?: \"\"}",
+                  "repairOrderNumber": "$groovy{$28.parsedData.json.order_no ?: \"\"}",
+                  "salespersonName": "$groovy{$28.parsedData.json.eigyo_mei ?: \"\"}",
+                  "seatingCapacity": "$groovy{$28.parsedData.json.teiin ?: \"\"}",
+                  "vehicleEvent": "$groovy{[$28.parsedData.json.syori_kbn]}",
+                  "vehicleEvent-display": "$28.parsedData.json.syori_kbn.label",
+                  "vehicleNumber": "$groovy{$28.parsedData.json.car_no ?: \"\"}"
+                },
+                "input": {
+                  "formEntityToken": "vehicle-images-form",
+                  "pbcToken": "image-management"
+                },
+                "inputFields": [ ],
+                "name": "Create form data",
+                "outputFields": [ ],
+                "sdkType": "CREATE_ENTITY",
+                "uuid": "739b0a8f-cf7a-4e83-93ca-4ebe55ef80e8"
+              },
+              "type": "APP",
+              "version": "1.0"
+            },
+            {
+              "enabled": true,
+              "id": 14,
+              "input": {
+                "message": "$28.message",
+                "newFormId": "$13.id",
+                "responseCode": "$28.responseCode",
+                "statusCode": "$28.status"
+              },
+              "nodeName": "APP - Set workflow output value - 正常レスポンス作成",
+              "sdk": {
+                "inputFields": [
+                  {
+                    "dataType": "string",
+                    "label": "newFormId",
+                    "name": "newFormId",
+                    "optional": false
+                  },
+                  {
+                    "dataType": "string",
+                    "label": "statusCode",
+                    "name": "statusCode",
+                    "optional": false
+                  },
+                  {
+                    "dataType": "string",
+                    "label": "responseCode",
+                    "name": "responseCode",
+                    "optional": false
+                  },
+                  {
+                    "dataType": "string",
+                    "label": "message",
+                    "name": "message",
+                    "optional": false
+                  }
+                ],
+                "name": "Set workflow output value",
+                "sdkType": "SET_VALUE_TO_INSTANCE",
+                "uuid": "f63bae3b-4003-4b29-aedf-4626216fc12a"
+              },
+              "type": "APP",
+              "version": "2.0"
+            },
+            {
+              "enabled": true,
+              "id": 34,
+              "nodeName": "STOP_JOB",
+              "result": "Successful",
+              "type": "STOP_JOB"
+            }
+          ],
+          "type": "IF"
+        },
+        {
+          "enabled": true,
+          "id": 35,
+          "input": {
+            "message": "$28.message",
+            "responseCode": "$28.responseCode",
+            "statusCode": "$28.status"
+          },
+          "nodeName": "APP - Set workflow output value - 異常レスポンス作成",
+          "sdk": {
+            "inputFields": [
+              {
+                "dataType": "string",
+                "label": "statusCode",
+                "name": "statusCode",
+                "of": "string",
+                "optional": false
+              },
+              {
+                "dataType": "string",
+                "label": "responseCode",
+                "name": "responseCode",
+                "of": "string",
+                "optional": false
+              },
+              {
+                "dataType": "string",
+                "label": "message",
+                "name": "message",
+                "of": "string",
+                "optional": false
+              }
+            ],
+            "name": "Set workflow output value",
+            "sdkType": "SET_VALUE_TO_INSTANCE",
+            "uuid": "f63bae3b-4003-4b29-aedf-4626216fc12a"
+          },
+          "type": "APP",
+          "version": "2.0"
+        },
+        {
+          "enabled": true,
+          "id": 36,
+          "nodeName": "STOP_JOB",
+          "result": "Successful",
+          "type": "STOP_JOB"
+        }
+      ],
+      "type": "IF"
+    },
+    {
+      "enabled": true,
+      "id": 43,
+      "input": {
+        "statusCode": "$28.status"
+      },
+      "nodeName": "APP - Set workflow output value - 異常レスポンス作成",
+      "sdk": {
+        "inputFields": [
+          {
+            "dataType": "string",
+            "label": "statusCode",
+            "name": "statusCode",
+            "of": "string",
+            "optional": false
+          }
+        ],
+        "name": "Set workflow output value",
+        "sdkType": "SET_VALUE_TO_INSTANCE",
+        "uuid": "f63bae3b-4003-4b29-aedf-4626216fc12a"
+      },
+      "type": "APP",
+      "version": "2.0"
+    },
+    {
+      "enabled": true,
+      "id": 3,
+      "nodeName": "STOP_JOB",
+      "result": "Failed",
+      "type": "STOP_JOB"
+    }
+  ],
+  "restApiEnabled": 1,
+  "restApiMethod": "POST",
+  "restApiUrl": "/flow/api/flow-rest/information-get-flow",
+  "token": "information-get-flow"
+}

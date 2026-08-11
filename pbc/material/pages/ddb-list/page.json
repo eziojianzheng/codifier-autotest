@@ -1,0 +1,90 @@
+{
+  "schemaId": "ddb-list",
+  "schemaJson_$$$NESTED_JSON_STRING$$$": {
+    "fields": [
+      {
+        "component": "Card",
+        "fields": [
+          {
+            "component": "Table",
+            "componentProps": {
+              "addButtonHref": "/form/ddb/layout/default",
+              "columnDefs": [
+                {
+                  "colId": "ddid",
+                  "field": "ddid",
+                  "headerName": "ddid",
+                  "type": "NUMBER_COLUMN"
+                },
+                {
+                  "colId": "hyid",
+                  "field": "hyid",
+                  "headerName": "hyid",
+                  "type": "NUMBER_COLUMN"
+                },
+                {
+                  "colId": "spid",
+                  "field": "spid",
+                  "headerName": "spid",
+                  "type": "NUMBER_COLUMN"
+                },
+                {
+                  "colId": "sl",
+                  "field": "sl",
+                  "headerName": "sl",
+                  "type": "NUMBER_COLUMN"
+                },
+                {
+                  "colId": "ze",
+                  "field": "ze",
+                  "headerName": "ze",
+                  "type": "NUMBER_COLUMN"
+                },
+                {
+                  "cellRendererParams": {
+                    "actions": [
+                      {
+                        "href": "/form/ddb/layout/default/:id",
+                        "type": "EDIT"
+                      },
+                      {
+                        "href": "/form/:id/view",
+                        "type": "VIEW"
+                      },
+                      {
+                        "type": "DELETE"
+                      }
+                    ],
+                    "displayLikeButton": true,
+                    "showIcon": true
+                  },
+                  "type": "ACTION_COLUMN",
+                  "width": 240
+                }
+              ],
+              "dataSource": {
+                "token": "ddb"
+              },
+              "pagination": true,
+              "pinnedFilter": [
+                "ddid",
+                "hyid",
+                "spid"
+              ]
+            },
+            "id": "ddb-table",
+            "style": {
+              "height": "100%"
+            }
+          }
+        ],
+        "style": {
+          "height": "100%"
+        }
+      }
+    ],
+    "form": {
+      "title": "ddb List"
+    }
+  }
+}

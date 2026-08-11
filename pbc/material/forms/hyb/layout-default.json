@@ -1,0 +1,30 @@
+{
+  "fields": [
+    {
+      "component": "NumberPicker",
+      "id": "hyid",
+      "title": "hyid"
+    },
+    {
+      "component": "Input",
+      "id": "zt",
+      "title": "zt",
+      "validation": {
+        "maxLength": 200
+      }
+    },
+    {
+      "component": "Input",
+      "id": "hyxm",
+      "title": "hyxm",
+      "validation": {
+        "maxLength": 200
+      }
+    }
+  ],
+  "form": {
+    "defaultCancelButton": true,
+    "defaultSubmitButton": true,
+    "title": "Layout"
+  }
+}

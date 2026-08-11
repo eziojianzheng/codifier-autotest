@@ -1,0 +1,96 @@
+{
+  "schemaId": "student-info-form-list",
+  "schemaJson_$$$NESTED_JSON_STRING$$$": {
+    "fields": [
+      {
+        "component": "Card",
+        "fields": [
+          {
+            "component": "Table",
+            "componentProps": {
+              "addButtonHref": "/form/student-info-form/layout/default",
+              "columnDefs": [
+                {
+                  "colId": "status",
+                  "field": "status",
+                  "headerName": "Status",
+                  "type": "TEXT_COLUMN"
+                },
+                {
+                  "colId": "studentName",
+                  "field": "studentName",
+                  "headerName": "Student Name",
+                  "type": "TEXT_COLUMN"
+                },
+                {
+                  "colId": "studentId",
+                  "field": "studentId",
+                  "headerName": "Student ID",
+                  "type": "TEXT_COLUMN"
+                },
+                {
+                  "colId": "enrollmentDate",
+                  "field": "enrollmentDate",
+                  "headerName": "Enrollment Date",
+                  "type": "DATE_COLUMN"
+                },
+                {
+                  "colId": "emailAddress",
+                  "field": "emailAddress",
+                  "headerName": "Email Address",
+                  "type": "TEXT_COLUMN"
+                },
+                {
+                  "colId": "phoneNumber",
+                  "field": "phoneNumber",
+                  "headerName": "Phone Number",
+                  "type": "TEXT_COLUMN"
+                },
+                {
+                  "cellRendererParams": {
+                    "actions": [
+                      {
+                        "href": "/form/student-info-form/layout/default/:id",
+                        "type": "EDIT"
+                      },
+                      {
+                        "href": "/form/:id/view",
+                        "type": "VIEW"
+                      },
+                      {
+                        "type": "DELETE"
+                      }
+                    ],
+                    "displayLikeButton": true,
+                    "showIcon": true
+                  },
+                  "type": "ACTION_COLUMN",
+                  "width": 240
+                }
+              ],
+              "dataSource": {
+                "token": "student-info-form"
+              },
+              "pagination": true,
+              "pinnedFilter": [
+                "status",
+                "studentName",
+                "studentId"
+              ]
+            },
+            "id": "student-info-form-table",
+            "style": {
+              "height": "100%"
+            }
+          }
+        ],
+        "style": {
+          "height": "100%"
+        }
+      }
+    ],
+    "form": {
+      "title": "studentinfo List"
+    }
+  }
+}

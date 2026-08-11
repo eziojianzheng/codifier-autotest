@@ -1,0 +1,52 @@
+{
+  "definition_$$$NESTED_JSON_STRING$$$": {
+    "code": "",
+    "inputFields": [
+      {
+        "controlType": "input",
+        "dataType": "string",
+        "label": "文件名称",
+        "name": "fileName",
+        "optional": false
+      },
+      {
+        "controlType": "input",
+        "dataType": "string",
+        "label": "文件的MIME类型",
+        "name": "contentType",
+        "optional": false
+      },
+      {
+        "controlType": "input",
+        "dataType": "string",
+        "label": "Base64编码的文件内容",
+        "name": "base64",
+        "optional": false
+      }
+    ],
+    "outputFields": [
+      {
+        "dataType": "string",
+        "label": "文件可访问的URL",
+        "name": "url"
+      },
+      {
+        "dataType": "string",
+        "label": "文件的MD5值",
+        "name": "md5"
+      },
+      {
+        "dataType": "string",
+        "label": "文件按字节计算的长度",
+        "name": "size"
+      }
+    ],
+    "sdkType": "BASE64_TO_FILE"
+  },
+  "isSystem": 1,
+  "name": "转换BASE64字符串为文件",
+  "nameEnUs": "Convert Base64 To File",
+  "nameJaJp": "Convert Base64 To File JP",
+  "sdkType": "BASE64_TO_FILE",
+  "uuid": "6682e021-47b6-4b10-a1c7-660e2fbe176d"
+}

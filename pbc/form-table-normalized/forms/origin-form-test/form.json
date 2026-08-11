@@ -1,0 +1,182 @@
+{
+  "dataLocation": "LOCAL",
+  "enableForbidUpdateSomeFieldsValueWhenReferenced": 0,
+  "fields": [
+    {
+      "encryptStorage": 0,
+      "encryptTransit": 0,
+      "forbidToUpdate": false,
+      "multiple": true,
+      "name": "ACL选择多选",
+      "referenceDisplayField": "departmentName",
+      "referenceEntity": "department-form",
+      "referenceField": "id",
+      "referenceMappingFields": "{\"value\":\"id\",\"label\":\"departmentName\"}",
+      "referencePbc": "form-table-normalized",
+      "storageField": "value14",
+      "token": "aclFieldMulti",
+      "type": "ACL"
+    },
+    {
+      "encryptStorage": 0,
+      "encryptTransit": 0,
+      "forbidToUpdate": false,
+      "name": "ACL选择单选",
+      "referenceDisplayField": "departmentName",
+      "referenceEntity": "department-form",
+      "referenceField": "id",
+      "referenceMappingFields": "{\"value\":\"id\",\"label\":\"departmentName\"}",
+      "referencePbc": "form-table-normalized",
+      "storageField": "value13",
+      "token": "aclFieldSingle",
+      "type": "ACL"
+    },
+    {
+      "encryptStorage": 0,
+      "encryptTransit": 0,
+      "forbidToUpdate": false,
+      "name": "多选",
+      "storageField": "value9",
+      "token": "checkBoxField01",
+      "type": "CHECKBOX"
+    },
+    {
+      "encryptStorage": 0,
+      "encryptTransit": 0,
+      "forbidToUpdate": false,
+      "name": "日期",
+      "storageField": "value6",
+      "token": "dateField01",
+      "type": "DATE"
+    },
+    {
+      "encryptStorage": 0,
+      "encryptTransit": 0,
+      "forbidToUpdate": false,
+      "name": "时间",
+      "storageField": "value7",
+      "token": "dateField02",
+      "type": "TIME"
+    },
+    {
+      "encryptStorage": 0,
+      "encryptTransit": 0,
+      "forbidToUpdate": false,
+      "name": "多行文本",
+      "storageField": "value4",
+      "token": "longText",
+      "type": "TEXTAREA"
+    },
+    {
+      "encryptStorage": 0,
+      "encryptTransit": 0,
+      "forbidToUpdate": false,
+      "name": "数字",
+      "storageField": "value2",
+      "token": "number1",
+      "type": "NUMBER"
+    },
+    {
+      "encryptStorage": 0,
+      "encryptTransit": 0,
+      "forbidToUpdate": false,
+      "name": "高精度数字",
+      "storageField": "value3",
+      "token": "numbericField01",
+      "type": "NUMERIC"
+    },
+    {
+      "encryptStorage": 0,
+      "encryptTransit": 0,
+      "forbidToUpdate": false,
+      "name": "密码",
+      "storageField": "value16",
+      "token": "passwordField",
+      "type": "PASSWORD"
+    },
+    {
+      "encryptStorage": 0,
+      "encryptTransit": 0,
+      "forbidToUpdate": false,
+      "name": "单选",
+      "storageField": "value8",
+      "token": "radioField01",
+      "type": "RADIO"
+    },
+    {
+      "encryptStorage": 0,
+      "encryptTransit": 0,
+      "forbidToUpdate": false,
+      "name": "富文本",
+      "storageField": "value11",
+      "token": "richTextField",
+      "type": "RICH_TEXT"
+    },
+    {
+      "encryptStorage": 0,
+      "encryptTransit": 0,
+      "forbidToUpdate": false,
+      "name": "下拉选择",
+      "storageField": "value10",
+      "token": "selectField01",
+      "type": "SELECT"
+    },
+    {
+      "encryptStorage": 0,
+      "encryptTransit": 0,
+      "forbidToUpdate": false,
+      "multiple": true,
+      "name": "下拉选择多选",
+      "storageField": "value12",
+      "token": "selectMultiField",
+      "type": "SELECT"
+    },
+    {
+      "encryptStorage": 0,
+      "encryptTransit": 0,
+      "forbidToUpdate": false,
+      "maxLength": 200,
+      "name": "单行文本",
+      "storageField": "value1",
+      "token": "singleLine1",
+      "type": "TEXT_BOX"
+    },
+    {
+      "encryptStorage": 0,
+      "encryptTransit": 0,
+      "forbidToUpdate": false,
+      "name": "开关",
+      "storageField": "value15",
+      "token": "toggleField",
+      "type": "SWITCH"
+    },
+    {
+      "encryptStorage": 0,
+      "encryptTransit": 0,
+      "forbidToUpdate": false,
+      "name": "上传",
+      "storageField": "value5",
+      "token": "uploadField",
+      "type": "UPLOAD"
+    }
+  ],
+  "isAutoLock": 0,
+  "isDeletableWhenReferenced": 1,
+  "isInnerEntity": 0,
+  "isMasterData": 0,
+  "layouts": [
+    {
+      "defaultLayout": true,
+      "name": "布局",
+      "sortIndex": 0,
+      "token": "default"
+    }
+  ],
+  "name": "宽表表单",
+  "permissionTarget": "origin-form-test",
+  "remoteNoSystemColumns": true,
+  "standalone": 1,
+  "standaloneTableName": "ezio_standalone_table",
+  "standaloneTableNormalized": 0,
+  "token": "origin-form-test"
+}

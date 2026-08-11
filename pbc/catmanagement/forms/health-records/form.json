@@ -1,0 +1,135 @@
+{
+  "dataLocation": "LOCAL",
+  "enableForbidUpdateSomeFieldsValueWhenReferenced": 0,
+  "fields": [
+    {
+      "encryptStorage": 0,
+      "encryptTransit": 0,
+      "forbidToUpdate": false,
+      "maxLength": 200,
+      "name": "breedType",
+      "normalizedStorageField": "breed_type",
+      "storageField": "value8",
+      "token": "breed_type",
+      "type": "TEXT_BOX"
+    },
+    {
+      "encryptStorage": 0,
+      "encryptTransit": 0,
+      "forbidToUpdate": false,
+      "maxLength": 200,
+      "name": "careLevel",
+      "normalizedStorageField": "care_level",
+      "storageField": "value9",
+      "token": "care_level",
+      "type": "TEXT_BOX"
+    },
+    {
+      "encryptStorage": 0,
+      "encryptTransit": 0,
+      "forbidToUpdate": false,
+      "maxLength": 200,
+      "name": "catId",
+      "normalizedStorageField": "cat_id",
+      "storageField": "value2",
+      "token": "cat_id",
+      "type": "TEXT_BOX"
+    },
+    {
+      "encryptStorage": 0,
+      "encryptTransit": 0,
+      "forbidToUpdate": false,
+      "maxLength": 200,
+      "name": "healthId",
+      "normalizedStorageField": "health_id",
+      "storageField": "value1",
+      "token": "health_id",
+      "type": "TEXT_BOX"
+    },
+    {
+      "encryptStorage": 0,
+      "encryptTransit": 0,
+      "forbidToUpdate": false,
+      "maxLength": 200,
+      "name": "healthScore",
+      "normalizedStorageField": "health_score",
+      "storageField": "value5",
+      "token": "health_score",
+      "type": "TEXT_BOX"
+    },
+    {
+      "encryptStorage": 0,
+      "encryptTransit": 0,
+      "forbidToUpdate": false,
+      "maxLength": 200,
+      "name": "healthStatus",
+      "normalizedStorageField": "health_status",
+      "storageField": "value6",
+      "token": "health_status",
+      "type": "TEXT_BOX"
+    },
+    {
+      "encryptStorage": 0,
+      "encryptTransit": 0,
+      "forbidToUpdate": false,
+      "maxLength": 200,
+      "name": "medicalNotes",
+      "normalizedStorageField": "medical_notes",
+      "storageField": "value10",
+      "token": "medical_notes",
+      "type": "TEXTAREA"
+    },
+    {
+      "encryptStorage": 0,
+      "encryptTransit": 0,
+      "forbidToUpdate": false,
+      "maxLength": 200,
+      "name": "status",
+      "normalizedStorageField": "status",
+      "storageField": "value4",
+      "token": "status",
+      "type": "TEXT_BOX"
+    },
+    {
+      "encryptStorage": 0,
+      "encryptTransit": 0,
+      "forbidToUpdate": false,
+      "maxLength": 200,
+      "name": "updateType",
+      "normalizedStorageField": "update_type",
+      "storageField": "value3",
+      "token": "update_type",
+      "type": "TEXT_BOX"
+    },
+    {
+      "encryptStorage": 0,
+      "encryptTransit": 0,
+      "forbidToUpdate": false,
+      "maxLength": 200,
+      "name": "vaccinationStatus",
+      "normalizedStorageField": "vaccination_status",
+      "storageField": "value7",
+      "token": "vaccination_status",
+      "type": "TEXT_BOX"
+    }
+  ],
+  "isAutoLock": 0,
+  "isDeletableWhenReferenced": 0,
+  "isInnerEntity": 0,
+  "isMasterData": 0,
+  "layouts": [
+    {
+      "defaultLayout": true,
+      "name": "Layout",
+      "sortIndex": 0,
+      "token": "default"
+    }
+  ],
+  "name": "health_records",
+  "permissionTarget": "health-records",
+  "remoteNoSystemColumns": true,
+  "standalone": 1,
+  "standaloneTableName": "eziosql_health_records",
+  "standaloneTableNormalized": 1,
+  "token": "health-records"
+}

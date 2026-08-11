@@ -1,0 +1,173 @@
+{
+  "schemaId": "base-test-form-list",
+  "schemaJson_$$$NESTED_JSON_STRING$$$": {
+    "fields": [
+      {
+        "component": "Card",
+        "fields": [
+          {
+            "component": "Table",
+            "componentProps": {
+              "addButtonHref": "/flow/number-picker-flow/new",
+              "columnDefs": [
+                {
+                  "colId": "status",
+                  "field": "status",
+                  "headerName": "状态",
+                  "type": "TEXT_COLUMN"
+                },
+                {
+                  "colId": "studentName",
+                  "field": "studentName",
+                  "headerName": "学生姓名",
+                  "type": "TEXT_COLUMN"
+                },
+                {
+                  "colId": "studentId",
+                  "field": "studentId",
+                  "headerName": "学生ID",
+                  "type": "TEXT_COLUMN"
+                },
+                {
+                  "colId": "email",
+                  "field": "email",
+                  "headerName": "邮箱",
+                  "type": "TEXT_COLUMN"
+                },
+                {
+                  "colId": "phoneNumber",
+                  "field": "phoneNumber",
+                  "headerName": "联系电话",
+                  "type": "TEXT_COLUMN"
+                },
+                {
+                  "colId": "enrollmentDate",
+                  "field": "enrollmentDate",
+                  "headerName": "入学日期",
+                  "type": "DATE_COLUMN"
+                },
+                {
+                  "colId": "major",
+                  "field": "major",
+                  "headerName": "专业",
+                  "type": "SELECT_COLUMN"
+                },
+                {
+                  "colId": "isFullTime",
+                  "field": "isFullTime",
+                  "headerName": "是否全日制"
+                },
+                {
+                  "colId": "age",
+                  "field": "age",
+                  "headerName": "年龄",
+                  "type": "NUMBER_COLUMN"
+                },
+                {
+                  "colId": "highPrecision",
+                  "field": "highPrecision",
+                  "headerName": "高精度",
+                  "type": "NUMERIC_COLUMN"
+                },
+                {
+                  "colId": "dropdownSelection",
+                  "field": "dropdownSelection",
+                  "headerName": "下拉选择",
+                  "type": "SELECT_COLUMN"
+                },
+                {
+                  "colId": "aclSelection",
+                  "field": "aclSelection",
+                  "headerName": "ACL选择",
+                  "headerName_i18n_key": "standard|>any|>any|>aclSelection",
+                  "headerName_i18n_ns": "standard",
+                  "type": "ACL_COLUMN"
+                },
+                {
+                  "colId": "treeSelection",
+                  "field": "treeSelection",
+                  "headerName": "树形选择"
+                },
+                {
+                  "colId": "cascadingSelection",
+                  "field": "cascadingSelection",
+                  "headerName": "级联选择"
+                },
+                {
+                  "colId": "multiLineText",
+                  "field": "multiLineText",
+                  "headerName": "多行文本",
+                  "type": "TEXTAREA_COLUMN"
+                },
+                {
+                  "cellRendererParams": {
+                    "componentProps": {
+                      "listType": "text"
+                    }
+                  },
+                  "colId": "upload",
+                  "field": "upload",
+                  "headerName": "上传",
+                  "headerName_i18n_key": "standard|>any|>any|>upload",
+                  "headerName_i18n_ns": "standard",
+                  "type": "UPLOAD_COLUMN"
+                },
+                {
+                  "cellRendererParams": {
+                    "componentProps": {
+                      "listType": "text"
+                    }
+                  },
+                  "colId": "uploadPic",
+                  "field": "uploadPic",
+                  "headerName": "uploadpic",
+                  "type": "UPLOAD_COLUMN"
+                },
+                {
+                  "cellRendererParams": {
+                    "actions": [
+                      {
+                        "href": "/form/base-test-form/layout/default/:id",
+                        "type": "EDIT"
+                      },
+                      {
+                        "href": "/form/:id/view",
+                        "type": "VIEW"
+                      },
+                      {
+                        "type": "DELETE"
+                      }
+                    ],
+                    "displayLikeButton": true,
+                    "showIcon": true
+                  },
+                  "type": "ACTION_COLUMN",
+                  "width": 240
+                }
+              ],
+              "dataSource": {
+                "token": "base-test-form"
+              },
+              "pagination": true,
+              "pinnedFilter": [
+                "status",
+                "studentName",
+                "studentId"
+              ]
+            },
+            "id": "base-test-form-table",
+            "style": {
+              "height": "100%"
+            }
+          }
+        ],
+        "style": {
+          "height": "100%"
+        }
+      }
+    ],
+    "form": {
+      "title": "basetestform列表"
+    }
+  }
+}

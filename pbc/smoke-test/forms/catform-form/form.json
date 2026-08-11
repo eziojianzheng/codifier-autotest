@@ -1,0 +1,159 @@
+{
+  "dataLocation": "LOCAL",
+  "enableForbidUpdateSomeFieldsValueWhenReferenced": 0,
+  "fields": [
+    {
+      "encryptStorage": 0,
+      "encryptTransit": 0,
+      "forbidToUpdate": false,
+      "maxValue": 30.0,
+      "minValue": 0.0,
+      "name": "Age",
+      "nameI18nKey": "ui-template-maker|>form-template-form|>age",
+      "storageField": "value4",
+      "token": "age",
+      "type": "NUMBER"
+    },
+    {
+      "encryptStorage": 0,
+      "encryptTransit": 0,
+      "forbidToUpdate": false,
+      "maxLength": 100,
+      "name": "Breed",
+      "nameI18nKey": "ui-template-maker|>form-template-form|>breed",
+      "storageField": "value3",
+      "token": "breed",
+      "type": "TEXT_BOX"
+    },
+    {
+      "encryptStorage": 0,
+      "encryptTransit": 0,
+      "forbidToUpdate": false,
+      "maxLength": 100,
+      "name": "Cat Name",
+      "nameI18nKey": "ui-template-maker|>form-template-form|>catName",
+      "storageField": "value2",
+      "token": "catName",
+      "type": "TEXT_BOX"
+    },
+    {
+      "encryptStorage": 0,
+      "encryptTransit": 0,
+      "forbidToUpdate": false,
+      "name": "Coat Color",
+      "nameI18nKey": "ui-template-maker|>form-template-form|>coatColor",
+      "storageField": "value6",
+      "token": "coatColor",
+      "type": "SELECT"
+    },
+    {
+      "encryptStorage": 0,
+      "encryptTransit": 0,
+      "forbidToUpdate": false,
+      "maxLength": 200,
+      "name": "下拉选择",
+      "referenceDisplayField": "input",
+      "referenceEntity": "datasource-form",
+      "referenceField": "id",
+      "referenceMappingFields": "{\"value\":\"id\",\"label\":\"input\"}",
+      "referencePbc": "smoke-test",
+      "storageField": "value11",
+      "token": "dropdownSelect",
+      "type": "SELECT"
+    },
+    {
+      "domain": "ERP 供应商管理",
+      "encryptStorage": 0,
+      "encryptTransit": 0,
+      "fieldConfigJson": "{\"formEntityToken\":\"edit-form\",\"pbcToken\":\"smoke-test\",\"relations\":[{\"colId\":\"parentDataId\",\"filterType\":\"text\",\"type\":\"equals\",\"filter\":\"$CURRENT_FORM_DATA_ID\"}]}",
+      "forbidToUpdate": false,
+      "maxLength": 200,
+      "name": "可编辑表格",
+      "nameI18nKey": "standard|>ERP 供应商管理|>any|>editableTable",
+      "nameI18nNs": "standard",
+      "source": "df5e8a84-55b4-46bc-9fcd-44ee4ad30e37",
+      "storageField": "value12",
+      "token": "editableTable",
+      "type": "EDITABLE_GRID"
+    },
+    {
+      "encryptStorage": 0,
+      "encryptTransit": 0,
+      "forbidToUpdate": false,
+      "name": "Gender",
+      "nameI18nKey": "ui-template-maker|>form-template-form|>gender",
+      "storageField": "value5",
+      "token": "gender",
+      "type": "SELECT"
+    },
+    {
+      "encryptStorage": 0,
+      "encryptTransit": 0,
+      "forbidToUpdate": false,
+      "name": "Neutered",
+      "nameI18nKey": "ui-template-maker|>form-template-form|>isNeutered",
+      "storageField": "value9",
+      "token": "isNeutered",
+      "type": "SWITCH"
+    },
+    {
+      "encryptStorage": 0,
+      "encryptTransit": 0,
+      "forbidToUpdate": false,
+      "name": "Last Vaccination Date",
+      "nameI18nKey": "ui-template-maker|>form-template-form|>lastVaccinationDate",
+      "storageField": "value8",
+      "token": "lastVaccinationDate",
+      "type": "DATE"
+    },
+    {
+      "encryptStorage": 0,
+      "encryptTransit": 0,
+      "forbidToUpdate": false,
+      "name": "Notes",
+      "nameI18nKey": "ui-template-maker|>form-template-form|>notes",
+      "storageField": "value10",
+      "token": "notes",
+      "type": "TEXTAREA"
+    },
+    {
+      "encryptStorage": 0,
+      "encryptTransit": 0,
+      "forbidToUpdate": false,
+      "name": "状态",
+      "storageField": "value1",
+      "token": "status",
+      "type": "TEXT_BOX"
+    },
+    {
+      "encryptStorage": 0,
+      "encryptTransit": 0,
+      "forbidToUpdate": false,
+      "maxValue": 25.0,
+      "minValue": 0.0,
+      "name": "Weight (kg)",
+      "nameI18nKey": "ui-template-maker|>form-template-form|>weightKg",
+      "storageField": "value7",
+      "token": "weightKg",
+      "type": "NUMBER"
+    }
+  ],
+  "isAutoLock": 0,
+  "isDeletableWhenReferenced": 1,
+  "isInnerEntity": 0,
+  "isMasterData": 0,
+  "layouts": [
+    {
+      "defaultLayout": true,
+      "name": "布局",
+      "sortIndex": 0,
+      "token": "default"
+    }
+  ],
+  "name": "catform",
+  "permissionTarget": "catform-form",
+  "remoteNoSystemColumns": true,
+  "standalone": 0,
+  "standaloneTableNormalized": 0,
+  "token": "catform-form"
+}

@@ -1,0 +1,8 @@
+{
+  "allowedLanguages": [
+    "zh-CN",
+    "ja-JP",
+    "en-US"
+  ],
+  "fallbackLng": "zh-CN"
+}

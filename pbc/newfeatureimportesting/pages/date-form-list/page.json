@@ -1,0 +1,71 @@
+{
+  "schemaId": "date-form-list",
+  "schemaJson_$$$NESTED_JSON_STRING$$$": {
+    "fields": [
+      {
+        "component": "Card",
+        "fields": [
+          {
+            "component": "Table",
+            "componentProps": {
+              "addButtonHref": "/form/date-form/layout/default",
+              "columnDefs": [
+                {
+                  "colId": "datePicker_1",
+                  "field": "datePicker_1",
+                  "headerName": "Date Picker1",
+                  "type": "DATE_COLUMN"
+                },
+                {
+                  "colId": "datePicker_2",
+                  "field": "datePicker_2",
+                  "headerName": "Date Picker2",
+                  "type": "DATE_COLUMN"
+                },
+                {
+                  "cellRendererParams": {
+                    "actions": [
+                      {
+                        "href": "/form/date-form/layout/default/:id",
+                        "type": "EDIT"
+                      },
+                      {
+                        "href": "/form/:id/view",
+                        "type": "VIEW"
+                      },
+                      {
+                        "type": "DELETE"
+                      }
+                    ],
+                    "displayLikeButton": true,
+                    "showIcon": true
+                  },
+                  "type": "ACTION_COLUMN",
+                  "width": 240
+                }
+              ],
+              "dataSource": {
+                "token": "date-form"
+              },
+              "pagination": true,
+              "pinnedFilter": [
+                "datePicker_1",
+                "datePicker_2"
+              ]
+            },
+            "id": "date-form-table",
+            "style": {
+              "height": "100%"
+            }
+          }
+        ],
+        "style": {
+          "height": "100%"
+        }
+      }
+    ],
+    "form": {
+      "title": "dateform List"
+    }
+  }
+}

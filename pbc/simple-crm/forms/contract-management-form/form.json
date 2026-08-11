@@ -1,0 +1,100 @@
+{
+  "dataLocation": "LOCAL",
+  "enableForbidUpdateSomeFieldsValueWhenReferenced": 0,
+  "fields": [
+    {
+      "encryptStorage": 0,
+      "encryptTransit": 0,
+      "forbidToUpdate": false,
+      "maxLength": 200,
+      "name": "Contract Name",
+      "storageField": "value1",
+      "token": "contractName",
+      "type": "TEXT_BOX"
+    },
+    {
+      "encryptStorage": 0,
+      "encryptTransit": 0,
+      "fieldConfigJson": "{\"formEntityToken\":\"contract-products\",\"pbcToken\":\"simple-crm\",\"relations\":[{\"colId\":\"parentDataId\",\"filterType\":\"text\",\"type\":\"equals\",\"filter\":\"$CURRENT_FORM_DATA_ID\"}]}",
+      "forbidToUpdate": false,
+      "maxLength": 200,
+      "name": "Products Under Contract",
+      "storageField": "value6",
+      "token": "contractProducts",
+      "type": "EDITABLE_GRID"
+    },
+    {
+      "encryptStorage": 0,
+      "encryptTransit": 0,
+      "forbidToUpdate": false,
+      "maxLength": 200,
+      "name": "Contract Total Amount",
+      "storageField": "value4",
+      "token": "contractTotalAmount",
+      "type": "NUMBER"
+    },
+    {
+      "encryptStorage": 0,
+      "encryptTransit": 0,
+      "forbidToUpdate": false,
+      "maxLength": 200,
+      "name": "Customer Name",
+      "storageField": "value3",
+      "token": "customerName",
+      "type": "SELECT"
+    },
+    {
+      "encryptStorage": 0,
+      "encryptTransit": 0,
+      "forbidToUpdate": false,
+      "maxLength": 200,
+      "name": "Delivery Type",
+      "storageField": "value2",
+      "token": "deliveryType",
+      "type": "RADIO"
+    },
+    {
+      "encryptStorage": 0,
+      "encryptTransit": 0,
+      "forbidToUpdate": false,
+      "maxLength": 200,
+      "name": "Product List",
+      "referenceDisplayField": "productName",
+      "referenceEntity": "product-management-form",
+      "referenceField": "id",
+      "referenceMappingFields": "{\"value\":\"id\",\"label\":\"productName\"}",
+      "referencePbc": "simple-crm",
+      "storageField": "value7",
+      "token": "productList",
+      "type": "SELECT"
+    },
+    {
+      "encryptStorage": 0,
+      "encryptTransit": 0,
+      "forbidToUpdate": false,
+      "maxLength": 200,
+      "name": "Status",
+      "storageField": "value5",
+      "token": "status",
+      "type": "SELECT"
+    }
+  ],
+  "isAutoLock": 0,
+  "isDeletableWhenReferenced": 1,
+  "isInnerEntity": 0,
+  "isMasterData": 0,
+  "layouts": [
+    {
+      "defaultLayout": true,
+      "name": "Layout",
+      "sortIndex": 0,
+      "token": "default"
+    }
+  ],
+  "name": "Contract Management",
+  "permissionTarget": "contract-management-form",
+  "remoteNoSystemColumns": true,
+  "standalone": 0,
+  "standaloneTableNormalized": 0,
+  "token": "contract-management-form"
+}

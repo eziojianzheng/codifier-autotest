@@ -1,0 +1,14 @@
+{
+  "category": "BUSINESS",
+  "contributor": "陈和俊",
+  "description": "简版CRM组件是软件应用中的核心项目，专注于客户关系管理。其核心职责是维护客户信息、跟踪销售机会并优化客户互动。主要功能包括：1. 客户信息管理，允许用户录入、更新和查询客户资料；2. 销售机会跟踪，记录潜在客户的需求和销售进度；3. 客户互动记录，保存与客户的沟通历史，包括电话、邮件和会面。简版CRM在整个系统中扮演着客户数据中枢的角色，为销售和市场团队提供实时数据支持，帮助提高客户满意度和销售效率。",
+  "formDashboardLayoutList": [ ],
+  "matchWeight": 0.0,
+  "name": "Simple CRM",
+  "routesJson_$$$NESTED_JSON_STRING$$$": {
+    "desktop": { },
+    "mobile": { }
+  },
+  "token": "simple-crm",
+  "uiPluginList": [ ]
+}

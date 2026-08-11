@@ -1,0 +1,79 @@
+{
+  "fields": [
+    {
+      "component": "Card",
+      "fields": [
+        {
+          "component": "Input",
+          "id": "test",
+          "title": "单行文本",
+          "validation": {
+            "maxLength": 200
+          }
+        },
+        {
+          "component": "NumberPicker",
+          "id": "a09e0w6f",
+          "title": "数字"
+        },
+        {
+          "component": "DatePicker",
+          "id": "ffa4cd3f",
+          "title": "日期"
+        },
+        {
+          "component": "Upload",
+          "componentProps": {
+            "listType": "picture-card"
+          },
+          "id": "c817f839",
+          "title": "上传"
+        },
+        {
+          "component": "RichText",
+          "id": "be902d7e",
+          "title": "富文本"
+        }
+      ]
+    },
+    {
+      "component": "Stack",
+      "componentProps": {
+        "justifyContent": "flex-end"
+      },
+      "fields": [
+        {
+          "component": "Button",
+          "componentProps": {
+            "action": {
+              "successAction": {
+                "type": "cancel"
+              },
+              "type": "submit"
+            },
+            "content": "提交",
+            "type": "primary"
+          }
+        },
+        {
+          "component": "Button",
+          "componentProps": {
+            "action": {
+              "type": "cancel"
+            },
+            "content": "取消"
+          }
+        }
+      ],
+      "style": {
+        "marginTop": 12
+      }
+    }
+  ],
+  "form": {
+    "defaultCancelButton": false,
+    "defaultSubmitButton": false,
+    "labelLayout": "vertical",
+    "title": "新建"
+  }
+}

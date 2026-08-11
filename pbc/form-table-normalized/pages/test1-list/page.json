@@ -1,0 +1,78 @@
+{
+  "schemaId": "test1-list",
+  "schemaJson_$$$NESTED_JSON_STRING$$$": {
+    "fields": [
+      {
+        "component": "Card",
+        "fields": [
+          {
+            "component": "Table",
+            "componentProps": {
+              "addButtonHref": "/form/test1/layout/default",
+              "columnDefs": [
+                {
+                  "colId": "singleText1",
+                  "field": "singleText1",
+                  "headerName": "单行文本",
+                  "type": "TEXT_COLUMN"
+                },
+                {
+                  "colId": "number1",
+                  "field": "number1",
+                  "headerName": "数字",
+                  "type": "NUMBER_COLUMN"
+                },
+                {
+                  "colId": "longText1",
+                  "field": "longText1",
+                  "headerName": "多行文本",
+                  "type": "TEXTAREA_COLUMN"
+                },
+                {
+                  "cellRendererParams": {
+                    "actions": [
+                      {
+                        "href": "/form/test1/layout/default/:id",
+                        "type": "EDIT"
+                      },
+                      {
+                        "href": "/form/:id/view",
+                        "type": "VIEW"
+                      },
+                      {
+                        "type": "DELETE"
+                      }
+                    ],
+                    "displayLikeButton": true,
+                    "showIcon": true
+                  },
+                  "type": "ACTION_COLUMN",
+                  "width": 240
+                }
+              ],
+              "dataSource": {
+                "token": "test1"
+              },
+              "pagination": true,
+              "pinnedFilter": [
+                "singleText1",
+                "number1",
+                "longText1"
+              ]
+            },
+            "id": "test1-table",
+            "style": {
+              "height": "100%"
+            }
+          }
+        ],
+        "style": {
+          "height": "100%"
+        }
+      }
+    ],
+    "form": {
+      "title": "test1列表"
+    }
+  }
+}

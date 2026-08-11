@@ -1,0 +1,210 @@
+{
+  "fields": [
+    {
+      "fields": [
+        {
+          "component": "Card",
+          "componentProps": {
+            "style": {
+              "margin": "0 0 20px"
+            }
+          },
+          "fields": [
+            {
+              "component": "Stack",
+              "componentProps": {
+                "alignItems": "center",
+                "flexDirection": "row"
+              },
+              "fields": [
+                {
+                  "component": "Stack",
+                  "componentProps": {
+                    "alignItems": "flex-start",
+                    "flexDirection": "row",
+                    "justifyContent": "flex-start"
+                  },
+                  "fields": [
+                    {
+                      "component": "Icon",
+                      "componentProps": {
+                        "color": "rgba(64, 169, 255, 1)",
+                        "name": "dashBoard",
+                        "size": 16
+                      }
+                    }
+                  ],
+                  "style": {
+                    "background": " rgba(230, 247, 255, 1)",
+                    "borderRadius": "30px",
+                    "padding": "8px"
+                  }
+                },
+                {
+                  "component": "Text",
+                  "componentProps": {
+                    "content": "压测记录表单"
+                  },
+                  "style": {
+                    "fontSize": 18,
+                    "fontWeight": "bold"
+                  }
+                }
+              ],
+              "style": {
+                "margin": "0 0 16px"
+              }
+            },
+            {
+              "component": "Grid",
+              "componentProps": {
+                "colNumber": 3,
+                "columnGap": 32,
+                "rowGap": 23
+              },
+              "fields": [
+                {
+                  "component": "NumberPicker",
+                  "id": "serialNumber",
+                  "title": "序号",
+                  "validation": {
+                    "minValue": 1,
+                    "required": true
+                  }
+                },
+                {
+                  "component": "DatePicker",
+                  "componentProps": {
+                    "disabledDate": {
+                      "type": "after",
+                      "value": "2100-12-31"
+                    }
+                  },
+                  "id": "testDate",
+                  "title": "测试日期"
+                },
+                {
+                  "component": "Input",
+                  "id": "uploadFileSize",
+                  "title": "上传文件大小",
+                  "validation": {
+                    "maxLength": 20,
+                    "regex": "^[0-9]+（MB\\)|^[0-9]+\\s*MB$",
+                    "required": true
+                  }
+                },
+                {
+                  "component": "NumberPicker",
+                  "id": "minPressureTestUsers",
+                  "title": "最少压测用户数",
+                  "validation": {
+                    "minValue": 0,
+                    "required": true
+                  }
+                },
+                {
+                  "component": "NumberPicker",
+                  "id": "maxPressureTestUsers",
+                  "title": "最大压测用户数",
+                  "validation": {
+                    "minValue": 0,
+                    "required": true
+                  }
+                },
+                {
+                  "component": "Input",
+                  "id": "cpuConfig",
+                  "title": "CPU",
+                  "validation": {
+                    "maxLength": 10,
+                    "regex": "^[0-9]+C$",
+                    "required": true
+                  }
+                },
+                {
+                  "component": "NumberPicker",
+                  "id": "cpuUsagePercent",
+                  "title": "CPU使用率(%)",
+                  "validation": {
+                    "maxValue": 100,
+                    "minValue": 0,
+                    "required": true
+                  }
+                },
+                {
+                  "component": "Input",
+                  "id": "memoryConfig",
+                  "title": "内存配置",
+                  "validation": {
+                    "maxLength": 10,
+                    "regex": "^[0-9]+G$",
+                    "required": true
+                  }
+                },
+                {
+                  "component": "NumberPicker",
+                  "id": "memoryUsagePercent",
+                  "title": "内存配置(使用率%)",
+                  "validation": {
+                    "maxValue": 100,
+                    "minValue": 0,
+                    "required": true
+                  }
+                },
+                {
+                  "component": "Input",
+                  "id": "p95ExecutionDuration",
+                  "title": "P95执行时长",
+                  "validation": {
+                    "maxLength": 20,
+                    "regex": "^[0-9]+m[0-9]+s$",
+                    "required": true
+                  }
+                },
+                {
+                  "component": "Input",
+                  "id": "p95ServerResponseTime",
+                  "title": "P95服务器响应时间",
+                  "validation": {
+                    "maxLength": 20,
+                    "regex": "^[0-9]+(\\.[0-9]+)?s$",
+                    "required": true
+                  }
+                },
+                {
+                  "component": "NumberPicker",
+                  "id": "errorRatePercent",
+                  "title": "错误率%",
+                  "validation": {
+                    "maxValue": 100,
+                    "minValue": 0,
+                    "required": true
+                  }
+                },
+                {
+                  "component": "Textarea",
+                  "id": "remarkDescription",
+                  "title": "备注说明"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "form": {
+        "labelLayout": "vertical"
+      }
+    },
+    {
+      "component": "Input",
+      "hidden": true,
+      "id": "status",
+      "title": "Status"
+    }
+  ],
+  "form": {
+    "defaultCancelButton": true,
+    "defaultSubmitButton": true,
+    "script": "$$$$ref:text:layout-default-layout-script.js"
+  }
+}

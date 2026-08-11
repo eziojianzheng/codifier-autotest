@@ -1,0 +1,264 @@
+{
+  "name": "Entry",
+  "schemaId": "entry",
+  "schemaJson_$$$NESTED_JSON_STRING$$$": {
+    "fields": [
+      {
+        "component": "Table",
+        "componentProps": {
+          "addButtonHref": "/form/cats/layout/default",
+          "columnDefs": [
+            {
+              "colId": "cat_id",
+              "field": "cat_id",
+              "headerName": "catId",
+              "type": "TEXT_COLUMN"
+            },
+            {
+              "colId": "update_type",
+              "field": "update_type",
+              "headerName": "updateType",
+              "type": "TEXT_COLUMN"
+            },
+            {
+              "colId": "status",
+              "field": "status",
+              "headerName": "status",
+              "type": "TEXT_COLUMN"
+            },
+            {
+              "colId": "intake_date",
+              "field": "intake_date",
+              "headerName": "intakeDate",
+              "type": "DATE_COLUMN"
+            },
+            {
+              "colId": "special_care_apply",
+              "field": "special_care_apply",
+              "headerName": "specialCareApply",
+              "type": "TEXTAREA_COLUMN"
+            },
+            {
+              "colId": "cat_name",
+              "field": "cat_name",
+              "headerName": "catName",
+              "type": "TEXT_COLUMN"
+            },
+            {
+              "colId": "breed",
+              "field": "breed",
+              "headerName": "breed",
+              "type": "TEXT_COLUMN"
+            },
+            {
+              "colId": "color",
+              "field": "color",
+              "headerName": "color",
+              "type": "TEXT_COLUMN"
+            },
+            {
+              "colId": "microchip_id",
+              "field": "microchip_id",
+              "headerName": "microchipId",
+              "type": "NUMERIC_COLUMN"
+            },
+            {
+              "colId": "last_checkup",
+              "field": "last_checkup",
+              "headerName": "lastCheckup",
+              "type": "TIME_COLUMN"
+            },
+            {
+              "cellRendererParams": {
+                "actions": [
+                  {
+                    "href": "/form/cats/layout/default/:id",
+                    "type": "EDIT"
+                  },
+                  {
+                    "type": "DELETE"
+                  }
+                ],
+                "displayLikeButton": true,
+                "showIcon": true
+              },
+              "type": "ACTION_COLUMN"
+            }
+          ],
+          "dataSource": {
+            "token": "cats"
+          },
+          "pinnedFilter": [
+            "cat_id",
+            "update_type",
+            "status"
+          ]
+        },
+        "id": "7a76bfed-table"
+      },
+      {
+        "component": "Table",
+        "componentProps": {
+          "addButtonHref": "/form/health-records/layout/default",
+          "columnDefs": [
+            {
+              "colId": "health_id",
+              "field": "health_id",
+              "headerName": "healthId",
+              "type": "TEXT_COLUMN"
+            },
+            {
+              "colId": "medical_notes",
+              "field": "medical_notes",
+              "headerName": "medicalNotes",
+              "type": "TEXTAREA_COLUMN"
+            },
+            {
+              "colId": "cat_id",
+              "field": "cat_id",
+              "headerName": "catId",
+              "type": "TEXT_COLUMN"
+            },
+            {
+              "colId": "update_type",
+              "field": "update_type",
+              "headerName": "updateType",
+              "type": "TEXT_COLUMN"
+            },
+            {
+              "colId": "status",
+              "field": "status",
+              "headerName": "status",
+              "type": "TEXT_COLUMN"
+            },
+            {
+              "colId": "health_score",
+              "field": "health_score",
+              "headerName": "healthScore",
+              "type": "TEXT_COLUMN"
+            },
+            {
+              "colId": "health_status",
+              "field": "health_status",
+              "headerName": "healthStatus",
+              "type": "TEXT_COLUMN"
+            },
+            {
+              "colId": "vaccination_status",
+              "field": "vaccination_status",
+              "headerName": "vaccinationStatus",
+              "type": "TEXT_COLUMN"
+            },
+            {
+              "colId": "breed_type",
+              "field": "breed_type",
+              "headerName": "breedType",
+              "type": "TEXT_COLUMN"
+            },
+            {
+              "colId": "care_level",
+              "field": "care_level",
+              "headerName": "careLevel",
+              "type": "TEXT_COLUMN"
+            },
+            {
+              "cellRendererParams": {
+                "actions": [
+                  {
+                    "href": "/form/health-records/layout/default/:id",
+                    "type": "EDIT"
+                  },
+                  {
+                    "type": "DELETE"
+                  }
+                ],
+                "displayLikeButton": true,
+                "showIcon": true
+              },
+              "type": "ACTION_COLUMN"
+            }
+          ],
+          "dataSource": {
+            "token": "health-records"
+          },
+          "pinnedFilter": [
+            "health_id",
+            "medical_notes",
+            "cat_id"
+          ]
+        },
+        "id": "9bac20a3-table"
+      },
+      {
+        "component": "Table",
+        "componentProps": {
+          "addButtonHref": "/form/adoption-applications/layout/default",
+          "columnDefs": [
+            {
+              "colId": "application_id",
+              "field": "application_id",
+              "headerName": "applicationId",
+              "type": "TEXT_COLUMN"
+            },
+            {
+              "colId": "cat_id",
+              "field": "cat_id",
+              "headerName": "catId",
+              "type": "TEXT_COLUMN"
+            },
+            {
+              "colId": "update_type",
+              "field": "update_type",
+              "headerName": "updateType",
+              "type": "TEXT_COLUMN"
+            },
+            {
+              "colId": "status",
+              "field": "status",
+              "headerName": "status",
+              "type": "TEXT_COLUMN"
+            },
+            {
+              "colId": "special_flag",
+              "field": "special_flag",
+              "headerName": "specialFlag",
+              "type": "NUMBER_COLUMN"
+            },
+            {
+              "colId": "care_level",
+              "field": "care_level",
+              "headerName": "careLevel",
+              "type": "TEXT_COLUMN"
+            },
+            {
+              "cellRendererParams": {
+                "actions": [
+                  {
+                    "href": "/form/adoption-applications/layout/default/:id",
+                    "type": "EDIT"
+                  },
+                  {
+                    "type": "DELETE"
+                  }
+                ],
+                "displayLikeButton": true,
+                "showIcon": true
+              },
+              "type": "ACTION_COLUMN"
+            }
+          ],
+          "dataSource": {
+            "token": "adoption-applications"
+          },
+          "pinnedFilter": [
+            "application_id",
+            "cat_id",
+            "update_type"
+          ]
+        },
+        "id": "00409fab-table"
+      }
+    ],
+    "form": { }
+  }
+}

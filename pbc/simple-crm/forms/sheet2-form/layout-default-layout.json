@@ -1,0 +1,23 @@
+{
+  "fields": [
+    {
+      "component": "Text",
+      "componentProps": {
+        "content": "Sheet2 is empty. No fields could be extracted between start and end."
+      },
+      "id": "emptyNotice",
+      "title": "Notice"
+    },
+    {
+      "component": "Input",
+      "hidden": true,
+      "id": "status",
+      "title": "Status"
+    }
+  ],
+  "form": {
+    "defaultCancelButton": true,
+    "defaultSubmitButton": true,
+    "script": "$$$$ref:text:layout-default-layout-script.js"
+  }
+}

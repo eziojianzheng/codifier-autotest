@@ -1,0 +1,80 @@
+{
+  "dataLocation": "LOCAL",
+  "enableForbidUpdateSomeFieldsValueWhenReferenced": 0,
+  "fields": [
+    {
+      "encryptStorage": 0,
+      "encryptTransit": 0,
+      "forbidToUpdate": false,
+      "maxLength": 200,
+      "name": "ddid",
+      "normalizedStorageField": "ddid",
+      "storageField": "value1",
+      "token": "ddid",
+      "type": "NUMBER"
+    },
+    {
+      "encryptStorage": 0,
+      "encryptTransit": 0,
+      "forbidToUpdate": false,
+      "maxLength": 200,
+      "name": "hyid",
+      "normalizedStorageField": "hyid",
+      "storageField": "value2",
+      "token": "hyid",
+      "type": "NUMBER"
+    },
+    {
+      "encryptStorage": 0,
+      "encryptTransit": 0,
+      "forbidToUpdate": false,
+      "maxLength": 200,
+      "name": "sl",
+      "normalizedStorageField": "sl",
+      "storageField": "value4",
+      "token": "sl",
+      "type": "NUMBER"
+    },
+    {
+      "encryptStorage": 0,
+      "encryptTransit": 0,
+      "forbidToUpdate": false,
+      "maxLength": 200,
+      "name": "spid",
+      "normalizedStorageField": "spid",
+      "storageField": "value3",
+      "token": "spid",
+      "type": "NUMBER"
+    },
+    {
+      "encryptStorage": 0,
+      "encryptTransit": 0,
+      "forbidToUpdate": false,
+      "maxLength": 200,
+      "name": "ze",
+      "normalizedStorageField": "ze",
+      "storageField": "value5",
+      "token": "ze",
+      "type": "NUMBER"
+    }
+  ],
+  "isAutoLock": 0,
+  "isDeletableWhenReferenced": 1,
+  "isInnerEntity": 0,
+  "isMasterData": 0,
+  "layouts": [
+    {
+      "defaultLayout": true,
+      "name": "Layout",
+      "sortIndex": 0,
+      "token": "default"
+    }
+  ],
+  "name": "ddb",
+  "permissionTarget": "ddb",
+  "remoteNoSystemColumns": true,
+  "standalone": 1,
+  "standaloneTableName": "ddb",
+  "standaloneTableNormalized": 1,
+  "token": "ddb"
+}

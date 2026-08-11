@@ -1,0 +1,350 @@
+{
+  "description": "",
+  "name": "date",
+  "nodeList": [
+    {
+      "enabled": true,
+      "id": 6,
+      "inMemory": true,
+      "inMemoryTransaction": false,
+      "interval": 60,
+      "nodeName": "TRIGGER",
+      "periodEnd": "23:59:59",
+      "periodStart": "00:00:00",
+      "restTrigger": {
+        "eligibleForAgent": false,
+        "method": "GET",
+        "requestBody": [ ],
+        "url": "/flow/api/flow-rest-selfauth/date-flow"
+      },
+      "scheduleType": "ONE_TIME",
+      "startTime": 1770701973871,
+      "triggerType": "REST",
+      "type": "TRIGGER",
+      "version": "2.0"
+    },
+    {
+      "enabled": true,
+      "id": 1,
+      "nodeName": "APP - Create form data",
+      "sdk": {
+        "formInput": {
+          "datePicker": "2025-10-01",
+          "input": "2025-10-01"
+        },
+        "input": {
+          "formEntityToken": "date-form",
+          "pbcToken": "pg"
+        },
+        "inputFields": [ ],
+        "name": "Create form data",
+        "numberStringToBigDecimal": false,
+        "outputFields": [ ],
+        "sdkType": "CREATE_ENTITY",
+        "uuid": "739b0a8f-cf7a-4e83-93ca-4ebe55ef80e8"
+      },
+      "type": "APP",
+      "version": "1.0"
+    },
+    {
+      "enabled": true,
+      "id": 2,
+      "nodeName": "APP - Generic Query SQL",
+      "sdk": {
+        "code": "$$$$ref:text:sdk-2.sql",
+        "inputFields": [
+          {
+            "controlType": "input",
+            "dataType": "string",
+            "label": "Timeout(Seconds)",
+            "name": "timeout",
+            "optional": true
+          }
+        ],
+        "name": "Generic Query SQL",
+        "numberStringToBigDecimal": false,
+        "outputFields": [ ],
+        "sdkType": "GENERAL_SQL",
+        "uuid": "b09e4613-69a2-4365-9bc0-3b8eedae5ff1"
+      },
+      "type": "APP",
+      "version": "1.0"
+    },
+    {
+      "enabled": true,
+      "id": 4,
+      "nodeName": "APP - Groovy脚本",
+      "sdk": {
+        "code": "return[\"inputData\":data.collect{it->return[\"input\":it.inputd,\"datePicker\":it.datepickerd]}]",
+        "input": {
+          "data": "$2"
+        },
+        "inputFields": [
+          {
+            "dataType": "string",
+            "label": "data",
+            "name": "data",
+            "optional": false
+          }
+        ],
+        "name": "Groovy脚本",
+        "numberStringToBigDecimal": true,
+        "outputFields": [
+          {
+            "dataType": "string",
+            "label": "inputData",
+            "name": "inputData"
+          }
+        ],
+        "sdkType": "GENERAL_GROOVY",
+        "uuid": "492f8c00-14de-4837-a1f6-ed6ff0a2870e"
+      },
+      "type": "APP",
+      "version": "1.0"
+    },
+    {
+      "enabled": true,
+      "id": 5,
+      "nodeName": "APP - 批量新建表单数据",
+      "sdk": {
+        "formEntityId": "",
+        "input": {
+          "batchInput": "$4.inputData",
+          "batchSize": "100",
+          "formEntityToken": "date-form",
+          "needReturnValue": "true",
+          "pbcToken": "pg"
+        },
+        "inputFields": [
+          {
+            "controlType": "input",
+            "dataType": "string",
+            "label": "batchInput",
+            "name": "batchInput",
+            "optional": true
+          },
+          {
+            "controlType": "entity",
+            "label": "Form Entity",
+            "name": "formEntityToken",
+            "optional": false
+          },
+          {
+            "controlType": "select",
+            "dataType": "string",
+            "label": "是否需要返回创建的值",
+            "name": "needReturnValue",
+            "optional": true,
+            "pickList": [
+              "true",
+              "false"
+            ]
+          },
+          {
+            "controlType": "input",
+            "label": "Batch Size",
+            "name": "batchSize",
+            "optional": false
+          }
+        ],
+        "name": "批量新建表单数据",
+        "numberStringToBigDecimal": false,
+        "outputFields": [
+          {
+            "label": "返回结果",
+            "name": "results"
+          },
+          {
+            "dataType": "string",
+            "label": "返回数量",
+            "name": "count"
+          }
+        ],
+        "sdkType": "BATCH_CREATE_ENTITY",
+        "uuid": "8abc1654-b307-4fe9-b41a-72f9d7481e79"
+      },
+      "type": "APP",
+      "version": "1.0"
+    },
+    {
+      "enabled": true,
+      "id": 10,
+      "nodeName": "APP - Generic Query SQL",
+      "sdk": {
+        "code": "$$$$ref:text:sdk-10.sql",
+        "inputFields": [
+          {
+            "controlType": "input",
+            "dataType": "string",
+            "label": "Timeout(Seconds)",
+            "name": "timeout",
+            "optional": true
+          }
+        ],
+        "name": "Generic Query SQL",
+        "numberStringToBigDecimal": false,
+        "outputFields": [ ],
+        "sdkType": "GENERAL_SQL",
+        "uuid": "b09e4613-69a2-4365-9bc0-3b8eedae5ff1"
+      },
+      "type": "APP",
+      "version": "1.0"
+    },
+    {
+      "enabled": true,
+      "id": 7,
+      "nodeName": "APP - Groovy脚本",
+      "sdk": {
+        "code": "return[\"ids\":data.collect{it.id}]",
+        "input": {
+          "data": "$10"
+        },
+        "inputFields": [
+          {
+            "dataType": "string",
+            "label": "data",
+            "name": "data",
+            "optional": false
+          }
+        ],
+        "name": "Groovy脚本",
+        "numberStringToBigDecimal": false,
+        "outputFields": [
+          {
+            "dataType": "string",
+            "label": "ids",
+            "name": "ids"
+          }
+        ],
+        "sdkType": "GENERAL_GROOVY",
+        "uuid": "492f8c00-14de-4837-a1f6-ed6ff0a2870e"
+      },
+      "type": "APP",
+      "version": "1.0"
+    },
+    {
+      "enabled": true,
+      "id": 8,
+      "nodeName": "APP - 批量删除表单数据",
+      "sdk": {
+        "formEntityId": "",
+        "input": {
+          "formEntityToken": "date-form",
+          "ids": "$7.ids",
+          "pbcToken": "pg"
+        },
+        "inputFields": [
+          {
+            "controlType": "input",
+            "dataType": "string",
+            "label": "ids",
+            "name": "ids",
+            "optional": false
+          },
+          {
+            "controlType": "entity",
+            "label": "Form Entity",
+            "name": "formEntityToken",
+            "optional": false
+          }
+        ],
+        "name": "批量删除表单数据",
+        "numberStringToBigDecimal": false,
+        "outputFields": [ ],
+        "sdkType": "BATCH_DELETE_ENTITY",
+        "uuid": "fef479f8-14b2-4f8e-8c9b-998caeff88a4"
+      },
+      "type": "APP",
+      "version": "1.0"
+    },
+    {
+      "enabled": true,
+      "id": 9,
+      "nodeName": "APP - 批量物理删除表单数据",
+      "sdk": {
+        "input": {
+          "formEntityToken": "date-form",
+          "ids": "$7.ids",
+          "onlyForDeletedData": "true",
+          "pbcToken": "pg"
+        },
+        "inputFields": [
+          {
+            "controlType": "input",
+            "dataType": "string",
+            "label": "ids",
+            "name": "ids",
+            "optional": false
+          },
+          {
+            "controlType": "entity",
+            "label": "Form Entity",
+            "name": "formEntityToken",
+            "optional": false
+          },
+          {
+            "controlType": "select",
+            "dataType": "string",
+            "defaultValue": true,
+            "label": "仅删除deleted的数据",
+            "name": "onlyForDeletedData",
+            "optional": true,
+            "pickList": [
+              "true",
+              "false"
+            ]
+          }
+        ],
+        "name": "批量物理删除表单数据",
+        "numberStringToBigDecimal": false,
+        "outputFields": [ ],
+        "sdkType": "PHYSICAL_BATCH_DELETE_FORM_ENTITY_DATA",
+        "uuid": "0ee40386-b7d5-47c2-b8c2-50aaea645f01"
+      },
+      "type": "APP",
+      "version": "1.0"
+    },
+    {
+      "enabled": true,
+      "id": 11,
+      "nodeName": "APP - Set workflow output value",
+      "sdk": {
+        "input": {
+          "bulkcreateout": "$5",
+          "node4groovyoutput": "$4"
+        },
+        "inputFields": [
+          {
+            "dataType": "string",
+            "label": "node4groovyoutput",
+            "name": "node4groovyoutput",
+            "optional": false
+          },
+          {
+            "dataType": "string",
+            "label": "bulkcreateout",
+            "name": "bulkcreateout",
+            "optional": false
+          }
+        ],
+        "name": "Set workflow output value",
+        "numberStringToBigDecimal": false,
+        "sdkType": "SET_VALUE_TO_INSTANCE",
+        "uuid": "f63bae3b-4003-4b29-aedf-4626216fc12a"
+      },
+      "type": "APP",
+      "version": "1.0"
+    },
+    {
+      "enabled": true,
+      "id": 3,
+      "nodeName": "STOP_JOB",
+      "result": "Successful",
+      "type": "STOP_JOB"
+    }
+  ],
+  "restApiEnabled": 1,
+  "restApiMethod": "GET",
+  "restApiUrl": "/flow/api/flow-rest-selfauth/date-flow",
+  "token": "date-flow"
+}

@@ -1,0 +1,27 @@
+{
+  "category": "AUTOMATION",
+  "connectorV2List": [
+    {
+      "connectorTypeUuid": "0d37b25f-3766-4be1-8391-67628d7a520a",
+      "name": "FTTT",
+      "parameters": { },
+      "uuid": "d72aeb49-ad37-4cda-8972-04c232a8afba",
+      "version": 0
+    },
+    {
+      "connectorTypeUuid": "30e71476-28eb-4eda-8cd3-07a17f49fde5",
+      "name": "NewFTTT",
+      "parameters": { },
+      "uuid": "35fcc866-c935-42fb-8073-eab3e4e96ab2",
+      "version": 0
+    }
+  ],
+  "contributor": "admin",
+  "formDashboardLayoutList": [ ],
+  "formEntityRelationList": [ ],
+  "matchWeight": 0.0,
+  "name": "importsdktest",
+  "token": "importsdktest",
+  "type": "CONNECTOR",
+  "uiPluginList": [ ]
+}

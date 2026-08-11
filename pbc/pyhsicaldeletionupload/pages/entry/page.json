@@ -1,0 +1,110 @@
+{
+  "name": "Entry",
+  "schemaId": "entry",
+  "schemaJson_$$$NESTED_JSON_STRING$$$": {
+    "fields": [
+      {
+        "component": "Card",
+        "fields": [
+          {
+            "component": "Table",
+            "componentProps": {
+              "addButtonHref": "/form/pyhsicaldeletionupload-form/layout/new",
+              "columnDefs": [
+                {
+                  "colId": "singleLineText",
+                  "field": "singleLineText",
+                  "headerName": "Text",
+                  "type": "TEXT_COLUMN"
+                },
+                {
+                  "colId": "number",
+                  "field": "number",
+                  "headerName": "Number Picker",
+                  "type": "NUMBER_COLUMN"
+                },
+                {
+                  "colId": "date",
+                  "field": "date",
+                  "headerName": "Date Picker",
+                  "type": "DATE_COLUMN"
+                },
+                {
+                  "cellRendererParams": {
+                    "componentProps": {
+                      "listType": "picture-card"
+                    }
+                  },
+                  "colId": "upload",
+                  "field": "upload",
+                  "headerName": "Upload",
+                  "type": "UPLOAD_COLUMN"
+                },
+                {
+                  "cellRendererParams": {
+                    "actions": [
+                      {
+                        "href": "/form/pyhsicaldeletionupload-form/layout/edit/:id",
+                        "type": "EDIT"
+                      },
+                      {
+                        "href": "/form/:id/view",
+                        "type": "VIEW"
+                      },
+                      {
+                        "component": "Button",
+                        "componentProps": {
+                          "action": {
+                            "method": "delete",
+                            "successAction": {
+                              "tableIds": [
+                                "pyhsicaldeletionupload-form-list-table"
+                              ],
+                              "type": "refreshTable"
+                            },
+                            "type": "request",
+                            "url": "/flow/api/flow-rest/pysicaldeletion?dataId=:id"
+                          },
+                          "content": "Physical Delete"
+                        }
+                      },
+                      {
+                        "type": "DELETE"
+                      }
+                    ],
+                    "displayLikeButton": true,
+                    "showIcon": true
+                  },
+                  "colId": "action",
+                  "headerName": "Operation",
+                  "type": "ACTION_COLUMN"
+                }
+              ],
+              "dataSource": {
+                "token": "pyhsicaldeletionupload-form"
+              },
+              "pagination": true,
+              "pinnedFilter": [
+                "singleLineText",
+                "number",
+                "date"
+              ]
+            },
+            "id": "pyhsicaldeletionupload-form-list-table",
+            "style": {
+              "height": "100%"
+            }
+          }
+        ],
+        "style": {
+          "height": "100%"
+        }
+      }
+    ],
+    "form": {
+      "defaultCancelButton": false,
+      "defaultSubmitButton": false,
+      "labelLayout": "vertical"
+    }
+  }
+}

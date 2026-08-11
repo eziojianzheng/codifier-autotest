@@ -1,0 +1,92 @@
+{
+  "fields": [
+    {
+      "component": "Card",
+      "componentProps": {
+        "title": "Product Information",
+        "titleDesc": "Manage core product details, pricing, media, and attachments."
+      },
+      "fields": [
+        {
+          "component": "Grid",
+          "componentProps": {
+            "colNumber": 3,
+            "columnGap": 24,
+            "rowGap": 20
+          },
+          "fields": [
+            {
+              "allowI18nValue": true,
+              "component": "Input",
+              "id": "productName",
+              "title": "Product Name",
+              "validation": {
+                "maxLength": 100,
+                "required": true
+              }
+            },
+            {
+              "component": "Input",
+              "id": "productCategory",
+              "title": "Product Category"
+            },
+            {
+              "component": "Input",
+              "id": "productBrand",
+              "title": "Product Brand"
+            },
+            {
+              "component": "NumberPicker",
+              "id": "costPrice",
+              "title": "Cost Price",
+              "validation": {
+                "minValue": 0
+              }
+            },
+            {
+              "component": "NumberPicker",
+              "id": "suggestedRetailPrice",
+              "title": "Suggested Retail Price",
+              "validation": {
+                "minValue": 0
+              }
+            },
+            {
+              "component": "Input",
+              "id": "unit",
+              "title": "Unit"
+            },
+            {
+              "component": "NumberPicker",
+              "id": "productReferenceProfitMargin",
+              "title": "Product Reference Profit Margin (%)",
+              "validation": {
+                "maxValue": 100,
+                "minValue": 0
+              }
+            },
+            {
+              "component": "Upload",
+              "componentProps": {
+                "listType": "text"
+              },
+              "id": "productFile",
+              "title": "Product File"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "component": "Input",
+      "hidden": true,
+      "id": "status",
+      "title": "Status"
+    }
+  ],
+  "form": {
+    "defaultCancelButton": true,
+    "defaultSubmitButton": true,
+    "title": "Layout"
+  }
+}

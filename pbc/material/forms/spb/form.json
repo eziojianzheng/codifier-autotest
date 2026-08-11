@@ -1,0 +1,69 @@
+{
+  "dataLocation": "LOCAL",
+  "enableForbidUpdateSomeFieldsValueWhenReferenced": 0,
+  "fields": [
+    {
+      "encryptStorage": 0,
+      "encryptTransit": 0,
+      "forbidToUpdate": false,
+      "maxLength": 200,
+      "name": "spid",
+      "normalizedStorageField": "spid",
+      "storageField": "value1",
+      "token": "spid",
+      "type": "NUMBER"
+    },
+    {
+      "encryptStorage": 0,
+      "encryptTransit": 0,
+      "forbidToUpdate": false,
+      "maxLength": 200,
+      "name": "spjg",
+      "normalizedStorageField": "spjg",
+      "storageField": "value4",
+      "token": "spjg",
+      "type": "NUMBER"
+    },
+    {
+      "encryptStorage": 0,
+      "encryptTransit": 0,
+      "forbidToUpdate": false,
+      "maxLength": 200,
+      "name": "splx",
+      "normalizedStorageField": "splx",
+      "storageField": "value3",
+      "token": "splx",
+      "type": "TEXT_BOX"
+    },
+    {
+      "encryptStorage": 0,
+      "encryptTransit": 0,
+      "forbidToUpdate": false,
+      "maxLength": 200,
+      "name": "spmc",
+      "normalizedStorageField": "spmc",
+      "storageField": "value2",
+      "token": "spmc",
+      "type": "TEXT_BOX"
+    }
+  ],
+  "isAutoLock": 0,
+  "isDeletableWhenReferenced": 1,
+  "isInnerEntity": 0,
+  "isMasterData": 0,
+  "layouts": [
+    {
+      "defaultLayout": true,
+      "name": "Layout",
+      "sortIndex": 0,
+      "token": "default"
+    }
+  ],
+  "name": "spb",
+  "permissionTarget": "spb",
+  "remoteNoSystemColumns": true,
+  "standalone": 1,
+  "standaloneTableName": "spb",
+  "standaloneTableNormalized": 1,
+  "token": "spb"
+}

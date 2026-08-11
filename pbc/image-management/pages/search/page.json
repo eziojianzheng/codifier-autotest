@@ -1,0 +1,253 @@
+{
+  "name": "検索画面",
+  "schemaId": "search",
+  "schemaJson_$$$NESTED_JSON_STRING$$$": {
+    "fields": [
+      {
+        "component": "PageHeader",
+        "componentProps": {
+          "headerStyle": "style3"
+        },
+        "fields": [
+          {
+            "component": "Button",
+            "componentProps": {
+              "action": {
+                "content": "ログアウトします。よろしいですか？",
+                "successAction": {
+                  "type": "logout"
+                },
+                "title": "ログアウト",
+                "type": "confirm"
+              },
+              "icon": "material:logout-outlined",
+              "type": "dashed"
+            }
+          }
+        ]
+      },
+      {
+        "component": "PageHeader",
+        "componentProps": {
+          "headerStyle": "style2"
+        },
+        "style": {
+          "color": "#AD0003",
+          "textAlign": "center"
+        }
+      },
+      {
+        "component": "Stack",
+        "componentProps": {
+          "flexDirection": "column",
+          "gap": 15
+        },
+        "fields": [
+          {
+            "component": "Radio",
+            "componentProps": {
+              "direction": "horizontal",
+              "options": [
+                {
+                  "label": "新車",
+                  "value": "10"
+                },
+                {
+                  "label": "中古車",
+                  "value": "20"
+                },
+                {
+                  "label": "車検(入庫時)",
+                  "value": "31"
+                },
+                {
+                  "label": "車検(整備中)",
+                  "value": "32"
+                },
+                {
+                  "label": "車検(出庫時)",
+                  "value": "33"
+                }
+              ]
+            },
+            "id": "veichleEvent",
+            "title": "業務種別"
+          },
+          {
+            "component": "Input",
+            "hidden": {
+              "dataPredicate": {
+                "conditions": [
+                  {
+                    "condition": "equals",
+                    "field": ":veichleEvent",
+                    "value": "10"
+                  },
+                  {
+                    "condition": "equals",
+                    "field": ":veichleEvent",
+                    "value": "20"
+                  }
+                ],
+                "operator": "OR"
+              },
+              "valueIfNegative": true,
+              "valueIfPositive": false
+            },
+            "id": "orderNumber",
+            "textInputType": "text",
+            "title": "注文番号",
+            "validation": {
+              "regex": "^[0-9A-Za-z]{8}$",
+              "regexErrorMessage": "注文番号は半角英数字8桁で入力してください"
+            }
+          },
+          {
+            "component": "Input",
+            "hidden": {
+              "dataPredicate": {
+                "conditions": [
+                  {
+                    "condition": "equals",
+                    "field": ":veichleEvent",
+                    "value": "31"
+                  },
+                  {
+                    "condition": "equals",
+                    "field": ":veichleEvent",
+                    "value": "32"
+                  },
+                  {
+                    "condition": "equals",
+                    "field": ":veichleEvent",
+                    "value": "33"
+                  }
+                ],
+                "operator": "OR"
+              },
+              "valueIfNegative": true,
+              "valueIfPositive": false
+            },
+            "id": "orderNumber",
+            "inputmode": "numeric",
+            "textInputType": "text",
+            "title": "RONO",
+            "validation": {
+              "regex": "^[0-9A-Za-z]{8}$",
+              "regexErrorMessage": "RONOは半角英数字8桁で入力してください"
+            }
+          },
+          {
+            "component": "Stack",
+            "componentProps": {
+              "flexDirection": "row"
+            },
+            "fields": [
+              {
+                "component": "Input",
+                "hidden": {
+                  "dataPredicate": {
+                    "conditions": [
+                      {
+                        "condition": "equals",
+                        "field": ":veichleEvent",
+                        "value": "10"
+                      }
+                    ],
+                    "operator": "AND"
+                  },
+                  "valueIfNegative": true,
+                  "valueIfPositive": false
+                },
+                "id": "vehicleNumber",
+                "title": "車台番号",
+                "validation": {
+                  "regex": "^[A-Za-z0-9-]{0,18}$",
+                  "regexErrorMessage": "車体番号は半角英数字ハイフン0〜18桁で入力してください"
+                }
+              },
+              {
+                "component": "Button",
+                "componentProps": {
+                  "action": {
+                    "methodName": "readQRCode",
+                    "type": "formMethod"
+                  },
+                  "icon": "material:qr-code-scanner-rounded"
+                },
+                "hidden": {
+                  "dataPredicate": {
+                    "conditions": [
+                      {
+                        "condition": "equals",
+                        "field": ":veichleEvent",
+                        "value": "10"
+                      }
+                    ],
+                    "operator": "AND"
+                  },
+                  "valueIfNegative": true,
+                  "valueIfPositive": false
+                },
+                "id": "qrcodeReaderButton"
+              }
+            ]
+          },
+          {
+            "component": "Button",
+            "componentProps": {
+              "action": {
+                "methodName": "validatefunc",
+                "successAction": {
+                  "methodName": "searchfunc",
+                  "type": "formMethod"
+                },
+                "type": "formMethod"
+              },
+              "content": "検索",
+              "style": {
+                "height": 50,
+                "margin": 10
+              },
+              "type": "primary"
+            },
+            "disabled": {
+              "dataPredicate": {
+                "conditions": [
+                  {
+                    "condition": "blank",
+                    "dataField": "veichleEvent",
+                    "value": ""
+                  }
+                ],
+                "operator": "AND"
+              }
+            },
+            "id": "searchButton"
+          }
+        ],
+        "style": {
+          "margin": 20
+        }
+      },
+      {
+        "component": "Image",
+        "componentProps": {
+          "src": "https://www.isuzu.co.jp/app-files/img/footer_im01.svg"
+        },
+        "style": {
+          "width": "100%"
+        }
+      }
+    ],
+    "form": {
+      "browserTitle": {
+        "notShowPbcName": true
+      },
+      "disableDirty": true,
+      "hidePageHeader": true,
+      "script": "$$$$ref:text:page-form-script.js",
+      "title": "車両検索"
+    }
+  }
+}

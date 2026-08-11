@@ -1,0 +1,110 @@
+[
+  {
+    "method": "C",
+    "name": "创建",
+    "nameEnUs": "Create",
+    "nameJaJp": "作成",
+    "target": "basetestform",
+    "targetToken": "base-test-form",
+    "token": "basetest_base-test-form_C"
+  },
+  {
+    "method": "D",
+    "name": "删除",
+    "nameEnUs": "Delete",
+    "nameJaJp": "削除",
+    "target": "basetestform",
+    "targetToken": "base-test-form",
+    "token": "basetest_base-test-form_D"
+  },
+  {
+    "method": "R",
+    "name": "读取",
+    "nameEnUs": "Read",
+    "nameJaJp": "読取",
+    "target": "basetestform",
+    "targetToken": "base-test-form",
+    "token": "basetest_base-test-form_R"
+  },
+  {
+    "method": "U",
+    "name": "更新",
+    "nameEnUs": "Update",
+    "nameJaJp": "更新",
+    "target": "basetestform",
+    "targetToken": "base-test-form",
+    "token": "basetest_base-test-form_U"
+  },
+  {
+    "method": "C",
+    "name": "创建",
+    "nameEnUs": "Create",
+    "nameJaJp": "作成",
+    "target": "edittabledatasource",
+    "targetToken": "edit-table-datasource-form",
+    "token": "basetest_edit-table-datasource-form_C"
+  },
+  {
+    "method": "D",
+    "name": "删除",
+    "nameEnUs": "Delete",
+    "nameJaJp": "削除",
+    "target": "edittabledatasource",
+    "targetToken": "edit-table-datasource-form",
+    "token": "basetest_edit-table-datasource-form_D"
+  },
+  {
+    "method": "R",
+    "name": "读取",
+    "nameEnUs": "Read",
+    "nameJaJp": "読取",
+    "target": "edittabledatasource",
+    "targetToken": "edit-table-datasource-form",
+    "token": "basetest_edit-table-datasource-form_R"
+  },
+  {
+    "method": "U",
+    "name": "更新",
+    "nameEnUs": "Update",
+    "nameJaJp": "更新",
+    "target": "edittabledatasource",
+    "targetToken": "edit-table-datasource-form",
+    "token": "basetest_edit-table-datasource-form_U"
+  },
+  {
+    "method": "C",
+    "name": "创建",
+    "nameEnUs": "Create",
+    "nameJaJp": "作成",
+    "target": "selectdatasource",
+    "targetToken": "select-datasource-form",
+    "token": "basetest_select-datasource-form_C"
+  },
+  {
+    "method": "D",
+    "name": "删除",
+    "nameEnUs": "Delete",
+    "nameJaJp": "削除",
+    "target": "selectdatasource",
+    "targetToken": "select-datasource-form",
+    "token": "basetest_select-datasource-form_D"
+  },
+  {
+    "method": "R",
+    "name": "读取",
+    "nameEnUs": "Read",
+    "nameJaJp": "読取",
+    "target": "selectdatasource",
+    "targetToken": "select-datasource-form",
+    "token": "basetest_select-datasource-form_R"
+  },
+  {
+    "method": "U",
+    "name": "更新",
+    "nameEnUs": "Update",
+    "nameJaJp": "更新",
+    "target": "selectdatasource",
+    "targetToken": "select-datasource-form",
+    "token": "basetest_select-datasource-form_U"
+  }
+]

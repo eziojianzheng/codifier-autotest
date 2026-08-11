@@ -1,0 +1,20 @@
+{
+  "fields": [
+    {
+      "component": "Input",
+      "id": "input",
+      "title": "Input",
+      "validation": {
+        "maxLength": 200
+      }
+    },
+    {
+      "component": "DatePicker",
+      "id": "datePicker",
+      "title": "Date Picker"
+    }
+  ],
+  "form": {
+    "title": "Layout"
+  }
+}

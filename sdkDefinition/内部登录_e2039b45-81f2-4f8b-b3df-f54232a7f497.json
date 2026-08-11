@@ -1,0 +1,71 @@
+{
+  "definition_$$$NESTED_JSON_STRING$$$": {
+    "inputFields": [
+      {
+        "controlType": "input",
+        "dataType": "string",
+        "label": "Payload",
+        "label_i18n_en-US": "Payload",
+        "label_i18n_ja-JP": "ペイロード",
+        "name": "payload",
+        "optional": true
+      },
+      {
+        "controlType": "input",
+        "dataType": "string",
+        "label": "用户Id",
+        "label_i18n_en-US": "UserId",
+        "label_i18n_ja-JP": " ユーザーID",
+        "name": "userId",
+        "optional": true
+      },
+      {
+        "controlType": "input",
+        "dataType": "string",
+        "label": "密码",
+        "label_i18n_en-US": "Password",
+        "label_i18n_ja-JP": " パスワード",
+        "name": "password",
+        "optional": true
+      },
+      {
+        "controlType": "input",
+        "dataType": "string",
+        "label": "Jwt过期时间(分钟)",
+        "label_i18n_en-US": "Jwt max life minutes",
+        "label_i18n_ja-JP": "JWTの最大有効時間（分）",
+        "name": "jwtMaxLifeMinutes",
+        "optional": true
+      }
+    ],
+    "outputFields": [
+      {
+        "dataType": "string",
+        "label": "Message",
+        "name": "message"
+      },
+      {
+        "dataType": "string",
+        "label": "Success",
+        "name": "success"
+      },
+      {
+        "dataType": "string",
+        "label": "AccessToken",
+        "name": "accessToken"
+      },
+      {
+        "dataType": "string",
+        "label": "RefreshToken",
+        "name": "refreshToken"
+      }
+    ],
+    "sdkType": "INTERNAL_LOGIN"
+  },
+  "isSystem": 1,
+  "name": "内部登录",
+  "nameEnUs": "Internal login",
+  "nameJaJp": "内部ログイン",
+  "sdkType": "INTERNAL_LOGIN",
+  "uuid": "e2039b45-81f2-4f8b-b3df-f54232a7f497"
+}

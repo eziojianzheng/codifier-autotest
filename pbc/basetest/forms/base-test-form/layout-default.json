@@ -1,0 +1,588 @@
+{
+  "fields": [
+    {
+      "component": "Card",
+      "componentProps": {
+        "style": {
+          "margin": "0 0 20px"
+        }
+      },
+      "fields": [
+        {
+          "component": "Stack",
+          "componentProps": {
+            "alignItems": "flex-start",
+            "flexDirection": "row"
+          },
+          "fields": [
+            {
+              "component": "Stack",
+              "componentProps": {
+                "alignItems": "flex-start",
+                "flexDirection": "row",
+                "justifyContent": "flex-start"
+              },
+              "fields": [
+                {
+                  "component": "Icon",
+                  "componentProps": {
+                    "color": "rgba(64, 169, 255, 1)",
+                    "name": "student",
+                    "size": 16
+                  }
+                }
+              ],
+              "style": {
+                "background": "rgba(230, 247, 255, 1)",
+                "borderRadius": "30px",
+                "padding": "8px"
+              }
+            },
+            {
+              "component": "Text",
+              "componentProps": {
+                "content": "学生信息"
+              },
+              "isSectionTitle": true,
+              "style": {
+                "fontSize": 18,
+                "fontWeight": "bold"
+              }
+            }
+          ],
+          "style": {
+            "margin": "0 0 16px"
+          }
+        },
+        {
+          "component": "Grid",
+          "componentProps": {
+            "colNumber": 3,
+            "columnGap": 24,
+            "rowGap": 16
+          },
+          "fields": [
+            {
+              "component": "Input",
+              "id": "studentName",
+              "title": "学生姓名"
+            },
+            {
+              "component": "Input",
+              "id": "studentId",
+              "title": "学生ID"
+            },
+            {
+              "component": "Input",
+              "id": "email",
+              "title": "邮箱"
+            },
+            {
+              "component": "Input",
+              "id": "phoneNumber",
+              "title": "联系电话"
+            },
+            {
+              "component": "DatePicker",
+              "id": "enrollmentDate",
+              "title": "入学日期"
+            },
+            {
+              "component": "Select",
+              "componentProps": {
+                "options": [
+                  {
+                    "label": "计算机科学",
+                    "value": "cs"
+                  },
+                  {
+                    "label": "电子工程",
+                    "value": "ee"
+                  },
+                  {
+                    "label": "机械工程",
+                    "value": "me"
+                  }
+                ]
+              },
+              "id": "major",
+              "title": "专业"
+            },
+            {
+              "component": "Switch",
+              "id": "isFullTime",
+              "title": "是否全日制"
+            },
+            {
+              "component": "Textarea",
+              "id": "multiLineText",
+              "title": "多行文本"
+            }
+          ],
+          "isFieldsContainer": true
+        },
+        {
+          "component": "UserAvatar",
+          "componentProps": {
+            "listType": "text"
+          },
+          "id": "upload",
+          "source": "c4c31926-494e-4405-b0cf-a5b17b2c7c1b",
+          "title": "上传",
+          "title_i18n_key": "standard|>any|>any|>upload",
+          "title_i18n_ns": "standard",
+          "validation": {
+            "maxLength": 200
+          }
+        },
+        {
+          "component": "Upload",
+          "componentProps": {
+            "listType": "text"
+          },
+          "id": "uploadPic",
+          "title": "uploadpic"
+        },
+        {
+          "component": "NumberPicker",
+          "id": "age",
+          "title": "年龄"
+        },
+        {
+          "component": "NumericPicker",
+          "id": "highPrecision",
+          "title": "高精度"
+        },
+        {
+          "component": "Select",
+          "componentProps": {
+            "dataSource": {
+              "token": "select-datasource-form"
+            },
+            "mapping": {
+              "label": "switch",
+              "value": "id"
+            },
+            "stringEqual": true
+          },
+          "id": "dropdownSelection",
+          "title": "下拉选择"
+        },
+        {
+          "component": "ACL",
+          "componentProps": {
+            "AgTableProps": {
+              "pinnedFilter": [
+                "switch",
+                "rating",
+                "singleLineText"
+              ]
+            },
+            "columnDefs": [
+              {
+                "colId": "switch",
+                "field": "switch",
+                "headerName": "开关"
+              },
+              {
+                "colId": "rating",
+                "field": "rating",
+                "headerName": "评分"
+              },
+              {
+                "colId": "singleLineText",
+                "field": "singleLineText",
+                "headerName": "单行文本",
+                "headerName_i18n_key": "standard|>ERP 供应商管理|>any|>singleLineText",
+                "headerName_i18n_ns": "standard",
+                "type": "TEXT_COLUMN"
+              },
+              {
+                "colId": "multiLineText",
+                "field": "multiLineText",
+                "headerName": "多行文本",
+                "type": "TEXTAREA_COLUMN"
+              },
+              {
+                "colId": "number",
+                "field": "number",
+                "headerName": "数字",
+                "headerName_i18n_key": "standard|>ERP 供应商管理|>any|>number",
+                "headerName_i18n_ns": "standard",
+                "type": "TEXT_COLUMN"
+              },
+              {
+                "colId": "highPrecisionDigital",
+                "field": "highPrecisionDigital",
+                "headerName": "高精度数字",
+                "type": "NUMERIC_COLUMN"
+              },
+              {
+                "colId": "date",
+                "field": "date",
+                "headerName": "日期",
+                "headerName_i18n_key": "standard|>CETA 基础模块|>any|>date",
+                "headerName_i18n_ns": "standard",
+                "type": "DATE_COLUMN"
+              },
+              {
+                "colId": "time",
+                "field": "time",
+                "headerName": "时间",
+                "headerName_i18n_key": "standard|>any|>any|>time",
+                "headerName_i18n_ns": "standard",
+                "type": "DATE_COLUMN"
+              },
+              {
+                "colId": "multipleChoice",
+                "field": "multipleChoice",
+                "headerName": "多选",
+                "type": "CHECKBOX_COLUMN"
+              },
+              {
+                "colId": "singleChoice",
+                "field": "singleChoice",
+                "headerName": "单选",
+                "headerName_i18n_key": "standard|>any|>any|>singleChoice",
+                "headerName_i18n_ns": "standard",
+                "type": "RADIO_COLUMN"
+              }
+            ],
+            "dataSource": {
+              "token": "select-datasource-form"
+            },
+            "mapping": {
+              "label": "switch",
+              "value": "id"
+            },
+            "stringEqual": true
+          },
+          "id": "aclSelection",
+          "source": "2f76e786-1068-4ca3-adfb-e9653f0f4971",
+          "title": "ACL选择",
+          "title_i18n_key": "standard|>any|>any|>aclSelection",
+          "title_i18n_ns": "standard",
+          "validation": {
+            "maxLength": 200
+          }
+        },
+        {
+          "component": "EditableTable",
+          "componentProps": {
+            "columnDefs": [
+              {
+                "cellEditorParams": { },
+                "colId": "cascadingSelection",
+                "editable": true,
+                "field": "cascadingSelection",
+                "headerName": "级联选择"
+              },
+              {
+                "cellEditorParams": { },
+                "colId": "password",
+                "editable": true,
+                "field": "password",
+                "headerName": "密码"
+              },
+              {
+                "cellEditorParams": {
+                  "validation": {
+                    "maxLength": 200
+                  }
+                },
+                "colId": "singleLineText",
+                "editable": true,
+                "field": "singleLineText",
+                "headerName": "单行文本",
+                "headerName_i18n_key": "standard|>ERP 供应商管理|>any|>singleLineText",
+                "headerName_i18n_ns": "standard",
+                "type": "TEXT_COLUMN"
+              },
+              {
+                "cellEditorParams": { },
+                "colId": "multiLineText",
+                "editable": true,
+                "field": "multiLineText",
+                "headerName": "多行文本",
+                "type": "TEXTAREA_COLUMN"
+              },
+              {
+                "cellEditorParams": { },
+                "colId": "digital",
+                "editable": true,
+                "field": "digital",
+                "headerName": "数字",
+                "type": "NUMBER_COLUMN"
+              },
+              {
+                "cellEditorParams": { },
+                "colId": "highPrecisionDigital",
+                "editable": true,
+                "field": "highPrecisionDigital",
+                "headerName": "高精度数字",
+                "type": "NUMERIC_COLUMN"
+              },
+              {
+                "cellEditorParams": {
+                  "validation": {
+                    "maxLength": 200
+                  }
+                },
+                "colId": "date",
+                "editable": true,
+                "field": "date",
+                "headerName": "日期",
+                "headerName_i18n_key": "standard|>CETA 基础模块|>any|>date",
+                "headerName_i18n_ns": "standard",
+                "type": "DATE_COLUMN"
+              },
+              {
+                "cellEditorParams": {
+                  "validation": {
+                    "maxLength": 200
+                  }
+                },
+                "colId": "time",
+                "editable": true,
+                "field": "time",
+                "headerName": "时间",
+                "headerName_i18n_key": "standard|>any|>any|>time",
+                "headerName_i18n_ns": "standard",
+                "type": "DATE_COLUMN"
+              },
+              {
+                "cellEditorParams": {
+                  "componentProps": { }
+                },
+                "colId": "multipleChoice",
+                "editable": true,
+                "field": "multipleChoice",
+                "headerName": "多选",
+                "type": "CHECKBOX_COLUMN"
+              },
+              {
+                "cellEditorParams": {
+                  "componentProps": { },
+                  "validation": {
+                    "maxLength": 200
+                  }
+                },
+                "colId": "singleChoice",
+                "editable": true,
+                "field": "singleChoice",
+                "headerName": "单选",
+                "headerName_i18n_key": "standard|>any|>any|>singleChoice",
+                "headerName_i18n_ns": "standard",
+                "type": "RADIO_COLUMN"
+              },
+              {
+                "cellEditorParams": {
+                  "componentProps": {
+                    "AgTableProps": {
+                      "pinnedFilter": [
+                        "switch",
+                        "rating",
+                        "singleLineText"
+                      ]
+                    },
+                    "columnDefs": [
+                      {
+                        "colId": "switch",
+                        "field": "switch",
+                        "headerName": "开关"
+                      },
+                      {
+                        "colId": "rating",
+                        "field": "rating",
+                        "headerName": "评分"
+                      },
+                      {
+                        "colId": "singleLineText",
+                        "field": "singleLineText",
+                        "headerName": "单行文本",
+                        "headerName_i18n_key": "standard|>ERP 供应商管理|>any|>singleLineText",
+                        "headerName_i18n_ns": "standard",
+                        "type": "TEXT_COLUMN"
+                      },
+                      {
+                        "colId": "multiLineText",
+                        "field": "multiLineText",
+                        "headerName": "多行文本",
+                        "type": "TEXTAREA_COLUMN"
+                      },
+                      {
+                        "colId": "number",
+                        "field": "number",
+                        "headerName": "数字",
+                        "headerName_i18n_key": "standard|>ERP 供应商管理|>any|>number",
+                        "headerName_i18n_ns": "standard",
+                        "type": "TEXT_COLUMN"
+                      },
+                      {
+                        "colId": "highPrecisionDigital",
+                        "field": "highPrecisionDigital",
+                        "headerName": "高精度数字",
+                        "type": "NUMERIC_COLUMN"
+                      },
+                      {
+                        "colId": "date",
+                        "field": "date",
+                        "headerName": "日期",
+                        "headerName_i18n_key": "standard|>CETA 基础模块|>any|>date",
+                        "headerName_i18n_ns": "standard",
+                        "type": "DATE_COLUMN"
+                      },
+                      {
+                        "colId": "time",
+                        "field": "time",
+                        "headerName": "时间",
+                        "headerName_i18n_key": "standard|>any|>any|>time",
+                        "headerName_i18n_ns": "standard",
+                        "type": "DATE_COLUMN"
+                      },
+                      {
+                        "colId": "multipleChoice",
+                        "field": "multipleChoice",
+                        "headerName": "多选",
+                        "type": "CHECKBOX_COLUMN"
+                      },
+                      {
+                        "colId": "singleChoice",
+                        "field": "singleChoice",
+                        "headerName": "单选",
+                        "headerName_i18n_key": "standard|>any|>any|>singleChoice",
+                        "headerName_i18n_ns": "standard",
+                        "type": "RADIO_COLUMN"
+                      }
+                    ],
+                    "dataSource": {
+                      "token": "select-datasource-form"
+                    },
+                    "mapping": {
+                      "label": "switch",
+                      "value": "id"
+                    },
+                    "stringEqual": true
+                  },
+                  "validation": {
+                    "maxLength": 200
+                  }
+                },
+                "colId": "aclSelection",
+                "editable": true,
+                "field": "aclSelection",
+                "headerName": "ACL选择",
+                "headerName_i18n_key": "standard|>any|>any|>aclSelection",
+                "headerName_i18n_ns": "standard",
+                "type": "ACL_COLUMN"
+              },
+              {
+                "cellEditorParams": {
+                  "componentProps": {
+                    "dataSource": {
+                      "token": "select-datasource-form"
+                    },
+                    "mapping": {
+                      "label": "switch",
+                      "value": "id"
+                    },
+                    "stringEqual": true
+                  }
+                },
+                "colId": "dropdownSelection",
+                "editable": true,
+                "field": "dropdownSelection",
+                "headerName": "下拉选择",
+                "type": "SELECT_COLUMN"
+              },
+              {
+                "cellEditorParams": { },
+                "colId": "switch",
+                "editable": true,
+                "field": "switch",
+                "headerName": "开关"
+              },
+              {
+                "cellEditorParams": { },
+                "colId": "rating",
+                "editable": true,
+                "field": "rating",
+                "headerName": "评分"
+              },
+              {
+                "cellEditorParams": { },
+                "colId": "treeSelection",
+                "editable": true,
+                "field": "treeSelection",
+                "headerName": "树形选择"
+              }
+            ]
+          },
+          "domain": "ERP 供应商管理",
+          "fieldConfig": {
+            "formEntityToken": "edit-table-datasource-form",
+            "pbcToken": "basetest",
+            "relations": [
+              {
+                "colId": "parentDataId",
+                "filter": "$CURRENT_FORM_DATA_ID",
+                "filterType": "text",
+                "type": "equals"
+              }
+            ]
+          },
+          "id": "editableTable",
+          "source": "df5e8a84-55b4-46bc-9fcd-44ee4ad30e37",
+          "title": "可编辑表格",
+          "title_i18n_key": "standard|>ERP 供应商管理|>any|>editableTable",
+          "title_i18n_ns": "standard",
+          "validation": {
+            "maxLength": 200
+          }
+        },
+        {
+          "component": "TreeSelect",
+          "componentProps": {
+            "dataSource": {
+              "token": "select-datasource-form"
+            },
+            "mapping": {
+              "children": "children",
+              "label": "switch",
+              "value": "id"
+            },
+            "stringEqual": true
+          },
+          "id": "treeSelection",
+          "title": "树形选择"
+        },
+        {
+          "component": "Cascader",
+          "componentProps": {
+            "dataSource": {
+              "token": "select-datasource-form"
+            },
+            "mapping": {
+              "children": "children",
+              "label": "switch",
+              "value": "id"
+            },
+            "stringEqual": true
+          },
+          "id": "cascadingSelection",
+          "title": "级联选择"
+        }
+      ]
+    },
+    {
+      "component": "Input",
+      "hidden": true,
+      "id": "status",
+      "title": "状态"
+    }
+  ],
+  "form": {
+    "defaultCancelButton": true,
+    "defaultSubmitButton": true
+  }
+}

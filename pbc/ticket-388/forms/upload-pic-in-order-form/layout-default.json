@@ -1,0 +1,18 @@
+{
+  "fields": [
+    {
+      "component": "Upload",
+      "componentProps": {
+        "listType": "picture-card",
+        "maxCount": 3
+      },
+      "id": "uploadPic",
+      "title": "Uploadpic"
+    }
+  ],
+  "form": {
+    "defaultCancelButton": true,
+    "defaultSubmitButton": true,
+    "title": "Layout"
+  }
+}

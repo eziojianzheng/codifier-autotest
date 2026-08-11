@@ -1,0 +1,140 @@
+{
+  "definition_$$$NESTED_JSON_STRING$$$": {
+    "input": {
+      "filterModel": "[]",
+      "include_deleted": "false",
+      "lockUpdate": "false",
+      "needACL": "false",
+      "needResource": "false",
+      "needText": "false",
+      "projectToken": "$CURRENT_PROJECT.token",
+      "throw_exception": "false"
+    },
+    "inputFields": [
+      {
+        "controlType": "select",
+        "dataType": "string",
+        "label": "needACL",
+        "label_i18n_en-US": "Need ACL",
+        "label_i18n_ja-JP": "ACLが必要",
+        "name": "needACL",
+        "optional": false,
+        "pickList": [
+          "true",
+          "false"
+        ]
+      },
+      {
+        "controlType": "select",
+        "dataType": "string",
+        "label": "needResource",
+        "label_i18n_en-US": "Need Resource",
+        "label_i18n_ja-JP": "リソースが必要",
+        "name": "needResource",
+        "optional": false,
+        "pickList": [
+          "true",
+          "false"
+        ]
+      },
+      {
+        "controlType": "select",
+        "dataType": "string",
+        "label": "needText",
+        "label_i18n_en-US": "Need Text",
+        "label_i18n_ja-JP": "テキストが必要",
+        "name": "needText",
+        "optional": false,
+        "pickList": [
+          "true",
+          "false"
+        ]
+      },
+      {
+        "controlType": "select",
+        "dataType": "string",
+        "label": "include_deleted",
+        "label_i18n_en-US": "Include Deleted",
+        "label_i18n_ja-JP": "削除済みを含む",
+        "name": "include_deleted",
+        "optional": false,
+        "pickList": [
+          "true",
+          "false"
+        ]
+      },
+      {
+        "controlType": "select",
+        "dataType": "string",
+        "label": "throw_exception",
+        "label_i18n_en-US": "Whether throw exception if data cannot be retrieved",
+        "label_i18n_ja-JP": "データが照会されなかった場合にエラーを報告するかどうか",
+        "name": "throw_exception",
+        "optional": false,
+        "pickList": [
+          "true",
+          "false"
+        ]
+      },
+      {
+        "controlType": "select",
+        "dataType": "string",
+        "label": "Need Count",
+        "label_i18n_en-US": "Need Count",
+        "label_i18n_ja-JP": "Countが必要",
+        "name": "needCount",
+        "optional": false,
+        "pickList": [
+          "true",
+          "false"
+        ]
+      },
+      {
+        "controlType": "input",
+        "dataType": "number",
+        "label": "Start Row",
+        "label_i18n_en-US": "Start Row",
+        "label_i18n_ja-JP": "スタート行",
+        "name": "startRow",
+        "optional": false
+      },
+      {
+        "controlType": "input",
+        "dataType": "number",
+        "label": "End Row",
+        "label_i18n_en-US": "End Row",
+        "label_i18n_ja-JP": "最終行",
+        "name": "endRow",
+        "optional": false
+      }
+    ],
+    "inputLayoutType": "LIST_QUERY",
+    "outputFields": [
+      {
+        "dataType": "list",
+        "label": "查询结果",
+        "label_i18n_en-US": "results",
+        "label_i18n_ja-JP": "結果",
+        "name": "results"
+      },
+      {
+        "dataType": "string",
+        "label": "结果数量",
+        "label_i18n_en-US": "count",
+        "label_i18n_ja-JP": "数量",
+        "name": "count"
+      }
+    ],
+    "pbcToken": null,
+    "projectToken": null,
+    "sdkType": "LIST_QUERY",
+    "tenantId": 1,
+    "token": null
+  },
+  "isSystem": 1,
+  "name": "根据条件获取表单数据",
+  "nameEnUs": "Get form data based on conditions",
+  "nameJaJp": "条件に基づいてフォームデータを取得する",
+  "sdkType": "LIST_QUERY",
+  "uuid": "b4ffad17-593b-4868-940b-70d89fa35cc3"
+}

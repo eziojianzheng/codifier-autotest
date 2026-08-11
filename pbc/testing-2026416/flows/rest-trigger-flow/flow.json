@@ -1,0 +1,239 @@
+{
+  "name": "resttrriggerflow",
+  "nodeList": [
+    {
+      "enabled": true,
+      "id": 1,
+      "inMemory": true,
+      "inMemoryTransaction": false,
+      "interval": 60,
+      "nodeName": "TRIGGER",
+      "periodEnd": "23:59:59",
+      "periodStart": "00:00:00",
+      "restTrigger": {
+        "eligibleForAgent": false,
+        "method": "GET",
+        "url": "/flow/api/flow-rest-selfauth/getrest"
+      },
+      "scheduleType": "ONE_TIME",
+      "startTime": 1776347808284,
+      "triggerType": "REST",
+      "type": "TRIGGER",
+      "version": "1.0"
+    },
+    {
+      "enabled": true,
+      "id": 2,
+      "nodeName": "APP - Create form data",
+      "sdk": {
+        "formInput": {
+          "studentName": "changename"
+        },
+        "input": {
+          "formEntityToken": "student-form",
+          "pbcToken": "testing-2026416"
+        },
+        "inputFields": [ ],
+        "name": "Create form data",
+        "numberStringToBigDecimal": false,
+        "outputFields": [ ],
+        "sdkType": "CREATE_ENTITY",
+        "uuid": "739b0a8f-cf7a-4e83-93ca-4ebe55ef80e8"
+      },
+      "type": "APP",
+      "version": "1.0"
+    },
+    {
+      "enabled": true,
+      "id": 3,
+      "nodeName": "APP - Modify form data",
+      "sdk": {
+        "formEntityDataId": "$2.id",
+        "formInput": {
+          "studentName": "changename"
+        },
+        "input": {
+          "formEntityToken": "student-form",
+          "needReturnValue": "true",
+          "pbcToken": "testing-2026416"
+        },
+        "inputFields": [ ],
+        "name": "Modify form data",
+        "numberStringToBigDecimal": false,
+        "outputFields": [ ],
+        "sdkType": "SET_ENTITY_FIELD_VALUE",
+        "uuid": "dc0e9c73-8da1-44dd-b314-abf8cd4586b3"
+      },
+      "type": "APP",
+      "version": "1.0"
+    },
+    {
+      "enabled": true,
+      "id": 4,
+      "nodeName": "APP - Get form data based on conditions",
+      "sdk": {
+        "input": {
+          "formEntityToken": "student-form",
+          "include_deleted": "false",
+          "lockUpdate": "false",
+          "needACL": "false",
+          "needResource": "false",
+          "needText": "false",
+          "pbcToken": "testing-2026416",
+          "projectToken": "$CURRENT_PROJECT.token",
+          "throw_exception": "false"
+        },
+        "inputFields": [
+          {
+            "controlType": "select",
+            "dataType": "string",
+            "label": "Need ACL",
+            "name": "needACL",
+            "optional": false,
+            "pickList": [
+              "true",
+              "false"
+            ]
+          },
+          {
+            "controlType": "select",
+            "dataType": "string",
+            "label": "Need Resource",
+            "name": "needResource",
+            "optional": false,
+            "pickList": [
+              "true",
+              "false"
+            ]
+          },
+          {
+            "controlType": "select",
+            "dataType": "string",
+            "label": "Need Text",
+            "name": "needText",
+            "optional": false,
+            "pickList": [
+              "true",
+              "false"
+            ]
+          },
+          {
+            "controlType": "select",
+            "dataType": "string",
+            "label": "Include Deleted",
+            "name": "include_deleted",
+            "optional": false,
+            "pickList": [
+              "true",
+              "false"
+            ]
+          },
+          {
+            "controlType": "select",
+            "dataType": "string",
+            "label": "Whether throw exception if data cannot be retrieved",
+            "name": "throw_exception",
+            "optional": false,
+            "pickList": [
+              "true",
+              "false"
+            ]
+          },
+          {
+            "controlType": "select",
+            "dataType": "string",
+            "label": "Need Count",
+            "name": "needCount",
+            "optional": false,
+            "pickList": [
+              "true",
+              "false"
+            ]
+          },
+          {
+            "controlType": "input",
+            "dataType": "number",
+            "label": "Start Row",
+            "name": "startRow",
+            "optional": false
+          },
+          {
+            "controlType": "input",
+            "dataType": "number",
+            "label": "End Row",
+            "name": "endRow",
+            "optional": false
+          }
+        ],
+        "name": "Get form data based on conditions",
+        "numberStringToBigDecimal": false,
+        "outputFields": [
+          {
+            "label": "results",
+            "name": "results"
+          },
+          {
+            "dataType": "string",
+            "label": "count",
+            "name": "count"
+          }
+        ],
+        "sdkType": "LIST_QUERY",
+        "uuid": "b4ffad17-593b-4868-940b-70d89fa35cc3"
+      },
+      "type": "APP",
+      "version": "1.0"
+    },
+    {
+      "dynamic": false,
+      "enabled": true,
+      "id": 7,
+      "nodeName": "SUB_FLOW",
+      "subFlowDefinitionToken": "subflow-flow",
+      "subFlowPbcToken": "testing-2026416",
+      "type": "SUB_FLOW"
+    },
+    {
+      "enabled": true,
+      "id": 5,
+      "nodeName": "APP - Set workflow output value",
+      "sdk": {
+        "input": {
+          "out": "$4",
+          "subout": "$7"
+        },
+        "inputFields": [
+          {
+            "dataType": "string",
+            "label": "out",
+            "name": "out",
+            "optional": false
+          },
+          {
+            "dataType": "string",
+            "label": "subout",
+            "name": "subout",
+            "optional": false
+          }
+        ],
+        "name": "Set workflow output value",
+        "numberStringToBigDecimal": false,
+        "sdkType": "SET_VALUE_TO_INSTANCE",
+        "uuid": "f63bae3b-4003-4b29-aedf-4626216fc12a"
+      },
+      "type": "APP",
+      "version": "1.0"
+    },
+    {
+      "enabled": true,
+      "id": 6,
+      "nodeName": "STOP_JOB",
+      "result": "Successful",
+      "type": "STOP_JOB"
+    }
+  ],
+  "restApiEnabled": 1,
+  "restApiMethod": "GET",
+  "restApiUrl": "/flow/api/flow-rest-selfauth/getrest",
+  "token": "rest-trigger-flow"
+}

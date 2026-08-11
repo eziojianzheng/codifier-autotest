@@ -1,0 +1,223 @@
+{
+  "name": "updateNull",
+  "nodeList": [
+    {
+      "enabled": true,
+      "id": 4,
+      "inMemory": false,
+      "inMemoryTransaction": false,
+      "interval": 60,
+      "nodeName": "TRIGGER",
+      "periodEnd": "23:59:59",
+      "periodStart": "00:00:00",
+      "restTrigger": {
+        "eligibleForAgent": false,
+        "method": "GET",
+        "url": "/flow/api/flow-rest/setnull"
+      },
+      "scheduleType": "ONE_TIME",
+      "startTime": 1768904875213,
+      "triggerType": "REST",
+      "type": "TRIGGER",
+      "version": "2.0"
+    },
+    {
+      "enabled": true,
+      "id": 1,
+      "nodeName": "APP - Create form data",
+      "sdk": {
+        "formInput": {
+          "input": "test",
+          "numberPicker": "1",
+          "textarea": "test"
+        },
+        "input": {
+          "formEntityToken": "update-null-form",
+          "pbcToken": "ticket385-update-null"
+        },
+        "inputFields": [ ],
+        "name": "Create form data",
+        "outputFields": [ ],
+        "sdkType": "CREATE_ENTITY",
+        "uuid": "739b0a8f-cf7a-4e83-93ca-4ebe55ef80e8"
+      },
+      "type": "APP",
+      "version": "1.0"
+    },
+    {
+      "enabled": true,
+      "id": 2,
+      "nodeName": "APP - Modify form data",
+      "sdk": {
+        "formEntityDataId": "$1.id",
+        "formInput": {
+          "input": "$groovy{null}",
+          "numberPicker": "$groovy{null}",
+          "textarea": "$groovy{null}"
+        },
+        "input": {
+          "formEntityToken": "update-null-form",
+          "needReturnValue": "true",
+          "pbcToken": "ticket385-update-null"
+        },
+        "inputFields": [ ],
+        "name": "Modify form data",
+        "outputFields": [ ],
+        "sdkType": "SET_ENTITY_FIELD_VALUE",
+        "uuid": "dc0e9c73-8da1-44dd-b314-abf8cd4586b3"
+      },
+      "type": "APP",
+      "version": "1.0"
+    },
+    {
+      "enabled": true,
+      "id": 3,
+      "nodeName": "APP - Get form data based on conditions",
+      "sdk": {
+        "input": {
+          "formEntityToken": "update-null-form",
+          "include_deleted": "false",
+          "lockUpdate": "false",
+          "needACL": "false",
+          "needResource": "false",
+          "needText": "false",
+          "pbcToken": "ticket385-update-null",
+          "projectToken": "$CURRENT_PROJECT.token",
+          "throw_exception": "false"
+        },
+        "inputFields": [
+          {
+            "controlType": "select",
+            "dataType": "string",
+            "label": "Need ACL",
+            "name": "needACL",
+            "optional": false,
+            "pickList": [
+              "true",
+              "false"
+            ]
+          },
+          {
+            "controlType": "select",
+            "dataType": "string",
+            "label": "Need Resource",
+            "name": "needResource",
+            "optional": false,
+            "pickList": [
+              "true",
+              "false"
+            ]
+          },
+          {
+            "controlType": "select",
+            "dataType": "string",
+            "label": "Need Text",
+            "name": "needText",
+            "optional": false,
+            "pickList": [
+              "true",
+              "false"
+            ]
+          },
+          {
+            "controlType": "select",
+            "dataType": "string",
+            "label": "Include Deleted",
+            "name": "include_deleted",
+            "optional": false,
+            "pickList": [
+              "true",
+              "false"
+            ]
+          },
+          {
+            "controlType": "select",
+            "dataType": "string",
+            "label": "Whether throw exception if data cannot be retrieved",
+            "name": "throw_exception",
+            "optional": false,
+            "pickList": [
+              "true",
+              "false"
+            ]
+          },
+          {
+            "controlType": "select",
+            "dataType": "string",
+            "label": "Need Count",
+            "name": "needCount",
+            "optional": false,
+            "pickList": [
+              "true",
+              "false"
+            ]
+          },
+          {
+            "controlType": "input",
+            "dataType": "number",
+            "label": "Start Row",
+            "name": "startRow",
+            "optional": false
+          },
+          {
+            "controlType": "input",
+            "dataType": "number",
+            "label": "End Row",
+            "name": "endRow",
+            "optional": false
+          }
+        ],
+        "name": "Get form data based on conditions",
+        "outputFields": [
+          {
+            "label": "results",
+            "name": "results"
+          },
+          {
+            "dataType": "string",
+            "label": "count",
+            "name": "count"
+          }
+        ],
+        "sdkType": "LIST_QUERY",
+        "uuid": "b4ffad17-593b-4868-940b-70d89fa35cc3"
+      },
+      "type": "APP",
+      "version": "1.0"
+    },
+    {
+      "enabled": true,
+      "id": 6,
+      "nodeName": "APP - Set workflow output value",
+      "sdk": {
+        "input": {
+          "out": "$3"
+        },
+        "inputFields": [
+          {
+            "dataType": "string",
+            "label": "out",
+            "name": "out",
+            "optional": false
+          }
+        ],
+        "name": "Set workflow output value",
+        "sdkType": "SET_VALUE_TO_INSTANCE",
+        "uuid": "f63bae3b-4003-4b29-aedf-4626216fc12a"
+      },
+      "type": "APP",
+      "version": "1.0"
+    },
+    {
+      "enabled": true,
+      "id": 5,
+      "nodeName": "STOP_JOB",
+      "result": "Successful",
+      "type": "STOP_JOB"
+    }
+  ],
+  "restApiEnabled": 1,
+  "restApiMethod": "GET",
+  "restApiUrl": "/flow/api/flow-rest/setnull",
+  "token": "update-null-flow"
+}

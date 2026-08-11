@@ -1,0 +1,22 @@
+[
+  {
+    "method": "U",
+    "name": "编辑",
+    "nameEnUs": "Update",
+    "nameJaJp": "修正する",
+    "target": "连接器管理",
+    "targetJaJp": "コネクター管理",
+    "targetToken": "CONNECTOR",
+    "token": "CONNECTOR_EDIT"
+  },
+  {
+    "method": "R",
+    "name": "查看",
+    "nameEnUs": "View",
+    "nameJaJp": "表示する",
+    "target": "连接器管理",
+    "targetJaJp": "コネクター管理",
+    "targetToken": "CONNECTOR",
+    "token": "CONNECTOR_VIEW"
+  }
+]

@@ -1,0 +1,69 @@
+{
+  "name": "importsdktest",
+  "nodeList": [
+    {
+      "enabled": true,
+      "id": 1,
+      "inMemory": true,
+      "inMemoryTransaction": false,
+      "interval": 60,
+      "nodeName": "TRIGGER",
+      "periodEnd": "23:59:59",
+      "periodStart": "00:00:00",
+      "restTrigger": {
+        "eligibleForAgent": false,
+        "method": "GET",
+        "url": "/flow/api/flow-rest-selfauth/importsdktest"
+      },
+      "scheduleType": "ONE_TIME",
+      "startTime": 1765444124236,
+      "triggerType": "REST",
+      "type": "TRIGGER",
+      "version": "2.0"
+    },
+    {
+      "actionUuid": "f795bc5f-95c3-49fa-9305-11ff603bdbd7",
+      "connectorUuid": "d72aeb49-ad37-4cda-8972-04c232a8afba",
+      "enabled": true,
+      "id": 2,
+      "input": { },
+      "nodeName": "APP - ChartSDK",
+      "type": "APP",
+      "version": "2.0"
+    },
+    {
+      "enabled": true,
+      "id": 3,
+      "nodeName": "APP - Set workflow output value",
+      "sdk": {
+        "input": {
+          "out": "$2"
+        },
+        "inputFields": [
+          {
+            "dataType": "string",
+            "label": "out",
+            "name": "out",
+            "optional": false
+          }
+        ],
+        "name": "Set workflow output value",
+        "sdkType": "SET_VALUE_TO_INSTANCE",
+        "uuid": "f63bae3b-4003-4b29-aedf-4626216fc12a"
+      },
+      "type": "APP",
+      "version": "1.0"
+    },
+    {
+      "enabled": true,
+      "id": 4,
+      "nodeName": "STOP_JOB",
+      "result": "Successful",
+      "type": "STOP_JOB"
+    }
+  ],
+  "restApiEnabled": 1,
+  "restApiMethod": "GET",
+  "restApiUrl": "/flow/api/flow-rest-selfauth/importsdktest",
+  "token": "import-sdk-test-flow"
+}

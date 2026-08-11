@@ -1,6 +1,8 @@
 {
+  "dataLocation": "LOCAL",
   "defaultMobileViewLayoutToken": "view",
   "defaultViewLayoutToken": "view",
+  "enableForbidUpdateSomeFieldsValueWhenReferenced": 0,
   "fields": [
     {
       "encryptStorage": 0,
@@ -230,6 +232,7 @@
   "masterDataType": "ROLE",
   "name": "System Role",
   "permissionTarget": "system-role-form",
+  "remoteNoSystemColumns": true,
   "standalone": 1,
   "standaloneTableName": "form_um_role",
   "standaloneTableNormalized": 0,

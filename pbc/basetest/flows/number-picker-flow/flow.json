@@ -1,0 +1,101 @@
+{
+  "name": "numberpicker",
+  "nodeList": [
+    {
+      "displayInTodoList": true,
+      "enabled": true,
+      "formEntityLayoutToken": "default",
+      "formEntityToken": "base-test-form",
+      "id": 1,
+      "nodeName": "FORM",
+      "operationType": "CREATE",
+      "pbcToken": "basetest",
+      "timeUnit": "days",
+      "type": "FORM"
+    },
+    {
+      "enabled": true,
+      "id": 2,
+      "nodeName": "APP - 新建表单数据",
+      "sdk": {
+        "formInput": {
+          "age": "100"
+        },
+        "input": {
+          "formEntityToken": "base-test-form",
+          "pbcToken": "basetest"
+        },
+        "inputFields": [ ],
+        "name": "新建表单数据",
+        "outputFields": [ ],
+        "sdkType": "CREATE_ENTITY",
+        "uuid": "739b0a8f-cf7a-4e83-93ca-4ebe55ef80e8"
+      },
+      "type": "APP",
+      "version": "1.0"
+    },
+    {
+      "enabled": true,
+      "id": 3,
+      "nodeName": "APP - Groovy脚本",
+      "sdk": {
+        "code": "$$$$ref:text:sdk-3.groovy",
+        "input": {
+          "data": "$2"
+        },
+        "inputFields": [
+          {
+            "dataType": "string",
+            "label": "data",
+            "name": "data",
+            "optional": false
+          }
+        ],
+        "name": "Groovy脚本",
+        "outputFields": [
+          {
+            "dataType": "string",
+            "label": "nianlin",
+            "name": "nianlin"
+          }
+        ],
+        "sdkType": "GENERAL_GROOVY",
+        "uuid": "492f8c00-14de-4837-a1f6-ed6ff0a2870e"
+      },
+      "type": "APP",
+      "version": "1.0"
+    },
+    {
+      "enabled": true,
+      "id": 4,
+      "nodeName": "APP - 修改表单数据",
+      "sdk": {
+        "formEntityDataId": "$2.id",
+        "formInput": {
+          "age": "$3.nianlin"
+        },
+        "input": {
+          "formEntityToken": "base-test-form",
+          "needReturnValue": "true",
+          "pbcToken": "basetest"
+        },
+        "inputFields": [ ],
+        "name": "修改表单数据",
+        "outputFields": [ ],
+        "sdkType": "SET_ENTITY_FIELD_VALUE",
+        "uuid": "dc0e9c73-8da1-44dd-b314-abf8cd4586b3"
+      },
+      "type": "APP",
+      "version": "1.0"
+    },
+    {
+      "enabled": true,
+      "id": 5,
+      "nodeName": "STOP_JOB",
+      "result": "Successful",
+      "type": "STOP_JOB"
+    }
+  ],
+  "restApiEnabled": 0,
+  "token": "number-picker-flow"
+}

@@ -1,0 +1,105 @@
+{
+  "name": "product-approval-flow",
+  "nodeList": [
+    {
+      "enabled": true,
+      "formTrigger": {
+        "transactional": false
+      },
+      "id": 1,
+      "inMemory": false,
+      "inMemoryTransaction": false,
+      "nodeName": "Start Product Approval Workflow",
+      "triggerType": "FORM",
+      "type": "TRIGGER"
+    },
+    {
+      "enabled": true,
+      "formEntityLayoutToken": "default",
+      "formEntityToken": "product-management-form",
+      "id": 2,
+      "nodeName": "Create Product Management Request",
+      "operationType": "CREATE",
+      "pbcToken": "simple-crm",
+      "timeUnit": "days",
+      "type": "FORM"
+    },
+    {
+      "enabled": true,
+      "formEntityDataId": "$2.formEntityDataId",
+      "formEntityLayoutToken": "default",
+      "formEntityToken": "product-management-form",
+      "id": 3,
+      "isCommentMandatoryForApproval": false,
+      "isCommentMandatoryForDisapproval": true,
+      "nodeName": "Approve Product Information",
+      "pbcToken": "simple-crm",
+      "timeUnit": "days",
+      "type": "APPROVAL"
+    },
+    {
+      "conditions": [
+        {
+          "condition": "equals",
+          "dataField": "$3.approvalResult",
+          "value": "APPROVAL"
+        }
+      ],
+      "elseSubFlow": [
+        {
+          "enabled": true,
+          "id": 6,
+          "nodeName": "Set Product Status To Rejected",
+          "sdk": {
+            "formEntityDataId": "$2.formEntityDataId",
+            "formInput": {
+              "status": "Rejected"
+            },
+            "input": {
+              "formEntityToken": "product-management-form",
+              "pbcToken": "simple-crm"
+            },
+            "numberStringToBigDecimal": false,
+            "sdkType": "SET_ENTITY_FIELD_VALUE",
+            "uuid": "dc0e9c73-8da1-44dd-b314-abf8cd4586b3"
+          },
+          "type": "APP",
+          "version": "1.0"
+        }
+      ],
+      "id": 4,
+      "nodeName": "Check Product Approval Result",
+      "subFlow": [
+        {
+          "enabled": true,
+          "id": 5,
+          "nodeName": "Set Product Status To Approved",
+          "sdk": {
+            "formEntityDataId": "$2.formEntityDataId",
+            "formInput": {
+              "status": "Approved"
+            },
+            "input": {
+              "formEntityToken": "product-management-form",
+              "pbcToken": "simple-crm"
+            },
+            "numberStringToBigDecimal": false,
+            "sdkType": "SET_ENTITY_FIELD_VALUE",
+            "uuid": "dc0e9c73-8da1-44dd-b314-abf8cd4586b3"
+          },
+          "type": "APP",
+          "version": "1.0"
+        }
+      ],
+      "type": "IF_ELSE"
+    },
+    {
+      "id": 7,
+      "nodeName": "End Product Approval Workflow",
+      "result": "Successful",
+      "type": "STOP_JOB"
+    }
+  ],
+  "restApiEnabled": 0,
+  "token": "product-approval-flow"
+}

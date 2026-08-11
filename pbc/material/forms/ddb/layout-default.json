@@ -1,0 +1,34 @@
+{
+  "fields": [
+    {
+      "component": "NumberPicker",
+      "id": "ddid",
+      "title": "ddid"
+    },
+    {
+      "component": "NumberPicker",
+      "id": "hyid",
+      "title": "hyid"
+    },
+    {
+      "component": "NumberPicker",
+      "id": "spid",
+      "title": "spid"
+    },
+    {
+      "component": "NumberPicker",
+      "id": "sl",
+      "title": "sl"
+    },
+    {
+      "component": "NumberPicker",
+      "id": "ze",
+      "title": "ze"
+    }
+  ],
+  "form": {
+    "defaultCancelButton": true,
+    "defaultSubmitButton": true,
+    "title": "Layout"
+  }
+}

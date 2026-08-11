@@ -1,0 +1,21 @@
+{
+  "fields": [
+    {
+      "component": "DatePicker",
+      "id": "datePicker_1",
+      "title": "Date Picker1"
+    },
+    {
+      "component": "DatePicker",
+      "componentProps": {
+        "showTime": true
+      },
+      "id": "datePicker_2",
+      "title": "Date Picker2"
+    }
+  ],
+  "form": {
+    "defaultCancelButton": true,
+    "defaultSubmitButton": true
+  }
+}

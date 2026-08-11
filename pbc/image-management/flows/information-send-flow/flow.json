@@ -1,0 +1,748 @@
+{
+  "name": "情報登録",
+  "nodeList": [
+    {
+      "enabled": true,
+      "id": 1,
+      "inMemory": true,
+      "inMemoryTransaction": false,
+      "interval": 60,
+      "nodeName": "TRIGGER",
+      "periodEnd": "23:59:59",
+      "periodStart": "00:00:00",
+      "restTrigger": {
+        "eligibleForAgent": false,
+        "method": "POST",
+        "requestBody": [
+          {
+            "dataType": "object",
+            "label": "file",
+            "name": "formdataid",
+            "optional": false,
+            "type": "string"
+          },
+          {
+            "name": "igsLoginDealerCode",
+            "optional": false,
+            "type": "string"
+          },
+          {
+            "name": "igsJwtToken",
+            "optional": false,
+            "type": "string"
+          }
+        ],
+        "url": "/flow/api/flow-rest/information-send-flow"
+      },
+      "scheduleType": "ONE_TIME",
+      "startTime": 1760939462366,
+      "triggerType": "REST",
+      "type": "TRIGGER",
+      "version": "1.0"
+    },
+    {
+      "enabled": true,
+      "id": 22,
+      "nodeName": "APP - Groovy script - 環境変数取得",
+      "sdk": {
+        "code": "$$$$ref:text:sdk-22.groovy",
+        "input": { },
+        "inputFields": [ ],
+        "name": "Groovy script",
+        "outputFields": [
+          {
+            "dataType": "string",
+            "label": "setImageApiUrl",
+            "name": "setImageApiUrl"
+          },
+          {
+            "dataType": "string",
+            "label": "environment",
+            "name": "environment"
+          },
+          {
+            "dataType": "string",
+            "label": "debug",
+            "name": "debug"
+          },
+          {
+            "dataType": "string",
+            "label": "fssS3Bucket",
+            "name": "fssS3Bucket"
+          },
+          {
+            "dataType": "string",
+            "label": "fssS3Host",
+            "name": "fssS3Host"
+          }
+        ],
+        "sdkType": "GENERAL_GROOVY",
+        "uuid": "492f8c00-14de-4837-a1f6-ed6ff0a2870e"
+      },
+      "type": "APP",
+      "version": "1.0"
+    },
+    {
+      "enabled": true,
+      "id": 16,
+      "nodeName": "APP - Get form data by ID - Form取得",
+      "sdk": {
+        "input": {
+          "formEntityDataId": "$1.restTrigger.requestBody.formdataid",
+          "formEntityFieldTokenList": "[]",
+          "formEntityToken": "vehicle-images-form",
+          "lockUpdate": "false",
+          "needSubFormData": "false",
+          "pbcToken": "image-management"
+        },
+        "inputFields": [
+          {
+            "controlType": "input",
+            "dataType": "string",
+            "label": "Query Data ID",
+            "name": "formEntityDataId",
+            "optional": true
+          },
+          {
+            "controlType": "input",
+            "dataType": "string",
+            "label": "Pbc Token",
+            "name": "pbcToken",
+            "optional": false
+          },
+          {
+            "controlType": "entity",
+            "label": "Form Entity",
+            "name": "formEntityToken",
+            "optional": false
+          },
+          {
+            "controlType": "select",
+            "dataType": "string",
+            "label": "Enable Password Decryption",
+            "name": "enablePwdDecrypt",
+            "optional": true,
+            "pickList": [
+              "true",
+              "false"
+            ]
+          },
+          {
+            "controlType": "select",
+            "dataType": "string",
+            "label": "Whether throw exception if data cannot be retrieved",
+            "name": "throwException",
+            "optional": false,
+            "pickList": [
+              "true",
+              "false"
+            ]
+          }
+        ],
+        "name": "Get form data by ID",
+        "outputFields": [ ],
+        "sdkType": "INTERNAL_GET_ENTITY_DATA_BY_ID",
+        "uuid": "ef57bcca-ecd4-42b0-af62-375cd65def93"
+      },
+      "type": "APP",
+      "version": "1.0"
+    },
+    {
+      "enabled": true,
+      "id": 19,
+      "nodeName": "APP - Groovy script - 事前処理",
+      "sdk": {
+        "code": "$$$$ref:text:sdk-19.groovy",
+        "input": {
+          "applicationFssUrl": "$APPLICATION.fss.url",
+          "environment": "$22.environment",
+          "fssS3Bucket": "$22.fssS3Bucket",
+          "fssS3Host": "$22.fssS3Host",
+          "igsLoginDealerCode": "$1.restTrigger.requestBody.igsLoginDealerCode",
+          "images": "$16.Images.resources",
+          "orderNumber": "$16.orderNumber"
+        },
+        "inputFields": [
+          {
+            "dataType": "string",
+            "label": "applicationFssUrl",
+            "name": "applicationFssUrl",
+            "optional": false
+          },
+          {
+            "dataType": "string",
+            "label": "igsLoginDealerCode",
+            "name": "igsLoginDealerCode",
+            "optional": false
+          },
+          {
+            "dataType": "string",
+            "label": "orderNumber",
+            "name": "orderNumber",
+            "optional": false
+          },
+          {
+            "dataType": "string",
+            "label": "images",
+            "name": "images",
+            "optional": false
+          },
+          {
+            "dataType": "string",
+            "label": "environment",
+            "name": "environment",
+            "optional": false
+          },
+          {
+            "dataType": "string",
+            "label": "fssS3Bucket",
+            "name": "fssS3Bucket",
+            "optional": false
+          },
+          {
+            "dataType": "string",
+            "label": "fssS3Host",
+            "name": "fssS3Host",
+            "optional": false
+          }
+        ],
+        "name": "Groovy script",
+        "outputFields": [
+          {
+            "dataType": "string",
+            "label": "zipFileName",
+            "name": "zipFileName"
+          },
+          {
+            "dataType": "string",
+            "label": "fullUrls",
+            "name": "fullUrls"
+          }
+        ],
+        "sdkType": "GENERAL_GROOVY",
+        "uuid": "492f8c00-14de-4837-a1f6-ed6ff0a2870e"
+      },
+      "type": "APP",
+      "version": "1.0"
+    },
+    {
+      "conditions": [
+        {
+          "condition": "equals",
+          "dataField": "$22.environment",
+          "id": 1359,
+          "value": "TRIALRUN"
+        }
+      ],
+      "enabled": true,
+      "id": 32,
+      "nodeName": "IF",
+      "subFlow": [
+        {
+          "enabled": true,
+          "id": 33,
+          "input": {
+            "message": "この環境では動作しない機能です",
+            "responseCode": "400",
+            "status": "400"
+          },
+          "nodeName": "APP - Set workflow output value - TRIALRUNでは動作しない",
+          "sdk": {
+            "inputFields": [
+              {
+                "dataType": "string",
+                "label": "status",
+                "name": "status",
+                "optional": false
+              },
+              {
+                "dataType": "string",
+                "label": "responseCode",
+                "name": "responseCode",
+                "optional": false
+              },
+              {
+                "dataType": "string",
+                "label": "message",
+                "name": "message",
+                "optional": false
+              }
+            ],
+            "name": "Set workflow output value",
+            "sdkType": "SET_VALUE_TO_INSTANCE",
+            "uuid": "f63bae3b-4003-4b29-aedf-4626216fc12a"
+          },
+          "type": "APP",
+          "version": "2.0"
+        },
+        {
+          "enabled": true,
+          "id": 34,
+          "nodeName": "STOP_JOB",
+          "result": "Failed",
+          "type": "STOP_JOB"
+        }
+      ],
+      "type": "IF"
+    },
+    {
+      "enabled": true,
+      "id": 27,
+      "nodeName": "APP - Groovy Script 画像ダウンロード＆サイズ圧縮",
+      "sdk": {
+        "code": "$$$$ref:text:sdk-27.groovy",
+        "input": {
+          "debug": "$22.debug",
+          "imageUrls": "$19.fullUrls"
+        },
+        "inputFields": [
+          {
+            "dataType": "string",
+            "label": "imageUrls",
+            "name": "imageUrls",
+            "optional": false
+          },
+          {
+            "dataType": "string",
+            "label": "debug",
+            "name": "debug",
+            "optional": false
+          }
+        ],
+        "name": "Groovy脚本",
+        "outputFields": [
+          {
+            "dataType": "string",
+            "label": "resultMap",
+            "name": "resultMap"
+          }
+        ],
+        "sdkType": "GENERAL_GROOVY",
+        "uuid": "492f8c00-14de-4837-a1f6-ed6ff0a2870e"
+      },
+      "type": "APP",
+      "version": "1.0"
+    },
+    {
+      "batchSize": 0,
+      "clearStepOutput": false,
+      "concurrent": false,
+      "enabled": true,
+      "id": 28,
+      "inputList": "$27.resultList",
+      "nodeName": "REPEAT",
+      "repeatMode": "BATCH",
+      "repeatType": "INPUT_LIST",
+      "subFlow": [
+        {
+          "enabled": true,
+          "id": 29,
+          "nodeName": "APP - Convert BASE64 to File - 画像ファイルアップロード",
+          "sdk": {
+            "code": "",
+            "input": {
+              "base64": "$groovy{$28.value.base64Data}",
+              "contentType": "jpegimage/jpeg",
+              "fileName": "$28.value.fileName"
+            },
+            "inputFields": [
+              {
+                "controlType": "input",
+                "dataType": "string",
+                "label": "文件名称",
+                "name": "fileName",
+                "optional": false
+              },
+              {
+                "controlType": "input",
+                "dataType": "string",
+                "label": "文件的MIME类型",
+                "name": "contentType",
+                "optional": false
+              },
+              {
+                "controlType": "input",
+                "dataType": "string",
+                "label": "Base64编码的文件内容",
+                "name": "base64",
+                "optional": false
+              }
+            ],
+            "name": "转换BASE64字符串为文件",
+            "outputFields": [
+              {
+                "dataType": "string",
+                "label": "文件可访问的URL",
+                "name": "url"
+              },
+              {
+                "dataType": "string",
+                "label": "文件的MD5值",
+                "name": "md5"
+              },
+              {
+                "dataType": "string",
+                "label": "文件按字节计算的长度",
+                "name": "size"
+              }
+            ],
+            "sdkType": "BASE64_TO_FILE",
+            "uuid": "6682e021-47b6-4b10-a1c7-660e2fbe176d"
+          },
+          "type": "APP",
+          "version": "1.0"
+        },
+        {
+          "enabled": true,
+          "id": 30,
+          "nodeName": "APP - Set repeat output value",
+          "sdk": {
+            "input": {
+              "fileName": "$28.value.fileName",
+              "filePath": "$29.url"
+            },
+            "inputFields": [
+              {
+                "dataType": "string",
+                "label": "filePath",
+                "name": "filePath",
+                "optional": false
+              },
+              {
+                "dataType": "string",
+                "label": "fileName",
+                "name": "fileName",
+                "optional": false
+              }
+            ],
+            "sdkType": "SET_OUTPUT_TO_REPEAT",
+            "uuid": "b6147336-5340-4dde-8787-0089619a0836"
+          },
+          "type": "APP",
+          "version": "1.0"
+        }
+      ],
+      "type": "REPEAT"
+    },
+    {
+      "enabled": true,
+      "id": 18,
+      "nodeName": "APP - Groovy script - ZIP化＆画像登録APIリクエスト",
+      "sdk": {
+        "code": "$$$$ref:text:sdk-18.groovy",
+        "input": {
+          "applicationFssUrl": "$APPLICATION.fss.url",
+          "dealerCode": "$1.restTrigger.requestBody.igsLoginDealerCode",
+          "debug": "$22.debug",
+          "environment": "$22.environment",
+          "igsJwtToken": "$1.restTrigger.requestBody.igsJwtToken",
+          "jwtToken": "$1.restTrigger.requestBody.igsJwtToken",
+          "loop": "$28",
+          "orderNumber": "$16.orderNumber",
+          "setImageApiUrl": "$22.setImageApiUrl",
+          "vehicleEvent": "$16.vehicleEvent[0].value",
+          "zipFileName": "$19.zipFileName"
+        },
+        "inputFields": [
+          {
+            "dataType": "string",
+            "label": "loop",
+            "name": "loop",
+            "optional": false
+          },
+          {
+            "dataType": "string",
+            "label": "setImageApiUrl",
+            "name": "setImageApiUrl",
+            "optional": false
+          },
+          {
+            "dataType": "string",
+            "label": "zipFileName",
+            "name": "zipFileName",
+            "optional": false
+          },
+          {
+            "dataType": "string",
+            "label": "dealerCode",
+            "name": "dealerCode",
+            "optional": false
+          },
+          {
+            "dataType": "string",
+            "label": "orderNumber",
+            "name": "orderNumber",
+            "optional": false
+          },
+          {
+            "dataType": "string",
+            "label": "jwtToken",
+            "name": "jwtToken",
+            "optional": false
+          },
+          {
+            "dataType": "string",
+            "label": "vehicleEvent",
+            "name": "vehicleEvent",
+            "optional": false
+          },
+          {
+            "dataType": "string",
+            "label": "igsJwtToken",
+            "name": "igsJwtToken",
+            "optional": false
+          },
+          {
+            "dataType": "string",
+            "label": "debug",
+            "name": "debug",
+            "optional": false
+          },
+          {
+            "dataType": "string",
+            "label": "environment",
+            "name": "environment",
+            "optional": false
+          },
+          {
+            "dataType": "string",
+            "label": "applicationFssUrl",
+            "name": "applicationFssUrl",
+            "optional": false
+          }
+        ],
+        "name": "Groovy script",
+        "outputFields": [
+          {
+            "dataType": "string",
+            "label": "responseCode",
+            "name": "responseCode"
+          },
+          {
+            "dataType": "string",
+            "label": "responseMessage",
+            "name": "responseMessage"
+          },
+          {
+            "dataType": "string",
+            "label": "responseBody",
+            "name": "responseBody"
+          },
+          {
+            "dataType": "string",
+            "label": "requestInfo",
+            "name": "requestInfo"
+          },
+          {
+            "dataType": "string",
+            "label": "status",
+            "name": "status"
+          }
+        ],
+        "sdkType": "GENERAL_GROOVY",
+        "uuid": "492f8c00-14de-4837-a1f6-ed6ff0a2870e"
+      },
+      "type": "APP",
+      "version": "1.0"
+    },
+    {
+      "conditions": [
+        {
+          "condition": "is_present",
+          "dataField": "$18.responseCode",
+          "id": 3663
+        }
+      ],
+      "enabled": true,
+      "id": 35,
+      "nodeName": "IF",
+      "subFlow": [
+        {
+          "conditions": [
+            {
+              "condition": "equals",
+              "dataField": "$18.responseCode",
+              "id": 6908,
+              "value": "0000"
+            }
+          ],
+          "enabled": true,
+          "id": 36,
+          "nodeName": "IF",
+          "subFlow": [
+            {
+              "enabled": true,
+              "id": 37,
+              "input": {
+                "message": "$18.message",
+                "responseCode": "$18.responseCode",
+                "status": "$18.status"
+              },
+              "nodeName": "APP - Set workflow output value - 正常レスポンス作成",
+              "sdk": {
+                "inputFields": [
+                  {
+                    "dataType": "string",
+                    "label": "responseCode",
+                    "name": "responseCode",
+                    "optional": false
+                  },
+                  {
+                    "dataType": "string",
+                    "label": "message",
+                    "name": "message",
+                    "optional": false
+                  },
+                  {
+                    "dataType": "string",
+                    "label": "status",
+                    "name": "status",
+                    "optional": false
+                  }
+                ],
+                "name": "Set workflow output value",
+                "sdkType": "SET_VALUE_TO_INSTANCE",
+                "uuid": "f63bae3b-4003-4b29-aedf-4626216fc12a"
+              },
+              "type": "APP",
+              "version": "2.0"
+            },
+            {
+              "enabled": true,
+              "id": 41,
+              "nodeName": "APP - Batch physical deletion of form data - Form削除",
+              "sdk": {
+                "input": {
+                  "formEntityToken": "vehicle-images-form",
+                  "ids": "$1.restTrigger.requestBody.formdataid",
+                  "onlyForDeletedData": "false",
+                  "pbcToken": "image-management"
+                },
+                "inputFields": [
+                  {
+                    "controlType": "input",
+                    "dataType": "string",
+                    "label": "ids",
+                    "name": "ids",
+                    "optional": false
+                  },
+                  {
+                    "controlType": "entity",
+                    "label": "Form Entity",
+                    "name": "formEntityToken",
+                    "optional": false
+                  },
+                  {
+                    "controlType": "select",
+                    "dataType": "string",
+                    "defaultValue": true,
+                    "label": "Delete only the deleted data",
+                    "name": "onlyForDeletedData",
+                    "optional": true,
+                    "pickList": [
+                      "true",
+                      "false"
+                    ]
+                  }
+                ],
+                "name": "Batch physical deletion of form data",
+                "outputFields": [ ],
+                "sdkType": "PHYSICAL_BATCH_DELETE_FORM_ENTITY_DATA",
+                "uuid": "0ee40386-b7d5-47c2-b8c2-50aaea645f01"
+              },
+              "type": "APP",
+              "version": "1.0"
+            },
+            {
+              "enabled": true,
+              "id": 38,
+              "nodeName": "STOP_JOB",
+              "result": "Successful",
+              "type": "STOP_JOB"
+            }
+          ],
+          "type": "IF"
+        },
+        {
+          "enabled": true,
+          "id": 39,
+          "input": {
+            "message": "$18.message",
+            "responseCode": "$18.responseCode",
+            "status": "$18.status"
+          },
+          "nodeName": "APP - Set workflow output value - 異常レスポンス作成",
+          "sdk": {
+            "inputFields": [
+              {
+                "dataType": "string",
+                "label": "responseCode",
+                "name": "responseCode",
+                "optional": false
+              },
+              {
+                "dataType": "string",
+                "label": "message",
+                "name": "message",
+                "optional": false
+              },
+              {
+                "dataType": "string",
+                "label": "status",
+                "name": "status",
+                "optional": false
+              }
+            ],
+            "name": "Set workflow output value",
+            "sdkType": "SET_VALUE_TO_INSTANCE",
+            "uuid": "f63bae3b-4003-4b29-aedf-4626216fc12a"
+          },
+          "type": "APP",
+          "version": "2.0"
+        },
+        {
+          "enabled": true,
+          "id": 40,
+          "nodeName": "STOP_JOB",
+          "result": "Successful",
+          "type": "STOP_JOB"
+        }
+      ],
+      "type": "IF"
+    },
+    {
+      "enabled": true,
+      "id": 26,
+      "input": {
+        "status": "$18.status"
+      },
+      "nodeName": "APP - Set workflow output value - 異常レスポンス作成",
+      "sdk": {
+        "inputFields": [
+          {
+            "dataType": "string",
+            "label": "status",
+            "name": "status",
+            "optional": false
+          }
+        ],
+        "name": "Set workflow output value",
+        "sdkType": "SET_VALUE_TO_INSTANCE",
+        "uuid": "f63bae3b-4003-4b29-aedf-4626216fc12a"
+      },
+      "type": "APP",
+      "version": "2.0"
+    },
+    {
+      "enabled": true,
+      "id": 3,
+      "nodeName": "STOP_JOB",
+      "result": "Failed",
+      "type": "STOP_JOB"
+    }
+  ],
+  "restApiEnabled": 1,
+  "restApiMethod": "POST",
+  "restApiUrl": "/flow/api/flow-rest/information-send-flow",
+  "token": "information-send-flow"
+}

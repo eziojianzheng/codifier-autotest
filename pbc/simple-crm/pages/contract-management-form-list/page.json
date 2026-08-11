@@ -1,0 +1,90 @@
+{
+  "schemaId": "contract-management-form-list",
+  "schemaJson_$$$NESTED_JSON_STRING$$$": {
+    "fields": [
+      {
+        "component": "Card",
+        "fields": [
+          {
+            "component": "Table",
+            "componentProps": {
+              "addButtonHref": "/form/contract-management-form/layout/default",
+              "columnDefs": [
+                {
+                  "colId": "contractName",
+                  "field": "contractName",
+                  "headerName": "Contract Name",
+                  "type": "TEXT_COLUMN"
+                },
+                {
+                  "colId": "deliveryType",
+                  "field": "deliveryType",
+                  "headerName": "Delivery Type",
+                  "type": "RADIO_COLUMN"
+                },
+                {
+                  "colId": "customerName",
+                  "field": "customerName",
+                  "headerName": "Customer Name",
+                  "type": "SELECT_COLUMN"
+                },
+                {
+                  "colId": "contractTotalAmount",
+                  "field": "contractTotalAmount",
+                  "headerName": "Contract Total Amount",
+                  "type": "NUMBER_COLUMN"
+                },
+                {
+                  "colId": "status",
+                  "field": "status",
+                  "headerName": "Status",
+                  "type": "SELECT_COLUMN"
+                },
+                {
+                  "cellRendererParams": {
+                    "actions": [
+                      {
+                        "href": "/form/contract-management-form/layout/default/:id",
+                        "type": "EDIT"
+                      },
+                      {
+                        "href": "/form/:id/view",
+                        "type": "VIEW"
+                      },
+                      {
+                        "type": "DELETE"
+                      }
+                    ],
+                    "displayLikeButton": true,
+                    "showIcon": true
+                  },
+                  "type": "ACTION_COLUMN",
+                  "width": 240
+                }
+              ],
+              "dataSource": {
+                "token": "contract-management-form"
+              },
+              "pagination": true,
+              "pinnedFilter": [
+                "contractName",
+                "deliveryType",
+                "customerName"
+              ]
+            },
+            "id": "contract-management-form-table",
+            "style": {
+              "height": "100%"
+            }
+          }
+        ],
+        "style": {
+          "height": "100%"
+        }
+      }
+    ],
+    "form": {
+      "title": "Contract Management List"
+    }
+  }
+}

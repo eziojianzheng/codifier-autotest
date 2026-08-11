@@ -1,0 +1,2907 @@
+{
+  "name": "jspreo",
+  "schemaId": "jspreo-flow",
+  "schemaJson_$$$NESTED_JSON_STRING$$$": {
+    "fields": [
+      {
+        "component": "Button",
+        "componentProps": {
+          "action": {
+            "openDialogProps": {
+              "hideFooter": true
+            },
+            "openFormProps": {
+              "FormRendererProps": {
+                "defaultData": ":currentData"
+              },
+              "schemaId": "user-authentication"
+            },
+            "successAction": {
+              "methodName": "authorationBtnResponse",
+              "type": "formMethod"
+            },
+            "type": "dialog"
+          },
+          "content": "账密认证",
+          "content_i18n_key": "basic-production-execution|>work-unit-login|>account-password-authenticatio"
+        },
+        "id": "authorationBtn",
+        "style": {
+          "display": "none"
+        }
+      },
+      {
+        "component": "Button",
+        "componentProps": {
+          "action": {
+            "method": "post",
+            "successAction": {
+              "methodName": "saveTasksInSession",
+              "successAction": {
+                "href": ":nextUrl",
+                "type": "link"
+              },
+              "type": "formMethod"
+            },
+            "transformDataRequest": "$$$$ref:text:page-transformDataRequest-0.js",
+            "type": "request",
+            "url": "/flow/api/flow-rest/productionStartCheck"
+          },
+          "content": "跳转链接",
+          "content_i18n_key": "basic-production-execution|>work-unit-login|>redirect-link",
+          "style": {
+            "display": "none"
+          }
+        },
+        "id": "jumpNextBtn"
+      },
+      {
+        "component": "Stack",
+        "componentProps": {
+          "flexDirection": "column"
+        },
+        "fields": [
+          {
+            "component": "Stack",
+            "componentProps": {
+              "flexDirection": "column"
+            },
+            "fields": [
+              {
+                "component": "Stack",
+                "componentProps": {
+                  "flexDirection": "row",
+                  "justifyContent": "space-between"
+                },
+                "fields": [
+                  {
+                    "component": "Text",
+                    "componentProps": {
+                      "content": "生产执行-待作业任务",
+                      "content_i18n_key": "basic-production-execution|>work-unit-login|>production-execution-pending-o"
+                    },
+                    "style": {
+                      "color": "white",
+                      "fontSize": "1.5rem",
+                      "fontWeight": "bold"
+                    }
+                  },
+                  {
+                    "component": "Stack",
+                    "componentProps": {
+                      "alignItems": "center",
+                      "flexDirection": "row"
+                    },
+                    "fields": [
+                      {
+                        "component": "Text",
+                        "componentProps": {
+                          "content": ":context.userProfile.username"
+                        }
+                      },
+                      {
+                        "className": "ant-button",
+                        "component": "Button",
+                        "componentProps": {
+                          "action": {
+                            "type": "logout"
+                          },
+                          "content": "注销",
+                          "content_i18n_key": "basic-production-execution|>work-unit-login|>log-out"
+                        },
+                        "id": "changUser"
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "component": "Text",
+                "componentProps": {
+                  "content": "选择生产单元查看待作业任务",
+                  "content_i18n_key": "basic-production-execution|>work-unit-login|>select-production-unit-to-view"
+                },
+                "style": {
+                  "color": "#ffffff",
+                  "fontSize": "0.875rem",
+                  "marginTop": "0.25rem",
+                  "opacity": "0.9"
+                }
+              }
+            ],
+            "style": {
+              "backgroundColor": "#1e40af",
+              "borderRadius": "0.375rem 0.35rem 0rem 0rem",
+              "boxShadow": "0 4px 6px rgba(0,0,0,0.1)",
+              "color": "#ffffff",
+              "horizontalPadding": "1.5rem",
+              "verticalPadding": "1rem",
+              "width": "100%"
+            }
+          },
+          {
+            "component": "Stack",
+            "componentProps": {
+              "alignItems": "stretch",
+              "flexDirection": "column"
+            },
+            "fields": [
+              {
+                "component": "Stack",
+                "componentProps": {
+                  "alignItems": "center",
+                  "flexDirection": "row",
+                  "justifyContent": "space-between"
+                },
+                "fields": [
+                  {
+                    "component": "Text",
+                    "componentProps": {
+                      "content": "生产单元",
+                      "content_i18n_key": "basic-production-execution|>work-unit-login|>production-unit"
+                    },
+                    "style": {
+                      "fontSize": "1.25rem",
+                      "fontWeight": 600,
+                      "white-space": "nowrap"
+                    }
+                  },
+                  {
+                    "component": "Stack",
+                    "componentProps": {
+                      "alignItems": "center",
+                      "flexDirection": "row",
+                      "justifyContent": "flex-start"
+                    },
+                    "fields": [
+                      {
+                        "component": "Input",
+                        "componentProps": {
+                          "placeholder": "请输入或扫描生产单元回车搜索",
+                          "placeholder_i18n_key": "basic-production-execution|>work-unit-login|>please-enter-or-scan-productio"
+                        },
+                        "fieldTitleProps": {
+                          "hidden": true
+                        },
+                        "id": "workUnitIdInput",
+                        "style": {
+                          "borderRadius": "0.5rem",
+                          "flex": 1,
+                          "focusRing": "2px solid rgba(100, 181, 246, 0.5)",
+                          "horizontalPadding": "1rem",
+                          "verticalPadding": "0.5rem"
+                        },
+                        "validation": {
+                          "maxLength": 200
+                        }
+                      },
+                      {
+                        "component": "Button",
+                        "componentProps": {
+                          "action": {
+                            "successAction": {
+                              "methodName": "scanButtonEvent",
+                              "type": "formMethod"
+                            },
+                            "type": "scanCode"
+                          },
+                          "icon": "material:document-scanner-rounded"
+                        },
+                        "style": {
+                          "background": "none",
+                          "border": "none",
+                          "position": "absolute",
+                          "right": 0
+                        }
+                      }
+                    ]
+                  }
+                ],
+                "style": {
+                  "position": "relative"
+                }
+              },
+              {
+                "className": "form-grid state-wrapper :wrapperState",
+                "component": "Grid",
+                "componentProps": {
+                  "blankChildPlace": false,
+                  "colNumber": null
+                },
+                "fields": [
+                  {
+                    "//className": ":firstCard.cardClass",
+                    "component": "Card",
+                    "fields": [
+                      {
+                        "component": "Stack",
+                        "componentProps": {
+                          "alignItems": "center",
+                          "flexDirection": "column",
+                          "justifyContent": "center"
+                        },
+                        "fields": [
+                          {
+                            "component": "Stack",
+                            "componentProps": {
+                              "flexDirection": "column"
+                            },
+                            "fields": [
+                              {
+                                "component": "Stack",
+                                "componentProps": {
+                                  "alignItems": "center",
+                                  "flexDirection": "row"
+                                },
+                                "fields": [
+                                  {
+                                    "component": "Text",
+                                    "componentProps": {
+                                      "content": ":firstCard.workUnitId",
+                                      "style": {
+                                        "color": "#64B5F6",
+                                        "fontSize": "1.125rem",
+                                        "fontWeight": "700"
+                                      }
+                                    }
+                                  },
+                                  {
+                                    "className": ":firstCard.modeClass",
+                                    "component": "Text",
+                                    "componentProps": {
+                                      "//style": {
+                                        "backgroundColor": "#dcfce7",
+                                        "borderRadius": "9999px",
+                                        "color": "#166534",
+                                        "display": "inline-block",
+                                        "fontSize": "0.75rem",
+                                        "fontWeight": "500",
+                                        "horizontalPadding": "0.5rem",
+                                        "verticalPadding": "0.125rem"
+                                      },
+                                      "content": ":firstCard.availabilityStatusLabel"
+                                    }
+                                  }
+                                ]
+                              },
+                              {
+                                "component": "Text",
+                                "componentProps": {
+                                  "//style": {
+                                    "color": "#334a52",
+                                    "fontSize": 15,
+                                    "fontWeight": "bold"
+                                  },
+                                  "content": ":firstCard.workUnitDescription",
+                                  "style": {
+                                    "color": "#334a52",
+                                    "fontSize": 15,
+                                    "fontWeight": "bold"
+                                  }
+                                }
+                              },
+                              {
+                                "component": "Stack",
+                                "componentProps": {
+                                  "flexDirection": "row"
+                                },
+                                "fields": [
+                                  {
+                                    "component": "Text",
+                                    "componentProps": {
+                                      "content": "待作业任务：",
+                                      "content_i18n_key": "basic-production-execution|>work-unit-login|>pending-operation-tasks"
+                                    },
+                                    "style": {
+                                      "color": "#6b7280",
+                                      "fontSize": "0.875rem"
+                                    }
+                                  },
+                                  {
+                                    "component": "Text",
+                                    "componentProps": {
+                                      "content": ":firstCard.wipQtySum",
+                                      "style": {
+                                        "color": "#374151",
+                                        "fontWeight": "500"
+                                      }
+                                    }
+                                  }
+                                ]
+                              }
+                            ]
+                          },
+                          {
+                            "component": "Button",
+                            "componentProps": {
+                              "action": {
+                                "methodName": "firstButton",
+                                "type": "formMethod"
+                              },
+                              "iconPosition": "end",
+                              "type": "primary"
+                            },
+                            "id": "first",
+                            "style": {
+                              "border": "none",
+                              "cursor": "pointer",
+                              "height": "100%",
+                              "inset": 0,
+                              "margin": 0,
+                              "opacity": 0,
+                              "padding": 0,
+                              "position": "absolute",
+                              "width": "100%"
+                            }
+                          }
+                        ],
+                        "style": {
+                          "height": "100%",
+                          "width": "100%"
+                        }
+                      }
+                    ],
+                    "hidden": {
+                      "dataPredicate": {
+                        "conditions": [
+                          {
+                            "condition": "notBlank",
+                            "dataField": "firstCard"
+                          }
+                        ],
+                        "operator": "AND"
+                      },
+                      "valueIfNegative": true,
+                      "valueIfPositive": false
+                    },
+                    "hover": {
+                      "boxShadow": "0 4px 6px rgba(0,0,0,0.1)"
+                    },
+                    "style": {
+                      "backgroundColor": "#ffffff",
+                      "border": "1px solid #e5e7eb",
+                      "borderRadius": "0.5rem",
+                      "boxShadow": "0 1px 2px rgba(0,0,0,0.05)",
+                      "cursor": "pointer",
+                      "padding": "1rem",
+                      "position": "relative",
+                      "transition": "all 0.2s"
+                    }
+                  },
+                  {
+                    "//className": ":secondCard.cardClass",
+                    "component": "Card",
+                    "fields": [
+                      {
+                        "component": "Stack",
+                        "componentProps": {
+                          "alignItems": "center",
+                          "flexDirection": "column",
+                          "justifyContent": "center"
+                        },
+                        "fields": [
+                          {
+                            "component": "Stack",
+                            "componentProps": {
+                              "flexDirection": "column"
+                            },
+                            "fields": [
+                              {
+                                "component": "Stack",
+                                "componentProps": {
+                                  "alignItems": "center",
+                                  "flexDirection": "row"
+                                },
+                                "fields": [
+                                  {
+                                    "component": "Text",
+                                    "componentProps": {
+                                      "content": ":secondCard.workUnitId",
+                                      "style": {
+                                        "color": "#64B5F6",
+                                        "fontSize": "1.125rem",
+                                        "fontWeight": "700"
+                                      }
+                                    }
+                                  },
+                                  {
+                                    "className": ":secondCard.modeClass",
+                                    "component": "Text",
+                                    "componentProps": {
+                                      "//style": {
+                                        "backgroundColor": "#dcfce7",
+                                        "borderRadius": "9999px",
+                                        "color": "#166534",
+                                        "display": "inline-block",
+                                        "fontSize": "0.75rem",
+                                        "fontWeight": "500",
+                                        "horizontalPadding": "0.5rem",
+                                        "verticalPadding": "0.125rem"
+                                      },
+                                      "content": ":secondCard.availabilityStatusLabel"
+                                    }
+                                  }
+                                ]
+                              },
+                              {
+                                "component": "Text",
+                                "componentProps": {
+                                  "content": ":secondCard.workUnitDescription",
+                                  "style": {
+                                    "color": "#334a52",
+                                    "fontSize": 15,
+                                    "fontWeight": "bold"
+                                  }
+                                }
+                              },
+                              {
+                                "component": "Stack",
+                                "componentProps": {
+                                  "flexDirection": "row"
+                                },
+                                "fields": [
+                                  {
+                                    "component": "Text",
+                                    "componentProps": {
+                                      "content": "待作业任务：",
+                                      "content_i18n_key": "basic-production-execution|>work-unit-login|>pending-operation-tasks"
+                                    },
+                                    "style": {
+                                      "color": "#6b7280",
+                                      "fontSize": "0.875rem"
+                                    }
+                                  },
+                                  {
+                                    "component": "Text",
+                                    "componentProps": {
+                                      "content": ":secondCard.wipQtySum",
+                                      "style": {
+                                        "color": "#374151",
+                                        "fontWeight": "500"
+                                      }
+                                    }
+                                  }
+                                ]
+                              }
+                            ]
+                          },
+                          {
+                            "component": "Button",
+                            "componentProps": {
+                              "action": {
+                                "methodName": "secondButton",
+                                "type": "formMethod"
+                              },
+                              "iconPosition": "end",
+                              "type": "primary"
+                            },
+                            "id": "second",
+                            "style": {
+                              "border": "none",
+                              "cursor": "pointer",
+                              "height": "100%",
+                              "inset": 0,
+                              "margin": 0,
+                              "opacity": 0,
+                              "padding": 0,
+                              "position": "absolute",
+                              "width": "100%"
+                            }
+                          }
+                        ],
+                        "style": {
+                          "height": "100%",
+                          "width": "100%"
+                        }
+                      }
+                    ],
+                    "hidden": {
+                      "dataPredicate": {
+                        "conditions": [
+                          {
+                            "condition": "notBlank",
+                            "dataField": "secondCard"
+                          }
+                        ],
+                        "operator": "AND"
+                      },
+                      "valueIfNegative": true,
+                      "valueIfPositive": false
+                    },
+                    "hover": {
+                      "boxShadow": "0 4px 6px rgba(0,0,0,0.1)"
+                    },
+                    "style": {
+                      "backgroundColor": "#ffffff",
+                      "border": "1px solid #e5e7eb",
+                      "borderRadius": "0.5rem",
+                      "boxShadow": "0 1px 2px rgba(0,0,0,0.05)",
+                      "cursor": "pointer",
+                      "padding": "1rem",
+                      "position": "relative",
+                      "transition": "all 0.2s"
+                    }
+                  },
+                  {
+                    "//className": ":thirdCard.cardClass",
+                    "component": "Card",
+                    "fields": [
+                      {
+                        "component": "Stack",
+                        "componentProps": {
+                          "alignItems": "center",
+                          "flexDirection": "column",
+                          "justifyContent": "center"
+                        },
+                        "fields": [
+                          {
+                            "component": "Stack",
+                            "componentProps": {
+                              "flexDirection": "column"
+                            },
+                            "fields": [
+                              {
+                                "component": "Stack",
+                                "componentProps": {
+                                  "alignItems": "center",
+                                  "flexDirection": "row"
+                                },
+                                "fields": [
+                                  {
+                                    "component": "Text",
+                                    "componentProps": {
+                                      "content": ":thirdCard.workUnitId",
+                                      "style": {
+                                        "color": "#64B5F6",
+                                        "fontSize": "1.125rem",
+                                        "fontWeight": "700"
+                                      }
+                                    }
+                                  },
+                                  {
+                                    "className": ":thirdCard.modeClass",
+                                    "component": "Text",
+                                    "componentProps": {
+                                      "//style": {
+                                        "backgroundColor": "#dcfce7",
+                                        "borderRadius": "9999px",
+                                        "color": "#166534",
+                                        "display": "inline-block",
+                                        "fontSize": "0.75rem",
+                                        "fontWeight": "500",
+                                        "horizontalPadding": "0.5rem",
+                                        "verticalPadding": "0.125rem"
+                                      },
+                                      "content": ":thirdCard.availabilityStatusLabel"
+                                    }
+                                  }
+                                ]
+                              },
+                              {
+                                "component": "Text",
+                                "componentProps": {
+                                  "content": ":thirdCard.workUnitDescription",
+                                  "style": {
+                                    "color": "#334a52",
+                                    "fontSize": 15,
+                                    "fontWeight": "bold"
+                                  }
+                                }
+                              },
+                              {
+                                "component": "Stack",
+                                "componentProps": {
+                                  "flexDirection": "row"
+                                },
+                                "fields": [
+                                  {
+                                    "component": "Text",
+                                    "componentProps": {
+                                      "content": "待作业任务：",
+                                      "content_i18n_key": "basic-production-execution|>work-unit-login|>pending-operation-tasks"
+                                    },
+                                    "style": {
+                                      "color": "#6b7280",
+                                      "fontSize": "0.875rem"
+                                    }
+                                  },
+                                  {
+                                    "component": "Text",
+                                    "componentProps": {
+                                      "content": ":thirdCard.wipQtySum",
+                                      "style": {
+                                        "color": "#374151",
+                                        "fontWeight": "500"
+                                      }
+                                    }
+                                  }
+                                ]
+                              }
+                            ]
+                          },
+                          {
+                            "component": "Button",
+                            "componentProps": {
+                              "action": {
+                                "methodName": "thirdButton",
+                                "type": "formMethod"
+                              },
+                              "iconPosition": "end",
+                              "type": "primary"
+                            },
+                            "id": "third",
+                            "style": {
+                              "border": "none",
+                              "cursor": "pointer",
+                              "height": "100%",
+                              "inset": 0,
+                              "margin": 0,
+                              "opacity": 0,
+                              "padding": 0,
+                              "position": "absolute",
+                              "width": "100%"
+                            }
+                          }
+                        ],
+                        "style": {
+                          "height": "100%",
+                          "width": "100%"
+                        }
+                      }
+                    ],
+                    "hidden": {
+                      "dataPredicate": {
+                        "conditions": [
+                          {
+                            "condition": "notBlank",
+                            "dataField": "thirdCard"
+                          }
+                        ],
+                        "operator": "AND"
+                      },
+                      "valueIfNegative": true,
+                      "valueIfPositive": false
+                    },
+                    "hover": {
+                      "boxShadow": "0 4px 6px rgba(0,0,0,0.1)"
+                    },
+                    "style": {
+                      "backgroundColor": "#ffffff",
+                      "border": "1px solid #e5e7eb",
+                      "borderRadius": "0.5rem",
+                      "boxShadow": "0 1px 2px rgba(0,0,0,0.05)",
+                      "cursor": "pointer",
+                      "padding": "1rem",
+                      "position": "relative",
+                      "transition": "all 0.2s"
+                    }
+                  },
+                  {
+                    "//className": ":fourthCard.cardClass",
+                    "component": "Card",
+                    "fields": [
+                      {
+                        "component": "Stack",
+                        "componentProps": {
+                          "alignItems": "center",
+                          "flexDirection": "column",
+                          "justifyContent": "center"
+                        },
+                        "fields": [
+                          {
+                            "component": "Stack",
+                            "componentProps": {
+                              "flexDirection": "column"
+                            },
+                            "fields": [
+                              {
+                                "component": "Stack",
+                                "componentProps": {
+                                  "alignItems": "center",
+                                  "flexDirection": "row"
+                                },
+                                "fields": [
+                                  {
+                                    "component": "Text",
+                                    "componentProps": {
+                                      "content": ":fourthCard.workUnitId",
+                                      "style": {
+                                        "color": "#64B5F6",
+                                        "fontSize": "1.125rem",
+                                        "fontWeight": "700"
+                                      }
+                                    }
+                                  },
+                                  {
+                                    "className": ":fourthCard.modeClass",
+                                    "component": "Text",
+                                    "componentProps": {
+                                      "//style": {
+                                        "backgroundColor": "#dcfce7",
+                                        "borderRadius": "9999px",
+                                        "color": "#166534",
+                                        "display": "inline-block",
+                                        "fontSize": "0.75rem",
+                                        "fontWeight": "500",
+                                        "horizontalPadding": "0.5rem",
+                                        "verticalPadding": "0.125rem"
+                                      },
+                                      "content": ":fourthCard.availabilityStatusLabel"
+                                    }
+                                  }
+                                ]
+                              },
+                              {
+                                "component": "Text",
+                                "componentProps": {
+                                  "content": ":fourthCard.workUnitDescription",
+                                  "style": {
+                                    "color": "#334a52",
+                                    "fontSize": 15,
+                                    "fontWeight": "bold"
+                                  }
+                                }
+                              },
+                              {
+                                "component": "Stack",
+                                "componentProps": {
+                                  "flexDirection": "row"
+                                },
+                                "fields": [
+                                  {
+                                    "component": "Text",
+                                    "componentProps": {
+                                      "content": "待作业任务：",
+                                      "content_i18n_key": "basic-production-execution|>work-unit-login|>pending-operation-tasks"
+                                    },
+                                    "style": {
+                                      "color": "#6b7280",
+                                      "fontSize": "0.875rem"
+                                    }
+                                  },
+                                  {
+                                    "component": "Text",
+                                    "componentProps": {
+                                      "content": ":fourthCard.wipQtySum",
+                                      "style": {
+                                        "color": "#374151",
+                                        "fontWeight": "500"
+                                      }
+                                    }
+                                  }
+                                ]
+                              }
+                            ]
+                          },
+                          {
+                            "component": "Button",
+                            "componentProps": {
+                              "action": {
+                                "methodName": "fourthButton",
+                                "type": "formMethod"
+                              },
+                              "iconPosition": "end",
+                              "type": "primary"
+                            },
+                            "id": "fourth",
+                            "style": {
+                              "border": "none",
+                              "cursor": "pointer",
+                              "height": "100%",
+                              "inset": 0,
+                              "margin": 0,
+                              "opacity": 0,
+                              "padding": 0,
+                              "position": "absolute",
+                              "width": "100%"
+                            }
+                          }
+                        ],
+                        "style": {
+                          "height": "100%",
+                          "width": "100%"
+                        }
+                      }
+                    ],
+                    "hidden": {
+                      "dataPredicate": {
+                        "conditions": [
+                          {
+                            "condition": "notBlank",
+                            "dataField": "fourthCard"
+                          }
+                        ],
+                        "operator": "AND"
+                      },
+                      "valueIfNegative": true,
+                      "valueIfPositive": false
+                    },
+                    "hover": {
+                      "boxShadow": "0 4px 6px rgba(0,0,0,0.1)"
+                    },
+                    "style": {
+                      "backgroundColor": "#ffffff",
+                      "border": "1px solid #e5e7eb",
+                      "borderRadius": "0.5rem",
+                      "boxShadow": "0 1px 2px rgba(0,0,0,0.05)",
+                      "cursor": "pointer",
+                      "padding": "1rem",
+                      "position": "relative",
+                      "transition": "all 0.2s"
+                    }
+                  },
+                  {
+                    "//className": ":fifthCard.cardClass",
+                    "component": "Card",
+                    "fields": [
+                      {
+                        "component": "Stack",
+                        "componentProps": {
+                          "alignItems": "center",
+                          "flexDirection": "column",
+                          "justifyContent": "center"
+                        },
+                        "fields": [
+                          {
+                            "component": "Stack",
+                            "componentProps": {
+                              "flexDirection": "column"
+                            },
+                            "fields": [
+                              {
+                                "component": "Stack",
+                                "componentProps": {
+                                  "alignItems": "center",
+                                  "flexDirection": "row"
+                                },
+                                "fields": [
+                                  {
+                                    "component": "Text",
+                                    "componentProps": {
+                                      "content": ":fifthCard.workUnitId",
+                                      "style": {
+                                        "color": "#64B5F6",
+                                        "fontSize": "1.125rem",
+                                        "fontWeight": "700"
+                                      }
+                                    }
+                                  },
+                                  {
+                                    "className": ":fifthCard.modeClass",
+                                    "component": "Text",
+                                    "componentProps": {
+                                      "//style": {
+                                        "backgroundColor": "#dcfce7",
+                                        "borderRadius": "9999px",
+                                        "color": "#166534",
+                                        "display": "inline-block",
+                                        "fontSize": "0.75rem",
+                                        "fontWeight": "500",
+                                        "horizontalPadding": "0.5rem",
+                                        "verticalPadding": "0.125rem"
+                                      },
+                                      "content": ":fifthCard.availabilityStatusLabel"
+                                    }
+                                  }
+                                ]
+                              },
+                              {
+                                "component": "Text",
+                                "componentProps": {
+                                  "content": ":fifthCard.workUnitDescription",
+                                  "style": {
+                                    "color": "#334a52",
+                                    "fontSize": 15,
+                                    "fontWeight": "bold"
+                                  }
+                                }
+                              },
+                              {
+                                "component": "Stack",
+                                "componentProps": {
+                                  "flexDirection": "row"
+                                },
+                                "fields": [
+                                  {
+                                    "component": "Text",
+                                    "componentProps": {
+                                      "content": "待作业任务：",
+                                      "content_i18n_key": "basic-production-execution|>work-unit-login|>pending-operation-tasks"
+                                    },
+                                    "style": {
+                                      "color": "#6b7280",
+                                      "fontSize": "0.875rem"
+                                    }
+                                  },
+                                  {
+                                    "component": "Text",
+                                    "componentProps": {
+                                      "content": ":fifthCard.wipQtySum",
+                                      "style": {
+                                        "color": "#374151",
+                                        "fontWeight": "500"
+                                      }
+                                    }
+                                  }
+                                ],
+                                "style": {
+                                  "width": "100%"
+                                }
+                              }
+                            ]
+                          },
+                          {
+                            "component": "Button",
+                            "componentProps": {
+                              "action": {
+                                "methodName": "fifthButton",
+                                "type": "formMethod"
+                              },
+                              "iconPosition": "end",
+                              "type": "primary"
+                            },
+                            "id": "fifth",
+                            "style": {
+                              "border": "none",
+                              "cursor": "pointer",
+                              "height": "100%",
+                              "inset": 0,
+                              "margin": 0,
+                              "opacity": 0,
+                              "padding": 0,
+                              "position": "absolute",
+                              "width": "100%"
+                            }
+                          }
+                        ],
+                        "style": {
+                          "height": "100%",
+                          "width": "100%"
+                        }
+                      }
+                    ],
+                    "hidden": {
+                      "dataPredicate": {
+                        "conditions": [
+                          {
+                            "condition": "notBlank",
+                            "dataField": "fifthCard"
+                          }
+                        ],
+                        "operator": "AND"
+                      },
+                      "valueIfNegative": true,
+                      "valueIfPositive": false
+                    },
+                    "hover": {
+                      "boxShadow": "0 4px 6px rgba(0,0,0,0.1)"
+                    },
+                    "style": {
+                      "backgroundColor": "#ffffff",
+                      "border": "1px solid #e5e7eb",
+                      "borderRadius": "0.5rem",
+                      "boxShadow": "0 1px 2px rgba(0,0,0,0.05)",
+                      "cursor": "pointer",
+                      "padding": "1rem",
+                      "position": "relative",
+                      "transition": "all 0.2s"
+                    }
+                  },
+                  {
+                    "//className": ":sixthCard.cardClass",
+                    "component": "Card",
+                    "fields": [
+                      {
+                        "component": "Stack",
+                        "componentProps": {
+                          "alignItems": "center",
+                          "flexDirection": "column",
+                          "justifyContent": "center"
+                        },
+                        "fields": [
+                          {
+                            "component": "Stack",
+                            "componentProps": {
+                              "flexDirection": "column"
+                            },
+                            "fields": [
+                              {
+                                "component": "Stack",
+                                "componentProps": {
+                                  "alignItems": "center",
+                                  "flexDirection": "row"
+                                },
+                                "fields": [
+                                  {
+                                    "component": "Text",
+                                    "componentProps": {
+                                      "content": ":sixthCard.workUnitId",
+                                      "style": {
+                                        "color": "#64B5F6",
+                                        "fontSize": "1.125rem",
+                                        "fontWeight": "700"
+                                      }
+                                    }
+                                  },
+                                  {
+                                    "className": ":sixthCard.modeClass",
+                                    "component": "Text",
+                                    "componentProps": {
+                                      "//style": {
+                                        "backgroundColor": "#dcfce7",
+                                        "borderRadius": "9999px",
+                                        "color": "#166534",
+                                        "display": "inline-block",
+                                        "fontSize": "0.75rem",
+                                        "fontWeight": "500",
+                                        "horizontalPadding": "0.5rem",
+                                        "verticalPadding": "0.125rem"
+                                      },
+                                      "content": ":sixthCard.availabilityStatusLabel"
+                                    }
+                                  }
+                                ]
+                              },
+                              {
+                                "component": "Text",
+                                "componentProps": {
+                                  "content": ":sixthCard.workUnitDescription",
+                                  "style": {
+                                    "color": "#334a52",
+                                    "fontSize": 15,
+                                    "fontWeight": "bold"
+                                  }
+                                }
+                              },
+                              {
+                                "component": "Stack",
+                                "componentProps": {
+                                  "flexDirection": "row"
+                                },
+                                "fields": [
+                                  {
+                                    "component": "Text",
+                                    "componentProps": {
+                                      "content": "待作业任务：",
+                                      "content_i18n_key": "basic-production-execution|>work-unit-login|>pending-operation-tasks"
+                                    },
+                                    "style": {
+                                      "color": "#6b7280",
+                                      "fontSize": "0.875rem"
+                                    }
+                                  },
+                                  {
+                                    "component": "Text",
+                                    "componentProps": {
+                                      "content": ":sixthCard.wipQtySum",
+                                      "style": {
+                                        "color": "#374151",
+                                        "fontWeight": "500"
+                                      }
+                                    }
+                                  }
+                                ]
+                              }
+                            ]
+                          },
+                          {
+                            "component": "Button",
+                            "componentProps": {
+                              "action": {
+                                "methodName": "sixthButton",
+                                "type": "formMethod"
+                              },
+                              "iconPosition": "end",
+                              "type": "primary"
+                            },
+                            "id": "sixth",
+                            "style": {
+                              "border": "none",
+                              "cursor": "pointer",
+                              "height": "100%",
+                              "inset": 0,
+                              "margin": 0,
+                              "opacity": 0,
+                              "padding": 0,
+                              "position": "absolute",
+                              "width": "100%"
+                            }
+                          }
+                        ],
+                        "style": {
+                          "height": "100%",
+                          "width": "100%"
+                        }
+                      }
+                    ],
+                    "hidden": {
+                      "dataPredicate": {
+                        "conditions": [
+                          {
+                            "condition": "notBlank",
+                            "dataField": "sixthCard"
+                          }
+                        ],
+                        "operator": "AND"
+                      },
+                      "valueIfNegative": true,
+                      "valueIfPositive": false
+                    },
+                    "hover": {
+                      "boxShadow": "0 4px 6px rgba(0,0,0,0.1)"
+                    },
+                    "style": {
+                      "backgroundColor": "#ffffff",
+                      "border": "1px solid #e5e7eb",
+                      "borderRadius": "0.5rem",
+                      "boxShadow": "0 1px 2px rgba(0,0,0,0.05)",
+                      "cursor": "pointer",
+                      "padding": "1rem",
+                      "position": "relative",
+                      "transition": "all 0.2s"
+                    }
+                  },
+                  {
+                    "//className": ":seventhCard.cardClass",
+                    "component": "Card",
+                    "fields": [
+                      {
+                        "component": "Stack",
+                        "componentProps": {
+                          "alignItems": "center",
+                          "flexDirection": "column",
+                          "justifyContent": "center"
+                        },
+                        "fields": [
+                          {
+                            "component": "Stack",
+                            "componentProps": {
+                              "flexDirection": "column"
+                            },
+                            "fields": [
+                              {
+                                "component": "Stack",
+                                "componentProps": {
+                                  "alignItems": "center",
+                                  "flexDirection": "row"
+                                },
+                                "fields": [
+                                  {
+                                    "component": "Text",
+                                    "componentProps": {
+                                      "content": ":seventhCard.workUnitId",
+                                      "style": {
+                                        "color": "#64B5F6",
+                                        "fontSize": "1.125rem",
+                                        "fontWeight": "700"
+                                      }
+                                    }
+                                  },
+                                  {
+                                    "className": ":seventhCard.modeClass",
+                                    "component": "Text",
+                                    "componentProps": {
+                                      "//style": {
+                                        "backgroundColor": "#dcfce7",
+                                        "borderRadius": "9999px",
+                                        "color": "#166534",
+                                        "display": "inline-block",
+                                        "fontSize": "0.75rem",
+                                        "fontWeight": "500",
+                                        "horizontalPadding": "0.5rem",
+                                        "verticalPadding": "0.125rem"
+                                      },
+                                      "content": ":seventhCard.availabilityStatusLabel"
+                                    }
+                                  }
+                                ]
+                              },
+                              {
+                                "component": "Text",
+                                "componentProps": {
+                                  "content": ":seventhCard.workUnitDescription",
+                                  "style": {
+                                    "color": "#334a52",
+                                    "fontSize": 15,
+                                    "fontWeight": "bold"
+                                  }
+                                }
+                              },
+                              {
+                                "component": "Stack",
+                                "componentProps": {
+                                  "flexDirection": "row"
+                                },
+                                "fields": [
+                                  {
+                                    "component": "Text",
+                                    "componentProps": {
+                                      "content": "待作业任务：",
+                                      "content_i18n_key": "basic-production-execution|>work-unit-login|>pending-operation-tasks"
+                                    },
+                                    "style": {
+                                      "color": "#6b7280",
+                                      "fontSize": "0.875rem"
+                                    }
+                                  },
+                                  {
+                                    "component": "Text",
+                                    "componentProps": {
+                                      "content": ":seventhCard.wipQtySum",
+                                      "style": {
+                                        "color": "#374151",
+                                        "fontWeight": "500"
+                                      }
+                                    }
+                                  }
+                                ]
+                              }
+                            ]
+                          },
+                          {
+                            "component": "Button",
+                            "componentProps": {
+                              "action": {
+                                "methodName": "seventhButton",
+                                "type": "formMethod"
+                              },
+                              "iconPosition": "end",
+                              "type": "primary"
+                            },
+                            "id": "seventh",
+                            "style": {
+                              "border": "none",
+                              "cursor": "pointer",
+                              "height": "100%",
+                              "inset": 0,
+                              "margin": 0,
+                              "opacity": 0,
+                              "padding": 0,
+                              "position": "absolute",
+                              "width": "100%"
+                            }
+                          }
+                        ],
+                        "style": {
+                          "height": "100%",
+                          "width": "100%"
+                        }
+                      }
+                    ],
+                    "hidden": {
+                      "dataPredicate": {
+                        "conditions": [
+                          {
+                            "condition": "notBlank",
+                            "dataField": "seventhCard"
+                          }
+                        ],
+                        "operator": "AND"
+                      },
+                      "valueIfNegative": true,
+                      "valueIfPositive": false
+                    },
+                    "hover": {
+                      "boxShadow": "0 4px 6px rgba(0,0,0,0.1)"
+                    },
+                    "style": {
+                      "backgroundColor": "#ffffff",
+                      "border": "1px solid #e5e7eb",
+                      "borderRadius": "0.5rem",
+                      "boxShadow": "0 1px 2px rgba(0,0,0,0.05)",
+                      "cursor": "pointer",
+                      "padding": "1rem",
+                      "position": "relative",
+                      "transition": "all 0.2s"
+                    }
+                  },
+                  {
+                    "//className": ":eighthCard.cardClass",
+                    "component": "Card",
+                    "fields": [
+                      {
+                        "component": "Stack",
+                        "componentProps": {
+                          "alignItems": "center",
+                          "flexDirection": "column",
+                          "justifyContent": "center"
+                        },
+                        "fields": [
+                          {
+                            "component": "Stack",
+                            "componentProps": {
+                              "flexDirection": "column"
+                            },
+                            "fields": [
+                              {
+                                "component": "Stack",
+                                "componentProps": {
+                                  "alignItems": "center",
+                                  "flexDirection": "row"
+                                },
+                                "fields": [
+                                  {
+                                    "component": "Text",
+                                    "componentProps": {
+                                      "content": ":eighthCard.workUnitId",
+                                      "style": {
+                                        "color": "#64B5F6",
+                                        "fontSize": "1.125rem",
+                                        "fontWeight": "700"
+                                      }
+                                    }
+                                  },
+                                  {
+                                    "className": ":eighthCard.modeClass",
+                                    "component": "Text",
+                                    "componentProps": {
+                                      "//style": {
+                                        "backgroundColor": "#dcfce7",
+                                        "borderRadius": "9999px",
+                                        "color": "#166534",
+                                        "display": "inline-block",
+                                        "fontSize": "0.75rem",
+                                        "fontWeight": "500",
+                                        "horizontalPadding": "0.5rem",
+                                        "verticalPadding": "0.125rem"
+                                      },
+                                      "content": ":eighthCard.availabilityStatusLabel"
+                                    }
+                                  }
+                                ]
+                              },
+                              {
+                                "component": "Text",
+                                "componentProps": {
+                                  "content": ":eighthCard.workUnitDescription",
+                                  "style": {
+                                    "color": "#334a52",
+                                    "fontSize": 15,
+                                    "fontWeight": "bold"
+                                  }
+                                }
+                              },
+                              {
+                                "component": "Stack",
+                                "componentProps": {
+                                  "flexDirection": "row"
+                                },
+                                "fields": [
+                                  {
+                                    "component": "Text",
+                                    "componentProps": {
+                                      "content": "待作业任务：",
+                                      "content_i18n_key": "basic-production-execution|>work-unit-login|>pending-operation-tasks"
+                                    },
+                                    "style": {
+                                      "color": "#6b7280",
+                                      "fontSize": "0.875rem"
+                                    }
+                                  },
+                                  {
+                                    "component": "Text",
+                                    "componentProps": {
+                                      "content": ":eighthCard.wipQtySum",
+                                      "style": {
+                                        "color": "#374151",
+                                        "fontWeight": "500"
+                                      }
+                                    }
+                                  }
+                                ]
+                              }
+                            ]
+                          },
+                          {
+                            "component": "Button",
+                            "componentProps": {
+                              "action": {
+                                "methodName": "eighthButton",
+                                "type": "formMethod"
+                              },
+                              "iconPosition": "end",
+                              "type": "primary"
+                            },
+                            "id": "eighth",
+                            "style": {
+                              "border": "none",
+                              "cursor": "pointer",
+                              "height": "100%",
+                              "inset": 0,
+                              "margin": 0,
+                              "opacity": 0,
+                              "padding": 0,
+                              "position": "absolute",
+                              "width": "100%"
+                            }
+                          }
+                        ],
+                        "style": {
+                          "height": "100%",
+                          "width": "100%"
+                        }
+                      }
+                    ],
+                    "hidden": {
+                      "dataPredicate": {
+                        "conditions": [
+                          {
+                            "condition": "notBlank",
+                            "dataField": "eighthCard"
+                          }
+                        ],
+                        "operator": "AND"
+                      },
+                      "valueIfNegative": true,
+                      "valueIfPositive": false
+                    },
+                    "hover": {
+                      "boxShadow": "0 4px 6px rgba(0,0,0,0.1)"
+                    },
+                    "style": {
+                      "backgroundColor": "#ffffff",
+                      "border": "1px solid #e5e7eb",
+                      "borderRadius": "0.5rem",
+                      "boxShadow": "0 1px 2px rgba(0,0,0,0.05)",
+                      "cursor": "pointer",
+                      "padding": "1rem",
+                      "position": "relative",
+                      "transition": "all 0.2s"
+                    }
+                  },
+                  {
+                    "//className": ":nightCard.cardClass",
+                    "component": "Card",
+                    "fields": [
+                      {
+                        "component": "Stack",
+                        "componentProps": {
+                          "alignItems": "center",
+                          "flexDirection": "column",
+                          "justifyContent": "center"
+                        },
+                        "fields": [
+                          {
+                            "component": "Stack",
+                            "componentProps": {
+                              "flexDirection": "column"
+                            },
+                            "fields": [
+                              {
+                                "component": "Stack",
+                                "componentProps": {
+                                  "alignItems": "center",
+                                  "flexDirection": "row"
+                                },
+                                "fields": [
+                                  {
+                                    "component": "Text",
+                                    "componentProps": {
+                                      "content": ":ninthCard.workUnitId",
+                                      "style": {
+                                        "color": "#64B5F6",
+                                        "fontSize": "1.125rem",
+                                        "fontWeight": "700"
+                                      }
+                                    }
+                                  },
+                                  {
+                                    "className": ":nightCard.modeClass",
+                                    "component": "Text",
+                                    "componentProps": {
+                                      "//style": {
+                                        "backgroundColor": "#dcfce7",
+                                        "borderRadius": "9999px",
+                                        "color": "#166534",
+                                        "display": "inline-block",
+                                        "fontSize": "0.75rem",
+                                        "fontWeight": "500",
+                                        "horizontalPadding": "0.5rem",
+                                        "verticalPadding": "0.125rem"
+                                      },
+                                      "content": ":ninthCard.availabilityStatusLabel"
+                                    }
+                                  }
+                                ]
+                              },
+                              {
+                                "component": "Text",
+                                "componentProps": {
+                                  "content": ":ninthCard.workUnitDescription",
+                                  "style": {
+                                    "color": "#334a52",
+                                    "fontSize": 15,
+                                    "fontWeight": "bold"
+                                  }
+                                }
+                              },
+                              {
+                                "component": "Stack",
+                                "componentProps": {
+                                  "flexDirection": "row"
+                                },
+                                "fields": [
+                                  {
+                                    "component": "Text",
+                                    "componentProps": {
+                                      "content": "待作业任务：",
+                                      "content_i18n_key": "basic-production-execution|>work-unit-login|>pending-operation-tasks"
+                                    },
+                                    "style": {
+                                      "color": "#6b7280",
+                                      "fontSize": "0.875rem"
+                                    }
+                                  },
+                                  {
+                                    "component": "Text",
+                                    "componentProps": {
+                                      "content": ":ninthCard.wipQtySum",
+                                      "style": {
+                                        "color": "#374151",
+                                        "fontWeight": "500"
+                                      }
+                                    }
+                                  }
+                                ]
+                              }
+                            ]
+                          },
+                          {
+                            "component": "Button",
+                            "componentProps": {
+                              "action": {
+                                "methodName": "ninthButton",
+                                "type": "formMethod"
+                              },
+                              "iconPosition": "end",
+                              "type": "primary"
+                            },
+                            "id": "ninth",
+                            "style": {
+                              "border": "none",
+                              "cursor": "pointer",
+                              "height": "100%",
+                              "inset": 0,
+                              "margin": 0,
+                              "opacity": 0,
+                              "padding": 0,
+                              "position": "absolute",
+                              "width": "100%"
+                            }
+                          }
+                        ],
+                        "style": {
+                          "height": "100%",
+                          "width": "100%"
+                        }
+                      }
+                    ],
+                    "hidden": {
+                      "dataPredicate": {
+                        "conditions": [
+                          {
+                            "condition": "notBlank",
+                            "dataField": "ninthCard"
+                          }
+                        ],
+                        "operator": "AND"
+                      },
+                      "valueIfNegative": true,
+                      "valueIfPositive": false
+                    },
+                    "hover": {
+                      "boxShadow": "0 4px 6px rgba(0,0,0,0.1)"
+                    },
+                    "style": {
+                      "backgroundColor": "#ffffff",
+                      "border": "1px solid #e5e7eb",
+                      "borderRadius": "0.5rem",
+                      "boxShadow": "0 1px 2px rgba(0,0,0,0.05)",
+                      "cursor": "pointer",
+                      "padding": "1rem",
+                      "position": "relative",
+                      "transition": "all 0.2s"
+                    }
+                  },
+                  {
+                    "//className": ":nightCard.cardClass",
+                    "component": "Card",
+                    "fields": [
+                      {
+                        "component": "Stack",
+                        "componentProps": {
+                          "alignItems": "center",
+                          "flexDirection": "column",
+                          "justifyContent": "center"
+                        },
+                        "fields": [
+                          {
+                            "component": "Stack",
+                            "componentProps": {
+                              "flexDirection": "column"
+                            },
+                            "fields": [
+                              {
+                                "component": "Stack",
+                                "componentProps": {
+                                  "alignItems": "center",
+                                  "flexDirection": "row"
+                                },
+                                "fields": [
+                                  {
+                                    "component": "Text",
+                                    "componentProps": {
+                                      "content": ":tenthCard.workUnitId",
+                                      "style": {
+                                        "color": "#64B5F6",
+                                        "fontSize": "1.125rem",
+                                        "fontWeight": "700"
+                                      }
+                                    }
+                                  },
+                                  {
+                                    "className": ":nightCard.modeClass",
+                                    "component": "Text",
+                                    "componentProps": {
+                                      "//style": {
+                                        "backgroundColor": "#dcfce7",
+                                        "borderRadius": "9999px",
+                                        "color": "#166534",
+                                        "display": "inline-block",
+                                        "fontSize": "0.75rem",
+                                        "fontWeight": "500",
+                                        "horizontalPadding": "0.5rem",
+                                        "verticalPadding": "0.125rem"
+                                      },
+                                      "content": ":tenthCard.availabilityStatusLabel"
+                                    }
+                                  }
+                                ]
+                              },
+                              {
+                                "component": "Text",
+                                "componentProps": {
+                                  "content": ":tenthCard.workUnitDescription",
+                                  "style": {
+                                    "color": "#334a52",
+                                    "fontSize": 15,
+                                    "fontWeight": "bold"
+                                  }
+                                }
+                              },
+                              {
+                                "component": "Stack",
+                                "componentProps": {
+                                  "flexDirection": "row"
+                                },
+                                "fields": [
+                                  {
+                                    "component": "Text",
+                                    "componentProps": {
+                                      "content": "待作业任务：",
+                                      "content_i18n_key": "basic-production-execution|>work-unit-login|>pending-operation-tasks"
+                                    },
+                                    "style": {
+                                      "color": "#6b7280",
+                                      "fontSize": "0.875rem"
+                                    }
+                                  },
+                                  {
+                                    "component": "Text",
+                                    "componentProps": {
+                                      "content": ":tenthCard.wipQtySum",
+                                      "style": {
+                                        "color": "#374151",
+                                        "fontWeight": "500"
+                                      }
+                                    }
+                                  }
+                                ]
+                              }
+                            ]
+                          },
+                          {
+                            "component": "Button",
+                            "componentProps": {
+                              "action": {
+                                "methodName": "tenthButton",
+                                "type": "formMethod"
+                              },
+                              "iconPosition": "end",
+                              "type": "primary"
+                            },
+                            "id": "tenth",
+                            "style": {
+                              "border": "none",
+                              "cursor": "pointer",
+                              "height": "100%",
+                              "inset": 0,
+                              "margin": 0,
+                              "opacity": 0,
+                              "padding": 0,
+                              "position": "absolute",
+                              "width": "100%"
+                            }
+                          }
+                        ],
+                        "style": {
+                          "height": "100%",
+                          "width": "100%"
+                        }
+                      }
+                    ],
+                    "hidden": {
+                      "dataPredicate": {
+                        "conditions": [
+                          {
+                            "condition": "notBlank",
+                            "dataField": "tenthCard"
+                          }
+                        ],
+                        "operator": "AND"
+                      },
+                      "valueIfNegative": true,
+                      "valueIfPositive": false
+                    },
+                    "hover": {
+                      "boxShadow": "0 4px 6px rgba(0,0,0,0.1)"
+                    },
+                    "style": {
+                      "backgroundColor": "#ffffff",
+                      "border": "1px solid #e5e7eb",
+                      "borderRadius": "0.5rem",
+                      "boxShadow": "0 1px 2px rgba(0,0,0,0.05)",
+                      "cursor": "pointer",
+                      "padding": "1rem",
+                      "position": "relative",
+                      "transition": "all 0.2s"
+                    }
+                  }
+                ],
+                "id": "form-grid",
+                "style": {
+                  "width": "100%"
+                }
+              },
+              {
+                "component": "Stack",
+                "componentProps": {
+                  "alignItems": "center",
+                  "flexDirection": "row",
+                  "gap": 40,
+                  "justifyContent": "center"
+                },
+                "fields": [
+                  {
+                    "component": "Stack",
+                    "componentProps": {
+                      "flexDirection": "row"
+                    },
+                    "fields": [
+                      {
+                        "component": "Button",
+                        "componentProps": {
+                          "action": {
+                            "methodName": "leftClick",
+                            "type": "formMethod"
+                          },
+                          "content": "<",
+                          "type": "text"
+                        },
+                        "id": "leftButton",
+                        "style": {
+                          "backgroundColor": "#ffffff",
+                          "border": "1px solid #d1d5db",
+                          "borderRadius": "0.375rem",
+                          "horizontalPadding": "0.75rem",
+                          "verticalPadding": "0.25rem"
+                        }
+                      }
+                    ],
+                    "style": {
+                      "position": "relative"
+                    }
+                  },
+                  {
+                    "component": "Stack",
+                    "componentProps": {
+                      "flexDirection": "row",
+                      "justifyContent": "center"
+                    },
+                    "fields": [
+                      {
+                        "component": "Text",
+                        "componentProps": {
+                          "content": ":thisPage"
+                        },
+                        "style": {
+                          "fontSize": "16px",
+                          "fontWeight": "bold"
+                        }
+                      },
+                      {
+                        "component": "Text",
+                        "componentProps": {
+                          "content": "/"
+                        },
+                        "style": {
+                          "fontSize": "16px"
+                        }
+                      },
+                      {
+                        "component": "Text",
+                        "componentProps": {
+                          "content": ":pagination"
+                        },
+                        "style": {
+                          "fontSize": "16px",
+                          "fontWeight": "bold"
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "component": "Stack",
+                    "componentProps": {
+                      "flexDirection": "row"
+                    },
+                    "fields": [
+                      {
+                        "component": "Button",
+                        "componentProps": {
+                          "action": {
+                            "methodName": "rightClick",
+                            "type": "formMethod"
+                          },
+                          "content": ">",
+                          "type": "text"
+                        },
+                        "id": "rightButton",
+                        "style": {
+                          "backgroundColor": "#ffffff",
+                          "border": "1px solid #d1d5db",
+                          "borderRadius": "0.375rem",
+                          "horizontalPadding": "0.75rem",
+                          "verticalPadding": "0.25rem"
+                        }
+                      }
+                    ],
+                    "style": {
+                      "position": "relative"
+                    }
+                  }
+                ]
+              },
+              {
+                "component": "Card",
+                "fields": [
+                  {
+                    "component": "Text",
+                    "componentProps": {
+                      "content": "待作业列表",
+                      "content_i18n_key": "basic-production-execution|>work-unit-login|>pending-operation-list"
+                    },
+                    "style": {
+                      "fontSize": "1.25rem",
+                      "fontWeight": 600
+                    }
+                  },
+                  {
+                    "component": "Table",
+                    "componentProps": {
+                      "//dataUrl": "/flow/api/flow-rest/mock/mock-pending-task-list-flow",
+                      "autoSizeStrategy": {
+                        "type": "fitCellContents"
+                      },
+                      "columnDefs": [
+                        {
+                          "cellRendererParams": {
+                            "actions": [
+                              {
+                                "component": "Button",
+                                "componentProps": {
+                                  "action": {
+                                    "methodName": "setTaskData",
+                                    "successAction": {
+                                      "openDialogProps": {
+                                        "hideFooter": true,
+                                        "size": "lg"
+                                      },
+                                      "openFormProps": {
+                                        "FormRendererProps": {
+                                          "defaultData": ":currentData"
+                                        },
+                                        "schemaId": "panel-material-arrived-confirmation"
+                                      },
+                                      "type": "dialog"
+                                    },
+                                    "type": "formMethod"
+                                  },
+                                  "content": "到料确认",
+                                  "content_i18n_key": "basic-production-execution|>work-unit-login|>material-arrival-confirmation",
+                                  "type": "primary"
+                                },
+                                "disabled": {
+                                  "dataPredicate": {
+                                    "conditions": [
+                                      {
+                                        "condition": "equals",
+                                        "field": ":processStatus[0].code",
+                                        "value": "Paused"
+                                      }
+                                    ],
+                                    "operator": "AND"
+                                  }
+                                }
+                              }
+                            ],
+                            "displayLikeButton": true
+                          },
+                          "pinned": "right",
+                          "type": "ACTION_COLUMN"
+                        },
+                        {
+                          "colId": "workOrderNumber",
+                          "field": "workOrderNumber",
+                          "headerName": "工单号",
+                          "headerName_i18n_key": "standard|>any|>any|>workOrderNumber",
+                          "headerName_i18n_ns": "standard",
+                          "sortable": false
+                        },
+                        {
+                          "colId": "workOrderNumber.material",
+                          "field": "workOrderNumber.0.material",
+                          "headerName": "物料编码",
+                          "headerName_i18n_key": "basic-production-execution|>work-unit-login|>material-code",
+                          "sortable": false
+                        },
+                        {
+                          "cellRendererParams": {
+                            "enumStyle": "style6",
+                            "enums": [
+                              {
+                                "color": "_gray",
+                                "label": "待执行",
+                                "value": "WaitForStart"
+                              },
+                              {
+                                "color": "#6fecde",
+                                "label": "已下派",
+                                "value": "Assigned"
+                              },
+                              {
+                                "color": "_green",
+                                "label": "生产中",
+                                "value": "Processing"
+                              },
+                              {
+                                "color": "#cc64ce",
+                                "label": "已暂停",
+                                "value": "Paused"
+                              }
+                            ]
+                          },
+                          "colId": "processStatus",
+                          "field": "processStatus.0.code",
+                          "headerName": "状态",
+                          "headerName_i18n_key": "basic-production-execution|>work-unit-login|>status",
+                          "sortable": false,
+                          "type": "ENUM_COLUMN"
+                        },
+                        {
+                          "colId": "workOrderNumber.material.materialDescription",
+                          "field": "workOrderNumber.0.material.0.materialDescription",
+                          "headerName": "物料名称",
+                          "headerName_i18n_key": "basic-production-execution|>work-unit-login|>material-name",
+                          "hidden": {
+                            "dataPredicate": {
+                              "conditions": [
+                                {
+                                  "condition": "equals"
+                                }
+                              ],
+                              "operator": "AND"
+                            },
+                            "valueIfNegative": true,
+                            "valueIfPositive": false
+                          }
+                        },
+                        {
+                          "colId": "workShift",
+                          "field": "workShift",
+                          "headerName": "班次",
+                          "headerName_i18n_key": "basic-warehouse-logistics-management|>material-pick-request-add|>shift",
+                          "hidden": {
+                            "dataPredicate": {
+                              "conditions": [
+                                {
+                                  "condition": "equals",
+                                  "field": ":productionOperationMode",
+                                  "value": "byShift"
+                                }
+                              ],
+                              "operator": "AND"
+                            },
+                            "valueIfNegative": true,
+                            "valueIfPositive": false
+                          },
+                          "type": "SELECT_COLUMN"
+                        },
+                        {
+                          "colId": "batchNumber",
+                          "field": "batchNumber",
+                          "headerName": "批号",
+                          "headerName_i18n_key": "standard|>ERP 供应商管理|>any|>batchNumber",
+                          "headerName_i18n_ns": "standard",
+                          "sortable": false
+                        },
+                        {
+                          "colId": "parentHandle",
+                          "field": "parentHandle",
+                          "headerName": "关联在制品",
+                          "headerName_i18n_key": "basic-manufacturing-master-data|>wip-operation-task|>associated-work-in-process-cod",
+                          "hidden": true,
+                          "hide": true
+                        },
+                        {
+                          "colId": "operation",
+                          "field": "operation",
+                          "headerName": "工序",
+                          "headerName_i18n_key": "standard|>any|>any|>operation",
+                          "headerName_i18n_ns": "standard",
+                          "hide": true
+                        },
+                        {
+                          "colId": "operation.operationDescription",
+                          "field": "operation.0.operationDescription",
+                          "headerName": "工序名称",
+                          "headerName_i18n_key": "basic-production-execution|>work-unit-login|>operation-name",
+                          "sortable": false
+                        },
+                        {
+                          "colId": "workUnit",
+                          "field": "workUnit",
+                          "headerName": "生产单元",
+                          "headerName_i18n_key": "basic-manufacturing-master-data|>wip-operation-task|>production-unit",
+                          "sortable": false
+                        },
+                        {
+                          "colId": "plannedQuantity",
+                          "field": "plannedQuantity",
+                          "headerName": "计划数量",
+                          "headerName_i18n_key": "basic-manufacturing-master-data|>wip-operation-task|>planned-quantity"
+                        },
+                        {
+                          "cellEditorParams": {
+                            "componentProps": {
+                              "dateFormat": "YYYY-MM-DD HH:mm:ss",
+                              "showTime": true
+                            }
+                          },
+                          "cellRendererParams": {
+                            "dateFormat": "YYYY-MM-DD HH:mm:ss"
+                          },
+                          "colId": "plannedStartTime",
+                          "componentProps": {
+                            "showTime": true
+                          },
+                          "field": "plannedStartTime",
+                          "headerName": "计划开始时间",
+                          "headerName_i18n_key": "basic-manufacturing-master-data|>wip-operation-task|>planned-start-time",
+                          "sort": "asc",
+                          "sortable": false,
+                          "type": "DATE_COLUMN"
+                        },
+                        {
+                          "cellEditorParams": {
+                            "componentProps": {
+                              "dateFormat": "YYYY-MM-DD HH:mm:ss",
+                              "showTime": true
+                            }
+                          },
+                          "cellRendererParams": {
+                            "dateFormat": "YYYY-MM-DD HH:mm:ss"
+                          },
+                          "colId": "plannedEndTime",
+                          "componentProps": {
+                            "showTime": true
+                          },
+                          "field": "plannedEndTime",
+                          "headerName": "计划结束时间",
+                          "headerName_i18n_key": "basic-manufacturing-master-data|>wip-operation-task|>planned-end-time",
+                          "sortable": false,
+                          "type": "DATE_COLUMN"
+                        },
+                        {
+                          "colId": "factory",
+                          "field": "factory",
+                          "headerName": "所属工厂",
+                          "headerName_i18n_key": "basic-manufacturing-master-data|>wip-operation-task|>affiliated-factory",
+                          "hidden": true,
+                          "type": "SELECT_COLUMN"
+                        },
+                        {
+                          "colId": "organizationField",
+                          "field": "organizationField",
+                          "headerName": "所属组织",
+                          "headerName_i18n_key": "basic-manufacturing-master-data|>wip-operation-task|>affiliated-organization",
+                          "hidden": true,
+                          "type": "SELECT_COLUMN"
+                        }
+                      ],
+                      "dataFilters": [
+                        {
+                          "colId": "workUnit.workUnitId",
+                          "filter": ":filter",
+                          "filterType": "text",
+                          "type": "equals"
+                        },
+                        {
+                          "colId": "processStatus.code",
+                          "filterType": "set",
+                          "type": "in",
+                          "values": [
+                            "Processing",
+                            "Paused",
+                            "Assigned"
+                          ]
+                        }
+                      ],
+                      "dataSource": {
+                        "pbcToken": "basic-manufacturing-master-data",
+                        "token": "wip-operation-task"
+                      },
+                      "pinnedFilter": [
+                        "relatedWipId",
+                        "operation",
+                        "workUnit"
+                      ],
+                      "rowClassRules": {
+                        "isPlanedDateTimeSame": "new Date(data.plannedStartTime).valueOf() === new Date(data.plannedEndTime).valueOf()"
+                      },
+                      "rowSelection": {
+                        "mode": "multiRow"
+                      },
+                      "selectColId": [
+                        "workUnit.workUnitDescription",
+                        "workUnit.workUnitId",
+                        "processStatus.code",
+                        "processStatus.codeName",
+                        "operation.operation",
+                        "operation.operationDescription",
+                        "operation.itemCodeBinding",
+                        "workOrderNumber.handle",
+                        "workOrderNumber.material",
+                        "workOrderNumber.material.materialCode",
+                        "workOrderNumber.material.materialDescription",
+                        "workOrderNumber.bom",
+                        "workOrderNumber.bom.bom",
+                        "workOrderNumber.bom.handle",
+                        "workOrderNumber.bom.bomDescription",
+                        "workOrderNumber.router",
+                        "workOrderNumber.router.handle",
+                        "workOrderNumber.router.routerDescription",
+                        "workOrderNumber.router.routerId",
+                        "workOrderNumber.factory",
+                        "workOrderNumber.factory.handle",
+                        "workOrderNumber.factory.factoryDescription",
+                        "workUnit",
+                        "processStatus",
+                        "plannedQuantity",
+                        "plannedStartTime",
+                        "plannedEndTime",
+                        "assignedQuantity",
+                        "completedQuantity",
+                        "qualifiedQuantity",
+                        "defectiveQuantity",
+                        "scrapQuantity",
+                        "operation",
+                        "degradationAdoption",
+                        "concessionReceiveQuantity",
+                        "selectionExclusionQuantity",
+                        "finalWorker",
+                        "finalReportTime",
+                        "parentDataId",
+                        "workOrderNumber",
+                        "reworkQuantity",
+                        "actualStartTime",
+                        "actualEndTime",
+                        "parentHandle",
+                        "workUser",
+                        "serialNumber",
+                        "batchNumber",
+                        "factory",
+                        "factory.factoryId",
+                        "factory.handle",
+                        "factory.factoryDescription",
+                        "organizationField",
+                        "equipmentCode",
+                        "equipmentCode.equipmentId",
+                        "workShift",
+                        "workShift.handle",
+                        "workShift.workShiftId",
+                        "workShift.workShiftDescription"
+                      ],
+                      "suppressAddButton": true,
+                      "suppressExcelExport": true,
+                      "suppressFavoriteView": true,
+                      "suppressFilterPanel": true,
+                      "suppressFullscreen": true,
+                      "suppressSaveSetting": true,
+                      "suppressStatusBarTotalRows": true,
+                      "toolbarFields": [
+                        {
+                          "className": "short-title",
+                          "component": "Stack",
+                          "componentProps": {
+                            "alignItems": "center",
+                            "flexDirection": "row",
+                            "justifyContent": "flex-start"
+                          },
+                          "fields": [
+                            {
+                              "component": "Text",
+                              "componentProps": {
+                                "content": "班次",
+                                "content_i18n_key": "basic-production-execution|>work-unit-login|>shift"
+                              },
+                              "style": {
+                                "white-space": "nowrap"
+                              }
+                            },
+                            {
+                              "component": "Text",
+                              "componentProps": {
+                                "content": "*",
+                                "content_i18n_key": "basic-production-execution|>work-unit-login|>x"
+                              },
+                              "style": {
+                                "color": "red"
+                              }
+                            },
+                            {
+                              "component": "Select",
+                              "componentProps": {
+                                "dataFilters": [
+                                  {
+                                    "colId": "factory.handle",
+                                    "filter": ":factory",
+                                    "filterType": "text",
+                                    "type": "equals"
+                                  }
+                                ],
+                                "dataSource": {
+                                  "pbcToken": "basic-manufacturing-master-data",
+                                  "token": "work-shift"
+                                },
+                                "mapping": {
+                                  "id": "id",
+                                  "label": "workShiftDescription",
+                                  "value": "id",
+                                  "workShiftId": "workShiftId"
+                                },
+                                "placeholder": "请选择班次",
+                                "placeholder_i18n_key": "basic-production-execution|>work-unit-login|>please-select-shift",
+                                "selectColId": [
+                                  "workPeriodStart",
+                                  "workPeriodEnd",
+                                  "workShiftId",
+                                  "workShiftDescription"
+                                ],
+                                "showSearch": true,
+                                "sortModel": [
+                                  {
+                                    "colId": "createdTime",
+                                    "sort": "asc",
+                                    "sortType": "date"
+                                  }
+                                ],
+                                "stringEqual": true,
+                                "transformDataResponse": "$$$$ref:text:page-shift-transformDataResponse-1.js",
+                                "valueType": "value"
+                              },
+                              "defaultValue": ":searchParams.shift",
+                              "fieldTitleProps": {
+                                "hidden": true
+                              },
+                              "id": "shift",
+                              "style": {
+                                "width": "100px"
+                              },
+                              "title": "班次",
+                              "title_i18n_key": "basic-production-execution|>work-unit-login|>shift",
+                              "validation": {
+                                "required": true
+                              }
+                            }
+                          ]
+                        },
+                        {
+                          "className": "ant-button-start",
+                          "component": "Button",
+                          "componentProps": {
+                            "action": {
+                              "methodName": "startButtonClickEvent",
+                              "successAction": {
+                                "method": "post",
+                                "successAction": {
+                                  "methodName": "saveTasksInSession",
+                                  "successAction": {
+                                    "href": ":nextUrl",
+                                    "type": "link"
+                                  },
+                                  "type": "formMethod"
+                                },
+                                "transformDataRequest": "$$$$ref:text:page-transformDataRequest-2.js",
+                                "type": "request",
+                                "url": "/flow/api/flow-rest/productionStartCheck"
+                              },
+                              "type": "formMethod"
+                            },
+                            "content": "启动生产",
+                            "content_i18n_key": "basic-production-execution|>work-unit-login|>start-production",
+                            "icon": "material:play-arrow-rounded"
+                          },
+                          "disabled": {
+                            "dataPredicate": {
+                              "conditions": [
+                                {
+                                  "condition": "stringEquals",
+                                  "field": ":isSelected",
+                                  "value": "true"
+                                }
+                              ],
+                              "operator": "AND"
+                            },
+                            "valueIfNegative": true,
+                            "valueIfPositive": false
+                          },
+                          "id": "startButton"
+                        },
+                        {
+                          "className": "ant-button-warning",
+                          "component": "Button",
+                          "componentProps": {
+                            "action": {
+                              "methodName": "jumpOperationButtonClickEvent",
+                              "successAction": {
+                                "method": "post",
+                                "successAction": {
+                                  "methodName": "saveTasksInSession",
+                                  "successAction": {
+                                    "openDialogProps": {
+                                      "hideFooter": true
+                                    },
+                                    "openFormProps": {
+                                      "FormRendererProps": {
+                                        "defaultData": ":currentData"
+                                      },
+                                      "schemaId": "login"
+                                    },
+                                    "successAction": {
+                                      "href": ":nextUrl",
+                                      "type": "link"
+                                    },
+                                    "type": "dialog"
+                                  },
+                                  "type": "formMethod"
+                                },
+                                "transformDataRequest": "$$$$ref:text:page-transformDataRequest-3.js",
+                                "type": "request",
+                                "url": "/flow/api/flow-rest/productionStartCheck"
+                              },
+                              "type": "formMethod"
+                            },
+                            "content": "调序生产",
+                            "content_i18n_key": "basic-production-execution|>work-unit-login|>sequence-adjustment-production",
+                            "icon": "material:move-down-rounded"
+                          },
+                          "disabled": {
+                            "dataPredicate": {
+                              "conditions": [
+                                {
+                                  "condition": "stringEquals",
+                                  "field": ":isSelected",
+                                  "value": "true"
+                                }
+                              ],
+                              "operator": "AND"
+                            },
+                            "valueIfNegative": true,
+                            "valueIfPositive": false
+                          },
+                          "id": "jumpOperationButton"
+                        },
+                        {
+                          "className": "ant-button-danger",
+                          "component": "Button",
+                          "componentProps": {
+                            "action": {
+                              "openDialogProps": {
+                                "closable": false,
+                                "hideFooter": true,
+                                "keyboard": false,
+                                "maskClosable": false,
+                                "size": "lg"
+                              },
+                              "openFormProps": {
+                                "FormRendererProps": { },
+                                "formEntityDataId": ":shiftHandRecord",
+                                "formEntityLayoutToken": "to",
+                                "formEntityToken": "shift-handover-record",
+                                "formType": "ENTITY"
+                              },
+                              "type": "dialog"
+                            },
+                            "content": "接班",
+                            "content_i18n_key": "basic-production-execution|>work-unit-login|>shift-handover",
+                            "icon": "material:currency-exchange-outlined"
+                          },
+                          "id": "handoverButton",
+                          "style": {
+                            "display": "none"
+                          }
+                        },
+                        {
+                          "//hidden": {
+                            "dataPredicate": {
+                              "conditions": [ ],
+                              "operator": "AND"
+                            },
+                            "permissionPredicate": {
+                              "hasAnyOf": [
+                                "o_production-execution-station_pendingTask_addToCheck"
+                              ]
+                            },
+                            "valueIfNegative": true,
+                            "valueIfPositive": false
+                          },
+                          "className": "ant-button-check",
+                          "component": "Button",
+                          "componentProps": {
+                            "action": {
+                              "methodName": "addToList",
+                              "type": "formMethod"
+                            },
+                            "content": "加入点检",
+                            "content_i18n_key": "basic-production-execution|>work-unit-login|>add-to-inspection",
+                            "icon": "material:playlist-add-check-rounded"
+                          },
+                          "disabled": {
+                            "dataPredicate": {
+                              "conditions": [
+                                {
+                                  "condition": "stringEquals",
+                                  "field": ":isSelected",
+                                  "value": "true"
+                                }
+                              ],
+                              "operator": "AND"
+                            },
+                            "valueIfNegative": true,
+                            "valueIfPositive": false
+                          },
+                          "hidden": {
+                            "dataPredicate": {
+                              "conditions": [
+                                {
+                                  "condition": "notEqual",
+                                  "field": ":factory",
+                                  "value": "3300"
+                                }
+                              ],
+                              "operator": "AND"
+                            },
+                            "permissionPredicate": {
+                              "hasAnyOf": [
+                                "o_production-execution-station_pendingTask_addToCheck"
+                              ]
+                            },
+                            "valueIfNegative": true,
+                            "valueIfPositive": false
+                          },
+                          "id": "addCheckButton"
+                        },
+                        {
+                          "//hidden": {
+                            "dataPredicate": {
+                              "conditions": [ ],
+                              "operator": "AND"
+                            },
+                            "permissionPredicate": {
+                              "hasAnyOf": [
+                                "o_production-execution-station_pendingTask_checkExecute"
+                              ]
+                            },
+                            "valueIfNegative": true,
+                            "valueIfPositive": false
+                          },
+                          "className": "ant-button-batch-check",
+                          "component": "Button",
+                          "componentProps": {
+                            "action": {
+                              "methodName": "showSecondPage",
+                              "type": "formMethod"
+                            },
+                            "content": "执行点检",
+                            "content_i18n_key": "basic-production-execution|>pad-operation-inspection|>inspection-execution",
+                            "icon": "material:apps-outage-rounded"
+                          },
+                          "disabled": {
+                            "dataPredicate": {
+                              "conditions": [
+                                {
+                                  "condition": "is_present",
+                                  "field": ":selectedRows"
+                                },
+                                {
+                                  "condition": "notEqual",
+                                  "field": ":factory",
+                                  "value": "3300"
+                                }
+                              ],
+                              "operator": "AND"
+                            },
+                            "valueIfNegative": true,
+                            "valueIfPositive": false
+                          },
+                          "hidden": {
+                            "dataPredicate": {
+                              "conditions": [ ],
+                              "operator": "AND"
+                            },
+                            "permissionPredicate": {
+                              "hasAnyOf": [
+                                "o_production-execution-station-pendingTask_batchCheckExecute"
+                              ]
+                            },
+                            "valueIfNegative": true,
+                            "valueIfPositive": false
+                          },
+                          "id": "batchCheckButton"
+                        },
+                        {
+                          "className": "ant-button-success",
+                          "component": "Button",
+                          "componentProps": {
+                            "action": {
+                              "methodName": "inspcetionExeButtonClickEvent",
+                              "successAction": {
+                                "openDialogProps": {
+                                  "hideFooter": true,
+                                  "size": "lg"
+                                },
+                                "openFormProps": {
+                                  "FormRendererProps": {
+                                    "defaultData": ":currentData"
+                                  },
+                                  "schemaId": "inspection-execution"
+                                },
+                                "type": "dialog"
+                              },
+                              "type": "formMethod"
+                            },
+                            "content": "点检执行",
+                            "content_i18n_key": "basic-production-execution|>work-unit-login|>inspection-execution",
+                            "icon": "material:move-down-rounded"
+                          },
+                          "disabled": {
+                            "dataPredicate": {
+                              "conditions": [
+                                {
+                                  "condition": "notBlank",
+                                  "field": ":filter",
+                                  "value": ""
+                                },
+                                {
+                                  "condition": "notEqual",
+                                  "field": ":filter",
+                                  "value": "UNKOWN"
+                                }
+                              ],
+                              "operator": "AND"
+                            },
+                            "valueIfNegative": true,
+                            "valueIfPositive": false
+                          },
+                          "hidden": {
+                            "dataPredicate": {
+                              "conditions": [ ],
+                              "operator": "AND"
+                            },
+                            "permissionPredicate": {
+                              "hasAnyOf": [
+                                "o_production-execution-station_pendingTask_checkExecute"
+                              ]
+                            },
+                            "valueIfNegative": true,
+                            "valueIfPositive": false
+                          },
+                          "id": "inspcetionExeButton"
+                        }
+                      ]
+                    },
+                    "id": "pendingTaskList",
+                    "style": {
+                      "height": "90%"
+                    }
+                  }
+                ],
+                "style": {
+                  "height": "100%"
+                }
+              }
+            ],
+            "style": {
+              "flex": 1,
+              "padding": "0.5rem 0rem",
+              "width": "100%"
+            }
+          }
+        ],
+        "id": "firstPage",
+        "style": {
+          "height": "100%"
+        }
+      },
+      {
+        "component": "Stack",
+        "componentProps": {
+          "flexDirection": "column"
+        },
+        "fields": [
+          {
+            "component": "Stack",
+            "componentProps": {
+              "flexDirection": "column"
+            },
+            "fields": [
+              {
+                "component": "Card",
+                "fields": [
+                  {
+                    "component": "Stack",
+                    "componentProps": {
+                      "flexDirection": "column"
+                    },
+                    "fields": [
+                      {
+                        "component": "Text",
+                        "componentProps": {
+                          "content": "点检列表",
+                          "content_i18n_key": "basic-production-execution|>work-unit-login|>inspection-list"
+                        },
+                        "style": {
+                          "color": "white",
+                          "fontSize": "1.5rem",
+                          "fontWeight": "bold"
+                        }
+                      },
+                      {
+                        "component": "Text",
+                        "componentProps": {
+                          "content": "待点检任务列表",
+                          "content_i18n_key": "basic-production-execution|>work-unit-login|>pending-inspection-task-list"
+                        },
+                        "style": {
+                          "color": "#ffffff",
+                          "fontSize": "0.875rem",
+                          "marginTop": "0.25rem",
+                          "opacity": "0.9"
+                        }
+                      }
+                    ]
+                  }
+                ],
+                "style": {
+                  "backgroundColor": "#1e40af",
+                  "borderRadius": "0.375rem 0.375rem 0rem 0rem",
+                  "boxShadow": "0 4px 6px rgba(0,0,0,0.1)",
+                  "color": "#ffffff",
+                  "horizontalPadding": "1.5rem",
+                  "verticalPadding": "1rem",
+                  "width": "100%"
+                }
+              },
+              {
+                "component": "Table",
+                "componentProps": {
+                  "columnDefs": [
+                    {
+                      "cellRendererParams": {
+                        "actions": [
+                          {
+                            "component": "Button",
+                            "componentProps": {
+                              "action": {
+                                "methodName": "deleteButtonClickEvent",
+                                "type": "formMethod"
+                              },
+                              "content": "删除",
+                              "content_i18n_key": "basic-production-execution|>work-unit-login|>delete",
+                              "type": "link"
+                            }
+                          }
+                        ]
+                      },
+                      "pinned": "right",
+                      "type": "ACTION_COLUMN"
+                    },
+                    {
+                      "colId": "workUnit",
+                      "field": "workUnit",
+                      "headerName": "生产单元",
+                      "headerName_i18n_key": "basic-production-execution|>work-unit-login|>production-unit",
+                      "hidden": true
+                    },
+                    {
+                      "colId": "workUnit.workUnitDescription",
+                      "field": "workUnit.0.workUnitDescription",
+                      "headerName": "生产单元",
+                      "headerName_i18n_key": "basic-production-execution|>work-unit-login|>production-unit"
+                    },
+                    {
+                      "colId": "workOrderNumber",
+                      "field": "workOrderNumber",
+                      "headerName": "工单号",
+                      "headerName_i18n_key": "basic-production-execution|>work-unit-login|>work-order-number"
+                    },
+                    {
+                      "colId": "workOrderNumber.material",
+                      "field": "workOrderNumber.0.material",
+                      "headerName": "物料编码",
+                      "headerName_i18n_key": "basic-production-execution|>work-unit-login|>material-code"
+                    },
+                    {
+                      "colId": "workOrderNumber.material.materialDescription",
+                      "field": "workOrderNumber.0.material.0.materialDescription",
+                      "headerName": "物料名称",
+                      "headerName_i18n_key": "basic-production-execution|>work-unit-login|>material-name"
+                    },
+                    {
+                      "colId": "batchNumber",
+                      "field": "batchNumber",
+                      "headerName": "批号",
+                      "headerName_i18n_key": "basic-production-execution|>work-unit-login|>batch-number"
+                    },
+                    {
+                      "colId": "operation.operationDescription",
+                      "field": "operation.0.operationDescription",
+                      "headerName": "工序名称",
+                      "headerName_i18n_key": "basic-production-execution|>work-unit-login|>operation-name"
+                    },
+                    {
+                      "colId": "plannedQuantity",
+                      "field": "plannedQuantity",
+                      "headerName": "计划数量",
+                      "headerName_i18n_key": "basic-production-execution|>work-unit-login|>planned-quantity",
+                      "hidden": true
+                    },
+                    {
+                      "colId": "operation",
+                      "field": "operation",
+                      "headerName": "工序",
+                      "headerName_i18n_key": "basic-production-execution|>work-unit-login|>operation",
+                      "hide": true
+                    },
+                    {
+                      "colId": "factory",
+                      "field": "factory",
+                      "headerName": "所属工厂",
+                      "headerName_i18n_key": "basic-production-execution|>work-unit-login|>factory",
+                      "hidden": true,
+                      "type": "SELECT_COLUMN"
+                    },
+                    {
+                      "colId": "organizationField",
+                      "field": "organizationField",
+                      "headerName": "所属组织",
+                      "headerName_i18n_key": "basic-production-execution|>work-unit-login|>organization",
+                      "hidden": true,
+                      "type": "SELECT_COLUMN"
+                    }
+                  ],
+                  "needCount": false,
+                  "rowModelType": "clientSide",
+                  "rowSelection": {
+                    "mode": "multiRow"
+                  },
+                  "suppressAddButton": true,
+                  "suppressFavoriteView": true,
+                  "suppressFilterPanel": true,
+                  "suppressSaveSetting": true,
+                  "toolbarFields": [
+                    {
+                      "className": "ant-button-check",
+                      "component": "Button",
+                      "componentProps": {
+                        "action": {
+                          "methodName": "showFirstPage",
+                          "type": "formMethod"
+                        },
+                        "content": "返回",
+                        "content_i18n_key": "basic-production-execution|>work-unit-login|>back",
+                        "icon": "material:keyboard-return-sharp"
+                      }
+                    },
+                    {
+                      "className": "ant-button-danger",
+                      "component": "Button",
+                      "componentProps": {
+                        "action": {
+                          "methodName": "batchDeleteButtonClickEvent",
+                          "type": "formMethod"
+                        },
+                        "content": "移除点检工单",
+                        "content_i18n_key": "basic-production-execution|>work-unit-login|>remove-inspection-work-order",
+                        "icon": "material:app-registration-rounded"
+                      }
+                    },
+                    {
+                      "className": "ant-button-batch-check",
+                      "component": "Button",
+                      "componentProps": {
+                        "action": {
+                          "methodName": "addCheckList",
+                          "successAction": {
+                            "openDialogProps": {
+                              "hideFooter": true,
+                              "size": "lg"
+                            },
+                            "openFormProps": {
+                              "FormRendererProps": {
+                                "defaultData": ":currentData"
+                              },
+                              "schemaId": "batch-check-execute-check-model"
+                            },
+                            "type": "dialog"
+                          },
+                          "type": "formMethod"
+                        },
+                        "content": "点检执行",
+                        "content_i18n_key": "basic-production-execution|>work-unit-login|>inspection-execution",
+                        "icon": "material:app-registration-rounded"
+                      }
+                    }
+                  ]
+                },
+                "id": "selectedRows"
+              }
+            ]
+          }
+        ],
+        "id": "secondPage",
+        "style": {
+          "display": "none"
+        }
+      }
+    ],
+    "form": {
+      "disableDirty": true,
+      "execScriptOn": "didMount",
+      "labelLayout": "vertical",
+      "script": "$$$$ref:text:page-form-script.js",
+      "transformRetrievedData": "$$$$ref:text:page-form-transformRetrievedData.js"
+    }
+  }
+}

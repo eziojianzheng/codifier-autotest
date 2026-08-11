@@ -1,0 +1,48 @@
+{
+  "definition_$$$NESTED_JSON_STRING$$$": {
+    "formEntityId": "",
+    "formInput": null,
+    "inputFields": [
+      {
+        "controlType": "input",
+        "dataType": "string",
+        "label": "batchInput",
+        "label_i18n_en-US": "Bulk data insertion",
+        "label_i18n_ja-JP": "一括データ追加",
+        "name": "batchInput",
+        "optional": true
+      },
+      {
+        "controlType": "entity",
+        "label": "Form Entity",
+        "label_i18n_en-US": "Form Entity",
+        "label_i18n_ja-JP": "フォーム・エンティティ",
+        "name": "formEntityToken",
+        "optional": false
+      }
+    ],
+    "outputFields": [
+      {
+        "dataType": "list",
+        "label": "返回结果",
+        "label_i18n_en-US": "results",
+        "label_i18n_ja-JP": "結果",
+        "name": "results"
+      },
+      {
+        "dataType": "string",
+        "label": "返回数量",
+        "label_i18n_en-US": "count",
+        "label_i18n_ja-JP": "数量",
+        "name": "count"
+      }
+    ],
+    "sdkType": "BATCH_CREATE_ENTITY"
+  },
+  "isSystem": 1,
+  "name": "批量新建表单数据",
+  "nameEnUs": "Bulk create form data",
+  "nameJaJp": "一括でフォームデータを作成する",
+  "sdkType": "BATCH_CREATE_ENTITY",
+  "uuid": "8abc1654-b307-4fe9-b41a-72f9d7481e79"
+}

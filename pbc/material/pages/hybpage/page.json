@@ -1,0 +1,79 @@
+{
+  "name": "hybpage",
+  "schemaId": "hybpage",
+  "schemaJson_$$$NESTED_JSON_STRING$$$": {
+    "fields": [
+      {
+        "component": "Card",
+        "fields": [
+          {
+            "component": "Table",
+            "componentProps": {
+              "addButtonHref": "/form/hyb/layout/default",
+              "columnDefs": [
+                {
+                  "colId": "hyid",
+                  "field": "hyid",
+                  "headerName": "hyid",
+                  "type": "NUMBER_COLUMN"
+                },
+                {
+                  "colId": "zt",
+                  "field": "zt",
+                  "headerName": "zt",
+                  "type": "TEXT_COLUMN"
+                },
+                {
+                  "colId": "hyxm",
+                  "field": "hyxm",
+                  "headerName": "hyxm",
+                  "type": "TEXT_COLUMN"
+                },
+                {
+                  "cellRendererParams": {
+                    "actions": [
+                      {
+                        "href": "/form/orders/layout/default/:id",
+                        "type": "EDIT"
+                      },
+                      {
+                        "href": "/form/:id/view",
+                        "type": "VIEW"
+                      },
+                      {
+                        "type": "DELETE"
+                      }
+                    ],
+                    "displayLikeButton": true,
+                    "showIcon": true
+                  },
+                  "type": "ACTION_COLUMN",
+                  "width": 240
+                }
+              ],
+              "dataSource": {
+                "token": "hyb"
+              },
+              "pagination": true,
+              "pinnedFilter": [
+                "hyid",
+                "zt",
+                "hyxm"
+              ]
+            },
+            "id": "orders-table",
+            "style": {
+              "height": "100%"
+            }
+          }
+        ],
+        "style": {
+          "height": "100%"
+        }
+      }
+    ],
+    "form": {
+      "title": "orders List"
+    }
+  }
+}

@@ -1,0 +1,95 @@
+{
+  "dataLocation": "LOCAL",
+  "defaultViewLayoutToken": "view",
+  "enableForbidUpdateSomeFieldsValueWhenReferenced": 0,
+  "fields": [
+    {
+      "encryptStorage": 0,
+      "encryptTransit": 0,
+      "forbidToUpdate": false,
+      "name": "Date Picker",
+      "storageField": "value3",
+      "token": "date",
+      "type": "DATE"
+    },
+    {
+      "encryptStorage": 0,
+      "encryptTransit": 0,
+      "forbidToUpdate": false,
+      "name": "Number Picker",
+      "storageField": "value2",
+      "token": "number",
+      "type": "NUMBER"
+    },
+    {
+      "encryptStorage": 0,
+      "encryptTransit": 0,
+      "forbidToUpdate": false,
+      "name": "Rich Text",
+      "storageField": "value4",
+      "token": "richText",
+      "type": "RICH_TEXT"
+    },
+    {
+      "encryptStorage": 0,
+      "encryptTransit": 0,
+      "forbidToUpdate": false,
+      "maxLength": 5,
+      "name": "Text",
+      "regex": "^[0-9]*$",
+      "storageField": "value1",
+      "token": "singleLineText",
+      "type": "TEXT_BOX"
+    },
+    {
+      "encryptStorage": 0,
+      "encryptTransit": 0,
+      "forbidToUpdate": false,
+      "maxLength": 5,
+      "name": "Textarea",
+      "storageField": "value6",
+      "token": "textarea",
+      "type": "TEXTAREA"
+    },
+    {
+      "encryptStorage": 0,
+      "encryptTransit": 0,
+      "forbidToUpdate": false,
+      "multiple": true,
+      "name": "Upload",
+      "storageField": "value5",
+      "token": "upload",
+      "type": "UPLOAD"
+    }
+  ],
+  "isAutoLock": 0,
+  "isDeletableWhenReferenced": 1,
+  "isInnerEntity": 0,
+  "isMasterData": 0,
+  "layouts": [
+    {
+      "defaultLayout": true,
+      "name": "New",
+      "sortIndex": 0,
+      "token": "new"
+    },
+    {
+      "defaultLayout": false,
+      "name": "Edit",
+      "sortIndex": 1,
+      "token": "edit"
+    },
+    {
+      "defaultLayout": false,
+      "name": "View",
+      "sortIndex": 2,
+      "token": "view"
+    }
+  ],
+  "name": "isizuTicket Form",
+  "permissionTarget": "isuzuhighticket-form",
+  "remoteNoSystemColumns": true,
+  "standalone": 0,
+  "standaloneTableNormalized": 0,
+  "token": "isuzuhighticket-form"
+}

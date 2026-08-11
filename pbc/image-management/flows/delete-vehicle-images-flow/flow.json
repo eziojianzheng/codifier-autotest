@@ -1,0 +1,91 @@
+{
+  "description": "",
+  "name": "車両画像データ削除",
+  "nodeList": [
+    {
+      "enabled": true,
+      "id": 2,
+      "inMemory": true,
+      "inMemoryTransaction": false,
+      "interval": 60,
+      "nodeName": "TRIGGER",
+      "periodEnd": "23:59:59",
+      "periodStart": "00:00:00",
+      "restTrigger": {
+        "eligibleForAgent": false,
+        "method": "POST",
+        "requestBody": [
+          {
+            "dataType": "string",
+            "label": "formdataid",
+            "name": "formdataid",
+            "optional": false
+          }
+        ],
+        "url": "/flow/api/flow-rest/delete-vehicle-images-flow"
+      },
+      "scheduleType": "ONE_TIME",
+      "startTime": 1765530754983,
+      "triggerType": "REST",
+      "type": "TRIGGER",
+      "version": "2.0"
+    },
+    {
+      "enabled": true,
+      "id": 1,
+      "nodeName": "APP - Batch physical deletion of form data",
+      "sdk": {
+        "input": {
+          "formEntityToken": "vehicle-images-form",
+          "ids": "$2.restTrigger.requestBody.formdataid",
+          "onlyForDeletedData": "false",
+          "pbcToken": "image-management"
+        },
+        "inputFields": [
+          {
+            "controlType": "input",
+            "dataType": "string",
+            "label": "ids",
+            "name": "ids",
+            "optional": false
+          },
+          {
+            "controlType": "entity",
+            "label": "Form Entity",
+            "name": "formEntityToken",
+            "optional": false
+          },
+          {
+            "controlType": "select",
+            "dataType": "string",
+            "defaultValue": true,
+            "label": "Delete only the deleted data",
+            "name": "onlyForDeletedData",
+            "optional": true,
+            "pickList": [
+              "true",
+              "false"
+            ]
+          }
+        ],
+        "name": "Batch physical deletion of form data",
+        "outputFields": [ ],
+        "sdkType": "PHYSICAL_BATCH_DELETE_FORM_ENTITY_DATA",
+        "uuid": "0ee40386-b7d5-47c2-b8c2-50aaea645f01"
+      },
+      "type": "APP",
+      "version": "1.0"
+    },
+    {
+      "enabled": true,
+      "id": 3,
+      "nodeName": "STOP_JOB",
+      "result": "Successful",
+      "type": "STOP_JOB"
+    }
+  ],
+  "restApiEnabled": 1,
+  "restApiMethod": "POST",
+  "restApiUrl": "/flow/api/flow-rest/delete-vehicle-images-flow",
+  "token": "delete-vehicle-images-flow"
+}

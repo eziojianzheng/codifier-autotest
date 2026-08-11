@@ -1,0 +1,21 @@
+{
+  "category": "BUSINESS",
+  "contributor": "Goto, Tsukasa",
+  "formDashboardLayoutList": [ ],
+  "formEntityRelationList": [ ],
+  "matchWeight": 0.0,
+  "name": "Image Management",
+  "routesJson_$$$NESTED_JSON_STRING$$$": {
+    "desktop": { },
+    "mobile": {
+      "/login/": {
+        "formType": "",
+        "noNeedAuth": true,
+        "schemaId": "login"
+      }
+    }
+  },
+  "tags": "dms",
+  "token": "image-management",
+  "uiPluginList": [ ]
+}

@@ -1,0 +1,17 @@
+{
+  "fields": [
+    {
+      "component": "Upload",
+      "componentProps": {
+        "listType": "picture-card"
+      },
+      "id": "uploadPic",
+      "title": "uploadpic"
+    }
+  ],
+  "form": {
+    "defaultCancelButton": true,
+    "defaultSubmitButton": true,
+    "title": "布局 EDITED"
+  }
+}

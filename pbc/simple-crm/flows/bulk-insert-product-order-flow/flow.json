@@ -1,0 +1,227 @@
+{
+  "name": "批量插入产品订单",
+  "nodeList": [
+    {
+      "enabled": true,
+      "id": 1,
+      "nodeName": "APP - Get form data based on conditions",
+      "sdk": {
+        "input": {
+          "formEntityToken": "product-management-form",
+          "include_deleted": "false",
+          "lockUpdate": "false",
+          "needACL": "false",
+          "needResource": "false",
+          "needText": "false",
+          "pbcToken": "simple-crm",
+          "projectToken": "$CURRENT_PROJECT.token",
+          "throw_exception": "false"
+        },
+        "inputFields": [
+          {
+            "controlType": "select",
+            "dataType": "string",
+            "label": "Need ACL",
+            "name": "needACL",
+            "optional": false,
+            "pickList": [
+              "true",
+              "false"
+            ]
+          },
+          {
+            "controlType": "select",
+            "dataType": "string",
+            "label": "Need Resource",
+            "name": "needResource",
+            "optional": false,
+            "pickList": [
+              "true",
+              "false"
+            ]
+          },
+          {
+            "controlType": "select",
+            "dataType": "string",
+            "label": "Need Text",
+            "name": "needText",
+            "optional": false,
+            "pickList": [
+              "true",
+              "false"
+            ]
+          },
+          {
+            "controlType": "select",
+            "dataType": "string",
+            "label": "Include Deleted",
+            "name": "include_deleted",
+            "optional": false,
+            "pickList": [
+              "true",
+              "false"
+            ]
+          },
+          {
+            "controlType": "select",
+            "dataType": "string",
+            "label": "Whether throw exception if data cannot be retrieved",
+            "name": "throw_exception",
+            "optional": false,
+            "pickList": [
+              "true",
+              "false"
+            ]
+          },
+          {
+            "controlType": "select",
+            "dataType": "string",
+            "label": "Need Count",
+            "name": "needCount",
+            "optional": false,
+            "pickList": [
+              "true",
+              "false"
+            ]
+          },
+          {
+            "controlType": "input",
+            "dataType": "number",
+            "label": "Start Row",
+            "name": "startRow",
+            "optional": false
+          },
+          {
+            "controlType": "input",
+            "dataType": "number",
+            "label": "End Row",
+            "name": "endRow",
+            "optional": false
+          }
+        ],
+        "name": "Get form data based on conditions",
+        "numberStringToBigDecimal": false,
+        "outputFields": [
+          {
+            "label": "results",
+            "name": "results"
+          },
+          {
+            "dataType": "string",
+            "label": "count",
+            "name": "count"
+          }
+        ],
+        "sdkType": "LIST_QUERY",
+        "uuid": "b4ffad17-593b-4868-940b-70d89fa35cc3"
+      },
+      "type": "APP",
+      "version": "1.0"
+    },
+    {
+      "enabled": true,
+      "id": 4,
+      "nodeName": "APP - Python script",
+      "sdk": {
+        "code": "$$$$ref:text:sdk-4.py",
+        "input": {
+          "results": "$1.results"
+        },
+        "inputFields": [
+          {
+            "dataType": "string",
+            "label": "results",
+            "name": "results",
+            "optional": false
+          }
+        ],
+        "name": "Python script",
+        "numberStringToBigDecimal": false,
+        "outputFields": [
+          {
+            "dataType": "string",
+            "label": "new_results",
+            "name": "new_results"
+          }
+        ],
+        "sdkType": "GENERAL_PYTHON_2",
+        "uuid": "012bd68f-a7ad-495c-af33-bd630aee13c1"
+      },
+      "type": "APP",
+      "version": "1.0"
+    },
+    {
+      "enabled": true,
+      "id": 3,
+      "nodeName": "APP - Bulk create form data",
+      "sdk": {
+        "formEntityId": "",
+        "input": {
+          "batchInput": "$4.new_results",
+          "batchSize": "500",
+          "formEntityToken": "product-management-form",
+          "needReturnValue": "false",
+          "pbcToken": "simple-crm"
+        },
+        "inputFields": [
+          {
+            "controlType": "input",
+            "dataType": "string",
+            "label": "Bulk data insertion",
+            "name": "batchInput",
+            "optional": true
+          },
+          {
+            "controlType": "entity",
+            "label": "Form Entity",
+            "name": "formEntityToken",
+            "optional": false
+          },
+          {
+            "controlType": "select",
+            "dataType": "string",
+            "label": "Need Return Created Value",
+            "name": "needReturnValue",
+            "optional": true,
+            "pickList": [
+              "true",
+              "false"
+            ]
+          },
+          {
+            "controlType": "input",
+            "label": "Batch Size",
+            "name": "batchSize",
+            "optional": false
+          }
+        ],
+        "name": "Bulk create form data",
+        "numberStringToBigDecimal": false,
+        "outputFields": [
+          {
+            "label": "results",
+            "name": "results"
+          },
+          {
+            "dataType": "string",
+            "label": "count",
+            "name": "count"
+          }
+        ],
+        "sdkType": "BATCH_CREATE_ENTITY",
+        "uuid": "8abc1654-b307-4fe9-b41a-72f9d7481e79"
+      },
+      "type": "APP",
+      "version": "1.0"
+    },
+    {
+      "enabled": true,
+      "id": 2,
+      "nodeName": "STOP_JOB",
+      "result": "Successful",
+      "type": "STOP_JOB"
+    }
+  ],
+  "restApiEnabled": 0,
+  "token": "bulk-insert-product-order-flow"
+}

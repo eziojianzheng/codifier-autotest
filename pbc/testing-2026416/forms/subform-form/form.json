@@ -1,0 +1,68 @@
+{
+  "dataLocation": "LOCAL",
+  "enableForbidUpdateSomeFieldsValueWhenReferenced": 0,
+  "fields": [
+    {
+      "encryptStorage": 0,
+      "encryptTransit": 0,
+      "forbidToUpdate": false,
+      "maxLength": 200,
+      "name": "Input",
+      "storageField": "value2",
+      "token": "input",
+      "type": "TEXT_BOX"
+    },
+    {
+      "encryptStorage": 0,
+      "encryptTransit": 0,
+      "forbidToUpdate": false,
+      "maxLength": 200,
+      "name": "Number Picker",
+      "storageField": "value4",
+      "token": "numberPicker",
+      "type": "NUMBER"
+    },
+    {
+      "domain": "ERP 供应商管理",
+      "encryptStorage": 0,
+      "encryptTransit": 0,
+      "forbidToUpdate": false,
+      "maxLength": 200,
+      "name": "parentDataId",
+      "nameI18nKey": "standard|>ERP 供应商管理|>any|>parentDataId",
+      "nameI18nNs": "standard",
+      "source": "b005371d-8ca6-4549-a492-e523eebd82c7",
+      "storageField": "value1",
+      "token": "parentDataId",
+      "type": "TEXT_BOX"
+    },
+    {
+      "encryptStorage": 0,
+      "encryptTransit": 0,
+      "forbidToUpdate": false,
+      "maxLength": 200,
+      "name": "Textarea",
+      "storageField": "value3",
+      "token": "textarea",
+      "type": "TEXTAREA"
+    }
+  ],
+  "isAutoLock": 0,
+  "isDeletableWhenReferenced": 1,
+  "isInnerEntity": 0,
+  "isMasterData": 0,
+  "layouts": [
+    {
+      "defaultLayout": true,
+      "name": "Layout",
+      "sortIndex": 0,
+      "token": "default"
+    }
+  ],
+  "name": "subform",
+  "permissionTarget": "subform-form",
+  "remoteNoSystemColumns": true,
+  "standalone": 0,
+  "standaloneTableNormalized": 0,
+  "token": "subform-form"
+}

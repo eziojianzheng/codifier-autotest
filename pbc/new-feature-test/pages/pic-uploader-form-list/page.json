@@ -1,0 +1,69 @@
+{
+  "schemaId": "pic-uploader-form-list",
+  "schemaJson_$$$NESTED_JSON_STRING$$$": {
+    "fields": [
+      {
+        "component": "Card",
+        "fields": [
+          {
+            "component": "Table",
+            "componentProps": {
+              "addButtonHref": "/form/pic-uploader-form/layout/default",
+              "columnDefs": [
+                {
+                  "cellRendererParams": {
+                    "componentProps": {
+                      "listType": "picture-card"
+                    }
+                  },
+                  "colId": "uploadPic",
+                  "field": "uploadPic",
+                  "headerName": "uploadpic",
+                  "type": "UPLOAD_COLUMN"
+                },
+                {
+                  "cellRendererParams": {
+                    "actions": [
+                      {
+                        "href": "/form/pic-uploader-form/layout/default/:id",
+                        "type": "EDIT"
+                      },
+                      {
+                        "href": "/form/:id/view",
+                        "type": "VIEW"
+                      },
+                      {
+                        "type": "DELETE"
+                      }
+                    ],
+                    "displayLikeButton": true,
+                    "showIcon": true
+                  },
+                  "type": "ACTION_COLUMN",
+                  "width": 240
+                }
+              ],
+              "dataSource": {
+                "token": "pic-uploader-form"
+              },
+              "pagination": true,
+              "pinnedFilter": [
+                "uploadPic"
+              ]
+            },
+            "id": "pic-uploader-form-table",
+            "style": {
+              "height": "100%"
+            }
+          }
+        ],
+        "style": {
+          "height": "100%"
+        }
+      }
+    ],
+    "form": {
+      "title": "picuploader列表"
+    }
+  }
+}

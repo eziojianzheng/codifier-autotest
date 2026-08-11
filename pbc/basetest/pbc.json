@@ -1,0 +1,11 @@
+{
+  "category": "BUSINESS",
+  "contributor": "admin",
+  "description": "basetest",
+  "formDashboardLayoutList": [ ],
+  "formEntityRelationList": [ ],
+  "matchWeight": 0.0,
+  "name": "基础测试",
+  "token": "basetest",
+  "uiPluginList": [ ]
+}

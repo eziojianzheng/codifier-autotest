@@ -1,0 +1,69 @@
+{
+  "fields": [
+    {
+      "component": "Card",
+      "fields": [
+        {
+          "component": "Input",
+          "id": "singleLineText",
+          "title": "Text",
+          "validation": {
+            "maxLength": 200
+          }
+        },
+        {
+          "component": "NumberPicker",
+          "id": "number",
+          "title": "Number Picker"
+        },
+        {
+          "component": "DatePicker",
+          "id": "date",
+          "title": "Date Picker",
+          "title_i18n_key": "multilanguagetest|>multilanguagetest-form|>date-picker"
+        },
+        {
+          "component": "Upload",
+          "componentProps": {
+            "listType": "picture-card"
+          },
+          "id": "upload",
+          "title": "Upload",
+          "title_i18n_key": "multilanguagetest|>multilanguagetest-form|>upload"
+        },
+        {
+          "component": "RichText",
+          "id": "richText",
+          "title": "Rich Text"
+        }
+      ]
+    },
+    {
+      "component": "Stack",
+      "componentProps": {
+        "justifyContent": "flex-end"
+      },
+      "fields": [
+        {
+          "component": "Button",
+          "componentProps": {
+            "action": {
+              "type": "cancel"
+            },
+            "content": "Cancel"
+          }
+        }
+      ],
+      "style": {
+        "marginTop": 12
+      }
+    }
+  ],
+  "form": {
+    "defaultCancelButton": false,
+    "defaultSubmitButton": false,
+    "labelLayout": "vertical",
+    "readonly": true,
+    "title": "View"
+  }
+}

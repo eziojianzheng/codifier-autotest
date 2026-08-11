@@ -1,0 +1,128 @@
+{
+  "schemaId": "catform-form-list",
+  "schemaJson_$$$NESTED_JSON_STRING$$$": {
+    "fields": [
+      {
+        "component": "Card",
+        "fields": [
+          {
+            "component": "Table",
+            "componentProps": {
+              "addButtonHref": "/form/catform-form/layout/default",
+              "columnDefs": [
+                {
+                  "colId": "status",
+                  "field": "status",
+                  "headerName": "状态",
+                  "type": "TEXT_COLUMN"
+                },
+                {
+                  "colId": "catName",
+                  "field": "catName",
+                  "headerName": "Cat Name",
+                  "headerName_i18n_key": "ui-template-maker|>form-template-form|>catName",
+                  "type": "TEXT_COLUMN"
+                },
+                {
+                  "colId": "breed",
+                  "field": "breed",
+                  "headerName": "Breed",
+                  "headerName_i18n_key": "ui-template-maker|>form-template-form|>breed",
+                  "type": "TEXT_COLUMN"
+                },
+                {
+                  "colId": "age",
+                  "field": "age",
+                  "headerName": "Age",
+                  "headerName_i18n_key": "ui-template-maker|>form-template-form|>age",
+                  "type": "NUMBER_COLUMN"
+                },
+                {
+                  "colId": "gender",
+                  "field": "gender",
+                  "headerName": "Gender",
+                  "headerName_i18n_key": "ui-template-maker|>form-template-form|>gender",
+                  "type": "SELECT_COLUMN"
+                },
+                {
+                  "colId": "coatColor",
+                  "field": "coatColor",
+                  "headerName": "Coat Color",
+                  "headerName_i18n_key": "ui-template-maker|>form-template-form|>coatColor",
+                  "type": "SELECT_COLUMN"
+                },
+                {
+                  "colId": "weightKg",
+                  "field": "weightKg",
+                  "headerName": "Weight (kg)",
+                  "headerName_i18n_key": "ui-template-maker|>form-template-form|>weightKg",
+                  "type": "NUMBER_COLUMN"
+                },
+                {
+                  "colId": "lastVaccinationDate",
+                  "field": "lastVaccinationDate",
+                  "headerName": "Last Vaccination Date",
+                  "headerName_i18n_key": "ui-template-maker|>form-template-form|>lastVaccinationDate",
+                  "type": "DATE_COLUMN"
+                },
+                {
+                  "colId": "isNeutered",
+                  "field": "isNeutered",
+                  "headerName": "Neutered",
+                  "headerName_i18n_key": "ui-template-maker|>form-template-form|>isNeutered"
+                },
+                {
+                  "colId": "notes",
+                  "field": "notes",
+                  "headerName": "Notes",
+                  "headerName_i18n_key": "ui-template-maker|>form-template-form|>notes",
+                  "type": "TEXTAREA_COLUMN"
+                },
+                {
+                  "cellRendererParams": {
+                    "actions": [
+                      {
+                        "href": "/form/catform-form/layout/default/:id",
+                        "type": "EDIT"
+                      },
+                      {
+                        "href": "/form/:id/view",
+                        "type": "VIEW"
+                      },
+                      {
+                        "type": "DELETE"
+                      }
+                    ],
+                    "displayLikeButton": true,
+                    "showIcon": true
+                  },
+                  "type": "ACTION_COLUMN",
+                  "width": 240
+                }
+              ],
+              "dataSource": {
+                "token": "catform-form"
+              },
+              "pagination": true,
+              "pinnedFilter": [
+                "status",
+                "catName",
+                "breed"
+              ]
+            },
+            "id": "catform-form-table",
+            "style": {
+              "height": "100%"
+            }
+          }
+        ],
+        "style": {
+          "height": "100%"
+        }
+      }
+    ],
+    "form": {
+      "title": "catform列表"
+    }
+  }
+}

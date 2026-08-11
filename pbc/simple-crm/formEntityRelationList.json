@@ -1,0 +1,22 @@
+[
+  {
+    "id": 4,
+    "joinConditions": [
+      {
+        "colId": "productName",
+        "joinFormColId": "productList",
+        "type": "equals"
+      }
+    ],
+    "name": "产品表与合同表",
+    "pbcId": 2419,
+    "projectId": 308,
+    "queryStrategy": "AUTO",
+    "relationType": "ONE_TO_MANY",
+    "sourceEntityToken": "product-management-form",
+    "sourcePbcToken": "simple-crm",
+    "targetEntityToken": "contract-management-form",
+    "targetPbcToken": "simple-crm",
+    "token": "product-contract"
+  }
+]

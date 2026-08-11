@@ -1,0 +1,84 @@
+{
+  "schemaId": "datasource-form-list",
+  "schemaJson_$$$NESTED_JSON_STRING$$$": {
+    "fields": [
+      {
+        "component": "Card",
+        "fields": [
+          {
+            "component": "Table",
+            "componentProps": {
+              "addButtonHref": "/form/datasource-form/layout/default",
+              "columnDefs": [
+                {
+                  "colId": "input",
+                  "field": "input",
+                  "headerName": "Input",
+                  "type": "TEXT_COLUMN"
+                },
+                {
+                  "colId": "textarea",
+                  "field": "textarea",
+                  "headerName": "Textarea",
+                  "type": "TEXTAREA_COLUMN"
+                },
+                {
+                  "colId": "numberPicker",
+                  "field": "numberPicker",
+                  "headerName": "Number Picker",
+                  "type": "NUMBER_COLUMN"
+                },
+                {
+                  "colId": "numericPicker",
+                  "field": "numericPicker",
+                  "headerName": "Numeric Picker",
+                  "type": "NUMERIC_COLUMN"
+                },
+                {
+                  "cellRendererParams": {
+                    "actions": [
+                      {
+                        "href": "/form/datasource-form/layout/default/:id",
+                        "type": "EDIT"
+                      },
+                      {
+                        "href": "/form/:id/view",
+                        "type": "VIEW"
+                      },
+                      {
+                        "type": "DELETE"
+                      }
+                    ],
+                    "displayLikeButton": true,
+                    "showIcon": true
+                  },
+                  "type": "ACTION_COLUMN",
+                  "width": 240
+                }
+              ],
+              "dataSource": {
+                "token": "datasource-form"
+              },
+              "pagination": true,
+              "pinnedFilter": [
+                "input",
+                "textarea",
+                "numberPicker"
+              ]
+            },
+            "id": "datasource-form-table",
+            "style": {
+              "height": "100%"
+            }
+          }
+        ],
+        "style": {
+          "height": "100%"
+        }
+      }
+    ],
+    "form": {
+      "title": "datasource List"
+    }
+  }
+}

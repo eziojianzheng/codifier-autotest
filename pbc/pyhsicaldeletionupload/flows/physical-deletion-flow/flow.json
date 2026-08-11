@@ -1,0 +1,285 @@
+{
+  "name": "PysicalDeletion",
+  "nodeList": [
+    {
+      "enabled": true,
+      "id": 1,
+      "inMemory": true,
+      "inMemoryTransaction": false,
+      "interval": 60,
+      "nodeName": "TRIGGER",
+      "periodEnd": "23:59:59",
+      "periodStart": "00:00:00",
+      "restTrigger": {
+        "eligibleForAgent": false,
+        "method": "DELETE",
+        "requestBody": [ ],
+        "requestParams": [
+          {
+            "name": "dataId",
+            "optional": false,
+            "type": "string"
+          }
+        ],
+        "url": "/flow/api/flow-rest/pysicaldeletion"
+      },
+      "scheduleType": "ONE_TIME",
+      "startTime": 1768294435459,
+      "triggerType": "REST",
+      "type": "TRIGGER",
+      "version": "2.0"
+    },
+    {
+      "enabled": true,
+      "id": 5,
+      "nodeName": "APP - Groovy script",
+      "sdk": {
+        "code": "$$$$ref:text:sdk-5.groovy",
+        "input": {
+          "dataId": "$1.restTrigger.requestParams.dataId"
+        },
+        "inputFields": [
+          {
+            "dataType": "string",
+            "label": "dataId",
+            "name": "dataId",
+            "optional": false
+          }
+        ],
+        "name": "Groovy script",
+        "outputFields": [
+          {
+            "dataType": "string",
+            "label": "ids",
+            "name": "ids"
+          }
+        ],
+        "sdkType": "GENERAL_GROOVY",
+        "uuid": "492f8c00-14de-4837-a1f6-ed6ff0a2870e"
+      },
+      "type": "APP",
+      "version": "1.0"
+    },
+    {
+      "enabled": true,
+      "id": 7,
+      "nodeName": "APP - Groovy脚本",
+      "sdk": {
+        "code": "def i=0",
+        "input": {
+          "user": "$CURRENT_USER.tenant"
+        },
+        "inputFields": [
+          {
+            "dataType": "string",
+            "label": "user",
+            "name": "user",
+            "optional": false
+          }
+        ],
+        "name": "Groovy脚本",
+        "sdkType": "GENERAL_GROOVY",
+        "uuid": "492f8c00-14de-4837-a1f6-ed6ff0a2870e"
+      },
+      "type": "APP",
+      "version": "1.0"
+    },
+    {
+      "enabled": true,
+      "id": 6,
+      "nodeName": "APP - Get form data based on conditions",
+      "sdk": {
+        "input": {
+          "formEntityToken": "pyhsicaldeletionupload-form",
+          "include_deleted": "false",
+          "lockUpdate": "false",
+          "needACL": "false",
+          "needResource": "false",
+          "needText": "false",
+          "pbcToken": "pyhsicaldeletionupload",
+          "projectToken": "$CURRENT_PROJECT.token",
+          "throw_exception": "false"
+        },
+        "inputFields": [
+          {
+            "controlType": "select",
+            "dataType": "string",
+            "label": "Need ACL",
+            "name": "needACL",
+            "optional": false,
+            "pickList": [
+              "true",
+              "false"
+            ]
+          },
+          {
+            "controlType": "select",
+            "dataType": "string",
+            "label": "Need Resource",
+            "name": "needResource",
+            "optional": false,
+            "pickList": [
+              "true",
+              "false"
+            ]
+          },
+          {
+            "controlType": "select",
+            "dataType": "string",
+            "label": "Need Text",
+            "name": "needText",
+            "optional": false,
+            "pickList": [
+              "true",
+              "false"
+            ]
+          },
+          {
+            "controlType": "select",
+            "dataType": "string",
+            "label": "Include Deleted",
+            "name": "include_deleted",
+            "optional": false,
+            "pickList": [
+              "true",
+              "false"
+            ]
+          },
+          {
+            "controlType": "select",
+            "dataType": "string",
+            "label": "Whether throw exception if data cannot be retrieved",
+            "name": "throw_exception",
+            "optional": false,
+            "pickList": [
+              "true",
+              "false"
+            ]
+          },
+          {
+            "controlType": "select",
+            "dataType": "string",
+            "label": "Need Count",
+            "name": "needCount",
+            "optional": false,
+            "pickList": [
+              "true",
+              "false"
+            ]
+          },
+          {
+            "controlType": "input",
+            "dataType": "number",
+            "label": "Start Row",
+            "name": "startRow",
+            "optional": false
+          },
+          {
+            "controlType": "input",
+            "dataType": "number",
+            "label": "End Row",
+            "name": "endRow",
+            "optional": false
+          }
+        ],
+        "name": "Get form data based on conditions",
+        "outputFields": [
+          {
+            "label": "results",
+            "name": "results"
+          },
+          {
+            "dataType": "string",
+            "label": "count",
+            "name": "count"
+          }
+        ],
+        "sdkType": "LIST_QUERY",
+        "uuid": "b4ffad17-593b-4868-940b-70d89fa35cc3"
+      },
+      "type": "APP",
+      "version": "1.0"
+    },
+    {
+      "enabled": true,
+      "id": 2,
+      "nodeName": "APP - Batch physical deletion of form data",
+      "sdk": {
+        "input": {
+          "formEntityToken": "pyhsicaldeletionupload-form",
+          "ids": "$5.ids",
+          "onlyForDeletedData": "false",
+          "pbcToken": "pyhsicaldeletionupload"
+        },
+        "inputFields": [
+          {
+            "controlType": "input",
+            "dataType": "string",
+            "label": "ids",
+            "name": "ids",
+            "optional": false
+          },
+          {
+            "controlType": "entity",
+            "label": "Form Entity",
+            "name": "formEntityToken",
+            "optional": false
+          },
+          {
+            "controlType": "select",
+            "dataType": "string",
+            "defaultValue": true,
+            "label": "Delete only the deleted data",
+            "name": "onlyForDeletedData",
+            "optional": true,
+            "pickList": [
+              "true",
+              "false"
+            ]
+          }
+        ],
+        "name": "Batch physical deletion of form data",
+        "outputFields": [ ],
+        "sdkType": "PHYSICAL_BATCH_DELETE_FORM_ENTITY_DATA",
+        "uuid": "0ee40386-b7d5-47c2-b8c2-50aaea645f01"
+      },
+      "type": "APP",
+      "version": "1.0"
+    },
+    {
+      "enabled": true,
+      "id": 3,
+      "nodeName": "APP - Set HTTP status code",
+      "sdk": {
+        "input": {
+          "http_status_code": "200"
+        },
+        "inputFields": [
+          {
+            "controlType": "input",
+            "dataType": "number",
+            "label": "HTTP status code",
+            "name": "http_status_code",
+            "optional": false
+          }
+        ],
+        "name": "Set HTTP status code",
+        "sdkType": "SET_HTTP_STATUS_TO_INSTANCE",
+        "uuid": "4ceec4ff-c521-4c2b-b152-f3c92f21f418"
+      },
+      "type": "APP",
+      "version": "1.0"
+    },
+    {
+      "enabled": true,
+      "id": 4,
+      "nodeName": "STOP_JOB",
+      "result": "Successful",
+      "type": "STOP_JOB"
+    }
+  ],
+  "restApiEnabled": 1,
+  "restApiMethod": "DELETE",
+  "restApiUrl": "/flow/api/flow-rest/pysicaldeletion",
+  "token": "physical-deletion-flow"
+}

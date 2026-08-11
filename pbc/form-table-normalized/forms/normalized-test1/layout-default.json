@@ -1,0 +1,218 @@
+{
+  "fields": [
+    {
+      "component": "Input",
+      "id": "singleLine1",
+      "title": "单行文本",
+      "validation": {
+        "maxLength": 200
+      }
+    },
+    {
+      "component": "NumberPicker",
+      "componentProps": {
+        "precision": 2
+      },
+      "id": "number1",
+      "title": "数字"
+    },
+    {
+      "component": "NumericPicker",
+      "componentProps": {
+        "precision": 10
+      },
+      "id": "numbericField01",
+      "title": "高精度数字"
+    },
+    {
+      "component": "Textarea",
+      "id": "longText",
+      "title": "多行文本"
+    },
+    {
+      "component": "Upload",
+      "componentProps": {
+        "listType": "text"
+      },
+      "id": "uploadField",
+      "title": "上传"
+    },
+    {
+      "component": "DatePicker",
+      "id": "dateField01",
+      "title": "日期"
+    },
+    {
+      "component": "TimePicker",
+      "id": "dateField02",
+      "title": "时间"
+    },
+    {
+      "component": "Radio",
+      "componentProps": {
+        "direction": "horizontal",
+        "options": [
+          {
+            "label": "选项1",
+            "value": "ee97f4c2"
+          },
+          {
+            "label": "选项2",
+            "value": "8d5ec131"
+          }
+        ]
+      },
+      "id": "radioField01",
+      "title": "单选"
+    },
+    {
+      "component": "Checkbox",
+      "componentProps": {
+        "direction": "horizontal",
+        "options": [
+          {
+            "label": "选项0",
+            "value": "ca8b0d66"
+          },
+          {
+            "label": "选项1",
+            "value": "4c562867"
+          },
+          {
+            "label": "选项2",
+            "value": "dadcbed3"
+          }
+        ]
+      },
+      "id": "checkBoxField01",
+      "title": "多选"
+    },
+    {
+      "component": "Select",
+      "componentProps": {
+        "options": [
+          {
+            "label": "选项0",
+            "value": "fa54726a"
+          },
+          {
+            "label": "选项1",
+            "value": "66d7a6a0"
+          },
+          {
+            "label": "选项2",
+            "value": "c64d89ca"
+          }
+        ],
+        "stringEqual": true
+      },
+      "id": "selectField01",
+      "title": "下拉选择"
+    },
+    {
+      "component": "Select",
+      "componentProps": {
+        "multiple": true,
+        "options": [
+          {
+            "label": "选项0",
+            "value": "3137fb20"
+          },
+          {
+            "label": "选项1",
+            "value": "57d38e36"
+          },
+          {
+            "label": "选项2",
+            "value": "51ec794f"
+          },
+          {
+            "label": "选项3",
+            "value": "95c24d9d"
+          }
+        ],
+        "stringEqual": true
+      },
+      "id": "selectMultiField",
+      "title": "下拉选择多选"
+    },
+    {
+      "component": "ACL",
+      "componentProps": {
+        "AgTableProps": {
+          "pinnedFilter": [
+            "departmentName"
+          ]
+        },
+        "columnDefs": [
+          {
+            "colId": "departmentName",
+            "field": "departmentName",
+            "headerName": "部门名称",
+            "type": "TEXT_COLUMN"
+          }
+        ],
+        "dataSource": {
+          "pbcToken": "form-table-normalized",
+          "token": "department-form"
+        },
+        "mapping": {
+          "label": "departmentName",
+          "value": "id"
+        },
+        "stringEqual": true
+      },
+      "id": "aclFieldSingle",
+      "title": "ACL选择单选"
+    },
+    {
+      "component": "ACL",
+      "componentProps": {
+        "AgTableProps": {
+          "pinnedFilter": [
+            "departmentName"
+          ]
+        },
+        "columnDefs": [
+          {
+            "colId": "departmentName",
+            "field": "departmentName",
+            "headerName": "部门名称",
+            "type": "TEXT_COLUMN"
+          }
+        ],
+        "dataSource": {
+          "pbcToken": "form-table-normalized",
+          "token": "department-form"
+        },
+        "mapping": {
+          "label": "departmentName",
+          "value": "id"
+        },
+        "multiple": true,
+        "stringEqual": true
+      },
+      "id": "aclFieldMulti",
+      "title": "ACL选择多选"
+    },
+    {
+      "component": "Switch",
+      "id": "toggleField",
+      "title": "开关"
+    },
+    {
+      "component": "Password",
+      "id": "passwordField",
+      "title": "密码"
+    },
+    {
+      "component": "RichText",
+      "id": "richTextField",
+      "title": "富文本"
+    }
+  ],
+  "form": {
+    "defaultCancelButton": true,
+    "defaultSubmitButton": true
+  }
+}

@@ -1,12 +1,18 @@
 {
   "project": {
     "activated": true,
+    "contributor": "Super Admin",
     "deleted": 0,
-    "description": "Codifier feature 测试专用项目，由自动化测试创建",
+    "description": "standardformtest",
+    "enableFormStandaloneTable": 1,
     "externalDataSourceList": [ ],
     "frontEndConfig": "$$$$ref:text:frontend/frontEndConfig.json",
-    "name": "Codifier AutoTest",
-    "tags": "test",
-    "token": "codifier-autotest"
+    "name": "窄表上线测试",
+    "projectSettings": {
+      "projectSettings": "{\"form\":{\"field\":{\"datetime\":{\"enable\":true,\"format\":\"MM-dd-yyyy HH:mm:ss.SSS\",\"zoneId\":\"Asia/Tokyo\"}}}}",
+      "projectToken": "standardformtest"
+    },
+    "tags": "standardformtest",
+    "token": "standardformtest"
   }
 }

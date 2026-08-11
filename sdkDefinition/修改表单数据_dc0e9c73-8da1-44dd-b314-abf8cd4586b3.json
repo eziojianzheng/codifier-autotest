@@ -1,0 +1,19 @@
+{
+  "definition_$$$NESTED_JSON_STRING$$$": {
+    "formEntityDataId": "",
+    "formEntityId": "",
+    "formInput": { },
+    "input": {
+      "needReturnValue": "true"
+    },
+    "inputFields": [ ],
+    "outputFields": [ ],
+    "sdkType": "SET_ENTITY_FIELD_VALUE"
+  },
+  "isSystem": 1,
+  "name": "修改表单数据",
+  "nameEnUs": "Modify form data",
+  "nameJaJp": "フォームデータの修正",
+  "sdkType": "SET_ENTITY_FIELD_VALUE",
+  "uuid": "dc0e9c73-8da1-44dd-b314-abf8cd4586b3"
+}

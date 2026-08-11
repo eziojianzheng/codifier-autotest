@@ -1,0 +1,22 @@
+{
+  "definition_$$$NESTED_JSON_STRING$$$": {
+    "inputFields": [
+      {
+        "controlType": "input",
+        "dataType": "number",
+        "label": "Http状态码",
+        "label_i18n_en-US": "HTTP status code",
+        "label_i18n_ja-JP": "HTTPステータスコード",
+        "name": "http_status_code",
+        "optional": false
+      }
+    ],
+    "sdkType": "SET_HTTP_STATUS_TO_INSTANCE"
+  },
+  "isSystem": 1,
+  "name": "设置Http状态码",
+  "nameEnUs": "Set HTTP status code",
+  "nameJaJp": "HTTPステータスコードの設定",
+  "sdkType": "SET_HTTP_STATUS_TO_INSTANCE",
+  "uuid": "4ceec4ff-c521-4c2b-b152-f3c92f21f418"
+}

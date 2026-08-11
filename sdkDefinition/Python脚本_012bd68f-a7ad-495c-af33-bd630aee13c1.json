@@ -1,0 +1,9 @@
+{
+  "definition_$$$NESTED_JSON_STRING$$$": { },
+  "isSystem": 1,
+  "name": "Python脚本",
+  "nameEnUs": "Python script",
+  "nameJaJp": "Pythonスクリプト",
+  "sdkType": "GENERAL_PYTHON_2",
+  "uuid": "012bd68f-a7ad-495c-af33-bd630aee13c1"
+}

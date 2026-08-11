@@ -1,0 +1,154 @@
+{
+  "fields": [
+    {
+      "component": "Input",
+      "hidden": true,
+      "id": "status",
+      "title": "Status"
+    },
+    {
+      "component": "Card",
+      "componentProps": {
+        "title": "Electronic Product Information",
+        "titleDesc": "Basic product details"
+      },
+      "fields": [
+        {
+          "component": "Stack",
+          "componentProps": {
+            "alignItems": "center",
+            "flexDirection": "row",
+            "gap": 8
+          }
+        },
+        {
+          "component": "Grid",
+          "componentProps": {
+            "colNumber": 3,
+            "columnGap": 24,
+            "rowGap": 20
+          },
+          "fields": [
+            {
+              "component": "Input",
+              "id": "productName",
+              "title": "Product Name",
+              "validation": {
+                "maxLength": 100,
+                "required": true
+              }
+            },
+            {
+              "component": "Input",
+              "id": "productModel",
+              "title": "Model",
+              "validation": {
+                "maxLength": 50,
+                "required": true
+              }
+            },
+            {
+              "component": "Input",
+              "id": "brand",
+              "title": "Brand",
+              "validation": {
+                "maxLength": 50,
+                "required": true
+              }
+            },
+            {
+              "component": "Select",
+              "componentProps": {
+                "options": [
+                  {
+                    "label": "Smartphone",
+                    "value": "smartphone"
+                  },
+                  {
+                    "label": "Laptop",
+                    "value": "laptop"
+                  },
+                  {
+                    "label": "Tablet",
+                    "value": "tablet"
+                  },
+                  {
+                    "label": "Monitor",
+                    "value": "monitor"
+                  },
+                  {
+                    "label": "Accessory",
+                    "value": "accessory"
+                  }
+                ]
+              },
+              "id": "category",
+              "title": "Category"
+            },
+            {
+              "component": "Input",
+              "id": "serialNumber",
+              "title": "Serial Number",
+              "validation": {
+                "maxLength": 100
+              }
+            },
+            {
+              "component": "DatePicker",
+              "id": "releaseDate",
+              "title": "Release Date"
+            },
+            {
+              "component": "NumberPicker",
+              "id": "price",
+              "title": "Price",
+              "validation": {
+                "minValue": 0,
+                "required": true
+              }
+            },
+            {
+              "component": "NumberPicker",
+              "id": "stockQuantity",
+              "title": "Stock Quantity",
+              "validation": {
+                "minValue": 0,
+                "required": true
+              }
+            },
+            {
+              "component": "NumberPicker",
+              "id": "warrantyPeriod",
+              "title": "Warranty Period (Months)",
+              "validation": {
+                "minValue": 0
+              }
+            },
+            {
+              "component": "Input",
+              "id": "color",
+              "title": "Color",
+              "validation": {
+                "maxLength": 30
+              }
+            },
+            {
+              "component": "Switch",
+              "id": "isAvailable",
+              "title": "Available for Sale"
+            },
+            {
+              "component": "Textarea",
+              "id": "productDescription",
+              "title": "Product Description"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "form": {
+    "defaultCancelButton": true,
+    "defaultSubmitButton": true
+  }
+}

@@ -1,0 +1,83 @@
+{
+  "dataLocation": "LOCAL",
+  "defaultViewLayoutToken": "view",
+  "enableForbidUpdateSomeFieldsValueWhenReferenced": 0,
+  "fields": [
+    {
+      "encryptStorage": 0,
+      "encryptTransit": 0,
+      "forbidToUpdate": false,
+      "name": "数字",
+      "storageField": "value2",
+      "token": "a09e0w6f",
+      "type": "NUMBER"
+    },
+    {
+      "encryptStorage": 0,
+      "encryptTransit": 0,
+      "forbidToUpdate": false,
+      "name": "富文本",
+      "storageField": "value4",
+      "token": "be902d7e",
+      "type": "RICH_TEXT"
+    },
+    {
+      "encryptStorage": 0,
+      "encryptTransit": 0,
+      "forbidToUpdate": false,
+      "name": "上传",
+      "storageField": "value5",
+      "token": "c817f839",
+      "type": "UPLOAD"
+    },
+    {
+      "encryptStorage": 0,
+      "encryptTransit": 0,
+      "forbidToUpdate": false,
+      "name": "日期",
+      "storageField": "value3",
+      "token": "ffa4cd3f",
+      "type": "DATE"
+    },
+    {
+      "encryptStorage": 0,
+      "encryptTransit": 0,
+      "forbidToUpdate": false,
+      "maxLength": 200,
+      "name": "单行文本",
+      "storageField": "value1",
+      "token": "test",
+      "type": "TEXT_BOX"
+    }
+  ],
+  "isAutoLock": 0,
+  "isDeletableWhenReferenced": 1,
+  "isInnerEntity": 0,
+  "isMasterData": 0,
+  "layouts": [
+    {
+      "defaultLayout": true,
+      "name": "新建",
+      "sortIndex": 0,
+      "token": "new"
+    },
+    {
+      "defaultLayout": false,
+      "name": "编辑",
+      "sortIndex": 1,
+      "token": "edit"
+    },
+    {
+      "defaultLayout": false,
+      "name": "查看",
+      "sortIndex": 2,
+      "token": "view"
+    }
+  ],
+  "name": "表单数据普通化 表单",
+  "permissionTarget": "form-table-normalized-form",
+  "remoteNoSystemColumns": true,
+  "standalone": 0,
+  "standaloneTableNormalized": 0,
+  "token": "form-table-normalized-form"
+}

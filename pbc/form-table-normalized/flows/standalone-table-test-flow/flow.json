@@ -1,0 +1,215 @@
+{
+  "description": "",
+  "name": "standalone-table-test-flow",
+  "nodeList": [
+    {
+      "enabled": true,
+      "id": 4,
+      "inMemory": true,
+      "inMemoryTransaction": false,
+      "interval": 60,
+      "nodeName": "TRIGGER",
+      "periodEnd": "23:59:59",
+      "periodStart": "00:00:00",
+      "restTrigger": {
+        "eligibleForAgent": false,
+        "method": "GET",
+        "requestBody": [ ],
+        "url": "/flow/api/flow-rest-selfauth/standalonetest"
+      },
+      "scheduleType": "ONE_TIME",
+      "startTime": 1767843944446,
+      "triggerType": "REST",
+      "type": "TRIGGER",
+      "version": "1.0"
+    },
+    {
+      "enabled": true,
+      "id": 6,
+      "isRetryIf": false,
+      "nodeName": "HANDLE_ERRORS",
+      "onErrorSubFlow": [
+        {
+          "enabled": true,
+          "id": 5,
+          "nodeName": "APP - Set workflow output value",
+          "sdk": {
+            "input": {
+              "newsdk": "$3",
+              "oldsdk": "$1"
+            },
+            "inputFields": [
+              {
+                "dataType": "string",
+                "label": "oldsdk",
+                "name": "oldsdk",
+                "optional": false
+              },
+              {
+                "dataType": "string",
+                "label": "newsdk",
+                "name": "newsdk",
+                "optional": false
+              }
+            ],
+            "name": "Set workflow output value",
+            "sdkType": "SET_VALUE_TO_INSTANCE",
+            "uuid": "f63bae3b-4003-4b29-aedf-4626216fc12a"
+          },
+          "type": "APP",
+          "version": "1.0"
+        },
+        {
+          "enabled": true,
+          "id": 8,
+          "nodeName": "APP - Set HTTP status code",
+          "sdk": {
+            "input": {
+              "http_status_code": "500"
+            },
+            "inputFields": [
+              {
+                "controlType": "input",
+                "dataType": "number",
+                "label": "HTTP status code",
+                "name": "http_status_code",
+                "optional": false
+              }
+            ],
+            "name": "Set HTTP status code",
+            "sdkType": "SET_HTTP_STATUS_TO_INSTANCE",
+            "uuid": "4ceec4ff-c521-4c2b-b152-f3c92f21f418"
+          },
+          "type": "APP",
+          "version": "1.0"
+        },
+        {
+          "enabled": true,
+          "id": 10,
+          "nodeName": "STOP_JOB",
+          "result": "Failed",
+          "type": "STOP_JOB"
+        }
+      ],
+      "retryInterval": 0,
+      "retryTimesInMonitorBlock": 0,
+      "subFlow": [
+        {
+          "enabled": true,
+          "id": 1,
+          "nodeName": "APP - 通用查询SQL",
+          "sdk": {
+            "code": "SELECT * FROM \"form-table-normalized\".\"origin-form-test\" WHERE \"number1\" = 1 AND \"numbericField01\" = 1.01",
+            "input": {
+              "_internal_stripTrailingZeros": "true"
+            },
+            "inputFields": [
+              {
+                "controlType": "input",
+                "dataType": "string",
+                "label": "Timeout(Seconds)",
+                "name": "timeout",
+                "optional": true
+              }
+            ],
+            "name": "通用查询SQL",
+            "outputFields": [ ],
+            "sdkType": "GENERAL_SQL",
+            "uuid": "b09e4613-69a2-4365-9bc0-3b8eedae5ff1"
+          },
+          "type": "APP",
+          "version": "1.0"
+        },
+        {
+          "enabled": true,
+          "id": 3,
+          "nodeName": "APP - 普通化表单的通用查询SQL",
+          "sdk": {
+            "code": "SELECT * FROM \"form-table-normalized\".\"origin-form-test\" WHERE \"number1\" = '1' AND \"numbericField01\" = '1.0100000000'",
+            "inputFields": [
+              {
+                "controlType": "input",
+                "dataType": "string",
+                "label": "Timeout(Seconds)",
+                "name": "timeout",
+                "optional": true
+              }
+            ],
+            "name": "普通化表单的通用查询SQL",
+            "outputFields": [ ],
+            "sdkType": "GENERAL_SQL_FOR_NORMALIZED_TABLE",
+            "uuid": "9386ff2c-2c85-49c7-a9f9-60f4aa7364b8"
+          },
+          "type": "APP",
+          "version": "1.0"
+        }
+      ],
+      "type": "HANDLE_ERRORS"
+    },
+    {
+      "enabled": true,
+      "id": 7,
+      "nodeName": "APP - Set workflow output value",
+      "sdk": {
+        "input": {
+          "newsdk": "$3",
+          "oldsdk": "$1"
+        },
+        "inputFields": [
+          {
+            "dataType": "string",
+            "label": "oldsdk",
+            "name": "oldsdk",
+            "optional": false
+          },
+          {
+            "dataType": "string",
+            "label": "newsdk",
+            "name": "newsdk",
+            "optional": false
+          }
+        ],
+        "name": "Set workflow output value",
+        "sdkType": "SET_VALUE_TO_INSTANCE",
+        "uuid": "f63bae3b-4003-4b29-aedf-4626216fc12a"
+      },
+      "type": "APP",
+      "version": "1.0"
+    },
+    {
+      "enabled": true,
+      "id": 9,
+      "nodeName": "APP - Set HTTP status code",
+      "sdk": {
+        "input": {
+          "http_status_code": "200"
+        },
+        "inputFields": [
+          {
+            "controlType": "input",
+            "dataType": "number",
+            "label": "HTTP status code",
+            "name": "http_status_code",
+            "optional": false
+          }
+        ],
+        "name": "Set HTTP status code",
+        "sdkType": "SET_HTTP_STATUS_TO_INSTANCE",
+        "uuid": "4ceec4ff-c521-4c2b-b152-f3c92f21f418"
+      },
+      "type": "APP",
+      "version": "1.0"
+    },
+    {
+      "enabled": true,
+      "id": 2,
+      "nodeName": "STOP_JOB",
+      "result": "Successful",
+      "type": "STOP_JOB"
+    }
+  ],
+  "restApiEnabled": 1,
+  "restApiMethod": "GET",
+  "restApiUrl": "/flow/api/flow-rest-selfauth/standalonetest",
+  "token": "standalone-table-test-flow"
+}

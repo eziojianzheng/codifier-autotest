@@ -1,0 +1,258 @@
+{
+  "name": "testsql",
+  "nodeList": [
+    {
+      "enabled": true,
+      "id": 8,
+      "inMemory": true,
+      "inMemoryTransaction": false,
+      "interval": 60,
+      "nodeName": "TRIGGER",
+      "periodEnd": "23:59:59",
+      "periodStart": "00:00:00",
+      "restTrigger": {
+        "eligibleForAgent": false,
+        "method": "GET",
+        "url": "/flow/api/flow-rest-selfauth/sqltest"
+      },
+      "scheduleType": "ONE_TIME",
+      "startTime": 1764670742173,
+      "triggerType": "REST",
+      "type": "TRIGGER",
+      "version": "2.0"
+    },
+    {
+      "enabled": true,
+      "id": 1,
+      "nodeName": "APP - Generic Query SQL For Normalized Form Table ezipsql_adoption_applications",
+      "sdk": {
+        "code": "select * from \"catmanagement\".\"adoption-applications\"",
+        "inputFields": [
+          {
+            "controlType": "input",
+            "dataType": "string",
+            "label": "Timeout(Seconds)",
+            "name": "timeout",
+            "optional": true
+          }
+        ],
+        "name": "Generic Query SQL For Normalized Form Table",
+        "outputFields": [ ],
+        "sdkType": "GENERAL_SQL_FOR_NORMALIZED_TABLE",
+        "uuid": "9386ff2c-2c85-49c7-a9f9-60f4aa7364b8"
+      },
+      "type": "APP",
+      "version": "1.0"
+    },
+    {
+      "enabled": true,
+      "id": 2,
+      "nodeName": "APP - Generic Query SQL For Normalized Form Table cat",
+      "sdk": {
+        "code": "select * from \"catmanagement\".\"cats\"",
+        "inputFields": [
+          {
+            "controlType": "input",
+            "dataType": "string",
+            "label": "Timeout(Seconds)",
+            "name": "timeout",
+            "optional": true
+          }
+        ],
+        "name": "Generic Query SQL For Normalized Form Table",
+        "outputFields": [ ],
+        "sdkType": "GENERAL_SQL_FOR_NORMALIZED_TABLE",
+        "uuid": "9386ff2c-2c85-49c7-a9f9-60f4aa7364b8"
+      },
+      "type": "APP",
+      "version": "1.0"
+    },
+    {
+      "enabled": true,
+      "id": 3,
+      "nodeName": "APP - Generic Query SQL For Normalized Form Table",
+      "sdk": {
+        "code": "select * from \"catmanagement\".\"health-records\"",
+        "inputFields": [
+          {
+            "controlType": "input",
+            "dataType": "string",
+            "label": "Timeout(Seconds)",
+            "name": "timeout",
+            "optional": true
+          }
+        ],
+        "name": "Generic Query SQL For Normalized Form Table",
+        "outputFields": [ ],
+        "sdkType": "GENERAL_SQL_FOR_NORMALIZED_TABLE",
+        "uuid": "9386ff2c-2c85-49c7-a9f9-60f4aa7364b8"
+      },
+      "type": "APP",
+      "version": "1.0"
+    },
+    {
+      "enabled": true,
+      "id": 4,
+      "nodeName": "APP - Generic Query SQL For Normalized Form Table",
+      "sdk": {
+        "code": "$$$$ref:text:sdk-4.sql",
+        "inputFields": [
+          {
+            "controlType": "input",
+            "dataType": "string",
+            "label": "Timeout(Seconds)",
+            "name": "timeout",
+            "optional": true
+          }
+        ],
+        "name": "Generic Query SQL For Normalized Form Table",
+        "outputFields": [ ],
+        "sdkType": "GENERAL_SQL_FOR_NORMALIZED_TABLE",
+        "uuid": "9386ff2c-2c85-49c7-a9f9-60f4aa7364b8"
+      },
+      "type": "APP",
+      "version": "1.0"
+    },
+    {
+      "enabled": true,
+      "id": 5,
+      "nodeName": "APP - 通用查询SQL ezipsql_adoption_applications",
+      "sdk": {
+        "code": "select * from \"catmanagement\".\"adoption-applications\" ",
+        "inputFields": [
+          {
+            "controlType": "input",
+            "dataType": "string",
+            "label": "Timeout(Seconds)",
+            "name": "timeout",
+            "optional": true
+          }
+        ],
+        "name": "通用查询SQL",
+        "outputFields": [ ],
+        "sdkType": "GENERAL_SQL",
+        "uuid": "b09e4613-69a2-4365-9bc0-3b8eedae5ff1"
+      },
+      "type": "APP",
+      "version": "1.0"
+    },
+    {
+      "enabled": true,
+      "id": 6,
+      "nodeName": "APP - 通用查询SQL Form Table cat",
+      "sdk": {
+        "code": "select * from \"catmanagement\".\"cats\"",
+        "inputFields": [
+          {
+            "controlType": "input",
+            "dataType": "string",
+            "label": "Timeout(Seconds)",
+            "name": "timeout",
+            "optional": true
+          }
+        ],
+        "name": "通用查询SQL",
+        "outputFields": [ ],
+        "sdkType": "GENERAL_SQL",
+        "uuid": "b09e4613-69a2-4365-9bc0-3b8eedae5ff1"
+      },
+      "type": "APP",
+      "version": "1.0"
+    },
+    {
+      "enabled": true,
+      "id": 7,
+      "nodeName": "APP - 通用查询SQL",
+      "sdk": {
+        "code": "$$$$ref:text:sdk-7.sql",
+        "input": {
+          "_internal_disableDataTypeConvert": "true"
+        },
+        "inputFields": [
+          {
+            "controlType": "input",
+            "dataType": "string",
+            "label": "Timeout(Seconds)",
+            "name": "timeout",
+            "optional": true
+          }
+        ],
+        "name": "通用查询SQL",
+        "outputFields": [ ],
+        "sdkType": "GENERAL_SQL",
+        "uuid": "b09e4613-69a2-4365-9bc0-3b8eedae5ff1"
+      },
+      "type": "APP",
+      "version": "1.0"
+    },
+    {
+      "enabled": true,
+      "id": 9,
+      "nodeName": "APP - 设置流程输出值",
+      "sdk": {
+        "input": {
+          "Table_cat": "$2",
+          "ezipsql_adoption_application": "$1",
+          "genericqlfuza": "$7",
+          "genericsqlselect": "$5",
+          "health_records": "$3",
+          "standalonesdk": "$4"
+        },
+        "inputFields": [
+          {
+            "dataType": "string",
+            "label": "ezipsql_adoption_application",
+            "name": "ezipsql_adoption_application",
+            "optional": false
+          },
+          {
+            "dataType": "string",
+            "label": "Table_cat",
+            "name": "Table_cat",
+            "optional": false
+          },
+          {
+            "dataType": "string",
+            "label": "health_records",
+            "name": "health_records",
+            "optional": false
+          },
+          {
+            "dataType": "string",
+            "label": "standalonesdk",
+            "name": "standalonesdk",
+            "optional": false
+          },
+          {
+            "dataType": "string",
+            "label": "genericsqlselect",
+            "name": "genericsqlselect",
+            "optional": false
+          },
+          {
+            "dataType": "string",
+            "label": "genericqlfuza",
+            "name": "genericqlfuza",
+            "optional": false
+          }
+        ],
+        "name": "设置流程输出值",
+        "sdkType": "SET_VALUE_TO_INSTANCE",
+        "uuid": "f63bae3b-4003-4b29-aedf-4626216fc12a"
+      },
+      "type": "APP",
+      "version": "1.0"
+    },
+    {
+      "enabled": true,
+      "id": 10,
+      "nodeName": "STOP_JOB",
+      "result": "Successful",
+      "type": "STOP_JOB"
+    }
+  ],
+  "restApiEnabled": 1,
+  "restApiMethod": "GET",
+  "restApiUrl": "/flow/api/flow-rest-selfauth/sqltest",
+  "token": "test-sql-flow"
+}

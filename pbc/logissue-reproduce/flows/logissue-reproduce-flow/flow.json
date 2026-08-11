@@ -1,0 +1,147 @@
+{
+  "name": "logissueReproduce",
+  "nodeList": [
+    {
+      "enabled": true,
+      "id": 3,
+      "inMemory": true,
+      "inMemoryTransaction": false,
+      "interval": 60,
+      "nodeName": "TRIGGER",
+      "periodEnd": "23:59:59",
+      "periodStart": "00:00:00",
+      "restTrigger": {
+        "eligibleForAgent": false,
+        "method": "GET",
+        "url": "/flow/api/flow-rest-selfauth/logissuerest"
+      },
+      "scheduleType": "ONE_TIME",
+      "startTime": 1769609309307,
+      "triggerType": "REST",
+      "type": "TRIGGER",
+      "version": "2.0"
+    },
+    {
+      "enabled": true,
+      "id": 2,
+      "nodeName": "APP - Groovy script - data",
+      "sdk": {
+        "code": "$$$$ref:text:sdk-2.groovy",
+        "name": "Groovy script",
+        "numberStringToBigDecimal": false,
+        "outputFields": [
+          {
+            "dataType": "string",
+            "label": "a",
+            "name": "a"
+          },
+          {
+            "dataType": "string",
+            "label": "b",
+            "name": "b"
+          },
+          {
+            "dataType": "string",
+            "label": "c",
+            "name": "c"
+          }
+        ],
+        "sdkType": "GENERAL_GROOVY",
+        "uuid": "492f8c00-14de-4837-a1f6-ed6ff0a2870e"
+      },
+      "type": "APP",
+      "version": "1.0"
+    },
+    {
+      "enabled": true,
+      "id": 1,
+      "nodeName": "APP - Groovy script",
+      "sdk": {
+        "code": "$$$$ref:text:sdk-1.groovy",
+        "input": {
+          "a": "$2.a",
+          "b": "$2.b",
+          "c": "$2.c"
+        },
+        "inputFields": [
+          {
+            "dataType": "string",
+            "label": "a",
+            "name": "a",
+            "optional": false
+          },
+          {
+            "dataType": "string",
+            "label": "b",
+            "name": "b",
+            "optional": false
+          },
+          {
+            "dataType": "string",
+            "label": "c",
+            "name": "c",
+            "optional": false
+          }
+        ],
+        "name": "Groovy script",
+        "numberStringToBigDecimal": true,
+        "outputFields": [
+          {
+            "dataType": "string",
+            "label": "a",
+            "name": "a"
+          },
+          {
+            "dataType": "string",
+            "label": "b",
+            "name": "b"
+          },
+          {
+            "dataType": "string",
+            "label": "c",
+            "name": "c"
+          }
+        ],
+        "sdkType": "GENERAL_GROOVY",
+        "uuid": "492f8c00-14de-4837-a1f6-ed6ff0a2870e"
+      },
+      "type": "APP",
+      "version": "1.0"
+    },
+    {
+      "enabled": true,
+      "id": 4,
+      "nodeName": "APP - Set workflow output value",
+      "sdk": {
+        "input": {
+          "out": "$1"
+        },
+        "inputFields": [
+          {
+            "dataType": "string",
+            "label": "out",
+            "name": "out",
+            "optional": false
+          }
+        ],
+        "name": "Set workflow output value",
+        "numberStringToBigDecimal": false,
+        "sdkType": "SET_VALUE_TO_INSTANCE",
+        "uuid": "f63bae3b-4003-4b29-aedf-4626216fc12a"
+      },
+      "type": "APP",
+      "version": "1.0"
+    },
+    {
+      "enabled": true,
+      "id": 5,
+      "nodeName": "STOP_JOB",
+      "result": "Successful",
+      "type": "STOP_JOB"
+    }
+  ],
+  "restApiEnabled": 1,
+  "restApiMethod": "GET",
+  "restApiUrl": "/flow/api/flow-rest-selfauth/logissuerest",
+  "token": "logissue-reproduce-flow"
+}

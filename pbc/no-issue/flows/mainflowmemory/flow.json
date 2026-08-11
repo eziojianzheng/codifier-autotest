@@ -1,0 +1,163 @@
+{
+  "name": "mainflowmemory",
+  "nodeList": [
+    {
+      "enabled": true,
+      "id": 1,
+      "inMemory": true,
+      "inMemoryTransaction": false,
+      "interval": 60,
+      "nodeName": "TRIGGER",
+      "periodEnd": "23:59:59",
+      "periodStart": "00:00:00",
+      "restTrigger": {
+        "eligibleForAgent": false,
+        "method": "GET",
+        "url": "/flow/api/flow-rest-selfauth/mainflowmemory"
+      },
+      "scheduleType": "ONE_TIME",
+      "startTime": 1769071347328,
+      "triggerType": "REST",
+      "type": "TRIGGER",
+      "version": "2.0"
+    },
+    {
+      "dynamic": false,
+      "enabled": true,
+      "id": 2,
+      "nodeName": "SUB_FLOW",
+      "subFlowDefinitionToken": "subflow-flow",
+      "subFlowPbcToken": "no-issue",
+      "type": "SUB_FLOW"
+    },
+    {
+      "dynamic": false,
+      "enabled": true,
+      "id": 4,
+      "nodeName": "SUB_FLOW",
+      "subFlowDefinitionToken": "subflow-flow",
+      "subFlowPbcToken": "no-issue",
+      "type": "SUB_FLOW"
+    },
+    {
+      "enabled": true,
+      "id": 5,
+      "nodeName": "APP - Groovy script",
+      "sdk": {
+        "code": "$$$$ref:text:sdk-5.groovy",
+        "input": {
+          "dataInput": "$2"
+        },
+        "inputFields": [
+          {
+            "dataType": "string",
+            "label": "dataInput",
+            "name": "dataInput",
+            "optional": false
+          }
+        ],
+        "name": "Groovy script",
+        "numberStringToBigDecimal": false,
+        "outputFields": [
+          {
+            "dataType": "string",
+            "label": "dataoutput",
+            "name": "dataoutput"
+          }
+        ],
+        "sdkType": "GENERAL_GROOVY",
+        "uuid": "492f8c00-14de-4837-a1f6-ed6ff0a2870e"
+      },
+      "type": "APP",
+      "version": "1.0"
+    },
+    {
+      "enabled": true,
+      "id": 6,
+      "nodeName": "APP - Groovy script",
+      "sdk": {
+        "code": "$$$$ref:text:sdk-6.groovy",
+        "input": {
+          "dataInput": "$2"
+        },
+        "inputFields": [
+          {
+            "dataType": "string",
+            "label": "dataInput",
+            "name": "dataInput",
+            "optional": false
+          }
+        ],
+        "name": "Groovy script",
+        "numberStringToBigDecimal": true,
+        "outputFields": [
+          {
+            "dataType": "string",
+            "label": "dataoutput",
+            "name": "dataoutput"
+          }
+        ],
+        "sdkType": "GENERAL_GROOVY",
+        "uuid": "492f8c00-14de-4837-a1f6-ed6ff0a2870e"
+      },
+      "type": "APP",
+      "version": "1.0"
+    },
+    {
+      "enabled": true,
+      "id": 7,
+      "nodeName": "APP - Set workflow output value",
+      "sdk": {
+        "input": {
+          "groovynostring": "$5",
+          "groovystring": "$6",
+          "subflownode1": "$2",
+          "subflownode2": "$4"
+        },
+        "inputFields": [
+          {
+            "dataType": "string",
+            "label": "subflownode1",
+            "name": "subflownode1",
+            "optional": false
+          },
+          {
+            "dataType": "string",
+            "label": "subflownode2",
+            "name": "subflownode2",
+            "optional": false
+          },
+          {
+            "dataType": "string",
+            "label": "groovynostring",
+            "name": "groovynostring",
+            "optional": false
+          },
+          {
+            "dataType": "string",
+            "label": "groovystring",
+            "name": "groovystring",
+            "optional": false
+          }
+        ],
+        "name": "Set workflow output value",
+        "numberStringToBigDecimal": false,
+        "sdkType": "SET_VALUE_TO_INSTANCE",
+        "uuid": "f63bae3b-4003-4b29-aedf-4626216fc12a"
+      },
+      "type": "APP",
+      "version": "1.0"
+    },
+    {
+      "enabled": true,
+      "id": 3,
+      "nodeName": "STOP_JOB",
+      "result": "Successful",
+      "type": "STOP_JOB"
+    }
+  ],
+  "restApiEnabled": 1,
+  "restApiMethod": "GET",
+  "restApiUrl": "/flow/api/flow-rest-selfauth/mainflowmemory",
+  "token": "mainflowmemory"
+}

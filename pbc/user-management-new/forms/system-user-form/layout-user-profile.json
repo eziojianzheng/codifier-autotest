@@ -207,7 +207,8 @@
                           "component": "Button",
                           "componentProps": {
                             "action": {
-                              "href": "/user/:id/change-password",
+                              "href": "/user/change-password",
+                              "target": "_blank",
                               "type": "link"
                             },
                             "content": "更改密码",

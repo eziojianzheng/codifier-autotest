@@ -1,0 +1,46 @@
+{
+  "definition_$$$NESTED_JSON_STRING$$$": {
+    "formInput": null,
+    "inputFields": [
+      {
+        "controlType": "input",
+        "dataType": "string",
+        "label": "ids",
+        "label_i18n_en-US": "ids",
+        "label_i18n_ja-JP": "ids",
+        "name": "ids",
+        "optional": false
+      },
+      {
+        "controlType": "entity",
+        "label": "Form Entity",
+        "label_i18n_en-US": "Form Entity",
+        "label_i18n_ja-JP": "フォーム・エンティティ",
+        "name": "formEntityToken",
+        "optional": false
+      },
+      {
+        "controlType": "select",
+        "dataType": "string",
+        "defaultValue": true,
+        "label": "仅删除deleted的数据",
+        "label_i18n_en-US": "Delete only the deleted data",
+        "label_i18n_ja-JP": "削除済みのデータのみを削除してください",
+        "name": "onlyForDeletedData",
+        "optional": true,
+        "pickList": [
+          "true",
+          "false"
+        ]
+      }
+    ],
+    "outputFields": [ ],
+    "sdkType": "PHYSICAL_BATCH_DELETE_FORM_ENTITY_DATA"
+  },
+  "isSystem": 1,
+  "name": "批量物理删除表单数据",
+  "nameEnUs": "Batch physical deletion of form data",
+  "nameJaJp": "フォームデータの一括物理削除",
+  "sdkType": "PHYSICAL_BATCH_DELETE_FORM_ENTITY_DATA",
+  "uuid": "0ee40386-b7d5-47c2-b8c2-50aaea645f01"
+}

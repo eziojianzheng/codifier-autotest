@@ -1,0 +1,103 @@
+{
+  "name": "test-lookup",
+  "schemaId": "test-lookup",
+  "schemaJson_$$$NESTED_JSON_STRING$$$": {
+    "fields": [
+      {
+        "component": "Table",
+        "componentProps": {
+          "addButtonHref": "/form/product-management-form/layout/default",
+          "columnDefs": [
+            {
+              "colId": "lkp_product_contract.contractName",
+              "field": "lkp_product_contract.0.contractName",
+              "headerName": "产品表与合同表 > Contract Name",
+              "type": "TEXT_COLUMN"
+            },
+            {
+              "colId": "lkp_product_contract",
+              "field": "lkp_product_contract",
+              "headerName": "产品表与合同表"
+            },
+            {
+              "colId": "status",
+              "field": "status",
+              "headerName": "Status",
+              "type": "TEXT_COLUMN"
+            },
+            {
+              "colId": "productName",
+              "field": "productName",
+              "headerName": "Product Name",
+              "type": "TEXT_COLUMN"
+            },
+            {
+              "colId": "productCategory",
+              "field": "productCategory",
+              "headerName": "Product Category",
+              "type": "TEXT_COLUMN"
+            },
+            {
+              "colId": "productBrand",
+              "field": "productBrand",
+              "headerName": "Product Brand",
+              "type": "TEXT_COLUMN"
+            },
+            {
+              "colId": "costPrice",
+              "field": "costPrice",
+              "headerName": "Cost Price",
+              "type": "NUMBER_COLUMN"
+            },
+            {
+              "colId": "suggestedRetailPrice",
+              "field": "suggestedRetailPrice",
+              "headerName": "Suggested Retail Price",
+              "type": "NUMBER_COLUMN"
+            },
+            {
+              "colId": "unit",
+              "field": "unit",
+              "headerName": "Unit",
+              "type": "TEXT_COLUMN"
+            },
+            {
+              "colId": "productReferenceProfitMargin",
+              "field": "productReferenceProfitMargin",
+              "headerName": "Product Reference Profit Margin (%)",
+              "type": "NUMBER_COLUMN"
+            },
+            {
+              "cellRendererParams": {
+                "componentProps": {
+                  "listType": "text"
+                }
+              },
+              "colId": "productFile",
+              "field": "productFile",
+              "headerName": "Product File",
+              "type": "UPLOAD_COLUMN"
+            }
+          ],
+          "dataSource": {
+            "token": "product-management-form"
+          },
+          "pagination": true,
+          "pinnedFilter": [
+            "lkp_product_contract",
+            "status",
+            "productName"
+          ],
+          "selectColId": [
+            "lkp_product_contract.contractName"
+          ],
+          "withCard": true
+        },
+        "id": "ef5c45dd-table"
+      }
+    ],
+    "form": {
+      "title": "test-lookup"
+    }
+  }
+}

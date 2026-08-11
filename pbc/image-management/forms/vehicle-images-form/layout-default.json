@@ -1,0 +1,782 @@
+{
+  "fields": [
+    {
+      "component": "PageHeader",
+      "componentProps": {
+        "headerStyle": "style3"
+      },
+      "fields": [
+        {
+          "component": "Button",
+          "componentProps": {
+            "action": {
+              "content": "ログアウトします。よろしいですか？",
+              "successAction": {
+                "type": "logout"
+              },
+              "title": "ログアウト",
+              "type": "confirm"
+            },
+            "icon": "material:logout-outlined",
+            "type": "dashed"
+          }
+        }
+      ]
+    },
+    {
+      "component": "PageHeader",
+      "componentProps": {
+        "headerStyle": "style2"
+      },
+      "style": {
+        "color": "#AD0003",
+        "textAlign": "center"
+      }
+    },
+    {
+      "component": "Stack",
+      "componentProps": {
+        "flexDirection": "column",
+        "gap": 15
+      },
+      "fields": [
+        {
+          "component": "Input",
+          "hidden": {
+            "dataPredicate": {
+              "conditions": [
+                {
+                  "condition": "equals",
+                  "field": ":vehicleEvent[0].value",
+                  "value": "10"
+                },
+                {
+                  "condition": "equals",
+                  "field": ":vehicleEvent[0].value",
+                  "value": "20"
+                }
+              ],
+              "operator": "OR"
+            },
+            "valueIfNegative": true,
+            "valueIfPositive": false
+          },
+          "id": "orderNumber",
+          "readonly": true,
+          "title": "注文番号",
+          "validation": {
+            "maxLength": null
+          }
+        },
+        {
+          "component": "Input",
+          "hidden": {
+            "dataPredicate": {
+              "conditions": [
+                {
+                  "condition": "equals",
+                  "field": ":vehicleEvent[0].value",
+                  "value": "31"
+                },
+                {
+                  "condition": "equals",
+                  "field": ":vehicleEvent[0].value",
+                  "value": "32"
+                },
+                {
+                  "condition": "equals",
+                  "field": ":vehicleEvent[0].value",
+                  "value": "33"
+                }
+              ],
+              "operator": "OR"
+            },
+            "valueIfNegative": true,
+            "valueIfPositive": false
+          },
+          "id": "repairOrderNumber",
+          "readonly": true,
+          "title": "RONO",
+          "validation": {
+            "maxLength": null
+          }
+        },
+        {
+          "component": "Select",
+          "componentProps": {
+            "options": [
+              {
+                "label": "新車",
+                "value": "10"
+              },
+              {
+                "label": "中古車",
+                "value": "20"
+              },
+              {
+                "label": "車検(入庫時)",
+                "value": "31"
+              },
+              {
+                "label": "車検(整備中)",
+                "value": "32"
+              },
+              {
+                "label": "車検(出庫時)",
+                "value": "33"
+              }
+            ],
+            "stringEqual": true
+          },
+          "hidden": true,
+          "id": "vehicleEvent",
+          "title": "業務種別"
+        },
+        {
+          "component": "Input",
+          "id": "vehicleEvent-display",
+          "readonly": true,
+          "title": "業務種別",
+          "validation": {
+            "maxLength": 200
+          },
+          "valueExpression": ":vehicleEvent[0].label"
+        },
+        {
+          "component": "Input",
+          "id": "vehicleNumber",
+          "readonly": true,
+          "title": "車台番号",
+          "validation": {
+            "maxLength": null,
+            "regex": "^[0-9A-Za-z-]{0,18}$"
+          }
+        },
+        {
+          "component": "Input",
+          "hidden": {
+            "dataPredicate": {
+              "conditions": [
+                {
+                  "condition": "equals",
+                  "field": ":vehicleEvent[0].label",
+                  "value": "新車"
+                },
+                {
+                  "condition": "equals",
+                  "field": ":vehicleEvent[0].label",
+                  "value": "中古車"
+                }
+              ],
+              "operator": "OR"
+            },
+            "valueIfNegative": true,
+            "valueIfPositive": false
+          },
+          "id": "salespersonName",
+          "readonly": true,
+          "title": "営業マン",
+          "validation": {
+            "maxLength": null
+          }
+        },
+        {
+          "component": "Input",
+          "componentProps": {
+            "style": {
+              "background": "#fffecc"
+            }
+          },
+          "hidden": {
+            "dataPredicate": {
+              "conditions": [
+                {
+                  "condition": "equals",
+                  "field": ":vehicleEvent[0].value",
+                  "value": "10"
+                },
+                {
+                  "condition": "equals",
+                  "field": ":vehicleEvent[0].value",
+                  "value": "20"
+                }
+              ],
+              "operator": "OR"
+            },
+            "valueIfNegative": true,
+            "valueIfPositive": false
+          },
+          "id": "registrationNumber",
+          "title": "登録番号",
+          "validation": {
+            "maxLength": null,
+            "regex": "^.{0,24}$",
+            "regexErrorMessage": "0～24文字で入力してください"
+          }
+        },
+        {
+          "component": "Input",
+          "hidden": {
+            "dataPredicate": {
+              "conditions": [
+                {
+                  "condition": "equals",
+                  "field": ":vehicleEvent[0].value",
+                  "value": "31"
+                },
+                {
+                  "condition": "equals",
+                  "field": ":vehicleEvent[0].value",
+                  "value": "32"
+                },
+                {
+                  "condition": "equals",
+                  "field": ":vehicleEvent[0].value",
+                  "value": "33"
+                }
+              ],
+              "operator": "OR"
+            },
+            "valueIfNegative": true,
+            "valueIfPositive": false
+          },
+          "id": "registrationNumber",
+          "readonly": true,
+          "title": "登録番号",
+          "validation": {
+            "maxLength": null
+          }
+        },
+        {
+          "component": "Stack",
+          "componentProps": {
+            "flexDirection": "row"
+          },
+          "fields": [
+            {
+              "component": "DatePicker",
+              "componentProps": {
+                "style": {
+                  "background": "#fffecc"
+                }
+              },
+              "hidden": {
+                "dataPredicate": {
+                  "conditions": [
+                    {
+                      "condition": "equals",
+                      "field": ":vehicleEvent[0].value",
+                      "value": "10"
+                    },
+                    {
+                      "condition": "equals",
+                      "field": ":vehicleEvent[0].value",
+                      "value": "20"
+                    }
+                  ],
+                  "operator": "OR"
+                },
+                "valueIfNegative": true,
+                "valueIfPositive": false
+              },
+              "id": "registrationDate",
+              "style": {
+                "background": "#fffecc"
+              },
+              "title": "登録日"
+            },
+            {
+              "component": "Button",
+              "componentProps": {
+                "action": {
+                  "formData": {
+                    "registrationDate": ""
+                  },
+                  "type": "setFormData"
+                },
+                "content": "クリア"
+              },
+              "hidden": {
+                "dataPredicate": {
+                  "conditions": [
+                    {
+                      "condition": "equals",
+                      "field": ":vehicleEvent[0].value",
+                      "value": "10"
+                    },
+                    {
+                      "condition": "equals",
+                      "field": ":vehicleEvent[0].value",
+                      "value": "20"
+                    }
+                  ],
+                  "operator": "OR"
+                },
+                "valueIfNegative": true,
+                "valueIfPositive": false
+              }
+            }
+          ]
+        },
+        {
+          "component": "Input",
+          "componentProps": {
+            "style": {
+              "background": "#ffe0e0"
+            }
+          },
+          "id": "customerName",
+          "title": "お客様名",
+          "validation": {
+            "maxLength": 60,
+            "regex": "^.{0,60}$",
+            "regexErrorMessage": "0〜60文字で入力してください",
+            "required": true
+          }
+        },
+        {
+          "component": "Stack",
+          "componentProps": {
+            "flexDirection": "row"
+          },
+          "fields": [
+            {
+              "component": "Input",
+              "componentProps": {
+                "style": {
+                  "background": "#ffe0e0"
+                }
+              },
+              "forceValidation": true,
+              "hidden": {
+                "dataPredicate": {
+                  "conditions": [
+                    {
+                      "condition": "equals",
+                      "field": ":vehicleEvent[0].value",
+                      "value": "10"
+                    },
+                    {
+                      "condition": "equals",
+                      "field": ":vehicleEvent[0].value",
+                      "value": "20"
+                    }
+                  ],
+                  "operator": "OR"
+                },
+                "valueIfNegative": true,
+                "valueIfPositive": false
+              },
+              "id": "fuelTankUnit",
+              "textInputType": "number",
+              "title": "燃料タンク(個)",
+              "validation": {
+                "regex": "^[1-9][0-9]?$",
+                "regexErrorMessage": "半角数字で1～99の範囲の整数値で入力してください",
+                "required": true
+              }
+            },
+            {
+              "component": "Input",
+              "componentProps": {
+                "style": {
+                  "background": "#ffe0e0"
+                }
+              },
+              "hidden": {
+                "dataPredicate": {
+                  "conditions": [
+                    {
+                      "condition": "equals",
+                      "field": ":vehicleEvent[0].value",
+                      "value": "10"
+                    },
+                    {
+                      "condition": "equals",
+                      "field": ":vehicleEvent[0].value",
+                      "value": "20"
+                    }
+                  ],
+                  "operator": "OR"
+                },
+                "valueIfNegative": true,
+                "valueIfPositive": false
+              },
+              "id": "fuelTankTotalCapacity",
+              "textInputType": "number",
+              "title": "燃料タンク(合計L)",
+              "validation": {
+                "regex": "^[1-9][0-9]{0,2}$",
+                "regexErrorMessage": "半角数字で1～999の範囲の整数値で入力してください",
+                "required": true
+              }
+            }
+          ]
+        },
+        {
+          "component": "Input",
+          "componentProps": {
+            "style": {
+              "background": "#ffe0e0"
+            }
+          },
+          "hidden": {
+            "dataPredicate": {
+              "conditions": [
+                {
+                  "condition": "equals",
+                  "field": ":vehicleEvent[0].value",
+                  "value": "10"
+                },
+                {
+                  "condition": "equals",
+                  "field": ":vehicleEvent[0].value",
+                  "value": "20"
+                }
+              ],
+              "operator": "OR"
+            },
+            "valueIfNegative": true,
+            "valueIfPositive": false
+          },
+          "id": "seatingCapacity",
+          "textInputType": "number",
+          "title": "乗車定員(人)",
+          "validation": {
+            "regex": "^[1-9][0-9]?$",
+            "regexErrorMessage": "半角数字で1～999の範囲の整数値で入力してください",
+            "required": true
+          }
+        },
+        {
+          "component": "Stack",
+          "componentProps": {
+            "flexDirection": "row"
+          },
+          "fields": [
+            {
+              "component": "DatePicker",
+              "componentProps": {
+                "style": {
+                  "background": "#ffe0e0"
+                }
+              },
+              "hidden": {
+                "dataPredicate": {
+                  "conditions": [
+                    {
+                      "condition": "equals",
+                      "field": ":vehicleEvent[0].value",
+                      "value": "31"
+                    }
+                  ],
+                  "operator": "AND"
+                },
+                "valueIfNegative": true,
+                "valueIfPositive": false
+              },
+              "id": "entryVerifyDate",
+              "style": {
+                "background": "#ffe0e0"
+              },
+              "textInputType": "number",
+              "title": "受入点検日",
+              "validation": {
+                "required": true
+              }
+            },
+            {
+              "component": "Input",
+              "componentProps": {
+                "style": {
+                  "background": "#fffecc"
+                }
+              },
+              "hidden": {
+                "dataPredicate": {
+                  "conditions": [
+                    {
+                      "condition": "equals",
+                      "field": ":vehicleEvent[0].value",
+                      "value": "31"
+                    }
+                  ],
+                  "operator": "AND"
+                },
+                "valueIfNegative": true,
+                "valueIfPositive": false
+              },
+              "id": "entryVerifierCode",
+              "textInputType": "number",
+              "title": "受入確認者",
+              "validation": {
+                "maxLength": null,
+                "regex": "^[0-9]{0,8}$",
+                "regexErrorMessage": "半角数字1〜8桁で入力してください"
+              }
+            }
+          ]
+        },
+        {
+          "component": "Stack",
+          "componentProps": {
+            "flexDirection": "row"
+          },
+          "fields": [
+            {
+              "component": "DatePicker",
+              "componentProps": {
+                "style": {
+                  "background": "#ffe0e0"
+                }
+              },
+              "hidden": {
+                "dataPredicate": {
+                  "conditions": [
+                    {
+                      "condition": "equals",
+                      "field": ":vehicleEvent[0].value",
+                      "value": "32"
+                    }
+                  ],
+                  "operator": "AND"
+                },
+                "valueIfNegative": true,
+                "valueIfPositive": false
+              },
+              "id": "maintenanceVerifyDate",
+              "style": {
+                "background": "#ffe0e0"
+              },
+              "title": "整備確認日",
+              "validation": {
+                "required": true
+              }
+            },
+            {
+              "component": "Input",
+              "componentProps": {
+                "style": {
+                  "background": "#fffecc"
+                }
+              },
+              "hidden": {
+                "dataPredicate": {
+                  "conditions": [
+                    {
+                      "condition": "equals",
+                      "field": ":vehicleEvent[0].value",
+                      "value": "32"
+                    }
+                  ],
+                  "operator": "AND"
+                },
+                "valueIfNegative": true,
+                "valueIfPositive": false
+              },
+              "id": "maintenanceVerifierCode",
+              "textInputType": "number",
+              "title": "整備確認者",
+              "validation": {
+                "maxLength": null,
+                "regex": "^[0-9]{0,8}$",
+                "regexErrorMessage": "半角数字1〜8桁で入力してください"
+              }
+            }
+          ]
+        },
+        {
+          "component": "Stack",
+          "componentProps": {
+            "flexDirection": "row"
+          },
+          "fields": [
+            {
+              "component": "DatePicker",
+              "componentProps": {
+                "style": {
+                  "background": "#ffe0e0"
+                }
+              },
+              "hidden": {
+                "dataPredicate": {
+                  "conditions": [
+                    {
+                      "condition": "equals",
+                      "field": ":vehicleEvent[0].value",
+                      "value": "33"
+                    }
+                  ],
+                  "operator": "AND"
+                },
+                "valueIfNegative": true,
+                "valueIfPositive": false
+              },
+              "id": "exitVerifyDate",
+              "style": {
+                "background": "#ffe0e0"
+              },
+              "title": "完成検査日",
+              "validation": {
+                "required": true
+              }
+            },
+            {
+              "component": "Input",
+              "componentProps": {
+                "style": {
+                  "background": "#fffecc"
+                }
+              },
+              "hidden": {
+                "dataPredicate": {
+                  "conditions": [
+                    {
+                      "condition": "equals",
+                      "field": ":vehicleEvent[0].value",
+                      "value": "33"
+                    }
+                  ],
+                  "operator": "AND"
+                },
+                "valueIfNegative": true,
+                "valueIfPositive": false
+              },
+              "id": "exitVerifierCode",
+              "textInputType": "number",
+              "title": "検査担当者",
+              "validation": {
+                "maxLength": null,
+                "regex": "^[0-9]{0,8}$",
+                "regexErrorMessage": "半角数字1〜8桁で入力してください"
+              }
+            }
+          ]
+        },
+        {
+          "component": "Textarea",
+          "componentProps": {
+            "style": {
+              "background": "#fffecc"
+            }
+          },
+          "id": "remarks",
+          "title": "特記事項",
+          "validation": {
+            "maxLength": 200
+          }
+        },
+        {
+          "component": "Upload",
+          "componentProps": {
+            "accept": ".jpg, .jpeg",
+            "deleteWithConfirm": true,
+            "listType": "picture-card",
+            "maxCount": 15,
+            "multiple": true,
+            "pictureCardSize": 85,
+            "showCount": true
+          },
+          "id": "Images",
+          "readonly": {
+            "dataPredicate": {
+              "conditions": [ ],
+              "operator": "AND"
+            },
+            "valueIfNegative": true,
+            "valueIfPositive": false
+          },
+          "style": {
+            "width": "100%"
+          },
+          "title": "車両画像"
+        },
+        {
+          "component": "Button",
+          "componentProps": {
+            "action": {
+              "methodName": "transfunc",
+              "successAction": {
+                "content": "登録します。よろしいですか？",
+                "successAction": {
+                  "msg": null,
+                  "successAction": {
+                    "methodName": "regifunc",
+                    "successAction": {
+                      "href": "/page/search",
+                      "type": "link"
+                    },
+                    "type": "formMethod"
+                  },
+                  "type": "submit"
+                },
+                "title": "登録実行",
+                "type": "confirm"
+              },
+              "type": "formMethod"
+            },
+            "content": "登録",
+            "type": "primary"
+          },
+          "id": "registerButton",
+          "style": {
+            "height": 50
+          }
+        },
+        {
+          "component": "Button",
+          "componentProps": {
+            "action": {
+              "content": "未登録の内容は破棄されます。よろしいですか？",
+              "successAction": {
+                "method": "post",
+                "requestData": {
+                  "formdataid": ":context.formEntityDataId"
+                },
+                "successAction": {
+                  "href": "/page/search",
+                  "type": "link"
+                },
+                "type": "request",
+                "url": "/flow/api/flow-rest/delete-vehicle-images-flow"
+              },
+              "title": "登録中止",
+              "type": "confirm"
+            },
+            "content": "戻る",
+            "type": "dashed"
+          },
+          "id": "backButton",
+          "style": {
+            "color": "#454545",
+            "height": 50
+          }
+        }
+      ],
+      "style": {
+        "margin": 20
+      }
+    },
+    {
+      "component": "Image",
+      "componentProps": {
+        "src": "https://www.isuzu.co.jp/app-files/img/footer_im01.svg"
+      },
+      "style": {
+        "width": "100%"
+      }
+    }
+  ],
+  "form": {
+    "browserTitle": {
+      "notShowPbcName": true
+    },
+    "disableDirty": true,
+    "fullWidth": true,
+    "hidePageHeader": true,
+    "libraries": [ ],
+    "script": "$$$$ref:text:layout-default-script.js",
+    "style": { },
+    "title": "画像登録"
+  }
+}

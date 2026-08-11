@@ -1,0 +1,33 @@
+{
+  "definition_$$$NESTED_JSON_STRING$$$": {
+    "formEntityId": "",
+    "formInput": null,
+    "inputFields": [
+      {
+        "controlType": "input",
+        "dataType": "string",
+        "label": "ids",
+        "label_i18n_en-US": "ids",
+        "label_i18n_ja-JP": "ids",
+        "name": "ids",
+        "optional": false
+      },
+      {
+        "controlType": "entity",
+        "label": "Form Entity",
+        "label_i18n_en-US": "Form Entity",
+        "label_i18n_ja-JP": "フォーム・エンティティ",
+        "name": "formEntityToken",
+        "optional": false
+      }
+    ],
+    "outputFields": [ ],
+    "sdkType": "BATCH_DELETE_ENTITY"
+  },
+  "isSystem": 1,
+  "name": "批量删除表单数据",
+  "nameEnUs": "Bulk delete form data",
+  "nameJaJp": "一括でフォームデータを削除する",
+  "sdkType": "BATCH_DELETE_ENTITY",
+  "uuid": "fef479f8-14b2-4f8e-8c9b-998caeff88a4"
+}

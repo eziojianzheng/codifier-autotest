@@ -1,0 +1,22 @@
+{
+  "fields": [
+    {
+      "component": "Input",
+      "id": "input",
+      "title": "Input",
+      "validation": {
+        "maxLength": 200
+      }
+    },
+    {
+      "component": "Textarea",
+      "id": "textarea",
+      "title": "Textarea"
+    }
+  ],
+  "form": {
+    "defaultCancelButton": true,
+    "defaultSubmitButton": true,
+    "title": "Layout"
+  }
+}

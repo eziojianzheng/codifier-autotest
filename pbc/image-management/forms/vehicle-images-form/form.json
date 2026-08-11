@@ -1,0 +1,227 @@
+{
+  "dataLocation": "LOCAL",
+  "defaultMobileViewLayoutToken": "default",
+  "enableForbidUpdateSomeFieldsValueWhenReferenced": 0,
+  "fields": [
+    {
+      "encryptStorage": 0,
+      "encryptTransit": 0,
+      "forbidToUpdate": false,
+      "multiple": true,
+      "name": "車両画像",
+      "storageField": "value14",
+      "token": "Images",
+      "type": "UPLOAD"
+    },
+    {
+      "encryptStorage": 0,
+      "encryptTransit": 0,
+      "forbidToUpdate": false,
+      "maxLength": 60,
+      "name": "お客様名",
+      "regex": "^.{0,60}$",
+      "regexErrorMessage": "0〜60文字で入力してください",
+      "storageField": "value17",
+      "token": "customerName",
+      "type": "TEXT_BOX"
+    },
+    {
+      "encryptStorage": 0,
+      "encryptTransit": 0,
+      "forbidToUpdate": false,
+      "name": "受入確認者",
+      "regex": "^[0-9]{0,8}$",
+      "regexErrorMessage": "半角数字1〜8桁で入力してください",
+      "storageField": "value7",
+      "token": "entryVerifierCode",
+      "type": "TEXT_BOX"
+    },
+    {
+      "encryptStorage": 0,
+      "encryptTransit": 0,
+      "forbidToUpdate": false,
+      "name": "受入点検日",
+      "storageField": "value3",
+      "token": "entryVerifyDate",
+      "type": "DATE"
+    },
+    {
+      "encryptStorage": 0,
+      "encryptTransit": 0,
+      "forbidToUpdate": false,
+      "name": "検査担当者",
+      "regex": "^[0-9]{0,8}$",
+      "regexErrorMessage": "半角数字1〜8桁で入力してください",
+      "storageField": "value9",
+      "token": "exitVerifierCode",
+      "type": "TEXT_BOX"
+    },
+    {
+      "encryptStorage": 0,
+      "encryptTransit": 0,
+      "forbidToUpdate": false,
+      "name": "完成検査日",
+      "storageField": "value6",
+      "token": "exitVerifyDate",
+      "type": "DATE"
+    },
+    {
+      "encryptStorage": 0,
+      "encryptTransit": 0,
+      "forbidToUpdate": false,
+      "name": "燃料タンク(合計L)",
+      "regex": "^[1-9][0-9]{0,2}$",
+      "regexErrorMessage": "半角数字で1～999の範囲の整数値で入力してください",
+      "storageField": "value1",
+      "token": "fuelTankTotalCapacity",
+      "type": "TEXT_BOX"
+    },
+    {
+      "encryptStorage": 0,
+      "encryptTransit": 0,
+      "forbidToUpdate": false,
+      "name": "燃料タンク(個)",
+      "regex": "^[1-9][0-9]?$",
+      "regexErrorMessage": "半角数字で1～99の範囲の整数値で入力してください",
+      "storageField": "value20",
+      "token": "fuelTankUnit",
+      "type": "TEXT_BOX"
+    },
+    {
+      "encryptStorage": 0,
+      "encryptTransit": 0,
+      "forbidToUpdate": false,
+      "name": "整備確認者",
+      "regex": "^[0-9]{0,8}$",
+      "regexErrorMessage": "半角数字1〜8桁で入力してください",
+      "storageField": "value8",
+      "token": "maintenanceVerifierCode",
+      "type": "TEXT_BOX"
+    },
+    {
+      "encryptStorage": 0,
+      "encryptTransit": 0,
+      "forbidToUpdate": false,
+      "name": "整備確認日",
+      "storageField": "value4",
+      "token": "maintenanceVerifyDate",
+      "type": "DATE"
+    },
+    {
+      "encryptStorage": 0,
+      "encryptTransit": 0,
+      "forbidToUpdate": false,
+      "name": "注文番号",
+      "storageField": "value18",
+      "token": "orderNumber",
+      "type": "TEXT_BOX"
+    },
+    {
+      "encryptStorage": 0,
+      "encryptTransit": 0,
+      "forbidToUpdate": false,
+      "name": "登録日",
+      "storageField": "value15",
+      "token": "registrationDate",
+      "type": "DATE"
+    },
+    {
+      "encryptStorage": 0,
+      "encryptTransit": 0,
+      "forbidToUpdate": false,
+      "name": "登録番号",
+      "regex": "^.{0,24}$",
+      "regexErrorMessage": "0～24文字で入力してください",
+      "storageField": "value11",
+      "token": "registrationNumber",
+      "type": "TEXT_BOX"
+    },
+    {
+      "encryptStorage": 0,
+      "encryptTransit": 0,
+      "forbidToUpdate": false,
+      "maxLength": 200,
+      "name": "特記事項",
+      "storageField": "value10",
+      "token": "remarks",
+      "type": "TEXTAREA"
+    },
+    {
+      "encryptStorage": 0,
+      "encryptTransit": 0,
+      "forbidToUpdate": false,
+      "name": "RONO",
+      "storageField": "value12",
+      "token": "repairOrderNumber",
+      "type": "TEXT_BOX"
+    },
+    {
+      "encryptStorage": 0,
+      "encryptTransit": 0,
+      "forbidToUpdate": false,
+      "name": "営業マン",
+      "storageField": "value19",
+      "token": "salespersonName",
+      "type": "TEXT_BOX"
+    },
+    {
+      "encryptStorage": 0,
+      "encryptTransit": 0,
+      "forbidToUpdate": false,
+      "name": "乗車定員(人)",
+      "regex": "^[1-9][0-9]?$",
+      "regexErrorMessage": "半角数字で1～999の範囲の整数値で入力してください",
+      "storageField": "value2",
+      "token": "seatingCapacity",
+      "type": "TEXT_BOX"
+    },
+    {
+      "encryptStorage": 0,
+      "encryptTransit": 0,
+      "forbidToUpdate": false,
+      "name": "業務種別",
+      "storageField": "value16",
+      "token": "vehicleEvent",
+      "type": "SELECT"
+    },
+    {
+      "encryptStorage": 0,
+      "encryptTransit": 0,
+      "forbidToUpdate": false,
+      "maxLength": 200,
+      "name": "業務種別",
+      "storageField": "value5",
+      "token": "vehicleEvent-display",
+      "type": "TEXT_BOX"
+    },
+    {
+      "encryptStorage": 0,
+      "encryptTransit": 0,
+      "forbidToUpdate": false,
+      "name": "車台番号",
+      "regex": "^[0-9A-Za-z-]{0,18}$",
+      "storageField": "value13",
+      "token": "vehicleNumber",
+      "type": "TEXT_BOX"
+    }
+  ],
+  "isAutoLock": 0,
+  "isDeletableWhenReferenced": 1,
+  "isInnerEntity": 0,
+  "isMasterData": 0,
+  "layouts": [
+    {
+      "defaultLayout": true,
+      "name": "Layout",
+      "sortIndex": 0,
+      "token": "default"
+    }
+  ],
+  "name": "車両画像",
+  "permissionTarget": "vehicle-images-form",
+  "remoteNoSystemColumns": true,
+  "standalone": 1,
+  "standaloneTableName": "vehicle_images_form",
+  "standaloneTableNormalized": 0,
+  "token": "vehicle-images-form"
+}

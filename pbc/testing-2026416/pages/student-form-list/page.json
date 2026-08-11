@@ -1,0 +1,173 @@
+{
+  "schemaId": "student-form-list",
+  "schemaJson_$$$NESTED_JSON_STRING$$$": {
+    "fields": [
+      {
+        "component": "Card",
+        "fields": [
+          {
+            "component": "Table",
+            "componentProps": {
+              "addButtonHref": "/form/student-form/layout/default",
+              "columnDefs": [
+                {
+                  "colId": "studentName",
+                  "field": "studentName",
+                  "headerName": "Student Name",
+                  "type": "TEXT_COLUMN"
+                },
+                {
+                  "colId": "studentId",
+                  "field": "studentId",
+                  "headerName": "Student ID",
+                  "type": "TEXT_COLUMN"
+                },
+                {
+                  "colId": "gender",
+                  "field": "gender",
+                  "headerName": "Gender",
+                  "type": "RADIO_COLUMN"
+                },
+                {
+                  "colId": "dateOfBirth",
+                  "field": "dateOfBirth",
+                  "headerName": "Date of Birth",
+                  "type": "DATE_COLUMN"
+                },
+                {
+                  "colId": "grade",
+                  "field": "grade",
+                  "headerName": "Grade",
+                  "type": "SELECT_COLUMN"
+                },
+                {
+                  "colId": "className",
+                  "field": "className",
+                  "headerName": "Class",
+                  "type": "TEXT_COLUMN"
+                },
+                {
+                  "colId": "phoneNumber",
+                  "field": "phoneNumber",
+                  "headerName": "Phone Number",
+                  "type": "TEXT_COLUMN"
+                },
+                {
+                  "colId": "email",
+                  "field": "email",
+                  "headerName": "Email",
+                  "type": "TEXT_COLUMN"
+                },
+                {
+                  "colId": "address",
+                  "field": "address",
+                  "headerName": "Address",
+                  "type": "TEXTAREA_COLUMN"
+                },
+                {
+                  "colId": "guardianName",
+                  "field": "guardianName",
+                  "headerName": "Guardian Name",
+                  "type": "TEXT_COLUMN"
+                },
+                {
+                  "colId": "guardianRelation",
+                  "field": "guardianRelation",
+                  "headerName": "Relationship",
+                  "type": "SELECT_COLUMN"
+                },
+                {
+                  "colId": "guardianPhone",
+                  "field": "guardianPhone",
+                  "headerName": "Guardian Phone",
+                  "type": "TEXT_COLUMN"
+                },
+                {
+                  "colId": "guardianEmail",
+                  "field": "guardianEmail",
+                  "headerName": "Guardian Email",
+                  "type": "TEXT_COLUMN"
+                },
+                {
+                  "colId": "enrollmentDate",
+                  "field": "enrollmentDate",
+                  "headerName": "Enrollment Date",
+                  "type": "DATE_COLUMN"
+                },
+                {
+                  "colId": "studentStatus",
+                  "field": "studentStatus",
+                  "headerName": "Student Status",
+                  "type": "SELECT_COLUMN"
+                },
+                {
+                  "colId": "gpa",
+                  "field": "gpa",
+                  "headerName": "GPA",
+                  "type": "NUMBER_COLUMN"
+                },
+                {
+                  "colId": "isBoarding",
+                  "field": "isBoarding",
+                  "headerName": "Boarding Student"
+                },
+                {
+                  "colId": "subjects",
+                  "field": "subjects",
+                  "headerName": "Subjects",
+                  "type": "CHECKBOX_COLUMN"
+                },
+                {
+                  "colId": "remarks",
+                  "field": "remarks",
+                  "headerName": "Remarks",
+                  "type": "TEXTAREA_COLUMN"
+                },
+                {
+                  "cellRendererParams": {
+                    "actions": [
+                      {
+                        "href": "/form/student-form/layout/default/:id",
+                        "type": "EDIT"
+                      },
+                      {
+                        "href": "/form/:id/view",
+                        "type": "VIEW"
+                      },
+                      {
+                        "type": "DELETE"
+                      }
+                    ],
+                    "displayLikeButton": true,
+                    "showIcon": true
+                  },
+                  "type": "ACTION_COLUMN",
+                  "width": 240
+                }
+              ],
+              "dataSource": {
+                "token": "student-form"
+              },
+              "pagination": true,
+              "pinnedFilter": [
+                "studentName",
+                "studentId",
+                "gender"
+              ]
+            },
+            "id": "student-form-table",
+            "style": {
+              "height": "100%"
+            }
+          }
+        ],
+        "style": {
+          "height": "100%"
+        }
+      }
+    ],
+    "form": {
+      "title": "studentform List"
+    }
+  }
+}

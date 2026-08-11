@@ -1,0 +1,84 @@
+{
+  "schemaId": "form-check-form-list",
+  "schemaJson_$$$NESTED_JSON_STRING$$$": {
+    "fields": [
+      {
+        "component": "Card",
+        "fields": [
+          {
+            "component": "Table",
+            "componentProps": {
+              "addButtonHref": "/form/form-check-form/layout/default",
+              "columnDefs": [
+                {
+                  "colId": "input",
+                  "field": "input",
+                  "headerName": "Input",
+                  "type": "TEXT_COLUMN"
+                },
+                {
+                  "colId": "textarea",
+                  "field": "textarea",
+                  "headerName": "Textarea",
+                  "type": "TEXTAREA_COLUMN"
+                },
+                {
+                  "colId": "numericPicker",
+                  "field": "numericPicker",
+                  "headerName": "Numeric Picker",
+                  "type": "NUMERIC_COLUMN"
+                },
+                {
+                  "colId": "numberPicker",
+                  "field": "numberPicker",
+                  "headerName": "Number Picker",
+                  "type": "NUMBER_COLUMN"
+                },
+                {
+                  "cellRendererParams": {
+                    "actions": [
+                      {
+                        "href": "/form/form-check-form/layout/default/:id",
+                        "type": "EDIT"
+                      },
+                      {
+                        "href": "/form/:id/view",
+                        "type": "VIEW"
+                      },
+                      {
+                        "type": "DELETE"
+                      }
+                    ],
+                    "displayLikeButton": true,
+                    "showIcon": true
+                  },
+                  "type": "ACTION_COLUMN",
+                  "width": 240
+                }
+              ],
+              "dataSource": {
+                "token": "form-check-form"
+              },
+              "pagination": true,
+              "pinnedFilter": [
+                "input",
+                "textarea",
+                "numericPicker"
+              ]
+            },
+            "id": "form-check-form-table",
+            "style": {
+              "height": "100%"
+            }
+          }
+        ],
+        "style": {
+          "height": "100%"
+        }
+      }
+    ],
+    "form": {
+      "title": "formcheck List"
+    }
+  }
+}

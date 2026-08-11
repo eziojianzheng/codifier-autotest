@@ -1,0 +1,87 @@
+{
+  "name": "Entry",
+  "schemaId": "entry",
+  "schemaJson_$$$NESTED_JSON_STRING$$$": {
+    "fields": [
+      {
+        "component": "Card",
+        "fields": [
+          {
+            "component": "Table",
+            "componentProps": {
+              "addButtonHref": "/form/form-table-normalized-form/layout/new",
+              "columnDefs": [
+                {
+                  "colId": "6c5f319b",
+                  "field": "6c5f319b",
+                  "headerName": "单行文本"
+                },
+                {
+                  "colId": "a09e0w6f",
+                  "field": "a09e0w6f",
+                  "headerName": "数字"
+                },
+                {
+                  "colId": "ffa4cd3f",
+                  "field": "ffa4cd3f",
+                  "headerName": "日期"
+                },
+                {
+                  "colId": "c817f839",
+                  "field": "c817f839",
+                  "headerName": "上传"
+                },
+                {
+                  "cellRendererParams": {
+                    "actions": [
+                      {
+                        "href": "/form/form-table-normalized-form/layout/edit/:id",
+                        "type": "EDIT"
+                      },
+                      {
+                        "href": "/form/:id/view",
+                        "type": "VIEW"
+                      },
+                      {
+                        "type": "DELETE"
+                      }
+                    ],
+                    "displayLikeButton": true,
+                    "showIcon": true
+                  },
+                  "colId": "action",
+                  "headerName": "操作",
+                  "type": "ACTION_COLUMN"
+                }
+              ],
+              "dataSource": {
+                "listByIdsUrl": null,
+                "listIdsUrl": null,
+                "listUrl": null,
+                "token": "form-table-normalized-form"
+              },
+              "pagination": true,
+              "pinnedFilter": [
+                "6c5f319b",
+                "a09e0w6f",
+                "ffa4cd3f"
+              ]
+            },
+            "id": "form-table-normalized-form-list-table",
+            "style": {
+              "height": "100%"
+            }
+          }
+        ],
+        "style": {
+          "height": "100%"
+        }
+      }
+    ],
+    "form": {
+      "defaultCancelButton": false,
+      "defaultSubmitButton": false,
+      "labelLayout": "vertical"
+    }
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "definition_$$$NESTED_JSON_STRING$$$": {
+    "code": "",
+    "inputFields": [ ],
+    "outputFields": [ ],
+    "sdkType": "GENERAL_SQL"
+  },
+  "isSystem": 1,
+  "name": "通用查询SQL",
+  "nameEnUs": "Generic Query SQL",
+  "nameJaJp": "汎用クエリSQL",
+  "sdkType": "GENERAL_SQL",
+  "uuid": "b09e4613-69a2-4365-9bc0-3b8eedae5ff1"
+}

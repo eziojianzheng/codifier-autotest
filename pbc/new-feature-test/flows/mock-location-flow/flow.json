@@ -1,0 +1,82 @@
+{
+  "name": "mocklocationflow",
+  "nodeList": [
+    {
+      "enabled": true,
+      "id": 1,
+      "inMemory": true,
+      "inMemoryTransaction": false,
+      "interval": 60,
+      "nodeName": "TRIGGER",
+      "periodEnd": "23:59:59",
+      "periodStart": "00:00:00",
+      "restTrigger": {
+        "eligibleForAgent": false,
+        "method": "POST",
+        "requestBody": [ ],
+        "url": "/flow/api/flow-rest/mocklocate"
+      },
+      "scheduleType": "ONE_TIME",
+      "startTime": 1780990362181,
+      "triggerType": "REST",
+      "type": "TRIGGER",
+      "version": "2.0"
+    },
+    {
+      "enabled": true,
+      "id": 2,
+      "nodeName": "APP - Groovy脚本",
+      "sdk": {
+        "code": "$$$$ref:text:sdk-2.groovy",
+        "name": "Groovy脚本",
+        "numberStringToBigDecimal": false,
+        "outputFields": [
+          {
+            "dataType": "string",
+            "label": "result",
+            "name": "result"
+          }
+        ],
+        "sdkType": "GENERAL_GROOVY",
+        "uuid": "492f8c00-14de-4837-a1f6-ed6ff0a2870e"
+      },
+      "type": "APP",
+      "version": "1.0"
+    },
+    {
+      "enabled": true,
+      "id": 3,
+      "nodeName": "APP - 设置流程输出值",
+      "sdk": {
+        "input": {
+          "address": "$2.result"
+        },
+        "inputFields": [
+          {
+            "dataType": "string",
+            "label": "address",
+            "name": "address",
+            "optional": false
+          }
+        ],
+        "name": "设置流程输出值",
+        "numberStringToBigDecimal": false,
+        "sdkType": "SET_VALUE_TO_INSTANCE",
+        "uuid": "f63bae3b-4003-4b29-aedf-4626216fc12a"
+      },
+      "type": "APP",
+      "version": "1.0"
+    },
+    {
+      "enabled": true,
+      "id": 4,
+      "nodeName": "STOP_JOB",
+      "result": "Successful",
+      "type": "STOP_JOB"
+    }
+  ],
+  "restApiEnabled": 1,
+  "restApiMethod": "POST",
+  "restApiUrl": "/flow/api/flow-rest/mocklocate",
+  "token": "mock-location-flow"
+}

@@ -1,0 +1,84 @@
+{
+  "schemaId": "spb-list",
+  "schemaJson_$$$NESTED_JSON_STRING$$$": {
+    "fields": [
+      {
+        "component": "Card",
+        "fields": [
+          {
+            "component": "Table",
+            "componentProps": {
+              "addButtonHref": "/form/spb/layout/default",
+              "columnDefs": [
+                {
+                  "colId": "spid",
+                  "field": "spid",
+                  "headerName": "spid",
+                  "type": "NUMBER_COLUMN"
+                },
+                {
+                  "colId": "spmc",
+                  "field": "spmc",
+                  "headerName": "spmc",
+                  "type": "TEXT_COLUMN"
+                },
+                {
+                  "colId": "splx",
+                  "field": "splx",
+                  "headerName": "splx",
+                  "type": "TEXT_COLUMN"
+                },
+                {
+                  "colId": "spjg",
+                  "field": "spjg",
+                  "headerName": "spjg",
+                  "type": "NUMBER_COLUMN"
+                },
+                {
+                  "cellRendererParams": {
+                    "actions": [
+                      {
+                        "href": "/form/spb/layout/default/:id",
+                        "type": "EDIT"
+                      },
+                      {
+                        "href": "/form/:id/view",
+                        "type": "VIEW"
+                      },
+                      {
+                        "type": "DELETE"
+                      }
+                    ],
+                    "displayLikeButton": true,
+                    "showIcon": true
+                  },
+                  "type": "ACTION_COLUMN",
+                  "width": 240
+                }
+              ],
+              "dataSource": {
+                "token": "spb"
+              },
+              "pagination": true,
+              "pinnedFilter": [
+                "spid",
+                "spmc",
+                "splx"
+              ]
+            },
+            "id": "spb-table",
+            "style": {
+              "height": "100%"
+            }
+          }
+        ],
+        "style": {
+          "height": "100%"
+        }
+      }
+    ],
+    "form": {
+      "title": "spb List"
+    }
+  }
+}

@@ -1,0 +1,267 @@
+{
+  "appearance": "light",
+  "items": [
+    {
+      "category": null,
+      "children": [
+        {
+          "category": null,
+          "icon": "oct:passkey-fill",
+          "key": "74e20a44",
+          "label": "用户",
+          "label_i18n_en-US": "User",
+          "label_i18n_ja-JP": "ユーザー",
+          "label_i18n_zh-CN": "用户",
+          "to": "/user-management-new/page/system-user-form-list"
+        },
+        {
+          "category": null,
+          "icon": "material:people-alt-outlined",
+          "key": "ad696683",
+          "label": "角色",
+          "label_i18n_en-US": "Role",
+          "label_i18n_ja-JP": "ロール",
+          "label_i18n_zh-CN": "角色",
+          "to": "/user-management-new/page/system-role-form-list"
+        }
+      ],
+      "icon": "material:group-sharp",
+      "key": "793341b4",
+      "label": "用户与角色",
+      "label_i18n_en-US": "Users and Roles",
+      "label_i18n_ja-JP": "ユーザーとロール",
+      "label_i18n_zh-CN": "用户与角色",
+      "to": ""
+    },
+    {
+      "icon": "oct:home",
+      "label": "basetestform列表",
+      "to": "/basetest/page/base-test-form-list"
+    },
+    {
+      "icon": "oct:home",
+      "label": "selectdatasource列表",
+      "to": "/basetest/page/select-datasource-form-list"
+    },
+    {
+      "icon": "oct:home",
+      "label": "edittabledatasource列表",
+      "to": "/basetest/page/edit-table-datasource-form-list"
+    },
+    {
+      "icon": "oct:home",
+      "label": "catmanagement",
+      "to": "/catmanagement"
+    },
+    {
+      "icon": "oct:home",
+      "label": "dateform List",
+      "to": "/newfeatureimportesting/page/date-form-list"
+    },
+    {
+      "icon": "oct:home",
+      "label": "dateformstandalone List",
+      "to": "/newfeatureimportesting/page/date-form-standalone-form-list"
+    },
+    {
+      "icon": "oct:home",
+      "label": "translationtest",
+      "to": "/translationtest"
+    },
+    {
+      "accessPermissionPredicate": {
+        "hasAnyOf": [
+          "CONNECTOR_EDIT",
+          "CONNECTOR_VIEW"
+        ]
+      },
+      "activeBasePath": "/connector",
+      "icon": "ant:api-outlined",
+      "label": "连接器管理",
+      "to": "/connector"
+    },
+    {
+      "icon": "oct:home",
+      "label": "testform List",
+      "to": "/testpbc/page/test-form-list"
+    },
+    {
+      "icon": "oct:home",
+      "label": "i18n",
+      "to": "/multilanguagetest"
+    },
+    {
+      "icon": "oct:home",
+      "label": "testform",
+      "to": "/testform"
+    },
+    {
+      "icon": "oct:home",
+      "label": "Image Management",
+      "to": "/image-management"
+    },
+    {
+      "icon": "oct:home",
+      "label": "isizuTicket",
+      "to": "/isuzuhighticket"
+    },
+    {
+      "category": null,
+      "key": "a316258e",
+      "label": "ログイン画面",
+      "to": "/image-management/page/login"
+    },
+    {
+      "icon": "oct:home",
+      "label": "表单数据普通化",
+      "to": "/form-table-normalized"
+    },
+    {
+      "category": null,
+      "key": "c7ea58fe",
+      "label": "standardtest",
+      "to": "/form-table-normalized/page/normalized-test1-list"
+    },
+    {
+      "category": null,
+      "key": "96dd90d5",
+      "label": "standalonetest",
+      "to": "/form-table-normalized/page/origin-form-list"
+    },
+    {
+      "icon": "oct:home",
+      "label": "standalonetableform List",
+      "to": "/form-table-normalized/page/standalone-table-form-list"
+    },
+    {
+      "icon": "oct:home",
+      "label": "Ticket-00000382",
+      "to": "/pyhsicaldeletionupload"
+    },
+    {
+      "icon": "oct:home",
+      "label": "uploadPicInorder List",
+      "to": "/ticket-388/page/upload-pic-in-order-form-list"
+    },
+    {
+      "icon": "oct:home",
+      "label": "upodatenullform List",
+      "to": "/ticket385-update-null/page/update-null-form-list"
+    },
+    {
+      "icon": "oct:home",
+      "label": "spb List",
+      "to": "/material/page/spb-list"
+    },
+    {
+      "category": null,
+      "icon": "solar:plug-circle-outline",
+      "key": "71d83de4",
+      "label": "hybpage",
+      "to": "/material/page/hybpage"
+    },
+    {
+      "children": [
+        {
+          "category": null,
+          "icon": "solar:link-outline",
+          "key": "069fbb47",
+          "label": "upload-pic-in-order-form-list",
+          "to": "/ticket-388/page/upload-pic-in-order-form-list"
+        }
+      ],
+      "icon": "oct:home",
+      "label": "ddb List",
+      "to": "/material/page/ddb-list"
+    },
+    {
+      "children": [
+        {
+          "category": null,
+          "icon": "solar:link-outline",
+          "key": "b9d3a132",
+          "label": "form-check-form-list",
+          "to": "/no-issue/page/form-check-form-list"
+        }
+      ],
+      "icon": "oct:home",
+      "label": "nochuissue",
+      "to": "/no-issue"
+    },
+    {
+      "icon": "oct:home",
+      "label": "dateform List",
+      "to": "/ticket402-date-picker-format/page/date-form-list"
+    },
+    {
+      "children": [ ],
+      "icon": "oct:home",
+      "label": "pg",
+      "to": "/pg"
+    },
+    {
+      "category": null,
+      "children": [
+        {
+          "category": null,
+          "icon": "solar:lightbulb-bolt-outline",
+          "key": "b27a18ea",
+          "label": "student-form-list",
+          "to": "/testing-2026416/page/student-form-list"
+        }
+      ],
+      "icon": "solar:move-to-folder-outline",
+      "key": "536acafb",
+      "label": "2026416testing",
+      "to": "/testing-2026416"
+    },
+    {
+      "icon": "oct:home",
+      "label": "datasource List",
+      "to": "/smoketest-pbc/page/data-source-form-list"
+    },
+    {
+      "icon": "oct:home",
+      "label": "studentform List",
+      "to": "/smoketest-pbc/page/student-form-list"
+    },
+    {
+      "icon": "oct:home",
+      "label": "setnullvalueform List",
+      "to": "/ticket-set-null-value-for-numeric-enum/page/set-null-value-form-list"
+    },
+    {
+      "icon": "oct:home",
+      "label": "studentform List",
+      "to": "/set-log-info-as-warning/page/student-form-list"
+    },
+    {
+      "icon": "oct:home",
+      "label": "locationtest列表",
+      "to": "/new-feature-test/page/location-test-form-list"
+    },
+    {
+      "icon": "oct:home",
+      "label": "picuploader列表",
+      "to": "/new-feature-test/page/pic-uploader-form-list"
+    },
+    {
+      "icon": "oct:home",
+      "label": "catform列表",
+      "to": "/smoke-test/page/catform-form-list"
+    },
+    {
+      "icon": "oct:home",
+      "label": "Simple CRM",
+      "to": "/simple-crm"
+    }
+  ],
+  "position": "sidebar",
+  "visibility": {
+    "accessPermissionPredicate": {
+      "hasAnyOf": [
+        "***"
+      ]
+    }
+  }
+}

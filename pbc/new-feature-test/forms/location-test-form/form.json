@@ -1,0 +1,69 @@
+{
+  "dataLocation": "LOCAL",
+  "enableForbidUpdateSomeFieldsValueWhenReferenced": 0,
+  "fields": [
+    {
+      "domain": "ERP 供应商管理",
+      "encryptStorage": 0,
+      "encryptTransit": 0,
+      "forbidToUpdate": false,
+      "maxLength": 200,
+      "name": "定位",
+      "nameI18nKey": "standard|>ERP 供应商管理|>any|>location",
+      "nameI18nNs": "standard",
+      "storageField": "value2",
+      "token": "location",
+      "type": "TEXT_BOX"
+    },
+    {
+      "encryptStorage": 0,
+      "encryptTransit": 0,
+      "forbidToUpdate": false,
+      "name": "reloacte",
+      "storageField": "value4",
+      "token": "relocate",
+      "type": "LONG_TEXT"
+    },
+    {
+      "encryptStorage": 0,
+      "encryptTransit": 0,
+      "forbidToUpdate": false,
+      "name": "签名",
+      "storageField": "value3",
+      "token": "signature",
+      "type": "LONG_TEXT"
+    },
+    {
+      "domain": "ERP 供应商管理",
+      "encryptStorage": 0,
+      "encryptTransit": 0,
+      "forbidToUpdate": false,
+      "maxLength": 200,
+      "name": "单行文本",
+      "nameI18nKey": "standard|>ERP 供应商管理|>any|>singleLineText",
+      "nameI18nNs": "standard",
+      "source": "ba3e4acf-932c-4828-846d-5d2691185f79",
+      "storageField": "value1",
+      "token": "singleLineText",
+      "type": "TEXT_BOX"
+    }
+  ],
+  "isAutoLock": 0,
+  "isDeletableWhenReferenced": 1,
+  "isInnerEntity": 0,
+  "isMasterData": 0,
+  "layouts": [
+    {
+      "defaultLayout": true,
+      "name": "Layout",
+      "sortIndex": 0,
+      "token": "default"
+    }
+  ],
+  "name": "locationtest",
+  "permissionTarget": "location-test-form",
+  "remoteNoSystemColumns": true,
+  "standalone": 0,
+  "standaloneTableNormalized": 0,
+  "token": "location-test-form"
+}

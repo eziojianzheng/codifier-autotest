@@ -1,0 +1,198 @@
+{
+  "fields": [
+    {
+      "component": "Card",
+      "componentProps": {
+        "title": "Contract Information",
+        "titleDesc": "Manage customer contract details"
+      },
+      "fields": [
+        {
+          "component": "Stack",
+          "componentProps": {
+            "alignItems": "center",
+            "flexDirection": "row",
+            "gap": 8,
+            "justifyContent": "flex-start"
+          },
+          "fields": [
+            {
+              "component": "Grid",
+              "componentProps": {
+                "colNumber": 2,
+                "columnGap": 24,
+                "rowGap": 20
+              },
+              "fields": [
+                {
+                  "component": "Input",
+                  "id": "contractName",
+                  "title": "Contract Name",
+                  "validation": {
+                    "required": true
+                  }
+                },
+                {
+                  "component": "Radio",
+                  "componentProps": {
+                    "options": [
+                      {
+                        "label": "One-time Delivery",
+                        "value": "oneTimeDelivery"
+                      },
+                      {
+                        "label": "Batch Delivery",
+                        "value": "batchDelivery"
+                      }
+                    ]
+                  },
+                  "id": "deliveryType",
+                  "title": "Delivery Type"
+                },
+                {
+                  "component": "Select",
+                  "componentProps": {
+                    "options": [
+                      {
+                        "label": "Customer Management",
+                        "value": "customerManagement"
+                      }
+                    ]
+                  },
+                  "id": "customerName",
+                  "title": "Customer Name"
+                },
+                {
+                  "component": "NumberPicker",
+                  "id": "contractTotalAmount",
+                  "title": "Contract Total Amount"
+                },
+                {
+                  "component": "Select",
+                  "componentProps": {
+                    "options": [
+                      {
+                        "label": "Draft",
+                        "value": "draft"
+                      },
+                      {
+                        "label": "Active",
+                        "value": "active"
+                      },
+                      {
+                        "label": "Completed",
+                        "value": "completed"
+                      },
+                      {
+                        "label": "Cancelled",
+                        "value": "cancelled"
+                      }
+                    ]
+                  },
+                  "id": "status",
+                  "title": "Status"
+                },
+                {
+                  "component": "Select",
+                  "componentProps": {
+                    "dataSource": {
+                      "token": "product-management-form"
+                    },
+                    "mapping": {
+                      "label": "productName",
+                      "value": "id"
+                    },
+                    "stringEqual": true
+                  },
+                  "id": "productList",
+                  "title": "Product List"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "component": "EditableTable",
+      "componentProps": {
+        "columnDefs": [
+          {
+            "cellEditorParams": {
+              "componentProps": {
+                "options": [
+                  {
+                    "label": "Product Management",
+                    "value": "productManagement"
+                  }
+                ]
+              }
+            },
+            "colId": "productName",
+            "editable": true,
+            "field": "productName",
+            "headerName": "Product Name",
+            "type": "SELECT_COLUMN"
+          },
+          {
+            "cellEditorParams": {
+              "validation": {
+                "minValue": 1,
+                "required": true
+              }
+            },
+            "colId": "quantity",
+            "editable": true,
+            "field": "quantity",
+            "headerName": "Quantity",
+            "type": "NUMBER_COLUMN"
+          },
+          {
+            "cellEditorParams": { },
+            "colId": "costPrice",
+            "editable": true,
+            "field": "costPrice",
+            "headerName": "Cost Price",
+            "type": "NUMBER_COLUMN"
+          },
+          {
+            "cellEditorParams": { },
+            "colId": "suggestedSellingPrice",
+            "editable": true,
+            "field": "suggestedSellingPrice",
+            "headerName": "Suggested Selling Price",
+            "type": "NUMBER_COLUMN"
+          },
+          {
+            "cellEditorParams": { },
+            "colId": "totalPrice",
+            "editable": true,
+            "field": "totalPrice",
+            "headerName": "Total Price",
+            "type": "NUMBER_COLUMN"
+          }
+        ]
+      },
+      "fieldConfig": {
+        "formEntityToken": "contract-products",
+        "pbcToken": "simple-crm",
+        "relations": [
+          {
+            "colId": "parentDataId",
+            "filter": "$CURRENT_FORM_DATA_ID",
+            "filterType": "text",
+            "type": "equals"
+          }
+        ]
+      },
+      "id": "contractProducts",
+      "title": "Products Under Contract"
+    }
+  ],
+  "form": {
+    "defaultCancelButton": true,
+    "defaultSubmitButton": true,
+    "labelLayout": "vertical",
+    "title": "Layout"
+  }
+}

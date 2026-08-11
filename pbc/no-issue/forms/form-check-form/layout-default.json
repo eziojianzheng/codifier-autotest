@@ -1,0 +1,38 @@
+{
+  "fields": [
+    {
+      "component": "Input",
+      "id": "input",
+      "title": "Input",
+      "validation": {
+        "maxLength": 200
+      }
+    },
+    {
+      "component": "Textarea",
+      "id": "textarea",
+      "title": "Textarea"
+    },
+    {
+      "component": "NumericPicker",
+      "componentProps": {
+        "precision": 15
+      },
+      "id": "numericPicker",
+      "title": "Numeric Picker",
+      "validation": {
+        "maxValue": 999999999999999
+      }
+    },
+    {
+      "component": "NumberPicker",
+      "id": "numberPicker",
+      "title": "Number Picker"
+    }
+  ],
+  "form": {
+    "defaultCancelButton": true,
+    "defaultSubmitButton": true,
+    "title": "Layout"
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "/": {
+    "pageTitle": "",
+    "pbcToken": "material",
+    "schemaId": "hybpage"
+  },
+  "/todo-list/form/:flowInstanceId/:flowThreadId/approval": {
+    "formType": "FLOW-APPROVAL",
+    "pageTitle": ""
+  },
+  "/todo-list/form/:flowInstanceId/:flowThreadId/confirm": {
+    "formType": "FLOW-FORM",
+    "pageTitle": ""
+  }
+}

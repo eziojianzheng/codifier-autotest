@@ -1,0 +1,200 @@
+{
+  "dataLocation": "LOCAL",
+  "enableForbidUpdateSomeFieldsValueWhenReferenced": 0,
+  "fields": [
+    {
+      "encryptStorage": 0,
+      "encryptTransit": 0,
+      "forbidToUpdate": false,
+      "multiple": true,
+      "name": "ACL选择多选",
+      "normalizedStorageField": "acl_field_multi",
+      "referenceDisplayField": "departmentName",
+      "referenceEntity": "department-form",
+      "referenceField": "id",
+      "referenceMappingFields": "{\"value\":\"id\",\"label\":\"departmentName\"}",
+      "referencePbc": "form-table-normalized",
+      "storageField": "value13",
+      "token": "aclFieldMulti",
+      "type": "ACL"
+    },
+    {
+      "encryptStorage": 0,
+      "encryptTransit": 0,
+      "forbidToUpdate": false,
+      "name": "ACL选择单选",
+      "normalizedStorageField": "acl_field_single",
+      "referenceDisplayField": "departmentName",
+      "referenceEntity": "department-form",
+      "referenceField": "id",
+      "referenceMappingFields": "{\"value\":\"id\",\"label\":\"departmentName\"}",
+      "referencePbc": "form-table-normalized",
+      "storageField": "value12",
+      "token": "aclFieldSingle",
+      "type": "ACL"
+    },
+    {
+      "encryptStorage": 0,
+      "encryptTransit": 0,
+      "forbidToUpdate": false,
+      "name": "多选",
+      "normalizedStorageField": "check_box_field01",
+      "storageField": "value8",
+      "token": "checkBoxField01",
+      "type": "CHECKBOX"
+    },
+    {
+      "encryptStorage": 0,
+      "encryptTransit": 0,
+      "forbidToUpdate": false,
+      "name": "日期",
+      "normalizedStorageField": "date_field01",
+      "storageField": "value6",
+      "token": "dateField01",
+      "type": "DATE"
+    },
+    {
+      "encryptStorage": 0,
+      "encryptTransit": 0,
+      "forbidToUpdate": false,
+      "name": "时间",
+      "normalizedStorageField": "date_field02",
+      "storageField": "value10",
+      "token": "dateField02",
+      "type": "TIME"
+    },
+    {
+      "encryptStorage": 0,
+      "encryptTransit": 0,
+      "forbidToUpdate": false,
+      "name": "多行文本",
+      "normalizedStorageField": "long_text",
+      "storageField": "value2",
+      "token": "longText",
+      "type": "TEXTAREA"
+    },
+    {
+      "encryptStorage": 0,
+      "encryptTransit": 0,
+      "forbidToUpdate": false,
+      "name": "数字",
+      "normalizedStorageField": "number1",
+      "precision": 2,
+      "storageField": "value1",
+      "token": "number1",
+      "type": "NUMBER"
+    },
+    {
+      "encryptStorage": 0,
+      "encryptTransit": 0,
+      "forbidToUpdate": false,
+      "name": "高精度数字",
+      "normalizedStorageField": "numberic_field01",
+      "precision": 10,
+      "storageField": "value5",
+      "token": "numbericField01",
+      "type": "NUMERIC"
+    },
+    {
+      "encryptStorage": 0,
+      "encryptTransit": 0,
+      "forbidToUpdate": false,
+      "name": "密码",
+      "normalizedStorageField": "password_field",
+      "storageField": "value15",
+      "token": "passwordField",
+      "type": "PASSWORD"
+    },
+    {
+      "encryptStorage": 0,
+      "encryptTransit": 0,
+      "forbidToUpdate": false,
+      "name": "单选",
+      "normalizedStorageField": "radio_field01",
+      "storageField": "value7",
+      "token": "radioField01",
+      "type": "RADIO"
+    },
+    {
+      "encryptStorage": 0,
+      "encryptTransit": 0,
+      "forbidToUpdate": false,
+      "name": "富文本",
+      "normalizedStorageField": "rich_text_field",
+      "storageField": "value16",
+      "token": "richTextField",
+      "type": "RICH_TEXT"
+    },
+    {
+      "encryptStorage": 0,
+      "encryptTransit": 0,
+      "forbidToUpdate": false,
+      "name": "下拉选择",
+      "normalizedStorageField": "select_field01",
+      "storageField": "value9",
+      "token": "selectField01",
+      "type": "SELECT"
+    },
+    {
+      "encryptStorage": 0,
+      "encryptTransit": 0,
+      "forbidToUpdate": false,
+      "multiple": true,
+      "name": "下拉选择多选",
+      "normalizedStorageField": "select_multi_field",
+      "storageField": "value11",
+      "token": "selectMultiField",
+      "type": "SELECT"
+    },
+    {
+      "encryptStorage": 0,
+      "encryptTransit": 0,
+      "forbidToUpdate": false,
+      "maxLength": 200,
+      "name": "单行文本",
+      "normalizedStorageField": "single_line1",
+      "storageField": "value3",
+      "token": "singleLine1",
+      "type": "TEXT_BOX"
+    },
+    {
+      "encryptStorage": 0,
+      "encryptTransit": 0,
+      "forbidToUpdate": false,
+      "name": "开关",
+      "normalizedStorageField": "toggle_field",
+      "storageField": "value14",
+      "token": "toggleField",
+      "type": "SWITCH"
+    },
+    {
+      "encryptStorage": 0,
+      "encryptTransit": 0,
+      "forbidToUpdate": false,
+      "name": "上传",
+      "normalizedStorageField": "upload_field",
+      "storageField": "value4",
+      "token": "uploadField",
+      "type": "UPLOAD"
+    }
+  ],
+  "isAutoLock": 0,
+  "isDeletableWhenReferenced": 0,
+  "isInnerEntity": 0,
+  "isMasterData": 0,
+  "layouts": [
+    {
+      "defaultLayout": true,
+      "name": "布局",
+      "sortIndex": 0,
+      "token": "default"
+    }
+  ],
+  "name": "窄表测试1",
+  "permissionTarget": "normalized-test1",
+  "remoteNoSystemColumns": true,
+  "standalone": 1,
+  "standaloneTableName": "huap_normalized_test1",
+  "standaloneTableNormalized": 1,
+  "token": "normalized-test1"
+}
