@@ -1,0 +1,12 @@
+{
+  "category": "BUSINESS",
+  "contributor": "admin",
+  "description": "第二个 PBC，含跨 PBC 引用，测 Codifier 多 PBC 拆分",
+  "formDashboardLayoutList": [ ],
+  "formEntityRelationList": [ ],
+  "matchWeight": 0,
+  "name": "Codifier Fixture 2",
+  "tags": "test,codifier",
+  "token": "codifier-fixture2",
+  "uiPluginList": [ ]
+}

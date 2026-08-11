@@ -1,0 +1,397 @@
+{
+  "fields": [
+    {
+      "component": "Stack",
+      "componentProps": {
+        "flexDirection": "column",
+        "gap": 16
+      },
+      "fields": [
+        {
+          "component": "Card",
+          "fields": [
+            {
+              "component": "Stack",
+              "componentProps": {
+                "flexDirection": "column",
+                "gap": 16
+              },
+              "fields": [
+                {
+                  "component": "Text",
+                  "componentProps": {
+                    "content": "基本信息",
+                    "content_i18n_en-US": "Basic Information",
+                    "content_i18n_ja-JP": "基本情報",
+                    "content_i18n_zh-CN": "基本信息"
+                  },
+                  "style": {
+                    "fontSize": 18,
+                    "fontWeight": 600
+                  }
+                },
+                {
+                  "component": "Stack",
+                  "componentProps": {
+                    "flexDirection": "column",
+                    "gap": 12
+                  },
+                  "fields": [
+                    {
+                      "component": "UserAvatar",
+                      "componentProps": {
+                        "shape": "circle",
+                        "size": 128
+                      },
+                      "fieldTitleProps": {
+                        "hidden": true
+                      },
+                      "id": "avatar"
+                    },
+                    {
+                      "component": "Input",
+                      "componentProps": {
+                        "placeholder": "Please input user name",
+                        "placeholder_i18n_en-US": "Please input user name",
+                        "placeholder_i18n_ja-JP": "ユーザー名を入力してください",
+                        "placeholder_i18n_zh-CN": "请输入用户名"
+                      },
+                      "defaultValue": ":context.userProfile.username",
+                      "id": "username",
+                      "title": "用户名",
+                      "title_i18n_en-US": "Username",
+                      "title_i18n_ja-JP": "ユーザー名",
+                      "title_i18n_zh-CN": "用户名",
+                      "validation": {
+                        "maxLength": 200,
+                        "required": true
+                      }
+                    },
+                    {
+                      "component": "Input",
+                      "componentProps": {
+                        "placeholder": "Please input nick name",
+                        "placeholder_i18n_en-US": "Please input nick name",
+                        "placeholder_i18n_ja-JP": "ニックネームを入力してください",
+                        "placeholder_i18n_zh-CN": "请输入昵称"
+                      },
+                      "defaultValue": ":context.userProfile.nickName",
+                      "id": "nickName",
+                      "title": "昵称",
+                      "title_i18n_en-US": "Nickname",
+                      "title_i18n_ja-JP": "ニックネーム",
+                      "title_i18n_zh-CN": "昵称",
+                      "validation": {
+                        "maxLength": 200
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "component": "Card",
+          "fields": [
+            {
+              "component": "Stack",
+              "componentProps": {
+                "flexDirection": "column",
+                "gap": 16
+              },
+              "fields": [
+                {
+                  "component": "Text",
+                  "componentProps": {
+                    "content": "联系信息",
+                    "content_i18n_en-US": "Contact Information",
+                    "content_i18n_ja-JP": "連絡先情報",
+                    "content_i18n_zh-CN": "联系信息"
+                  },
+                  "style": {
+                    "fontSize": 18,
+                    "fontWeight": 600
+                  }
+                },
+                {
+                  "component": "Stack",
+                  "componentProps": {
+                    "flexDirection": "column",
+                    "gap": 12
+                  },
+                  "fields": [
+                    {
+                      "component": "Input",
+                      "componentProps": {
+                        "ootb": "isEmail",
+                        "placeholder": "Please input email",
+                        "placeholder_i18n_en-US": "Please input email",
+                        "placeholder_i18n_ja-JP": "メールアドレスを入力してください",
+                        "placeholder_i18n_zh-CN": "请输入电子邮件"
+                      },
+                      "defaultValue": ":context.userProfile.email",
+                      "id": "email",
+                      "title": "电子邮箱",
+                      "title_i18n_en-US": "Email",
+                      "title_i18n_ja-JP": "メールアドレス",
+                      "title_i18n_zh-CN": "电子邮件",
+                      "validation": {
+                        "maxLength": 200,
+                        "required": true
+                      }
+                    },
+                    {
+                      "component": "Input",
+                      "componentProps": {
+                        "placeholder": "Please input user phone",
+                        "placeholder_i18n_en-US": "Please input user phone",
+                        "placeholder_i18n_ja-JP": "ユーザーの電話番号を入力してください",
+                        "placeholder_i18n_zh-CN": "请输入用户电话"
+                      },
+                      "defaultValue": ":context.userProfile.phone",
+                      "id": "phone",
+                      "title": "电话号码",
+                      "title_i18n_en-US": "Phone Number",
+                      "title_i18n_ja-JP": "電話番号",
+                      "title_i18n_zh-CN": "电话号码",
+                      "validation": {
+                        "maxLength": 200,
+                        "ootb": "isMobilePhoneNum"
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "component": "Card",
+          "fields": [
+            {
+              "component": "Stack",
+              "componentProps": {
+                "flexDirection": "column",
+                "gap": 16
+              },
+              "fields": [
+                {
+                  "component": "Text",
+                  "componentProps": {
+                    "content": "账户安全",
+                    "content_i18n_en-US": "Account Security",
+                    "content_i18n_ja-JP": "アカウントセキュリティ",
+                    "content_i18n_zh-CN": "账户安全"
+                  },
+                  "style": {
+                    "fontSize": 18,
+                    "fontWeight": 600
+                  }
+                },
+                {
+                  "component": "Stack",
+                  "componentProps": {
+                    "flexDirection": "column",
+                    "gap": 12
+                  },
+                  "fields": [
+                    {
+                      "component": "Stack",
+                      "componentProps": {
+                        "alignItems": "flex-end",
+                        "flexDirection": "row"
+                      },
+                      "fields": [
+                        {
+                          "component": "Button",
+                          "componentProps": {
+                            "action": {
+                              "href": "/user/:id/change-password",
+                              "type": "link"
+                            },
+                            "content": "更改密码",
+                            "content_i18n_en-US": "Change password",
+                            "content_i18n_ja-JP": "パスワードを変更する",
+                            "content_i18n_zh-CN": "更改密码",
+                            "type": "primary"
+                          }
+                        }
+                      ]
+                    },
+                    {
+                      "component": "Select",
+                      "componentProps": {
+                        "allowClear": true,
+                        "dataResponseKeyPath": "",
+                        "dataUrl": "/user-management/api/login/config",
+                        "mapping": {
+                          "label": "name",
+                          "value": "token"
+                        }
+                      },
+                      "hidden": true,
+                      "id": "ssoType",
+                      "title": "登录类型",
+                      "title_i18n_en-US": "SSO Login Type",
+                      "title_i18n_ja-JP": "SSOログインタイプ",
+                      "title_i18n_zh-CN": "SSO 登录类型"
+                    },
+                    {
+                      "component": "Input",
+                      "hidden": {
+                        "dataPredicate": {
+                          "conditions": [
+                            {
+                              "condition": "equals",
+                              "dataField": "ssoType",
+                              "value": "builtin"
+                            },
+                            {
+                              "condition": "blank",
+                              "dataField": "ssoType",
+                              "value": null
+                            }
+                          ],
+                          "operator": "OR"
+                        }
+                      },
+                      "id": "ssoUsername",
+                      "title": "统一登录用户名",
+                      "title_i18n_en-US": "SSO User Name",
+                      "title_i18n_ja-JP": "SSOユーザー名",
+                      "title_i18n_zh-CN": "SSO 用户名",
+                      "validation": {
+                        "maxLength": 200
+                      }
+                    },
+                    {
+                      "component": "Select",
+                      "componentProps": {
+                        "options": [
+                          {
+                            "label": "允许",
+                            "label_i18n_en-US": "Allow",
+                            "label_i18n_ja-JP": "許可する",
+                            "label_i18n_zh-CN": "允许",
+                            "value": 1
+                          },
+                          {
+                            "label": "禁止",
+                            "label_i18n_en-US": "Deny",
+                            "label_i18n_ja-JP": "禁止する",
+                            "label_i18n_zh-CN": "禁止",
+                            "value": 0
+                          },
+                          {
+                            "label": "统一认证不可用时允许",
+                            "label_i18n_en-US": "Allow when unified authentication is unavailable",
+                            "label_i18n_ja-JP": "統一認証が利用できない場合は許可する",
+                            "label_i18n_zh-CN": "统一认证不可用时允许",
+                            "value": 2
+                          }
+                        ],
+                        "stringEqual": true,
+                        "valueType": "value"
+                      },
+                      "hidden": {
+                        "dataPredicate": {
+                          "conditions": [
+                            {
+                              "condition": "equals",
+                              "dataField": "ssoType",
+                              "value": "builtin"
+                            },
+                            {
+                              "condition": "blank",
+                              "dataField": "ssoType",
+                              "value": null
+                            }
+                          ],
+                          "operator": "OR"
+                        }
+                      },
+                      "id": "ssoAllowBuiltin",
+                      "title": "允许本地登录",
+                      "title_i18n_en-US": "Allow Local Login",
+                      "title_i18n_ja-JP": "ローカルログインを許可",
+                      "title_i18n_zh-CN": "允许本地登录"
+                    },
+                    {
+                      "component": "Input",
+                      "defaultValue": "user",
+                      "hidden": true,
+                      "id": "userSource",
+                      "title": "用户来源",
+                      "title_i18n_en-US": "User Source",
+                      "title_i18n_ja-JP": "ユーザーソース",
+                      "title_i18n_key": "user-management|>system-user-form|>parameter|>8",
+                      "title_i18n_zh-CN": "用户来源",
+                      "validation": {
+                        "maxLength": 200
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "component": "Stack",
+          "componentProps": {
+            "alignItems": "center",
+            "flexDirection": "row",
+            "id": "bottom-bar",
+            "justifyContent": "flex-end"
+          },
+          "fields": [
+            {
+              "component": "Button",
+              "componentProps": {
+                "action": {
+                  "methodName": "updateUserProfile",
+                  "type": "formMethod"
+                },
+                "content": "保存",
+                "content_i18n_key": "save",
+                "content_i18n_ns": "icp-common",
+                "type": "primary"
+              },
+              "disabled": {
+                "dataPredicate": {
+                  "conditions": [
+                    {
+                      "condition": "blank",
+                      "dataField": "username"
+                    },
+                    {
+                      "condition": "blank",
+                      "dataField": "email"
+                    }
+                  ],
+                  "operator": "OR"
+                }
+              }
+            }
+          ],
+          "style": {
+            "padding": "0 0 20px 0"
+          }
+        }
+      ]
+    }
+  ],
+  "form": {
+    "defaultButton": false,
+    "labelLayout": "vertical",
+    "onSubmit": null,
+    "script": "$$$$ref:text:layout-user-profile-script.js",
+    "submitMethod": "put",
+    "title": "用户个人资料",
+    "title_i18n_en-US": "User Profile",
+    "title_i18n_ja-JP": "ユーザープロファイル",
+    "title_i18n_zh-CN": "用户个人资料",
+    "updateUrl": "/form/api/v2/form-entity-data/:id/user-management-new/system-user-form/edit"
+  }
+}

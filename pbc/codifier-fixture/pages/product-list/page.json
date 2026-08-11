@@ -1,0 +1,90 @@
+{
+  "name": "产品列表",
+  "schemaId": "product-list",
+  "schemaJson_$$$NESTED_JSON_STRING$$$": {
+    "fields": [
+      {
+        "component": "Card",
+        "fields": [
+          {
+            "component": "Table",
+            "componentProps": {
+              "addButtonHref": "/form/product/layout/default",
+              "columnDefs": [
+                {
+                  "colId": "name",
+                  "field": "name",
+                  "headerName": "产品名称",
+                  "type": "TEXT_COLUMN"
+                },
+                {
+                  "colId": "code",
+                  "field": "code",
+                  "headerName": "产品编码",
+                  "type": "TEXT_COLUMN"
+                },
+                {
+                  "colId": "price",
+                  "field": "price",
+                  "headerName": "单价",
+                  "type": "NUMBER_COLUMN"
+                },
+                {
+                  "colId": "category",
+                  "field": "category",
+                  "headerName": "分类",
+                  "type": "SELECT_COLUMN"
+                },
+                {
+                  "colId": "launchDate",
+                  "field": "launchDate",
+                  "headerName": "上市日期",
+                  "type": "TIME_COLUMN"
+                },
+                {
+                  "cellRendererParams": {
+                    "actions": [
+                      {
+                        "href": "/form/product/layout/default/:id",
+                        "type": "EDIT"
+                      },
+                      {
+                        "href": "/form/:id/view",
+                        "type": "VIEW"
+                      },
+                      {
+                        "type": "DELETE"
+                      }
+                    ],
+                    "displayLikeButton": true,
+                    "showIcon": true
+                  },
+                  "headerName": "操作",
+                  "pinned": "right",
+                  "type": "ACTION_COLUMN",
+                  "width": 200
+                }
+              ],
+              "dataSource": {
+                "token": "product"
+              },
+              "pagination": true,
+              "pinnedFilter": [ ]
+            },
+            "id": "product-table",
+            "style": {
+              "height": "450px"
+            }
+          }
+        ],
+        "style": {
+          "height": "100%"
+        }
+      }
+    ],
+    "form": {
+      "labelLayout": "vertical",
+      "title": "产品列表"
+    }
+  }
+}
