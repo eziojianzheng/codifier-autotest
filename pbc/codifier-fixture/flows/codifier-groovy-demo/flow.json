@@ -1,0 +1,73 @@
+{
+  "name": "Codifier Groovy Demo",
+  "nodeList": [
+    {
+      "enabled": true,
+      "id": 1,
+      "inMemory": true,
+      "inMemoryTransaction": true,
+      "restTrigger": {
+        "eligibleForAgent": false,
+        "method": "POST",
+        "requestBody": [
+          {
+            "dataType": "string",
+            "label": "X",
+            "name": "x",
+            "optional": true
+          }
+        ],
+        "requestHeaders": [ ],
+        "requestParams": [ ],
+        "url": "/flow/api/flow-rest/codifier-groovy-demo"
+      },
+      "triggerType": "REST",
+      "type": "TRIGGER"
+    },
+    {
+      "enabled": true,
+      "id": 2,
+      "nodeName": "APP - Groovy Script",
+      "sdk": {
+        "input": {
+          "script": "$$$$ref:text:sdk-2-script.groovy"
+        },
+        "inputFields": [ ],
+        "name": "Groovy 计算",
+        "numberStringToBigDecimal": false,
+        "outputFields": [ ],
+        "sdkType": "GENERAL_GROOVY"
+      },
+      "type": "APP"
+    },
+    {
+      "enabled": true,
+      "id": 3,
+      "nodeName": "设置返回值",
+      "sdk": {
+        "input": {
+          "code": "0",
+          "data": "$2.output",
+          "message": "success"
+        },
+        "inputFields": [ ],
+        "name": "返回结果",
+        "numberStringToBigDecimal": false,
+        "outputFields": [ ],
+        "sdkType": "SET_VALUE_TO_INSTANCE"
+      },
+      "type": "APP"
+    },
+    {
+      "enabled": true,
+      "id": 4,
+      "nodeName": "STOP_JOB",
+      "result": "Successful",
+      "type": "STOP_JOB"
+    }
+  ],
+  "restApiEnabled": 1,
+  "restApiMethod": "POST",
+  "restApiUrl": "/flow/api/flow-rest/codifier-groovy-demo",
+  "token": "codifier-groovy-demo"
+}

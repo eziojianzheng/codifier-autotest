@@ -1,0 +1,62 @@
+{
+  "name": "Codifier Cross-PBC Demo",
+  "nodeList": [
+    {
+      "enabled": true,
+      "id": 1,
+      "inMemory": true,
+      "inMemoryTransaction": false,
+      "restTrigger": {
+        "eligibleForAgent": false,
+        "method": "POST",
+        "requestBody": [ ],
+        "requestHeaders": [ ],
+        "requestParams": [ ],
+        "url": "/flow/api/flow-rest/codifier-crosspbc-demo"
+      },
+      "triggerType": "REST",
+      "type": "TRIGGER"
+    },
+    {
+      "async": false,
+      "dynamic": false,
+      "enabled": true,
+      "id": 2,
+      "input": { },
+      "nodeName": "调用其他PBC的Groovy流程",
+      "subFlowDefinitionToken": "codifier-groovy-demo",
+      "subFlowPbcToken": "codifier-fixture",
+      "transactionalPropagationType": "SUPPORTS",
+      "type": "SUB_FLOW"
+    },
+    {
+      "enabled": true,
+      "id": 3,
+      "nodeName": "设置返回值",
+      "sdk": {
+        "input": {
+          "code": "0",
+          "data": "$2.output",
+          "message": "success"
+        },
+        "inputFields": [ ],
+        "name": "返回",
+        "numberStringToBigDecimal": false,
+        "outputFields": [ ],
+        "sdkType": "SET_VALUE_TO_INSTANCE"
+      },
+      "type": "APP"
+    },
+    {
+      "enabled": true,
+      "id": 4,
+      "nodeName": "STOP_JOB",
+      "result": "Successful",
+      "type": "STOP_JOB"
+    }
+  ],
+  "restApiEnabled": 1,
+  "restApiMethod": "POST",
+  "restApiUrl": "/flow/api/flow-rest/codifier-crosspbc-demo",
+  "token": "codifier-crosspbc-demo"
+}

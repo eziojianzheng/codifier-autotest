@@ -1,0 +1,11 @@
+{
+  "category": "BASIS",
+  "description": "roleAndPermission",
+  "formDashboardLayoutList": [ ],
+  "formEntityRelationList": [ ],
+  "matchWeight": 0,
+  "name": "角色与权限",
+  "token": "role-and-permission",
+  "type": "ROLE_AND_PERMISSION",
+  "uiPluginList": [ ]
+}

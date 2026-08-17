@@ -1,0 +1,119 @@
+{
+  "category": "BUSINESS",
+  "config": "{\"menu\":[{\"to\":\"\",\"label\":\"用户与角色\",\"label_i18n_zh-CN\":\"用户与角色\",\"label_i18n_en-US\":\"Users and Roles\",\"label_i18n_ja-JP\":\"ユーザーとロール\",\"category\":null,\"key\":\"793341b4\",\"children\":[{\"to\":\"/user-management-new/page/system-user-form-list\",\"label\":\"用户\",\"label_i18n_zh-CN\":\"用户\",\"label_i18n_en-US\":\"User\",\"label_i18n_ja-JP\":\"ユーザー\",\"category\":null,\"key\":\"74e20a44\",\"icon\":\"oct:passkey-fill\"},{\"to\":\"/user-management-new/page/system-role-form-list\",\"label\":\"角色\",\"label_i18n_zh-CN\":\"角色\",\"label_i18n_en-US\":\"Role\",\"label_i18n_ja-JP\":\"ロール\",\"category\":null,\"key\":\"ad696683\",\"icon\":\"material:people-alt-outlined\"}],\"icon\":\"material:group-sharp\"}]}",
+  "contributor": "admin",
+  "description": "User management , Role management ",
+  "formDashboardLayoutList": [ ],
+  "formEntityRelationList": [ ],
+  "matchWeight": 0,
+  "name": "User Management",
+  "routesJson_$$$NESTED_JSON_STRING$$$": {
+    "desktop": {
+      "/": {
+        "pageTitle": "用户管理",
+        "pageTitle_i18n_en-US": "User Management",
+        "pageTitle_i18n_ja-JP": "ユーザー管理",
+        "pageTitle_i18n_zh-CN": "用户管理",
+        "schemaId": "system-user-form-list"
+      },
+      "/role": {
+        "formType": "",
+        "pageTitle": "角色列表",
+        "pageTitle_i18n_en-US": "Role List",
+        "pageTitle_i18n_ja-JP": "ロールリスト",
+        "pageTitle_i18n_zh-CN": "角色列表",
+        "schemaId": "system-role-form-list"
+      },
+      "/role/:formEntityDataId/view": {
+        "formType": "ENTITY-VIEW",
+        "pageTitle": "角色详情",
+        "pageTitle_i18n_en-US": "Role Details",
+        "pageTitle_i18n_ja-JP": "ロールの詳細",
+        "pageTitle_i18n_zh-CN": "角色详情",
+        "parent": "/role",
+        "retrieveUrl": "/user-management/api/role/:params.roleId",
+        "submitMethod": "put",
+        "updateUrl": "/user-management/api/role/:params.roleId"
+      },
+      "/role/new": {
+        "createUrl": "/user-management/api/role",
+        "formEntityLayoutToken": "new",
+        "formEntityToken": "system-role-form",
+        "formType": "ENTITY",
+        "pageDescription": "",
+        "pageTitle": "创建角色",
+        "pageTitle_i18n_en-US": "Create Role",
+        "pageTitle_i18n_ja-JP": "ロール作成",
+        "pageTitle_i18n_zh-CN": "创建角色",
+        "parent": "/role",
+        "submitMethod": "post"
+      },
+      "/user": {
+        "pageTitle": "用户管理",
+        "pageTitle_i18n_en-US": "User Management",
+        "pageTitle_i18n_ja-JP": "ユーザー管理",
+        "pageTitle_i18n_zh-CN": "用户管理",
+        "schemaId": "system-user-form-list"
+      },
+      "/user/:formEntityDataId/change-password": {
+        "formEntityLayoutToken": "user-change-password",
+        "formEntityToken": "system-user-form",
+        "formType": "ENTITY"
+      },
+      "/user/:formEntityDataId/edit": {
+        "formEntityLayoutToken": "edit",
+        "formEntityToken": "system-user-form",
+        "formType": "ENTITY",
+        "pageTitle": "修改用户",
+        "pageTitle_i18n_en-US": "Edit User",
+        "pageTitle_i18n_ja-JP": "ユーザー編集",
+        "pageTitle_i18n_zh-CN": "修改用户",
+        "parent": "/",
+        "retrieveUrl": "/user-management/api/user/:params.userId",
+        "submitMethod": "put",
+        "updateUrl": "/user-management/api/user/:params.userId"
+      },
+      "/user/:formEntityDataId/view": {
+        "formType": "ENTITY-VIEW",
+        "pageTitle": "用户详情",
+        "pageTitle_i18n_en-US": "User Details",
+        "pageTitle_i18n_ja-JP": "ユーザー詳細",
+        "pageTitle_i18n_zh-CN": "用户详情",
+        "parent": "/",
+        "retrieveUrl": "/user-management/api/user/:params.userId"
+      },
+      "/user/new": {
+        "createUrl": "/user-management/api/user",
+        "formEntityLayoutToken": "new",
+        "formEntityToken": "system-user-form",
+        "formType": "ENTITY",
+        "pageTitle": "新建用户",
+        "pageTitle_i18n_en-US": "Create New User",
+        "pageTitle_i18n_ja-JP": "新規ユーザー作成",
+        "pageTitle_i18n_zh-CN": "新建用户",
+        "parent": "/",
+        "submitMethod": "post"
+      },
+      "/user/profile": {
+        "formEntityLayoutToken": "user-profile",
+        "formEntityToken": "system-user-form",
+        "formType": "ENTITY"
+      }
+    },
+    "mobile": {
+      "/user/change-password": {
+        "formEntityLayoutToken": "user-change-password",
+        "formEntityToken": "system-user-form",
+        "formType": "ENTITY"
+      },
+      "/user/profile": {
+        "formEntityLayoutToken": "user-profile",
+        "formEntityToken": "system-user-form",
+        "formType": "ENTITY"
+      }
+    }
+  },
+  "tags": "UM,User and Role,User Management",
+  "token": "user-management-new",
+  "uiPluginList": [ ]
+}
