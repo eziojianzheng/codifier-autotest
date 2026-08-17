@@ -1,0 +1,99 @@
+{
+  "name": "Codifier Approval Demo",
+  "nodeList": [
+    {
+      "enabled": true,
+      "formTrigger": {
+        "transactional": false
+      },
+      "id": 1,
+      "inMemory": false,
+      "inMemoryTransaction": false,
+      "triggerType": "FORM",
+      "type": "TRIGGER"
+    },
+    {
+      "enabled": true,
+      "formEntityLayoutToken": "default",
+      "formEntityToken": "product",
+      "id": 2,
+      "nodeName": "创建产品",
+      "operationType": "CREATE",
+      "pbcToken": "codifier-fixture",
+      "timeUnit": "days",
+      "type": "FORM"
+    },
+    {
+      "enabled": true,
+      "formEntityDataId": "$2.formEntityDataId",
+      "formEntityLayoutToken": "default",
+      "formEntityToken": "product",
+      "id": 3,
+      "isCommentMandatoryForApproval": false,
+      "isCommentMandatoryForDisapproval": true,
+      "nodeName": "审批产品上架",
+      "pbcToken": "codifier-fixture",
+      "timeUnit": "days",
+      "type": "APPROVAL"
+    },
+    {
+      "conditions": [
+        {
+          "condition": "equals",
+          "dataField": "$3.approvalResult",
+          "value": "APPROVAL"
+        }
+      ],
+      "elseSubFlow": [
+        {
+          "enabled": true,
+          "id": 6,
+          "nodeName": "设为下架",
+          "sdk": {
+            "input": {
+              "active": "false"
+            },
+            "inputFields": [ ],
+            "name": "下架",
+            "numberStringToBigDecimal": false,
+            "outputFields": [ ],
+            "sdkType": "SET_ENTITY_FIELD_VALUE"
+          },
+          "type": "APP"
+        }
+      ],
+      "enabled": true,
+      "id": 4,
+      "nodeName": "审批结果判断",
+      "operator": "AND",
+      "subFlow": [
+        {
+          "enabled": true,
+          "id": 5,
+          "nodeName": "设为上架",
+          "sdk": {
+            "input": {
+              "active": "true"
+            },
+            "inputFields": [ ],
+            "name": "上架",
+            "numberStringToBigDecimal": false,
+            "outputFields": [ ],
+            "sdkType": "SET_ENTITY_FIELD_VALUE"
+          },
+          "type": "APP"
+        }
+      ],
+      "type": "IF_ELSE"
+    },
+    {
+      "enabled": true,
+      "id": 7,
+      "nodeName": "STOP_JOB",
+      "result": "Successful",
+      "type": "STOP_JOB"
+    }
+  ],
+  "restApiEnabled": 0,
+  "token": "codifier-approval-demo"
+}

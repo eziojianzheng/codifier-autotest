@@ -1,0 +1,238 @@
+{
+  "defaultMobileViewLayoutToken": "view",
+  "defaultViewLayoutToken": "view",
+  "fields": [
+    {
+      "encryptStorage": 0,
+      "encryptTransit": 0,
+      "forbidToUpdate": false,
+      "maxLength": 200,
+      "name": "角色描述",
+      "nameI18nKey": "user-management|>system-role-form|>description",
+      "storageField": "value2",
+      "token": "description",
+      "type": "TEXT_BOX"
+    },
+    {
+      "encryptStorage": 0,
+      "encryptTransit": 0,
+      "forbidToUpdate": false,
+      "maxLength": 200,
+      "name": "Integration Role",
+      "nameI18nKey": "user-management|>system-role-form|>integrationRole",
+      "storageField": "value14",
+      "token": "integrationRole",
+      "type": "NUMBER"
+    },
+    {
+      "encryptStorage": 0,
+      "encryptTransit": 0,
+      "forbidToUpdate": false,
+      "maxLength": 200,
+      "name": "Is System Role?",
+      "nameI18nKey": "user-management|>system-role-form|>isSystem",
+      "storageField": "value13",
+      "token": "isSystem",
+      "type": "TEXT_BOX"
+    },
+    {
+      "encryptStorage": 0,
+      "encryptTransit": 0,
+      "forbidToUpdate": false,
+      "maxLength": 200,
+      "name": "角色名",
+      "nameI18nKey": "user-management|>system-role-form|>name",
+      "storageField": "value1",
+      "token": "name",
+      "type": "TEXT_BOX"
+    },
+    {
+      "encryptStorage": 0,
+      "encryptTransit": 0,
+      "forbidToUpdate": false,
+      "maxLength": 200,
+      "name": "Org Form Pbc Token",
+      "nameI18nKey": "user-management|>system-role-form|>orgFormPbcToken",
+      "storageField": "value17",
+      "token": "orgFormPbcToken",
+      "type": "TEXT_BOX"
+    },
+    {
+      "encryptStorage": 0,
+      "encryptTransit": 0,
+      "forbidToUpdate": false,
+      "maxLength": 200,
+      "name": "Org Form Token",
+      "nameI18nKey": "user-management|>system-role-form|>orgFormToken",
+      "storageField": "value16",
+      "token": "orgFormToken",
+      "type": "TEXT_BOX"
+    },
+    {
+      "encryptStorage": 0,
+      "encryptTransit": 0,
+      "forbidToUpdate": false,
+      "maxLength": 200,
+      "name": "PBC ID",
+      "nameI18nKey": "user-management|>system-role-form|>pbcId",
+      "storageField": "value11",
+      "token": "pbcId",
+      "type": "TEXT_BOX"
+    },
+    {
+      "encryptStorage": 0,
+      "encryptTransit": 0,
+      "forbidToUpdate": false,
+      "maxLength": 200,
+      "name": "PBC Token",
+      "nameI18nKey": "user-management|>system-role-form|>pbcToken",
+      "storageField": "value12",
+      "token": "pbcToken",
+      "type": "TEXT_BOX"
+    },
+    {
+      "encryptStorage": 0,
+      "encryptTransit": 0,
+      "forbidToUpdate": false,
+      "maxLength": 200,
+      "name": "pid",
+      "nameI18nKey": "user-management|>system-role-form|>pid",
+      "storageField": "value7",
+      "token": "pid",
+      "type": "TEXT_BOX"
+    },
+    {
+      "encryptStorage": 0,
+      "encryptTransit": 0,
+      "forbidToUpdate": false,
+      "maxLength": 200,
+      "name": "Project ID",
+      "nameI18nKey": "user-management|>system-role-form|>projectId",
+      "storageField": "value10",
+      "token": "projectId",
+      "type": "TEXT_BOX"
+    },
+    {
+      "encryptStorage": 0,
+      "encryptTransit": 0,
+      "forbidToUpdate": false,
+      "maxLength": 200,
+      "nameI18nKey": "user-management|>system-role-form|>projectToken",
+      "storageField": "value9",
+      "token": "projectToken",
+      "type": "TEXT_BOX"
+    },
+    {
+      "encryptStorage": 0,
+      "encryptTransit": 0,
+      "forbidToUpdate": false,
+      "maxLength": 200,
+      "name": "Role ID",
+      "nameI18nKey": "user-management|>system-role-form|>generatedEsxcigxu",
+      "storageField": "value5",
+      "token": "roleId",
+      "type": "TEXT_BOX",
+      "uniqueField": true
+    },
+    {
+      "encryptStorage": 0,
+      "encryptTransit": 0,
+      "forbidToUpdate": false,
+      "maxLength": 200,
+      "name": "权限范围",
+      "nameI18nKey": "user-management|>system-role-form|>scope",
+      "storageField": "value4",
+      "token": "scope",
+      "type": "RADIO"
+    },
+    {
+      "encryptStorage": 0,
+      "encryptTransit": 0,
+      "forbidToUpdate": false,
+      "maxLength": 200,
+      "name": "Tenant ID",
+      "nameI18nKey": "user-management|>system-role-form|>generatedFthtooln",
+      "storageField": "value8",
+      "token": "tenantId",
+      "type": "TEXT_BOX"
+    },
+    {
+      "encryptStorage": 0,
+      "encryptTransit": 0,
+      "forbidToUpdate": false,
+      "maxLength": 200,
+      "name": "Role Token",
+      "nameI18nKey": "user-management|>system-role-form|>generatedNmtkrigk",
+      "storageField": "value6",
+      "token": "token",
+      "type": "TEXT_BOX"
+    },
+    {
+      "encryptStorage": 0,
+      "encryptTransit": 0,
+      "forbidToUpdate": false,
+      "maxLength": 200,
+      "multiple": true,
+      "name": "用户列表",
+      "nameI18nKey": "user-management|>system-role-form|>users",
+      "referenceDisplayField": "nickName",
+      "referenceEntity": "system-user-form",
+      "referenceField": "id",
+      "referenceMappingFields": "{\"value\":\"id\",\"label\":\"nickName\"}",
+      "referencePbc": "user-management-new",
+      "referenceReciprocal": "{\"referenceField\":\"role\",\"keyField\":\"id\"}",
+      "storageField": "value3",
+      "token": "users",
+      "type": "ACL"
+    },
+    {
+      "encryptStorage": 0,
+      "encryptTransit": 0,
+      "forbidToUpdate": false,
+      "maxLength": 200,
+      "name": "UUID",
+      "nameI18nKey": "user-management|>system-role-form|>uuid",
+      "storageField": "value15",
+      "token": "uuid",
+      "type": "TEXT_BOX"
+    }
+  ],
+  "isAutoLock": 0,
+  "isDeletableWhenReferenced": 1,
+  "isInnerEntity": 0,
+  "isMasterData": 1,
+  "layouts": [
+    {
+      "defaultLayout": false,
+      "name": "New Role",
+      "sortIndex": 0,
+      "token": "new"
+    },
+    {
+      "defaultLayout": false,
+      "name": "Edit Role",
+      "sortIndex": 1,
+      "token": "edit"
+    },
+    {
+      "defaultLayout": true,
+      "name": "Role brief information",
+      "sortIndex": 2,
+      "token": "view"
+    },
+    {
+      "defaultLayout": false,
+      "name": "Role detail information",
+      "sortIndex": 3,
+      "token": "detail"
+    }
+  ],
+  "masterDataType": "ROLE",
+  "name": "System Role",
+  "permissionTarget": "system-role-form",
+  "standalone": 1,
+  "standaloneTableName": "form_um_role",
+  "standaloneTableNormalized": 0,
+  "token": "system-role-form",
+  "usingNewOrgTreeDataSecurity": 0
+}

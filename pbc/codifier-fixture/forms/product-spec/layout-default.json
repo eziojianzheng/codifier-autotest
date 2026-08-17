@@ -1,0 +1,25 @@
+{
+  "fields": [
+    {
+      "component": "Input",
+      "hidden": true,
+      "id": "parentDataId",
+      "title": "父表关联ID"
+    },
+    {
+      "component": "Input",
+      "id": "specName",
+      "title": "规格名"
+    },
+    {
+      "component": "Input",
+      "id": "specValue",
+      "title": "规格值"
+    }
+  ],
+  "form": {
+    "defaultCancelButton": true,
+    "defaultSubmitButton": true,
+    "labelLayout": "vertical"
+  }
+}
