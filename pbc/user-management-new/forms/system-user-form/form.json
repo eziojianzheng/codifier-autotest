@@ -1,0 +1,384 @@
+{
+  "defaultMobileViewLayoutToken": "view",
+  "defaultViewLayoutToken": "view",
+  "description": "用户表",
+  "fields": [
+    {
+      "encryptStorage": 0,
+      "encryptTransit": 0,
+      "forbidToUpdate": false,
+      "maxLength": 200,
+      "name": "API Token",
+      "storageField": "value26",
+      "token": "apiToken",
+      "type": "TEXTAREA"
+    },
+    {
+      "encryptStorage": 0,
+      "encryptTransit": 0,
+      "forbidToUpdate": false,
+      "maxLength": 200,
+      "storageField": "value15",
+      "token": "avatar",
+      "type": "UPLOAD"
+    },
+    {
+      "encryptStorage": 0,
+      "encryptTransit": 0,
+      "forbidToUpdate": false,
+      "maxLength": 200,
+      "name": "出生日期",
+      "nameI18nKey": "user-management|>system-user-form|>birthday",
+      "storageField": "value17",
+      "token": "birthday",
+      "type": "TIME"
+    },
+    {
+      "encryptStorage": 0,
+      "encryptTransit": 0,
+      "forbidToUpdate": false,
+      "maxLength": 200,
+      "name": "部门",
+      "nameI18nKey": "user-management|>system-user-form|>department",
+      "storageField": "value16",
+      "token": "department",
+      "type": "TEXT_BOX"
+    },
+    {
+      "encryptStorage": 0,
+      "encryptTransit": 0,
+      "forbidToUpdate": false,
+      "maxLength": 200,
+      "name": "电子邮箱",
+      "storageField": "value6",
+      "token": "email",
+      "type": "TEXT_BOX"
+    },
+    {
+      "encryptStorage": 0,
+      "encryptTransit": 0,
+      "forbidToUpdate": false,
+      "maxLength": 200,
+      "name": "是否有效",
+      "nameI18nKey": "user-management|>system-user-form|>enabled",
+      "storageField": "value11",
+      "token": "enabled",
+      "type": "SWITCH"
+    },
+    {
+      "domain": "test domain",
+      "encryptStorage": 0,
+      "encryptTransit": 0,
+      "forbidToUpdate": false,
+      "maxLength": 10,
+      "module": "test module",
+      "name": "性别",
+      "nameI18nKey": "standard|>test domain|>test module|>gender",
+      "nameI18nNs": "standard",
+      "storageField": "value14",
+      "token": "gender",
+      "type": "TEXT_BOX"
+    },
+    {
+      "encryptStorage": 0,
+      "encryptTransit": 0,
+      "forbidToUpdate": false,
+      "maxLength": 200,
+      "name": "Integration User",
+      "nameI18nKey": "user-management|>system-user-form|>integrationUser",
+      "storageField": "value25",
+      "token": "integrationUser",
+      "type": "TEXT_BOX"
+    },
+    {
+      "encryptStorage": 0,
+      "encryptTransit": 0,
+      "forbidToUpdate": false,
+      "maxLength": 200,
+      "name": "是否Admin?",
+      "nameI18nKey": "user-management|>system-user-form|>isAdmin",
+      "storageField": "value12",
+      "token": "isAdmin",
+      "type": "SWITCH"
+    },
+    {
+      "encryptStorage": 0,
+      "encryptTransit": 0,
+      "forbidToUpdate": false,
+      "maxLength": 200,
+      "name": "收件地址",
+      "nameI18nKey": "user-management|>system-user-form|>mailingAddress",
+      "storageField": "value20",
+      "token": "mailingAddress",
+      "type": "TEXT_BOX"
+    },
+    {
+      "encryptStorage": 0,
+      "encryptTransit": 0,
+      "forbidToUpdate": false,
+      "maxLength": 100,
+      "name": "新密码",
+      "storageField": "value21",
+      "token": "newPassword",
+      "type": "PASSWORD"
+    },
+    {
+      "encryptStorage": 0,
+      "encryptTransit": 0,
+      "forbidToUpdate": false,
+      "maxLength": 200,
+      "name": "昵称",
+      "storageField": "value2",
+      "token": "nickName",
+      "type": "TEXT_BOX"
+    },
+    {
+      "encryptStorage": 0,
+      "encryptTransit": 0,
+      "forbidToUpdate": false,
+      "maxLength": 100,
+      "name": "密码",
+      "nameI18nKey": "user-management|>system-user-form|>password",
+      "storageField": "value3",
+      "token": "password",
+      "type": "PASSWORD"
+    },
+    {
+      "encryptStorage": 0,
+      "encryptTransit": 0,
+      "forbidToUpdate": false,
+      "maxLength": 100,
+      "name": "确认密码",
+      "storageField": "value29",
+      "token": "passwordConfirmation",
+      "type": "PASSWORD"
+    },
+    {
+      "encryptStorage": 0,
+      "encryptTransit": 0,
+      "forbidToUpdate": false,
+      "maxLength": 200,
+      "name": "电话号码",
+      "storageField": "value5",
+      "token": "phone",
+      "type": "TEXT_BOX"
+    },
+    {
+      "encryptStorage": 0,
+      "encryptTransit": 0,
+      "forbidToUpdate": false,
+      "maxLength": 200,
+      "name": "职位",
+      "nameI18nKey": "user-management|>system-user-form|>position",
+      "storageField": "value18",
+      "token": "position",
+      "type": "TEXT_BOX"
+    },
+    {
+      "encryptStorage": 0,
+      "encryptTransit": 0,
+      "forbidToUpdate": false,
+      "maxLength": 200,
+      "name": "Project Token",
+      "nameI18nKey": "user-management|>system-user-form|>projectToken",
+      "storageField": "value24",
+      "token": "projectToken",
+      "type": "TEXT_BOX"
+    },
+    {
+      "encryptStorage": 0,
+      "encryptTransit": 0,
+      "forbidToUpdate": false,
+      "maxLength": 200,
+      "name": "密码重置日期",
+      "nameI18nKey": "user-management|>system-user-form|>pwdResetTime",
+      "storageField": "value22",
+      "token": "pwdResetTime",
+      "type": "TIME"
+    },
+    {
+      "encryptStorage": 0,
+      "encryptTransit": 0,
+      "forbidToUpdate": false,
+      "maxLength": 200,
+      "name": "二维码",
+      "nameI18nKey": "user-management|>system-user-form|>QrCode",
+      "storageField": "value27",
+      "token": "qrCode",
+      "type": "TEXT_BOX"
+    },
+    {
+      "encryptStorage": 0,
+      "encryptTransit": 0,
+      "forbidToUpdate": false,
+      "maxLength": 200,
+      "multiple": true,
+      "name": "用户角色",
+      "nameI18nKey": "user-management|>system-user-form|>role",
+      "referenceDisplayField": "name",
+      "referenceEntity": "system-role-form",
+      "referenceField": "id",
+      "referenceMappingFields": "{\"label\":\"name\",\"value\":\"id\"}",
+      "referencePbc": "user-management-new",
+      "referenceReciprocal": "{\"disabled\":true}",
+      "storageField": "value4",
+      "token": "role",
+      "type": "ACL"
+    },
+    {
+      "encryptStorage": 0,
+      "encryptTransit": 0,
+      "forbidToUpdate": false,
+      "maxLength": 200,
+      "name": "允许本地登录",
+      "storageField": "value9",
+      "token": "ssoAllowBuiltin",
+      "type": "SELECT"
+    },
+    {
+      "encryptStorage": 0,
+      "encryptTransit": 0,
+      "forbidToUpdate": false,
+      "maxLength": 200,
+      "name": "登录类型",
+      "referenceDisplayField": "name",
+      "referenceField": "token",
+      "referenceMappingFields": "{\"value\":\"token\",\"label\":\"name\"}",
+      "storageField": "value7",
+      "token": "ssoType",
+      "type": "SELECT"
+    },
+    {
+      "encryptStorage": 0,
+      "encryptTransit": 0,
+      "forbidToUpdate": false,
+      "maxLength": 200,
+      "name": "统一登录用户名",
+      "storageField": "value8",
+      "token": "ssoUsername",
+      "type": "TEXT_BOX"
+    },
+    {
+      "encryptStorage": 0,
+      "encryptTransit": 0,
+      "forbidToUpdate": false,
+      "maxLength": 200,
+      "name": "租户 ID",
+      "nameI18nKey": "user-management|>system-user-form|>tenantId",
+      "storageField": "value23",
+      "token": "tenantId",
+      "type": "NUMBER"
+    },
+    {
+      "encryptStorage": 0,
+      "encryptTransit": 0,
+      "forbidToUpdate": false,
+      "maxLength": 200,
+      "name": "用户 ID",
+      "nameI18nKey": "user-management|>system-user-form|>uid",
+      "storageField": "value13",
+      "token": "uid",
+      "type": "TEXT_BOX",
+      "uniqueField": true
+    },
+    {
+      "encryptStorage": 0,
+      "encryptTransit": 0,
+      "forbidToUpdate": false,
+      "maxLength": 200,
+      "name": "用户空闲时间",
+      "nameI18nKey": "user-management|>system-user-form|>userIdleTime",
+      "storageField": "value28",
+      "token": "userIdleTime",
+      "type": "NUMBER"
+    },
+    {
+      "encryptStorage": 0,
+      "encryptTransit": 0,
+      "forbidToUpdate": false,
+      "maxLength": 200,
+      "name": "用户来源",
+      "nameI18nKey": "user-management|>system-user-form|>parameter|>8",
+      "storageField": "value10",
+      "token": "userSource",
+      "type": "TEXT_BOX"
+    },
+    {
+      "encryptStorage": 0,
+      "encryptTransit": 0,
+      "forbidToUpdate": false,
+      "maxLength": 200,
+      "name": "用户名",
+      "storageField": "value1",
+      "token": "username",
+      "type": "TEXT_BOX"
+    },
+    {
+      "encryptStorage": 0,
+      "encryptTransit": 0,
+      "forbidToUpdate": false,
+      "maxLength": 200,
+      "name": "在职状态",
+      "nameI18nKey": "user-management|>system-user-form|>workStatus",
+      "storageField": "value19",
+      "token": "workStatus",
+      "type": "TEXT_BOX"
+    }
+  ],
+  "isAutoLock": 0,
+  "isDeletableWhenReferenced": 1,
+  "isInnerEntity": 0,
+  "isMasterData": 1,
+  "layouts": [
+    {
+      "defaultLayout": false,
+      "name": "New User",
+      "sortIndex": 0,
+      "token": "new"
+    },
+    {
+      "defaultLayout": false,
+      "name": "Edit User",
+      "sortIndex": 1,
+      "token": "edit"
+    },
+    {
+      "defaultLayout": true,
+      "name": "User Information",
+      "sortIndex": 2,
+      "token": "view"
+    },
+    {
+      "defaultLayout": false,
+      "name": "User Detail",
+      "sortIndex": 3,
+      "token": "detailView"
+    },
+    {
+      "defaultLayout": false,
+      "name": "Change Password",
+      "sortIndex": 4,
+      "token": "changePassword"
+    },
+    {
+      "defaultLayout": false,
+      "name": "User Profile",
+      "sortIndex": 5,
+      "token": "user-profile"
+    },
+    {
+      "defaultLayout": false,
+      "name": "User Change Password",
+      "sortIndex": 6,
+      "token": "user-change-password"
+    }
+  ],
+  "masterDataType": "USER",
+  "name": "System User",
+  "permissionTarget": "system-user-form",
+  "standalone": 1,
+  "standaloneTableName": "form_um_user",
+  "standaloneTableNormalized": 0,
+  "token": "system-user-form",
+  "usingNewOrgTreeDataSecurity": 0
+}
