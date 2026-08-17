@@ -1,0 +1,74 @@
+[
+  {
+    "method": "C",
+    "name": "创建",
+    "nameEnUs": "Create",
+    "nameJaJp": "作成",
+    "target": "System Role",
+    "targetToken": "system-role-form",
+    "token": "user-management_system-role-form_C"
+  },
+  {
+    "method": "D",
+    "name": "删除",
+    "nameEnUs": "Delete",
+    "nameJaJp": "削除",
+    "target": "System Role",
+    "targetToken": "system-role-form",
+    "token": "user-management_system-role-form_D"
+  },
+  {
+    "method": "R",
+    "name": "读取",
+    "nameEnUs": "Read",
+    "nameJaJp": "読取",
+    "target": "System Role",
+    "targetToken": "system-role-form",
+    "token": "user-management_system-role-form_R"
+  },
+  {
+    "method": "U",
+    "name": "更新",
+    "nameEnUs": "Update",
+    "nameJaJp": "更新",
+    "target": "System Role",
+    "targetToken": "system-role-form",
+    "token": "user-management_system-role-form_U"
+  },
+  {
+    "method": "C",
+    "name": "创建",
+    "nameEnUs": "Create",
+    "nameJaJp": "作成",
+    "target": "System User",
+    "targetToken": "system-user-form",
+    "token": "user-management_system-user-form_C"
+  },
+  {
+    "method": "D",
+    "name": "删除",
+    "nameEnUs": "Delete",
+    "nameJaJp": "削除",
+    "target": "System User",
+    "targetToken": "system-user-form",
+    "token": "user-management_system-user-form_D"
+  },
+  {
+    "method": "R",
+    "name": "读取",
+    "nameEnUs": "Read",
+    "nameJaJp": "読取",
+    "target": "System User",
+    "targetToken": "system-user-form",
+    "token": "user-management_system-user-form_R"
+  },
+  {
+    "method": "U",
+    "name": "更新",
+    "nameEnUs": "Update",
+    "nameJaJp": "更新",
+    "target": "System User",
+    "targetToken": "system-user-form",
+    "token": "user-management_system-user-form_U"
+  }
+]

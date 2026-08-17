@@ -1,0 +1,12 @@
+{
+  "category": "BASIS",
+  "config": "{\"loginMethods\":[{\"token\":\"basic\",\"type\":\"auth\",\"authType\":\"basic\",\"name\":\"用户名密码\",\"loginProperty\":\"email\",\"needCaptcha\":false,\"hide\":false,\"default\":true,\"order\":1}]}",
+  "description": "Account Login",
+  "formDashboardLayoutList": [ ],
+  "formEntityRelationList": [ ],
+  "matchWeight": 0,
+  "name": "Login",
+  "token": "login",
+  "type": "LOGIN",
+  "uiPluginList": [ ]
+}

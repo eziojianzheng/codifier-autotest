@@ -1,0 +1,12 @@
+{
+  "project": {
+    "activated": true,
+    "deleted": 0,
+    "description": "Codifier feature 测试专用项目，由自动化测试创建",
+    "externalDataSourceList": [ ],
+    "frontEndConfig": "$$$$ref:text:frontend/frontEndConfig.json",
+    "name": "Codifier AutoTest",
+    "tags": "test",
+    "token": "codifier-autotest"
+  }
+}
