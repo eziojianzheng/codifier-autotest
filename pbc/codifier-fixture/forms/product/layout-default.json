@@ -1,0 +1,174 @@
+{
+  "fields": [
+    {
+      "component": "Card",
+      "componentProps": {
+        "title": "产品信息 🏷️"
+      },
+      "fields": [
+        {
+          "component": "Collapse",
+          "componentProps": {
+            "defaultActiveKey": [
+              "basic",
+              "price"
+            ],
+            "itemSplit": true,
+            "items": [
+              {
+                "fields": [
+                  {
+                    "component": "Grid",
+                    "componentProps": {
+                      "blankChildPlace": false,
+                      "colNumber": 2,
+                      "columnGap": 16
+                    },
+                    "fields": [
+                      {
+                        "component": "Input",
+                        "id": "name",
+                        "title": "产品名称",
+                        "validation": {
+                          "maxLength": 200,
+                          "required": true
+                        }
+                      },
+                      {
+                        "component": "Input",
+                        "id": "code",
+                        "title": "产品编码 \"唯一\"",
+                        "validation": {
+                          "maxLength": 100
+                        }
+                      },
+                      {
+                        "component": "Select",
+                        "componentProps": {
+                          "options": [
+                            {
+                              "label": "电子",
+                              "value": "electronics"
+                            },
+                            {
+                              "label": "服饰",
+                              "value": "apparel"
+                            },
+                            {
+                              "label": "食品 🍎",
+                              "value": "food"
+                            }
+                          ]
+                        },
+                        "id": "category",
+                        "title": "分类"
+                      },
+                      {
+                        "component": "DatePicker",
+                        "id": "launchDate",
+                        "title": "上市日期"
+                      }
+                    ]
+                  }
+                ],
+                "key": "basic",
+                "label": "基本信息 / Basic Info / 基本情報"
+              },
+              {
+                "fields": [
+                  {
+                    "component": "Grid",
+                    "componentProps": {
+                      "blankChildPlace": false,
+                      "colNumber": 2,
+                      "columnGap": 16
+                    },
+                    "fields": [
+                      {
+                        "component": "NumberPicker",
+                        "id": "price",
+                        "title": "单价",
+                        "validation": {
+                          "maxValue": 9999999,
+                          "minValue": 0
+                        }
+                      },
+                      {
+                        "component": "Switch",
+                        "id": "active",
+                        "title": "是否上架"
+                      }
+                    ]
+                  },
+                  {
+                    "component": "Textarea",
+                    "id": "description",
+                    "title": "描述",
+                    "validation": {
+                      "maxLength": 2000
+                    }
+                  },
+                  {
+                    "component": "Upload",
+                    "id": "attachment",
+                    "title": "附件"
+                  }
+                ],
+                "key": "price",
+                "label": "价格与状态"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "component": "Card",
+      "componentProps": {
+        "title": "规格明细（父子表）"
+      },
+      "fields": [
+        {
+          "component": "EditableTable",
+          "componentProps": {
+            "columnDefs": [
+              {
+                "colId": "specName",
+                "field": "specName",
+                "headerName": "规格名",
+                "type": "TEXT_COLUMN"
+              },
+              {
+                "colId": "specValue",
+                "field": "specValue",
+                "headerName": "规格值",
+                "type": "TEXT_COLUMN"
+              }
+            ],
+            "formEntityToken": "product-spec"
+          },
+          "fieldConfig": {
+            "formEntityToken": "product-spec",
+            "pbcToken": "codifier-fixture",
+            "relations": [
+              {
+                "colId": "parentDataId",
+                "filter": "$CURRENT_FORM_DATA_ID",
+                "filterType": "text",
+                "type": "equals"
+              }
+            ]
+          },
+          "id": "specs",
+          "title": "规格明细"
+        }
+      ]
+    }
+  ],
+  "form": {
+    "defaultCancelButton": true,
+    "defaultSubmitButton": true,
+    "labelLayout": "vertical",
+    "script": "$$$$ref:text:layout-default-script.js"
+  }
+}

@@ -1,0 +1,41 @@
+{
+  "enableForbidUpdateSomeFieldsValueWhenReferenced": 0,
+  "fields": [
+    {
+      "maxLength": 200,
+      "name": "父表关联ID",
+      "storageField": "value1",
+      "token": "parentDataId",
+      "type": "TEXT_BOX"
+    },
+    {
+      "maxLength": 200,
+      "name": "规格名",
+      "storageField": "value2",
+      "token": "specName",
+      "type": "TEXT_BOX"
+    },
+    {
+      "maxLength": 200,
+      "name": "规格值",
+      "storageField": "value3",
+      "token": "specValue",
+      "type": "TEXT_BOX"
+    }
+  ],
+  "isAutoLock": 0,
+  "isDeletableWhenReferenced": 1,
+  "isInnerEntity": 0,
+  "isMasterData": 0,
+  "layouts": [
+    {
+      "defaultLayout": true,
+      "name": "默认布局",
+      "sortIndex": 0,
+      "token": "default"
+    }
+  ],
+  "name": "产品规格明细",
+  "permissionTarget": "product-spec",
+  "token": "product-spec"
+}
